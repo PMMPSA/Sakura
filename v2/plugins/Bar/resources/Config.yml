@@ -1,0 +1,30 @@
+---
+#{player} - Hiển Thị Tên Của Người Chơi
+#{group} - Hiển Thị Cấp Bậc Của Người Chơi
+#{faction} - Hiển Thị Nhóm Của Người Chơi Đang Tham 
+#{money} - Hiển Thị Số Tiền Của Người Chơi
+#{gm} - Hiển Thị Chế Độ Chơi Của Người Chơi
+#{IP} - Hiển Thị IP Của Người Chơi
+#{onl} - Hiển Thị Số Người Đang Trực Tuyến Tại Máy Chủ
+#{monl} - Hiển Thị Số Người Trực Tuyến Nhiều Nhất Của Máy Chủ
+#{hp} - Hiển Thị Số Máu Hiện Tại Của Người Chơi
+#{maxhp} - Hiển Thị Số Máu Cao Nhất Của Người Chơi
+#{X} {Y} {Z} - Hiển Thị Tọa Độ Người Chơi Đang Đứng
+#{level} - Hiển Thị Tên Thế Giới Người Chơi Đang Đứng
+#{time} - Hiển Thị Thời Gian(Vào php.ini Chỉnh date.timezone=UTC Thành date.timezone=Asia/Ho_Chi_Minh Để Chỉnh Thành Giờ Việt Nam)
+#{id}:{ids} - Hiển Thị ID Vật Phẩm
+#{item} - Hiển Thị Tên Vật Phẩm
+#{tps} - Hiển Thị TPS Của Máy Chủ
+#{usage}- Hiển Thị Tốc Độ Tải Của Máy Chủ
+#{tag} - Hiển Thị Tag Trên Đầu Của Ngươid Chơi
+#{kill} - Hiển Thị Số Lần Giết Của Người Chơi
+#{deaths} - Hiển Thị Số Lần Chết Của Người Chơi
+#{h} - Căn Qua Bên Phải
+#{n} - Xuống Dòng(Có Thể Dùng \n Để Xuống Dòng)
+
+#======================================
+
+Bar: "{h}{4}{3} §l§e{1}Sakuraft {5}X {1}SkyBlock {4}{3}§r\n{h}§l§a»§eKính Chào§b: §a{player}§r\n{h}§l§a»§eTrực Tuyến§b: §a{onl}§f/§a{monl}§r\n{h}§l§a»§eSố Xu§b: §a{money} §f|§l§e Số Coin§b: §a{coin}§r\n{h}§l§a»§eID§b: §a{id}§f:§a{ids}§r\n{h}§l§a»§eThời Gian§b: §a{time}§r\n{h}§l§e======================\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n"
+
+#======================================
+...

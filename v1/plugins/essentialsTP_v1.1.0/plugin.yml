@@ -1,0 +1,182 @@
+name: essentialsTP
+main: essentialsTP\essentialsTP
+version: 1.1.0
+api: [1.12.0]
+#Edit: Ghast Noob
+commands:
+ home:
+  description: Ghi /home Để Xem Danh Sách Home Của Bạn. Ghi /home <Tên Home> Để Về Home Mà Bạn Đã Đặt.
+  usage: "/home Hoặc /home <Tên Home>"
+  permission: essentialstp.command.home
+  
+ sethome:
+  description: Đặt Một Địa Điểm Bất Kỳ Để Đánh Dấu Nơi Đó.
+  usage: "§f➸§a Ghi: §f/§bsethome §f<§bTên Home§f>§a Để Đánh Dấu Địa Điểm Này."
+  permission: essentialstp.command.sethome
+  
+ delhome:
+  description: Xóa Các Địa Điểm Mà Bạn Đã Đánh Dấu.
+  usage: "§f➸§a Ghi: §f/§bdelhome §f<§bTên Home§f>§a Để Xóa Các Địa Điểm Mà Bạn Đã Đánh Dấu."
+  permission: essentialstp.command.delhome
+  
+ back:
+  description: Di Chuyển Đến Vị Trí Mà Bạn Đã Chết Vào Lần Gần Nhất.
+  usage: "/back"
+  permission: essentialstp.command.back
+  
+ wild:
+  description: Dịch Chuyện Đến Một Nơi Bất Kỳ Trong Thế Giới.
+  usage: "/wild"
+  permission: essentialstp.command.wild
+  
+ setspawn:
+  description: Thiết Lập Điểm Hồi Sinh Của Thế Giới.
+  usage: "/setspawn"
+  permission: essentialstp.command.setspawn
+  
+ spawn:
+  description: Dịch Chuyển Đến Nơi Hồi Sinh Của Thế Giới.
+  usage: "/spawn"
+  permission: essentialstp.command.spawn
+  
+ warp:
+  description: Ghi /warp Để Xem Danh Sách Warp Của Máy Chủ. Ghi /warp <Tên Warp> Để Dịch Chuyển Đến Vị Trí Mà Các Quản Trị Viên Đã Đặt.
+  usage: "/warp  /warp <Tên Warp>"
+  permission: essentialstp.command.tpahere
+  
+ setwarp:
+  description: Đặt Vị Trí Bất Kỳ Để Làm Warp.
+  usage: "§f➸§a Ghi: §f/§bsetwarp §f<§bTên Warp§f>§a Để Đặt Vị Trí Bất Kỳ Làm Warp."
+  permission: essentialstp.command.setwarp
+  
+ delwarp:
+  description: Xóa Các Vị Trí Mà Bạn Đã Đặt Làm Warp.
+  usage: "§f➸§a Ghi: §f/§bdelwarp §f<§bTên Warp§f>§a Để Xóa Các Vị Trí Mà Bạn Đã Đặt Làm Warp."
+  permission: essentialstp.command.delwarp
+  
+ tpa:
+  description: Gửi Yêu Cầu Để Dịch Chuyển Đến Người Chơi Bất Kỳ.
+  usage: "§f➸§a Ghi: §f/§btpa §f<§bTên Người Chơi§f>§a Để Gửi Yêu Cầu Dịch Chuyển Đến Người Đó."
+  permission: essentialstp.command.tpa
+  
+ tpahere:
+  description: Gửi Yêu Cầu Để Dịch Chuyển Người Chơi Nào Đó Đến Mình.
+  usage: "§f➸§a Ghi: §f/§btpahere §f<§bTên Người Chơi§f>§a Để Gửi Yêu Cầu Dịch Chuyển Người Chơi Đó Đến Mình."
+  permission: essentialstp.command.tpahere
+  
+ tpaccept:
+  description: Đồng Ý Lời Mời Dịch Chuyển Của Người Chơi Nào Đó.
+  usage: "/tpaccept"
+  permission: essentialstp.command.tpaccept
+  
+ tpdeny:
+   description: Từ Chối Tất Cả Yêu Cầu Dịch Chuyển Của Các Người Chơi Khác.
+   usage: "/tpdeny"
+   permission: essentialstp.command.tpdeny
+   
+permissions:
+ essentialstp:
+  default: op
+  description: "Sẽ Cho Phép Sài Tất Cả Các Lệnh Của EssentialsTP"
+  
+  children:
+   essentialstp.command:
+    description: "Sẽ Cho Phép Bạn Sử Dụng Các Lệnh"
+    default: true
+    
+    children:
+     essentialstp.command.tpdeny:
+      description: "Cho Phép Người Chơi Từ Chối Yêu Cầu"
+      default: true
+      
+     essentialstp.command.tpaccept:
+      description: "Cho Phép Người Chơi Chấp Nhận Yêu Cầu"
+      default: true
+      
+     essentialstp.command.tpahere:
+      description: "Cho Phép Người Chơi Dịch Chuyển Người Chơi Đến Họ"
+      default: true
+      
+     essentialstp.command.tpa:
+      description: "Cho Phép Người Chơi Gửi Yêu Cầu Dịch Chuyển Đến Người Khác"
+      default: true
+      
+     essentialstp.command.delwarp:
+      description: "Cho Phép Xóa Các Địa Điểm Đã Đánh Dấu"
+      default: op
+      
+     essentialstp.command.setwarp:
+      description: "Cho Phép Người Chơi Đánh Dấu Các Địa Điểm"
+      default: op
+      
+     essentialstp.command.warp:
+      description: "Cho Phép Người Chơi Sử Dụng Tất Cả Lệnh Của Warp"
+      default: true
+      
+     essentialstp.command.setspawn:
+      description: "Cho Phép Người Chơi Đánh Dấu Nơi Hồi Sinh Của Thế Giới"
+      default: op
+      
+     essentialstp.command.spawn:
+      description: "Cho Phép Người Chơi Tới Điểm Hồi Sinh Của Thế Giới"
+      default: true
+      
+     essentialstp.command.wild:
+      description: "Cho Phép Người Chơi Dịch Chuyển Ngẫu Nhiên Đến Một Địa Điểm Nào Đó Trong Thế Giới"
+      default: true
+      
+     essentialstp.command.back:
+      description: "Cho Phép Ngươi Chơi Quay Lại Điểm Đã Chết Trước Đó"
+      default: true
+      
+     essentialstp.command.delhome:
+      description: "Cho Phép Người Chơi Xóa Địa Điểm Home Đã Đánh Dấu"
+      default: true
+      
+     essentialstp.command.sethome:
+      description: "Cho Phép Người Chơi Đánh Dấu Địa Điểm Bất Kỳ"
+      default: true
+      
+     essentialstp.command.home:
+      description: "Cho Phép Người Chơi Sử Dụng Lệnh /home"
+      default: true
+      
+     essentialstp.command.bedsetshome:
+      description: "Cho Phép Người Chơi Đánh Dấu Địa Điểm Giường Đã Ngủ Gần Nhất"
+      default: true
+      
+     essentialstp.command.sign.warp:
+      description: "Cho Phép Người Chơi Sài Bảng Warp"
+      default: true
+      
+     essentialstp.command.sign.wild:
+      description: "Cho Người Chơi Sài Bảng Wild"
+      default: op
+      
+     essentialstp.command.sign.spawn:
+      description: "Cho Người Chơi Sài Bảng Spawn"
+      default: true
+      
+     essentialstp.command.sign.warp.create:
+      description: "Cho Người Chơi Tạo Bảng Warp"
+      default: op
+      
+     essentialstp.command.sign.wild.create:
+      description: "Cho Phép Người Chơi Tạo Bảng Wild"
+      default: op
+      
+     essentialstp.command.sign.spawn.create:
+      description: "Cho Phép Người Chơi Tạo Bảng Warp"
+      default: op
+      
+     essentialstp.command.sign.warp.break:
+      description: "Cho Phép Người Chơi Phá Bảng Warp"
+      default: op
+      
+     essentialstp.command.sign.wild.break:
+      description: "Cho Phép Người Chơi Phá Bảng Wild"
+      default: op
+      
+     essentialstp.command.sign.spawn.break:
+      description: "Cho Phép Người Chơi Phá Bảng Spawn"
+      default: op

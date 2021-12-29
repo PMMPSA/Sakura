@@ -1,0 +1,913 @@
+<?php
+declare(strict_types = 1);
+
+
+namespace Sheep;
+
+
+use Sheep\Async\PMAsyncHandler;
+use pocketmine\plugin\PluginBase;
+use Sheep\Command\CommandManager;
+use Sheep\Command\InfoCommand;
+use Sheep\Command\PMCommandProxy;
+use Sheep\Command\UpdateCommand;
+use Sheep\Source\SourceManager;
+use Sheep\Store\FileStore;
+use Sheep\Utils\ScanTask;
+
+class SheepPlugin extends PluginBase {
+	/** @var Sheep */
+	private $api;
+	private $store;
+	/** @var SourceManager */
+	private $sourceManager;
+	/** @var CommandManager */
+	private $commandManager;
+
+	public function onEnable() {
+		include_once("../../vendor/autoload.php");
+		define("Sheep\\PLUGIN_PATH", constant("pocketmine\\PLUGIN_PATH"));
+
+		$asyncHandler = new PMAsyncHandler($this->getServer()->getScheduler());
+		$this->api = Sheep::getInstance();
+		$this->api->init($asyncHandler, $store = new FileStore("sheep.lock"));
+		$this->store = $store;
+		$this->sourceManager = $this->api->getSourceManager();
+		$this->commandManager = new CommandManager();
+		$this->commandManager->register(new UpdateCommand());
+		$this->commandManager->register(new InfoCommand());
+
+		foreach($this->commandManager->getAll() as $command) {
+			$this->getServer()->getCommandMap()->register("sheep", new PMCommandProxy($command));
+		}
+		$this->scan();
+
+		register_shutdown_function(function() use (&$store) {
+			echo "[*] Sheep Updater is running...\n";
+			foreach($store->getAll() as $plugin) {
+				switch($plugin["state"]) {
+					case PluginState::STATE_UPDATING:
+						$base = \Sheep\PLUGIN_PATH . DIRECTORY_SEPARATOR . $plugin["name"];
+						if(file_exists($base . ".phar") && file_exists($base . ".phar.update")) {
+							try {
+								\Phar::unlinkArchive($base . ".phar");
+							} catch(\PharException $exception) {
+								echo "[!] Sheep Updater failed for plugin \"{$plugin["name"]}\": {$exception->getMessage()}\n";
+								break;
+							}
+							@rename($base . ".phar.update", $base . ".phar");
+						}
+
+						$plugin["state"] = PluginState::STATE_INSTALLED;
+						$store->update($plugin);
+						break;
+					case PluginState::STATE_NOT_INSTALLED:
+						@unlink(\Sheep\PLUGIN_PATH . $plugin["name"] . ".phar");
+						$store->remove($plugin["name"]);
+						break;
+				}
+			}
+
+			$store->persist();
+		});
+
+	}
+
+	public function scan() {
+		$this->getLogger()->info("Scanning loaded plugins for changes...");
+		$this->getServer()->getScheduler()->scheduleTask(new ScanTask($this, $this->store));
+	}
+
+	public function getSourceManager() {
+		return $this->sourceManager;
+	}
+
+	public function getGitRevision() {
+		$ref = @file_get_contents($this->getFile() . DIRECTORY_SEPARATOR . ".git/HEAD");
+		if(!$ref) return "unknown";
+		$rev = trim(@file_get_contents($this->getFile() . ".git/" . trim(explode(" ", $ref)[1])));
+		return $rev ?: "unknown";
+	}
+
+	public function getStore() {
+		return $this->store;
+	}
+}<?php
+declare(strict_types = 1);
+
+
+namespace Sheep\Async;
+
+
+use pocketmine\scheduler\ServerScheduler;
+use React\Promise\Deferred;
+use React\Promise\Promise;
+use Sheep\Async\Task\CurlTask;
+use Sheep\Async\Task\WriteTask;
+
+class PMAsyncHandler implements AsyncHandler {
+	private $scheduler;
+
+	public function __construct(ServerScheduler $scheduler) {
+		$this->scheduler = $scheduler;
+	}
+
+	public function getURL(string $url, int $timeout = 10, array $extraHeaders = []): Promise {
+		$deferred = new Deferred();
+
+		$this->scheduler->scheduleAsyncTask(new CurlTask($url, CurlOptions::CURL_GET,
+			function(string $result, string $error) use (&$deferred) {
+			if($error) {
+				$deferred->reject($error);
+			} else {
+				$deferred->resolve($result);
+			}
+		}, $timeout, $extraHeaders));
+
+		return $deferred->promise();
+	}
+
+	public function read(string $file): Promise {
+		// TODO: Implement read() method.
+	}
+
+	public function write(string $file, string $data): Promise {
+		$deferred = new Deferred();
+
+		$this->scheduler->scheduleAsyncTask(new WriteTask($file, $data,
+			function(bool $ok) use (&$deferred) {
+				if(!$ok) {
+					$deferred->reject($ok);
+				} else {
+					$deferred->resolve();
+				}
+			}));
+
+		return $deferred->promise();
+	}
+}<?php
+declare(strict_types = 1);
+
+
+namespace Sheep\Async;
+
+
+use React\Promise\Promise;
+
+interface AsyncHandler {
+
+	public function getURL(string $url, int $timeout = 10, array $extraHeaders = []) : Promise;
+	public function read(string $file) : Promise;
+	public function write(string $file, string $data) : Promise;
+}<?php
+declare(strict_types = 1);
+
+
+namespace Sheep;
+
+use React\Promise\Deferred;
+use React\Promise\Promise;
+use Sheep\Async\AsyncHandler;
+use Sheep\Source\Source;
+use Sheep\Source\SourceManager;
+use Sheep\Utils\Error;
+use Sheep\Store\Store;
+
+/**
+ * The Sheep API.
+ * @package Sheep
+ */
+class Sheep {
+	private static $instance;
+
+	/** @var SourceManager */
+	private $sourceManager;
+	private $defaultSource;
+	/** @var Store */
+	private $store;
+
+	public function info(string $plugin, string $version, Source $source = null) : Promise {
+		if($source === null) $source = $this->defaultSource;
+		return $source->resolve($plugin, $version);
+	}
+
+	public function install(string $plugin, string $version, Source $source = null) : Promise {
+		$deferred = new Deferred();
+		if($source === null) $source = $this->defaultSource;
+		if($this->store->exists($plugin)) {
+			$deferred->reject(new Error("Plugin already installed.", Error::E_PLUGIN_ALREADY_INSTALLED));
+			goto end;
+		}
+
+		$this->info($plugin, $version, $source)
+				->then(function(Plugin $plugin) use (&$deferred, &$source) {
+					$source->install($plugin)
+						->then(function() use (&$deferred, $plugin) {
+							$plugin->setState(PluginState::STATE_INSTALLED);
+							$this->store->add($plugin);
+							$deferred->resolve();
+						})
+						->otherwise(function($error) use (&$deferred) {
+							$deferred->reject($error);
+						});
+				})
+				->otherwise(function($error) use (&$deferred) {
+					$deferred->reject($error);
+				});
+		end:
+		return $deferred->promise();
+	}
+
+	public function update(string $plugin, Source $source = null) : Promise {
+		$deferred = new Deferred();
+		if($source === null) $source = $this->defaultSource;
+
+		if(($current = $this->store->get($plugin)) !== null) {
+			$this->info($current["name"], $current["version"])
+				->then(function(Plugin $target) use (&$deferred, &$source, $current) {
+						$source->update($target)
+							->then(function() use (&$deferred, $target) {
+								$target->setState(PluginState::STATE_UPDATING);
+								$this->store->update($target);
+								$deferred->resolve();
+							})
+							->otherwise(function(Error $error) use (&$deferred) {
+								$deferred->reject($error);
+							});
+				})
+				->otherwise(function(Error $error) use (&$deferred) {
+					$deferred->reject($error);
+				});
+		} else {
+			$deferred->reject(new Error("Plugin not found in store.", Error::E_PLUGIN_NOT_IN_LOCK));
+		}
+
+		return $deferred->promise();
+	}
+
+	// should probably not be promised based as it isn't asynchronous at all
+	public function uninstall(string $plugin) : Promise {
+		$deferred = new Deferred();
+		if(($p = $this->store->get($plugin)) === null) { // "Yes, you should throw an exception
+														//   Try/catch is too much work?"
+			$deferred->reject(new Error("Plugin does not exist.", Error::E_PLUGIN_NOT_IN_LOCK));
+			return $deferred->promise();
+		}
+		$p->setState(PluginState::STATE_NOT_INSTALLED);
+		$this->store->update($p);
+		$deferred->resolve();
+
+		return $deferred->promise();
+	}
+
+	public function init(AsyncHandler $asyncHandler, Store $store) {
+		$this->sourceManager = new SourceManager($asyncHandler);
+		$this->defaultSource = $this->sourceManager->getDefaultSource();
+		$this->store = $store;
+	}
+
+	public static function getInstance() : Sheep {
+		if(!self::$instance) {
+			self::$instance = new Sheep();
+		}
+		return self::$instance;
+	}
+
+	/**
+	 * @return SourceManager
+	 */
+	public function getSourceManager(): SourceManager {
+		return $this->sourceManager;
+	}
+}<?php
+declare(strict_types=1);
+
+
+namespace Sheep\Store;
+
+
+class FileStore extends MemoryStore {
+	private $filename, $data;
+
+	public function __construct(string $filename) {
+		$this->filename = $filename;
+		if(file_exists($filename)) {
+			$this->data = json_decode(file_get_contents($filename), true);
+		} else {
+			$this->data = [ // other elements may be added for future use
+				"_readme" => "This file was generated by Sheep on " .  date("F j, Y, g:i a") . ".",
+				"plugins" => [],
+			];
+		}
+		$this->plugins = &$this->data["plugins"];
+		$this->persist();
+	}
+
+	public function persist() {
+		file_put_contents($this->filename, json_encode($this->data, JSON_PRETTY_PRINT));
+	}
+}<?php
+declare(strict_types=1);
+
+
+namespace Sheep\Store;
+
+
+use Sheep\Plugin;
+
+class MemoryStore implements Store {
+	protected $plugins;
+
+	public function add(Plugin $plugin) {
+		$this->plugins[strtolower($plugin->getName())] = $plugin->jsonSerialize();
+	}
+
+	public function update(Plugin $plugin) {
+		$this->add($plugin);
+	}
+
+	public function remove(string $plugin) {
+		unset($this->plugins[strtolower($plugin)]);
+	}
+
+	public function get(string $plugin) {
+		if(!$this->exists($plugin)) return null;
+		return Plugin::fromArray($this->plugins[strtolower($plugin)]);
+	}
+
+	public function getAll(): array {
+		return $this->plugins;
+	}
+
+	public function exists(string $plugin) : bool {
+		return isset($this->plugins[strtolower($plugin)]);
+	}
+
+	public function persist() {
+	}
+}<?php
+declare(strict_types=1);
+
+
+namespace Sheep\Store;
+
+
+use Sheep\Plugin;
+
+interface Store {
+
+	public function add(Plugin $plugin);
+	public function update(Plugin $plugin);
+	public function remove(string $plugin);
+
+	/**
+	 * @param string $plugin
+	 * @return Plugin|null
+	 */
+	public function get(string $plugin);
+	public function getAll() : array;
+	public function exists(string $plugin) : bool;
+
+	public function persist();
+}<?php
+declare(strict_types = 1);
+
+
+namespace Sheep\Source;
+
+
+use Sheep\Async\AsyncHandler;
+
+class SourceManager {
+	private $asyncHandler;
+	/** @var Source[] */
+	private $sources;
+
+	public function __construct(AsyncHandler $asyncHandler) {
+		$this->asyncHandler = $asyncHandler;
+		$this->sources = [];
+		$this->registerDefaults();
+	}
+
+	public function get(string $name) {
+		return isset($this->sources[$name]) ? $this->sources[$name] : false;
+	}
+
+	public function register(string $name, Source $source) {
+		if(preg_match("/@deprecated/", (new \ReflectionClass($source))->getDocComment()) > 0) {
+			trigger_error("The source $name is deprecated. Using this is not a good idea!", E_USER_DEPRECATED);
+		}
+
+		$this->sources[$name] = $source;
+	}
+
+	public function registerDefaults() {
+		$this->register("Poggit", new PoggitSource($this->asyncHandler));
+	}
+
+	public function getDefaultSource() {
+		return $this->sources["Poggit"];
+	}
+}<?php
+declare(strict_types = 1);
+
+
+namespace Sheep\Source;
+
+use React\Promise\Deferred;
+use React\Promise\Promise;
+use Sheep\Plugin;
+use Sheep\Utils\Error;
+
+/**
+ * Class Poggit
+ * @package Sheep\Source
+ */
+class PoggitSource extends BaseSource {
+	const ENDPOINT = "https://poggit.pmmp.io/releases.json";
+
+	public function search(string $query) : Promise {
+	}
+
+	public function resolve(string $plugin, string $version) : Promise {
+		$deferred = new Deferred();
+
+		$this->asyncHandler->getURL(self::ENDPOINT . "?name=$plugin" . ($version !== "latest" ? "&version=$version" : "&latest-only"))
+			->then(function($data) use (&$deferred) {
+				$plugins = json_decode($data, true);
+				if(count($plugins) === 1) {
+					$deferred->resolve(new PoggitPlugin($plugins[0]));
+				} else {
+					$deferred->reject(count($plugins) === 0 ?
+						new Error("Plugin/version not found", Error::E_PLUGIN_NO_CANDIDATES) :
+						new Error("Too many plugins/versions found", Error::E_PLUGIN_MULTIPLE_CANDIDATES));
+				}
+			})
+			->otherwise(function($error) use ($deferred) {
+				$deferred->reject(new Error($error, Error::E_CURL_ERROR));
+			});
+		return $deferred->promise();
+	}
+
+	public function install(Plugin... $plugin) : Promise {
+		$deferred = new Deferred();
+
+		$target = array_shift($plugin);
+		$depends = $target->getDependencies();
+
+		// resolve all dependencies
+		$resolver = function(array $dependencies, array &$resolved = []) use (&$resolver) : Promise {
+			$deferred = new Deferred();
+
+			if(count($dependencies) === 0) {
+				$deferred->resolve($resolved); // punt result up the stack if we haven't exceeded the limit by now :p
+				goto end;
+			}
+
+			$current = array_shift($dependencies);
+			// skip non-hard dependencies
+			if(!$current["isHard"]) return $resolver($dependencies, $resolved);
+			$this->resolve($current["name"], $current["version"])
+				->then(function(Plugin $plugin) use (&$deferred, &$dependencies, &$resolved, &$resolver) {
+					$resolved[] = $plugin;
+					$resolver($dependencies, $resolved)
+						->then(function($resolved) use (&$deferred) {
+							$deferred->resolve($resolved);
+						});
+				});
+
+			end:
+			return $deferred->promise();
+		};
+
+		$installer = function() use (&$deferred, $target, $plugin) {
+			$this->download($target, \Sheep\PLUGIN_PATH . DIRECTORY_SEPARATOR . $target->getName() . ".phar")
+				->then(function() use (&$deferred, $plugin) {
+					if(count($plugin) > 0) {
+						$this->install(...$plugin);
+					} else { // or resolve the promise.
+						$deferred->resolve();
+					}
+				});
+		};
+
+		$resolver($depends)
+			->then(function(array $resolved) use (&$installer) {
+				// install dependencies
+				if(count($resolved) > 0) {
+					$this->install(...$resolved)
+						->then($installer);
+				} else {
+					$installer();
+				}
+			});
+
+		return $deferred->promise();
+	}
+}<?php
+declare(strict_types = 1);
+
+
+namespace Sheep\Source;
+
+
+use React\Promise\Deferred;
+use React\Promise\Promise;
+use Sheep\Async\AsyncHandler;
+use Sheep\Plugin;
+use Sheep\Utils\Error;
+
+abstract class BaseSource implements Source {
+	protected $asyncHandler;
+
+	public function __construct(AsyncHandler $asyncHandler) {
+		$this->asyncHandler = $asyncHandler;
+	}
+
+	public function update(Plugin $plugin) : Promise {
+		$deferred = new Deferred();
+		$current = $plugin->getVersion();
+		$this->resolve($plugin->getName(), "latest")
+			->then(function(Plugin $plugin) use (&$deferred, $current) {
+				// Poggit's not enforcing semver yet...not sure how else to compare.
+				// TODO: maybe source-defined version comparison?
+				if($plugin->getVersion() !== $current) {
+					$this->download($plugin, \Sheep\PLUGIN_PATH . DIRECTORY_SEPARATOR . $plugin->getName() . ".phar.update")
+						->then(function() use (&$deferred) {
+							$deferred->resolve();
+						})
+						->otherwise(function(Error $error) use (&$deferred) {
+							$deferred->reject($error);
+						});
+				} else {
+					$deferred->reject(new Error("Plugin is already at it's latest version"));
+				}
+			})
+			->otherwise(function(Error $error) use (&$deferred) {
+				$deferred->reject($error);
+			});
+
+
+		return $deferred->promise();
+	}
+
+
+	protected function download(Plugin $plugin, string $location) : Promise {
+		$deferred = new Deferred();
+
+		$this->asyncHandler->getURL($plugin->getUri())
+			// then write file...
+			->then(function($content) use (&$deferred, $location) {
+				$this->asyncHandler->write($location, $content)
+					->then(function() use (&$deferred) {
+						$deferred->resolve();
+					});
+			})
+			->otherwise(function(string $error) use (&$deferred) {
+				$deferred->reject(new Error($error, Error::E_CURL_ERROR));
+			});
+
+		return $deferred->promise();
+	}
+}<?php
+declare(strict_types = 1);
+
+
+namespace Sheep\Source;
+
+
+use React\Promise\Promise;
+use Sheep\Plugin;
+
+interface Source {
+
+	/**
+	 * Searches for a plugin.
+	 *
+	 * @param string $query The name of the plugin.
+	 * @return Promise
+	 */
+	public function search(string $query) : Promise;
+
+	/**
+	 * Resolves a single version of a plugin.
+	 *
+	 * @param string $plugin
+	 * @param string $version
+	 * @return Promise
+	 */
+	public function resolve(string $plugin, string $version) : Promise;
+
+	/**
+	 * Installs a given Plugin.
+	 *
+	 * @param Plugin|Plugin[] ...$plugin The plugin(s) in question.
+	 * @return Promise
+	 */
+	public function install(Plugin... $plugin) : Promise;
+
+	/**
+	 * Updates a given Plugin. Implement this function to gain custom
+	 * functionality or to work around repository quirks.
+	 *
+	 * @param Plugin $plugin The plugin in question.
+	 * @return Promise
+	 */
+	public function update(Plugin $plugin) : Promise;
+}<?php
+declare(strict_types=1);
+
+
+namespace Sheep\Command;
+
+
+class CommandManager {
+	private $commands;
+
+	public function __construct() {
+		$this->registerDefaults();
+	}
+
+	public function get(string $command) : Command {
+		return @$this->commands[$command];
+	}
+
+	/**
+	 * @return Command[]
+	 */
+	public function getAll() : array {
+		return $this->commands;
+	}
+
+	public function register(Command $command) {
+		$this->commands[$command->getName()] = $command;
+	}
+
+	public function registerDefaults() {
+		$this->register(new InstallCommand());
+		$this->register(new UninstallCommand());
+	}
+}<?php
+declare(strict_types=1);
+
+
+namespace Sheep\Command;
+
+
+use Sheep\Command\Problem\Problem;
+use Sheep\Utils\Error;
+
+class InstallCommand extends Command {
+
+	public function __construct() {
+		parent::__construct("install", "Installs a plugin.");
+		$this->arg("plugin", "The plugin to install.", true);
+		$this->arg("version", "The version of the plugin.");
+	}
+
+	public function execute(Problem $problem, array $args) {
+		$problem->print("Installing plugin {$args["plugin"]}...");
+		$this->api->install($args["plugin"], @$args["version"] ?: "latest")
+			->then(function() use (&$problem) {
+				$problem->print("Success!");
+			})
+			->otherwise(function(Error $error) use (&$problem) {
+				$problem->print("Failure: $error");
+			});
+	}
+}<?php
+declare(strict_types=1);
+
+
+namespace Sheep\Command;
+
+
+use Sheep\Command\Problem\Problem;
+use Sheep\Sheep;
+
+abstract class Command {
+	protected $api;
+
+	protected $name, $description;
+	protected $args;
+
+	public function __construct(string $name, string $description) {
+		$this->api = Sheep::getInstance();
+
+		$this->name = $name;
+		$this->description = $description;
+		$this->args = [];
+	}
+
+	protected function arg(string $name, string $description = "", bool $required = false) {
+		$this->args[$name] = [$name, $description, $required];
+	}
+
+	public function getName() : string {
+		return $this->name;
+	}
+
+	public function getDescription() : string {
+		return $this->description;
+	}
+
+	public function getArguments() : array {
+		return $this->args;
+	}
+
+	public function getUsage() : string {
+		$str = $this->name;
+		foreach($this->args as $arg) {
+			if($arg[2]) { // required
+				$str .= " <{$arg[0]}>";
+			} else {
+				$str .= " [{$arg[0]}]";
+			}
+		}
+		return $str;
+	}
+
+	public function run(Problem $problem, array $args) {
+		$output = $this->args;
+		$keys = array_keys($output);
+
+		$num = count($output);
+		for($i = 0; $i < $num; $i++) {
+			if($arg = @$args[$i]) {
+				$output[$keys[$i]] = $arg;
+			} else {
+				if($output[$keys[$i]][2]) {
+					$problem->print($this->getUsage());
+					return;
+				} else {
+					$output = array_slice($output, 0, $i);
+					break;
+				}
+			}
+		}
+		$this->execute($problem, $output);
+	}
+
+	protected abstract function execute(Problem $problem, array $args);
+}<?php
+
+
+namespace Sheep\Command;
+
+
+use Sheep\Command\Problem\Problem;
+use Sheep\Utils\Error;
+
+class UninstallCommand extends Command {
+	public function __construct() {
+		parent::__construct("uninstall", "Uninstalls a plugin.");
+		$this->arg("plugin", "The plugin to uninstall.", true);
+	}
+
+	public function execute(Problem $problem, array $args) {
+		$problem->print("Uninstalling plugin {$args["plugin"]}...");
+		$this->api->uninstall($args["plugin"])
+			->then(function() use (&$problem) {
+				$problem->print("Success!");
+			})
+			->otherwise(function(Error $error) use (&$problem) {
+				$problem->print("Failure: $error");
+			});
+	}
+}<?php
+declare(strict_types=1);
+
+
+namespace Sheep\Command;
+
+
+use Sheep\Command\Problem\Problem;
+use Sheep\Utils\Error;
+
+class UpdateCommand extends Command {
+
+	public function __construct() {
+		parent::__construct("update", "Updates a plugin.");
+		$this->arg("plugin", "The plugin to update.", true);
+	}
+
+	protected function execute(Problem $problem, array $args) {
+		$problem->print("Updating {$args["plugin"]}...");
+		$this->api->update($args["plugin"])
+			->then(function() use (&$problem) {
+				$problem->print("Success!");
+			})
+			->otherwise(function(Error $error) use (&$problem) {
+				$problem->print($error);
+			});
+	}
+}<?php
+
+
+namespace Sheep\Command;
+
+
+use pocketmine\utils\TextFormat;
+use Sheep\Command\Problem\Problem;
+use Sheep\Plugin;
+use Sheep\PluginState;
+use Sheep\Utils\Error;
+
+class InfoCommand extends Command {
+
+	public function __construct() {
+		parent::__construct("info", "Displays information about a plugin.");
+		$this->arg("plugin", "The plugin in question.", true);
+	}
+
+	protected function execute(Problem $problem, array $args) {
+		$this->api->info($args["plugin"], "latest")
+			->then(function(Plugin $plugin) use (&$problem) {
+				$problem->print("- {$plugin->getName()} -");
+				foreach($plugin->getInfo() as $key => $value) {
+					switch($key) {
+						case "status":
+							$problem->print(TextFormat::GOLD . $key . TextFormat::RESET . ": " . PluginState::STATE_DESC[$value]);
+							break;
+						case "authors":
+							$problem->print(TextFormat::GOLD . $key . TextFormat::RESET . ": " . implode(",", $value));
+							break;
+						default:
+							$problem->print(TextFormat::GOLD . $key . TextFormat::RESET . ": " . $value);
+					}
+				}
+			})
+			->otherwise(function(Error $error) use (&$problem) {
+				$problem->print("An error occurred: $error");
+			});
+	}
+}<?php
+declare(strict_types=1);
+
+
+namespace Sheep\Command;
+
+use pocketmine\command\Command as PMCommand;
+use pocketmine\command\CommandSender;
+use pocketmine\command\ConsoleCommandSender;
+use Sheep\Command\Problem\PMProblem;
+
+class PMCommandProxy extends PMCommand {
+	private $command;
+
+	public function __construct(Command $command) {
+		$this->command = $command;
+		parent::__construct($command->getName(), $command->getDescription(), $command->getUsage());
+	}
+
+	public function execute(CommandSender $sender, $commandLabel, array $args) {
+		if(!($sender instanceof ConsoleCommandSender)) {
+			$sender->sendMessage("You must execute this command from the console.");
+			return;
+		}
+		$this->command->run(new PMProblem($sender), $args);
+	}
+}<?php
+declare(strict_types=1);
+
+
+namespace Sheep\Utils;
+
+
+use pocketmine\plugin\Plugin;
+use pocketmine\scheduler\PluginTask;
+use Sheep\PluginState;
+use Sheep\Sheep;
+use Sheep\Store\Store;
+
+class ScanTask extends PluginTask {
+	private $store;
+
+	public function __construct(Plugin $owner, Store $store) {
+		parent::__construct($owner);
+		$this->store = $store;
+	}
+
+	public function onRun($currentTick) {
+		$server = $this->getOwner()->getServer();
+		$sheep = Sheep::getInstance();
+
+		foreach($server->getPluginManager()->getPlugins() as $plugin) {
+			if($this->store->exists($plugin->getName())) continue;
+
+			$sheep->info($plugin->getName(), $plugin->getDescription()->getVersion()) // search default source
+				->then(function(\Sheep\Plugin $plugin) {
+					$plugin->setState(PluginState::STATE_INSTALLED);
+					$this->store->add($plugin);
+				})
+				->otherwise(function(Error $error) use (&$plugin) {
+					$this->store->add(\Sheep\Plugin::fromArray([
+						"source" => "Local",
+						"name" => $plugin->getName(),
+						"version" => $plugin->getDescription()->getVersion(),
+						"state" => PluginState::STATE_INSTALLED
+					]));
+				});
+		}
+	}
+}

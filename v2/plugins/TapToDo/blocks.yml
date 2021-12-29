@@ -1,0 +1,10 @@
+---
+version: 1
+blocks:
+- x: 132
+  "y": 37
+  z: 143
+  level: LobbySimple
+  commands:
+  - muachiakhoa 1
+...

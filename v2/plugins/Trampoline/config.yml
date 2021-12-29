@@ -1,0 +1,19 @@
+###ID Khối###
+#165 Tức Là ID Khối Khi Đứng Lên Sẽ Tự Động Nhảy Lên Cao
+#165 Là Khối Chất Nhờn(Slime)
+Khoi: 165
+
+###Độ Cao###
+#0.3 Tức Là Nhảy Cao 1 Block
+#0.4 Tức Là Nhày Cao 2 Block
+#0.5 TỨc Là Nhảy Cao 3 Block
+#0.6 Tức Là Nhảy Cao 4 Block
+#0.7 Tức Là Nhảy Cao 5 Block
+#0.8 Tức Là Nhảy Cao 6 Block
+#0.9 Tức Là Nhảy Cao 7 Block
+#1 Tức Là Nhảy Cao 8 Block
+DoCao: 0.7
+
+###Hiệu Ứng###
+#Chọn true Để Bật Hiệu Ứng Khi Đứng Lên Khối Chất Nhờn(Slime) Chọn flase Để Tắt
+HieuUng: true

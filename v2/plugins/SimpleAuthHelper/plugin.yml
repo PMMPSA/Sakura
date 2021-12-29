@@ -1,0 +1,46 @@
+main: aliuly\helper\Main
+api: [2.0.0, 3.0.0-ALPHA7]
+load: POSTWORLD
+depend: [SimpleAuth]
+
+name: SimpleAuthHelper
+description: Đơn giản hóa cách mọi người xác thực với máy chủ
+version: 2.0.0
+author: aliuly
+website: https://github.com/alejandroliu/pocketmine-plugins/tree/master/SimpleAuthHelper
+
+commands:
+  chpwd:
+    description: "Đổi mật khẩu"
+    usage: "/chpwd <Mật Khẩu Cũ>"
+    permission: simpleauthhelper.command.chpwd
+    aliases: [passwd, doimk, doimatkhau]
+  resetpwd:
+    description: "Đặt lại mật khẩu"
+    usage: "/resetpwd <Người Chơi>"
+    permission: simpleauthhelper.command.resetpwd
+    aliases: [resetpw, datlaimatkhau, datlaimk]
+  preregister:
+    description: "Đăng ký trước"
+    usage: "/preregister <Người Chơi> <Mật Khẩu>"
+    permission: simpleauthhelper.command.prereg
+    aliases: [prereg]
+  logout:
+    description: "Đăng xuất người chơi"
+    usage: "/logout"
+    permission: simpleauthhelper.command.logout
+    aliases: [dangxuat, dx]
+
+permissions:
+  simpleauthhelper.command.chpwd:
+    default: true
+    description: "Allow users to change passwords"
+  simpleauthhelper.command.logout:
+    default: true
+    description: "Allow users to logout"
+  simpleauthhelper.command.resetpwd:
+    default: op
+    description: "Allow ops to reset other's passwords"
+  simpleauthhelper.command.prereg:
+    default: op
+    description: "Allow ops to pre-register users"

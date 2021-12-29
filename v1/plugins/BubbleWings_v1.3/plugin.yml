@@ -1,0 +1,15 @@
+name: WingBubble
+main: BubbleWings\Main
+version: 1.3
+api: [1.0.0]
+author: "vk.com/eddir"
+commands:
+  wingbubble:
+    description: Lấy Cánh Bubble
+    permission: wingbubble.command
+    usage: /wingbubble
+permissions:
+  wingbubble.command:
+    default: op
+    description: Cho Phép Người Chơi Lấy Cánh Bubble
+#Ghast Noob

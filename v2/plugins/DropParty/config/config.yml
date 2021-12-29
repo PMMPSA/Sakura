@@ -1,0 +1,22 @@
+---
+World: LobbySimple
+Time: 10
+Duration: 180
+Message.Started: '§e⊹⊱§aLễ Hội §bDrop§a Đã §bBắt Đầu§a Tại§b Sảnh Chính§e⊰⊹'
+Message.Ended: '§e⊹⊱§aLễ Hội §bDrop§a Đã §bKết Thúc§e⊰⊹'
+Message.Countdown: '§e⊹⊱§aLễ Hội §bDrop§a Sẽ §bBắt Đầu§a Sau §b{time} Phút§a Nữa§e⊰⊹'
+Popup.Enabled: false
+Popup.Message: '§e⊹⊱§aLễ Hội §bDrop§a Đang Bắt Đầu Tại§b Sảnh Chính§e⊰⊹'
+Coordinates:
+  X: 118
+  "Y": 36
+  Z: 140
+Items:
+- 263
+- 264
+- 4
+- 15
+- 14
+- 388
+- 331
+...

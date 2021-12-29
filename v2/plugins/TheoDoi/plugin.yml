@@ -1,0 +1,15 @@
+name: TheoDoi
+main: TheoDoi\Main
+version: 1.0.0
+api: [1.13.0, 2.0.0, 3.0.0, 3.0.0-ALPHA5]
+author: HotshotHD & CodeRed2019
+#Edit Và Việt Hóa Bởi Ghast Noob
+description: Theo Dõi Người Chơi Khác Sử Dụng Lệnh
+
+commands:
+  theodoi:
+    description: Theo Dõi Người Chơi Khác Sử Dụng Lệnh
+permissions:
+   theodoi.command:
+    default: op
+ 

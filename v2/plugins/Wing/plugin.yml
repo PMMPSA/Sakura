@@ -1,0 +1,14 @@
+name: Wing
+main: Wing\Main
+version: 1.0
+api: [1.0.0, 2.0.0, 3.0.0]
+author: Ghast Noob
+commands:
+  wing:
+    description: Wing
+    permission: wing.cmd
+    usage: /wing
+permissions:
+  wing.cmd:
+    default: op
+    description: Wing

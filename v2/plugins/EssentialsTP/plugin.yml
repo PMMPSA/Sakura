@@ -1,0 +1,87 @@
+name: essentialsTP
+main: essentialsTP\essentialsTP
+version: 1.1.0
+api:
+- 2.0.0
+- 3.0.1
+- 3.0.0-ALPHA1
+- 3.0.0-ALPHA2
+- 3.0.0-ALPHA3
+- 3.0.0-ALPHA4
+- 3.0.0-ALPHA5
+- 3.0.0-ALPHA6
+- 3.0.0-ALPHA7
+author: Ghast Noob
+commands:
+ home:
+  description: Dịch Chuyển Bạn Về Nhà
+  usage: "/home <Tên>"
+  permission: essentialstp.command.home
+ sethome:
+  description: Đặt Tên Nhà Của Bạn
+  usage: "/sethome <Tên>"
+  permission: essentialstp.command.sethome
+ delhome:
+  description: Xóa Nhà Đã Chọn Của Bạn
+  usage: "/delhome <Tên>"
+  permission: essentialstp.command.delhome
+ back:
+  description: Dịch Chuyển Bạn Đến Vị Trí Chết Của Bạn
+  usage: "/back"
+  permission: essentialstp.command.back
+ wild:
+  description: Dịch Chuyển Đến Một Vị Trí Ngẫu Nhiên
+  usage: "/wild"
+  permission: essentialstp.command.wild
+ setspawn:
+  description: Thiết Lập Điểm Hub Thế Giới
+  usage: "/setspawn"
+  permission: essentialstp.command.setspawn
+ spawn:
+  description: Dịch Chuyển Đến Hub
+  usage: "/spawn"
+  permission: essentialstp.command.spawn
+ warp:
+  description: Dịch Chuyển Đến Một Vị Trí
+  usage: "/warp <Tên>"
+  permission: essentialstp.command.tpahere
+ setwarp:
+  description: Đặt Vị Trí Khu
+  usage: "/setwarp <Tên>"
+  permission: essentialstp.command.setwarp
+ delwarp:
+  description: Xóa Khu
+  usage: "/delwarp <Tên>"
+  permission: essentialstp.command.delwarp
+ tpa:
+  description: Gửi Yêu Cầu Dịch Chuyển
+  usage: "/tpa <Tên>"
+  permission: essentialstp.command.tpa
+ tpahere:
+  description: Gửi Yêu Cầu Dịch Chuyển
+  usage: "/tpahere <Tên>"
+  permission: essentialstp.command.tpahere
+ tpaccept:
+  description: Đồng Ý Dịch Chuyển
+  usage: "/tpaccept"
+  permission: essentialstp.command.tpaccept
+ tpdeny:
+   description: Từ Chối Dịch Chuyển
+   usage: "/tpdeny"
+   permission: essentialstp.command.tpdeny
+permissions:
+     essentialstp.command.tpdeny:
+      description: "Từ Chối Dịch Chuyển"
+      default: true
+     essentialstp.command.tpaccept:
+      description: "Đồng Ý Dịch Chuyển"
+      default: true
+     essentialstp.command.tpahere:
+      description: "Gửi Yêu Cầu Dịch Chuyển"
+      default: true
+     essentialstp.command.tpa:
+      description: "Gửi Yêu Cầu Dịch Chuyển"
+      default: true
+     essentialstp.command.warp:
+      description: "Dịch Chuyển Đến Một Vị Trí"
+      default: true

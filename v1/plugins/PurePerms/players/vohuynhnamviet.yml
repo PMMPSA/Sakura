@@ -1,0 +1,10 @@
+---
+userName: Vohuynhnamviet
+group: Admin
+permissions:
+- '*'
+- '*'
+- '*'
+worlds: []
+prefix: 23
+...

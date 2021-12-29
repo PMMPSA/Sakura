@@ -1,0 +1,31 @@
+# Cài đặt AntiHack cho SimpleAuth2
+
+# Kíck hoạt antihack
+enabled: false
+
+#Enable LOGIN protection ONLY for PurePerms SuperAdmin ranks (and OP if enabled)
+protectsuperadmins: true
+
+#Enable LOGIN protection for OPs
+protectops: true
+
+#Threat Level: 1) Low 2) Medium 3) High
+#How many out of IP, CID and SKIN must be the same to allow unrestricted access
+threat: 2
+
+pinregister: "VUI LÒNG GIỮ MÃ PIN AN TOÀN: "
+pintext: "XEM LẠI MÃ PIN NÀY ĐỂ PHỤC HỒI TÀI KHOẢN: "
+pinerror: "PIN LỖI: VUI LÒNG LIÊN HỆ STAFF"
+pinchanged: "MÃ PIN CỦA BẠN ĐÃ ĐƯỢC THAY ĐỔI LÀ: "
+pinunchanged: "MÃ PIN CỦA BẠN CHƯA ĐƯỢC THAY ĐỔI: "
+pinreset: "Đặt lại dữ liệu bảo mật cho: "
+
+pinhelp1: "Bạn đã được cấp MÃ PIN khi đăng ký"
+pinhelp2: "Nếu bạn có chút vấn đề vui lòng liên hệ với STAFF"
+pinhelp3: "Hoặc hỏi STAFF để đặt lại mã PIN của bạn"
+pinhelp4: "Để bảo mật cho bạn, nhập <mật khẩu> <mã PIN> (có khoảng cách)"
+
+hackwarning: "HOẠT ĐỘNG ĐÁNG NGỜ CHO NGƯỜI CHƠI: "
+consolehelp: "Nhập /login <người chơi> để đặt lại kiểm tra an ninh cho người chơi"
+noplayer : "Không tìm thấy người chơi!"
+

@@ -1,0 +1,47 @@
+---
+plugin-name: EssentialsTP
+sqlite-dbname: essentials_tp
+tpa-here-cooldown: "30"
+tp-home-cooldown: "5"
+tp-warp-cooldown: "5"
+tp-spawn-cooldown: "5"
+MOTD: §a✔§b Chào Mừng Bạn
+wild-MaxX: "300"
+wild-MaxY: "300"
+bed-sets-home: "true"
+Lang_invalid_usage: '§a✖§c Sử Dụng Không Hợp Lệ'
+Lang_command_only_use_ingame: §a✖§c Lệnh Này Chỉ Có Thể Sử Dụng Trong Trò Chơi
+Lang_no_permissions: '§a✖§c Bạn Không Có Quyền Sử Dụng Lệnh Này'
+Lang_teleport_home: §a✔§b Bạn Đã Dịch Chuyển Về Nhà
+Lang_teleport_wild: §a✔§b Bạn Đã Được Dịch Chuyển Ngẫu Nhiên
+Lang_teleport_death: §a✔§b Bạn Đã Được Dịch Chuyển Về Chỗ Chết
+Lang_spawn_set: §a✔§b Bạn Đã Đặt §6Hub
+Lang_your_homes: '§a✔§b Nhà Của Bạn:§r'
+Lang_no_home_set: §a✖§c Bạn Không Có Nhà Nào
+Lang_no_home_name: §a✖§c Bạn Không Có Nhà Nào Tên Như Thế
+Lang_home_set: §a✔§b Bạn Đã Đặt Nhà
+Lang_home_delete_1: '§a✔§b Tên Nhà:'
+Lang_home_delete_2: §cĐã Bị Xóa Bỏ
+Lang_no_teleport_self: §a✖§c Bạn Không Thể Dịch Chuyển Về Nơi Chính Mình
+Lang_player_not_online: §a✖§c Người Chơi Hiện Tại không Trực Tuyến
+Lang_sent_request_you: §bGửi Yêu Cầu Dịch Chuyển Tới Bạn
+Lang_sent_request_them: §bBạn Đã Gửi Yêu Cầu Tới Bạn Để Dịch Chuyển Đến Họ
+Lang_accept_request: §bĐể Đồng Ý Lời Mời
+Lang_decline_request: §bĐể Từ Chối Lời Mời
+Lang_request_expire_1: §bYêu Cầu Này Chỉ Tồn Tại Trong
+Lang_request_expire_2: §bGiây
+Lang_request_expire_3: §bTrước Khi Hết Hạn
+Lang_type: §bGhi
+Lang_no_active_request: §a✖§c Bạn Vui Lòng Kêu Người Muốn Dịch Chuyển Tới Bạn Ghi Tên Của Bạn Đầy Đủ Ra
+Lang_warps: §a✔§b Các Khu:§r
+Lang_no_warps: §a✖§c Máy Chủ Hiện Tại Không Có Khu Nào
+Lang_no_warp_listed: §a✖§c Không Có Khu Nào Tên Như Vậy
+Lang_warp_set: §a✔§b Khu Đặt Là
+Lang_warp_to: §a✔§b Bạn Đã Được Dịch Chuyển Đến
+Lang_warp_delete_1: '§a✔§c Khu'
+Lang_warp_delete_2: §cĐã Bị Xóa Bỏ
+Lang_no_warps_name: §a✖§c Không Có Khu Nào Tên Như Vậy
+Land_chunk_not_loaded: §a✖§c Bạn Không thể Dịch Chuyển
+Lang_action_cooldown: §a✖§c Hành Động Đã Hết Hạn Vui Lòng Thử Lại
+Lang_no_death: §a✖§c Chết
+...

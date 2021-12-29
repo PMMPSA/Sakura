@@ -1,0 +1,10 @@
+name: VipArea
+main: VipArea\VipArea\Main
+version: 1.0
+api: [2.0.0, 3.0.0]
+author: Ghast Noob
+
+commands:
+   viparea:
+     default: op
+     description: Tạo Khu Vực Danh Cho VIP

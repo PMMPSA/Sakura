@@ -1,0 +1,93 @@
+---
+version: 1.4.0
+default-factions-plugin: FactionsPro
+groups:
+  OP:
+    chat: §a|§b{prefix}§a| §c[§e{fac_name}§r§c] §c༺§eӨP§c༻ §f{display_name}§r §f>
+      §b{msg}
+    nametag: §a|§b{prefix}§a| §c[§e{fac_name}§r§c] §c༺§eӨP§c༻ §f{display_name}
+    worlds: []
+  Admin:
+    chat: §a|§b{prefix}§a| §c[§e{fac_name}§r§c] §c༺§eAɖɱɨɲ§c༻ §f{display_name} §f>
+      §b{msg}
+    nametag: §a|§b{prefix}§a| §c[§e{fac_name}§r§c] §c༺§eAɖɱɨɲ§c༻ §f{display_name}
+    worlds: []
+  Builder:
+    chat: §a|§b{prefix}§a| §c[§e{fac_name}§r§c] §c༺§eBυɨłɖєɾ§c༻ §f{display_name}§r
+      §f> §b{msg}
+    nametag: §a|§b{prefix}§a| §c[§e{fac_name}§r§c] §c༺§eBυɨłɖєɾ§c༻ §f{display_name}
+    worlds: []
+  Police:
+    chat: §a|§b{prefix}§a| §c[§e{fac_name}§r§c] §c༺§ePσɭίςε§c༻ §f{display_name}§r
+      §f> §b{msg}
+    nametag: §a|§b{prefix}§a| §c[§e{fac_name}§r§c] §c༺§ePσɭίςε§c༻ §f{display_name}
+    worlds: []
+  Helper:
+    chat: §a|§b{prefix}§a| §c[§e{fac_name}§r§c] §c༺§eHεɭρεɾ§c༻ §f{display_name}§r
+      §f> §b{msg}
+    nametag: §a|§b{prefix}§a| §c[§e{fac_name}§r§c] §c༺§eHεɭρεɾ§c༻ §f{display_name}
+    worlds: []
+  YouTuber:
+    chat: §a|§b{prefix}§a| §c[§e{fac_name}§r§c] §b༺§fYøυ§cTυßєɾ§b༻ §f{display_name}§r
+      > §b{msg}
+    nametag: §a|§b{prefix}§a| §c[§e{fac_name}§r§c] §b༺§fYøυ§cTυßєɾ§b༻ §f{display_name}
+    worlds: []
+  Member:
+    chat: §a|§b{prefix}§a| §c[§e{fac_name}§r§c] §f༺§eMεɱβεɾ§f༻ §f{display_name}§r
+      §f> §f{msg}
+    nametag: §a|§b{prefix}§a| §c[§e{fac_name}§r§c] §f༺§eMember§f༻ §f{display_name}
+    worlds: []
+  vip1:
+    nametag: §a|§b{prefix}§a| §c[§e{fac_name}§r§c] §b༺§eVɨρ§a-§cI§b༻ §f{display_name}§r
+    chat: §a|§b{prefix}§a| §c[§e{fac_name}§r§c] §b༺§eVɨρ§a-§cI§b༻ §f{display_name}§r
+      §f> §e{msg}
+  Owner:
+    nametag: §a|§b{prefix}§a| §c[§e{fac_name}§r§c] §c༺§eOωռεɾ§c༻ §f{display_name}
+    chat: §a|§b{prefix}§a| §c[§e{fac_name}§r§c] §c༺§eOωռεɾ§c༻ §f{display_name}§r §f>
+      §b{msg}
+  Guest:
+    chat: §a|§b{prefix}§a| §c[§e{fac_name}§r§c] §f༺§eMεɱβεɾ§f༻ §f{display_name}§r
+      §f> §f{msg}
+    nametag: §a|§b{prefix}§a| §c[§e{fac_name}§r§c] §f༺§eMember§f༻ §f{display_name}
+    worlds: []
+  SuperMem:
+    nametag: §a|§b{prefix}§a| §c[§e{fac_name}§r§c] §e༺§bSμρεɾMεɱ§e༻ §f{display_name}
+    chat: §a|§b{prefix}§a| §c[§e{fac_name}§r§c] §e༺§bSμρεɾMεɱ§e༻ §f{display_name}§r
+      §f> §a{msg}
+  vip2:
+    nametag: §a|§b{prefix}§a| §c[§e{fac_name}§r§c] §b༺§eVɨρ§a-§cII§b༻ §f{display_name}
+    chat: §a|§b{prefix}§a| §c[§e{fac_name}§r§c] §b༺§eVɨρ§a-§cII§b༻ §f{display_name}§r
+      §f> §e{msg}
+  vip3:
+    nametag: §a|§b{prefix}§a| §c[§e{fac_name}§r§c] §b༺§eVɨρ§a-§cIII§b༻ §f{display_name}
+    chat: §a|§b{prefix}§a| §c[§e{fac_name}§r§c] §b༺§eVɨρ§a-§cIII§b༻ §f{display_name}§r
+      §f> §e{msg}
+  vip4:
+    nametag: §a|§b{prefix}§a| §c[§e{fac_name}§r§c] §b༺§eVɨρ§a-§cIV§b༻ §f{display_name}
+    chat: §a|§b{prefix}§a| §c[§e{fac_name}§r§c] §b༺§eVɨρ§a-§cIV§b༻ §f{display_name}§r
+      §f> §e{msg}
+  vip5:
+    nametag: §a|§b{prefix}§a| §c[§e{fac_name}§r§c] §b༺§eVɨρ§a-§cV§b༻ §f{display_name}
+    chat: §a|§b{prefix}§a| §c[§e{fac_name}§r§c] §b༺§eVɨρ§a-§cV§b༻ §f{display_name}§r
+      §f> §e{msg}
+  Empire:
+    chat: §a|§b{prefix}§a| §c[§e{fac_name}§r§c] §e༺§bEɱρɨɾє§e༻§f {display_name}§r
+      §f> §a{msg}
+    nametag: §a|§b{prefix}§a| §c[§e{fac_name}§r§c] §e༺§bEɱρɨɾє§e༻ §f{display_name}
+  GOD:
+    chat: §a|§b{prefix}§a| §c[§e{fac_name}§r§c] §e༺§bGøɖ§e༻ §f{display_name}§r §f>
+      §a{msg}
+    nametag: §a|§b{prefix}§a| §c[§e{fac_name}§r§c] §e༺§bGøɖ§e༻ §f{display_name}
+  TonNgoKhong:
+    chat: §a|§b{prefix}§a| §c[§e{fac_name}§r§c] §e༺§bTôɲ Nɠộ Kħôɲɠ§e༻ §f{display_name}§r
+      §f> §a{msg}
+    nametag: §a|§b{prefix}§a| §c[§e{fac_name}§r§c] §e༺§bTôɲ Nɠộ Kħôɲɠ§e༻ §f{display_name}
+  BlackHole:
+    chat: §a|§b{prefix}§a| §c[§e{fac_name}§r§c] §e༺§bBɭɑɕƙ Hσɭε§e༻ §f{display_name}§r
+      §f> §a{msg}
+    nametag: §a|§b{prefix}§a| §c[§e{fac_name}§r§c] §e༺§bBɭɑɕƙ Hσɭε§e༻ §f{display_name}
+  MVP:
+    chat: §a|§b{prefix}§a| §c[§e{fac_name}§r§c] §e༺§bMѵρ§e༻ §f{display_name}§r §f>
+      §a{msg}
+    nametag: §a|§b{prefix}§a| §c[§e{fac_name}§r§c] §e༺§bMѵρ§e༻ §f{display_name}
+...

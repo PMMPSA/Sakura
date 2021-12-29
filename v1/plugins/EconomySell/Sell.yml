@@ -1,0 +1,122 @@
+---
+125:4:114:shop:
+  x: 125
+  "y": 4
+  z: 114
+  level: shop
+  cost: 100
+  item: 331
+  itemName: Redstone
+  meta: 0
+  amount: 32
+122:4:114:shop:
+  x: 122
+  "y": 4
+  z: 114
+  level: shop
+  cost: 100
+  item: 264
+  itemName: Diamond
+  meta: 0
+  amount: 32
+119:4:114:shop:
+  x: 119
+  "y": 4
+  z: 114
+  level: shop
+  cost: 100
+  item: 388
+  itemName: Emerald
+  meta: 0
+  amount: 32
+116:4:114:shop:
+  x: 116
+  "y": 4
+  z: 114
+  level: shop
+  cost: 50
+  item: 263
+  itemName: Coal
+  meta: 0
+  amount: 32
+113:4:114:shop:
+  x: 113
+  "y": 4
+  z: 114
+  level: shop
+  cost: 100
+  item: 265
+  itemName: Iron Ingot
+  meta: 0
+  amount: 32
+110:4:114:shop:
+  x: 110
+  "y": 4
+  z: 114
+  level: shop
+  cost: 100
+  item: 266
+  itemName: Gold Ingot
+  meta: 0
+  amount: 32
+107:4:114:shop:
+  x: 107
+  "y": 4
+  z: 114
+  level: shop
+  cost: 50
+  item: 351
+  itemName: Lapis Lazuli
+  meta: 4
+  amount: 32
+103:4:100:shop:
+  x: 103
+  "y": 4
+  z: 100
+  level: shop
+  cost: 50
+  item: 4
+  itemName: Cobblestone
+  meta: 0
+  amount: 32
+141:4:82:shop:
+  x: 141
+  "y": 4
+  z: 82
+  level: shop
+  cost: 500
+  item: 81
+  itemName: Cactus
+  meta: 0
+  amount: 32
+144:4:82:shop:
+  x: 144
+  "y": 4
+  z: 82
+  level: shop
+  cost: 500
+  item: 338
+  itemName: Sugar Cane
+  meta: 0
+  amount: 32
+102:4:93:shop:
+  x: 102
+  "y": 4
+  z: 93
+  level: shop
+  cost: 50000
+  item: 7
+  itemName: Bedrock
+  meta: 0
+  amount: 64
+102:4:83:shop:
+  x: 102
+  "y": 4
+  z: 83
+  level: shop
+  cost: 5000000
+  item: 399
+  itemName: Nether Star
+  meta: 0
+  amount: 32
+...

@@ -1,0 +1,11 @@
+name: MuaChiaKhoa
+description: Mua Chìa Khóa
+author: Ghast Noob
+version: 1.0
+main: MuaChiaKhoa\Main
+api: [1.0.0, 2.0.0, 3.0.0]
+commands:
+ muachiakhoa:
+    description: Mua Chìa Khóa
+    permission: muachiakhoa.cmd
+    default: true

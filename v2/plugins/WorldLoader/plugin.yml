@@ -1,0 +1,6 @@
+name: WorldLoader
+description: Load Tất Cả Thế Giới
+main: WorldLoader\Main
+version: 1.0
+api: [3.0.0, 3.0.0-ALPHA6]
+author: Ghast Noob

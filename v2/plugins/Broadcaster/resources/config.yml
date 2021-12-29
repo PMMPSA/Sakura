@@ -1,0 +1,35 @@
+---
+prefix: "§e⊹⊱§dSakuraft§e⊰⊹"
+suffix: "[A]"
+time: 30
+sendmessage-format: "&e[{TIME}] &b[{PREFIX}] {SUFFIX} &a{SENDER}&e>&f {MESSAGE}"
+datetime-format: "H:i:s"
+broadcast-enabled: true
+messages:
+ - "{PREFIX}§a Để Lên Rank Hãy Sử Dụng Lệnh: §b/rankup"
+ - "{PREFIX}§a Vote Cho Máy Chủ Tại: §bbit.do/sakuraft"
+ - "{PREFIX}§a Để Xem Quyền Hạn Của Các Rank Trong RankUP Hãy Sử Dụng Lệnh: §b/quyenhan"
+ - "{PREFIX}§a Cảm Ơn Bạn Đã Tham Gia Máy Chủ"
+ - "{PREFIX}§a Để Sửa Chữa Đồ Hãy Sử Dụng Lệnh: §b/buyfix"
+ - "{PREFIX}§a Bạn Có Thể Hút Nước Bằng Cách Dùng Khối Bọt Biển"
+ - "{PREFIX}§a Để Mua Fly Hãy Sử Dụng Lệnh: §b/buyfly"
+ - "{PREFIX}§a Để Xây Dựng Một Cộng Đồng Người Chơi Văn Minh Hãy Nói Không Với §bHack, Cheat, Nói Tục,..."
+ - "{PREFIX}§a Để Phù Phép Hãy Sử Dụng Lệnh: §b/buyec"
+ - "{PREFIX}§a Hãy Thử Xem Các Người Chơi Đang Trực Tuyến Tại Máy Chủ Bằng Lệnh: §b/list"
+ - "{PREFIX}§a Máy Chủ Đang Trong Quá Trình Phát Triển Mong Mọi Người Ủng Hộ"
+ - "{PREFIX}§a Bạn Lỡ Tay Làm Mất Cúp §dSakuraft§a?§a Đừng Lo Lắng Vì Đã Có Lệnh: §b/muacup"
+ - "{PREFIX}§a Bạn Có Thể Xem Thời Gian Hiện Tại Bằng Bảng Thông Tin Bên Phải Màn Hình"
+ - "{PREFIX}§a Mọi Hành Vi §bHack, Cheat,...§a Nếu Phát Hiện Sẽ Bị§b Cấm§a Vào Máy Chủ"
+ - "{PREFIX}§a Để Về Sảnh Chính Hãy Sử Dụng Lệnh: §b/lobby, /hub, /spawn"
+ - "{PREFIX}§a Chúng Tôi Sẽ Luôn Theo Dõi Bạn!"
+ - "{PREFIX}§a Để Sửa Chỗ Đồ Hãy Sử Dụng Lệnh: §b/buyfix"
+ - "{PREFIX}§a Để Xem Quyền Lợi Của VIP Hãy Sử Dụng Lệnh: §b/quyenvip"
+ - "{PREFIX}§a Để Xem Danh Sách Các Quản Trị Viên Hãy Sử Dụng Lệnh: §b/ops"
+ - "{PREFIX}§a Tạo Ngay Một Bang Hội Với Giá 3000 Xu Bằng Cách: §b/g create (Tên Bang Hội)"
+popup-time: 15
+popup-duration: 5
+sendpopup-format: "&a{SENDER}&e>>&f {MESSAGE}"
+popup-broadcast-enabled: false
+popups:
+ - "&a{TOTALPLAYERS}§f/&a{MAXPLAYERS}§b Đang Trực Tuyến"
+...

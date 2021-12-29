@@ -1,0 +1,416 @@
+---
+Member:
+  alias: mem
+  inheritance: []
+  permissions:
+  - advancedkits.command
+  - essentials.kit.use
+  - essentials.list
+  - essentials.warp.use
+  - essentials.warps.sb
+  - essentials.warps.shop
+  - myplot.command.claim
+  - notp
+  - pchat.colored.format
+  - pchat.colored.nametag
+  - pocketmine.command.list
+  - pocketmine.command.me
+  - pocketmine.command.transfer
+  - pocketmine.command.transferserver
+  - pperms.command.ppinfo
+  - quyenhang.command
+  - sell.all
+  - sell.hand
+  - tool.nick.use
+  worlds: []
+  isDefault: true
+Admin:
+  alias: adm
+  inheritance: []
+  permissions:
+  - essentials.ban
+  - essentials.ban-ip
+  - essentials.banlist
+  - essentials.bsn
+  - essentials.fly
+  - essentials.gamemode
+  - essentials.kick
+  - essentials.list
+  - essentials.pardon
+  - essentials.pardon-ip
+  - essentials.warps.sb
+  - pocketmine.command.ban
+  - pocketmine.command.ban-ip
+  - pocketmine.command.banlist
+  - pocketmine.command.gamemode
+  - pocketmine.command.kick
+  - pocketmine.command.pardon
+  - pocketmine.command.pardon-ip
+  - pocketmine.command.teleport
+  - pocketmine.command.transfer
+  - poketmine.command.port
+  - poketmine.command.teleport
+  - simplewarp.command.warp
+  - simplewarp.warp
+  - tool.fly.use
+Builder:
+  alias: bdr
+  inheritance: []
+  permissions:
+  - essentials.gamemode
+  - essentials.teleport
+  - essentials.warps
+  - essentials.warps.
+  - essentials.warps.sb
+  - fbop
+  - gamemode
+  - pocketmine.command.gamemode
+  - pocketmine.command.teleport
+  - pocketmine.command.transfer
+  worlds: []
+Owner:
+  alias: owr
+  inheritance: []
+  permissions:
+  - '*'
+  - essentials.warps
+  - essentials.warps.
+  - essentials.warps.sb
+  - fbop
+  - pocketmine.command.transfer
+  worlds: []
+Co-Owner:
+  alias: coowr
+  inheritance: []
+  permissions:
+  - essentials.warps
+  - essentials.warps.
+  - essentials.warps.sb
+  - fbop
+  - pocketmine.command.transfer
+  worlds: []
+OP:
+  alias: op
+  inheritance: []
+  permissions:
+  - '*'
+  - essentials.warps
+  - essentials.warps.
+  - essentials.warps.sb
+  - fbop
+  - pocketmine.command.transfer
+  worlds: []
+YouTuber:
+  alias: yt
+  inheritance: []
+  permissions:
+  - essentials.fly
+  - essentials.list
+  - essentials.teleport
+  - essentials.warps
+  - essentials.warps.
+  - essentials.warps.sb
+  - fbop
+  - fly
+  - pocketmine.command.teleport
+  - pocketmine.command.transfer
+  - tp
+  worlds: []
+VIPI:
+  alias: vip
+  inheritance: []
+  permissions:
+  - essentials.colorchat
+  - essentials.fly.others
+  - essentials.fly.use
+  - essentials.kit.use
+  - essentials.warp.use
+  - essentials.warps
+  - essentials.warps.
+  - essentials.warps.sb
+  - fly.me
+  - pchat.colored.format
+  - pchat.colored.nametag
+  - pocketmine.command.list
+  - pocketmine.command.me
+  - pocketmine.command.transfer
+  - pocketmine.command.transferserver
+  - pperms.command.ppinfo
+  worlds: []
+VIPII:
+  alias: vip2
+  inheritance: []
+  permissions:
+  - essentials.clearinventory.use
+  - essentials.colorchat
+  - essentials.fly.use
+  - essentials.getpos.use
+  - essentials.kit.use
+  - essentials.teleport
+  - essentials.warp.use
+  - essentials.warps
+  - essentials.warps.
+  - essentials.warps.sb
+  - fly.me
+  - pchat.colored.format
+  - pchat.colored.nametag
+  - pocketmine.command.list
+  - pocketmine.command.me
+  - pocketmine.command.teleport
+  - pocketmine.command.transfer
+  - pocketmine.command.transferserver
+  - pperms.command.ppinfo
+  worlds: []
+VIPIII:
+  alias: vip3
+  inheritance: []
+  permissions:
+  - essentials.clearinventory.use
+  - essentials.colorchat
+  - essentials.fly.use
+  - essentials.kit.use
+  - essentials.warp.use
+  - essentials.warps
+  - essentials.warps.
+  - essentials.warps.sb
+  - fly.me
+  - mask.command
+  - pchat.colored.format
+  - pchat.colored.nametag
+  - pocketmine.broadcast.user
+  - pocketmine.command.list
+  - pocketmine.command.me
+  - pocketmine.command.nick
+  - pocketmine.command.status
+  - pocketmine.command.teleport
+  - pocketmine.command.transferserver
+  - pperms.command.ppinfo
+  - sell.all
+  - simplewarp.command.warp
+  - simplewarp.warp
+  - tool.fly.use
+  - tool.nick.use
+  worlds: []
+Police:
+  alias: ""
+  isDefault: false
+  inheritance: []
+  permissions:
+  - essentials.ban
+  - essentials.ban-ip
+  - essentials.banlist
+  - essentials.colorchat
+  - essentials.fly
+  - essentials.fly.use
+  - essentials.kick
+  - essentials.kit.use
+  - essentials.list
+  - essentials.pardon
+  - essentials.pardon-ip
+  - essentials.setgroup
+  - essentials.teleport
+  - essentials.warp.use
+  - essentials.warps
+  - essentials.warps.
+  - essentials.warps.sb
+  - fly.me
+  - pocketmine.command.ban
+  - pocketmine.command.banlist
+  - pocketmine.command.fly
+  - pocketmine.command.kick
+  - pocketmine.command.mute
+  - pocketmine.command.pardon
+  - pocketmine.command.teleport
+  - pocketmine.command.tp
+  - pperms.command.listuperms
+  - simplewarp.command.warp
+  - simplewarp.warp
+  worlds: []
+Helper:
+  alias: ""
+  isDefault: false
+  inheritance: []
+  permissions:
+  - essentials.ban
+  - essentials.banlist
+  - essentials.colorchat
+  - essentials.fly
+  - essentials.fly.use
+  - essentials.kick
+  - essentials.kit.use
+  - essentials.list
+  - essentials.pardon
+  - essentials.teleport
+  - essentials.tp.me
+  - essentials.warp.use
+  - essentials.warps
+  - essentials.warps.
+  - essentials.warps.sb
+  - pocketmine.command.ban
+  - pocketmine.command.kick
+  - pocketmine.command.teleport
+  - pocketmine.command.tp
+  - pocketmine.command.transfer
+  - pperms.command.listuperms
+  - simplewarp.command.warp
+  - simplewarp.warp
+  worlds: []
+Co-Op:
+  alias: ""
+  isDefault: false
+  inheritance: []
+  permissions:
+  - '*'
+  - pocketmine.command.transfer
+  worlds: []
+victory:
+  alias: ""
+  isDefault: false
+  inheritance: []
+  permissions:
+  - pocketmine.command.transfer
+  worlds: []
+Empire:
+  alias: ""
+  isDefault: false
+  inheritance: []
+  permissions:
+  - fly.me
+  - notp
+  - pocketmine.command.nick
+  - pocketmine.command.teleport
+  - pocketmine.command.transfer
+  - quyenhang.command
+  - sell.all
+  - tool.fly.use
+  - tool.nick.use
+  worlds: []
+SuperMem:
+  alias: ""
+  isDefault: false
+  inheritance: []
+  permissions:
+  - fly.me
+  - pocketmine.command.transfer
+  - quyenhang.command
+  - sell.all
+  - sell.hand
+  - tool.fly.me
+  - tool.fly.use
+  - tool.nick.use
+  worlds: []
+giamkhao:
+  alias: ""
+  isDefault: false
+  inheritance: []
+  permissions:
+  - pocketmine.command.transfer
+  worlds: []
+Best_pvp:
+  alias: ""
+  isDefault: false
+  inheritance: []
+  permissions:
+  - pocketmine.command.transfer
+  worlds: []
+Test:
+  alias: ""
+  isDefault: false
+  inheritance: []
+  permissions:
+  - pocketmine.command.transfer
+  worlds: []
+VIPIV:
+  alias: ""
+  isDefault: false
+  inheritance: []
+  permissions:
+  - essentials.gamemode
+  - notp
+  - pocketmine.command.teleport
+  - pocketmine.command.transfer
+  - quyenhang.command
+  - sell.all
+  - tool.fly.use
+  - tool.gmc
+  - tool.nick.use
+  - wingfire.command
+  - winglucky.command
+  - wingwater.command
+  worlds: []
+GOD:
+  alias: ""
+  isDefault: false
+  inheritance: []
+  permissions:
+  - pocketmine.command.teleport
+  - pocketmine.command.transfer
+  - quyenhang.command
+  - tool.fly.use
+  - tool.nick.use
+  worlds: []
+MVP:
+  alias: ""
+  isDefault: false
+  inheritance: []
+  permissions:
+  - kit.basic.command
+  - pocketmine.command.transfer
+  - quyenhang.command
+  worlds: []
+TonNgoKhong:
+  alias: ""
+  isDefault: false
+  inheritance: []
+  permissions:
+  - changescape.command
+  - notp
+  - pocketmine.command.teleport
+  - pocketmine.command.transfer
+  - pocketmine.command.transferserver
+  - quyenhang.command
+  - sell.all
+  - skinchanger.cmd.changecape
+  - tool.fly.use
+  - tool.nick.use
+  - transferserver.command
+  - wingfire.command
+  - wingwaterdrip.command
+  worlds: []
+BlackHole:
+  alias: ""
+  isDefault: false
+  inheritance: []
+  permissions:
+  - pocketmine.command.transfer
+  - quyenhang.command
+  worlds: []
+AnhBoQua:
+  alias: ""
+  isDefault: false
+  inheritance: []
+  permissions: []
+  worlds: []
+VipV:
+  alias: ""
+  isDefault: false
+  inheritance: []
+  permissions:
+  - mask.command
+  - muarank.command
+  - pocketmine.command.teleport
+  - quyenhang.command
+  - sell.all
+  - sell.hand
+  - skinchanger.cmd.changescape
+  - wingangry.command
+  - wingcritical.command
+  - wingfire.command
+  - wingflame.command
+  - winghappy.command
+  - wingheart.command
+  - wingspore.command
+  - wingwater.command
+  - wingwaterdrip.command
+  worlds: []
+...

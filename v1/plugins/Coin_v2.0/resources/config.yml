@@ -1,0 +1,8 @@
+# Tài Nguyên & Cấu Hình Coin
+monetary-unit: "Coin"
+add-op-at-rank: false
+default-coin: 0
+max-coin: 999999999999999999999999999999
+debug: true
+default-lang: user-define
+auto-save-interval: 1

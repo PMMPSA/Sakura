@@ -1,0 +1,14 @@
+name: MuaRank
+version: 1.0
+api: 2.0.0
+main: MuaRank\Main
+author: Ghast Noob
+commands:
+ muarank:
+  permisson: muarank.command
+  description: "Mua Rank Dành Cho Người Chơi"
+permissions:
+ muarank:
+  children:
+   muarank.command:
+   default: true

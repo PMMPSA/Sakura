@@ -1,0 +1,17 @@
+---
+data-provider: yamlv1
+default-language: en
+disable-op: true
+enable-multiworld-perms: false
+enable-noeul-sixtyfour: false
+mysql-settings:
+  host: 127.0.0.1
+  port: 3306
+  user: fcvn
+  password: fcvn
+  db: fcvn
+noeul-minimum-pw-length: 6
+superadmin-ranks:
+- OP
+- Owner
+...

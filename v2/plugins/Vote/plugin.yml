@@ -1,0 +1,12 @@
+name: Vote
+description: Vote
+author: Ghast Noob
+version: 1.0
+main: Vote\Vote\Main
+api: 2.0.0
+commands:
+ vote:
+    description: Vote
+    usage: "Sử dụng: /vote"
+    permission: vote.command
+    default: true

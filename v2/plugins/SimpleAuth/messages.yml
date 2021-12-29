@@ -1,0 +1,29 @@
+# SimpleAuth 1.8 language file
+# Lệnh đăng nhập khác: /dn, /dangnhap
+# Lệnh đăng ký khác: /dk, /dangky
+
+join:
+ message1: "§e⊹⊱§aChào Mừng Bạn Đến Với §dSakuraft§e⊰⊹"
+ message2: "§e⊹⊱§aMáy Chủ Làm Về SkyBlock Mong Bạn Ủng Hộ§e⊰⊹"
+ register: "§e⊹⊱§aVui Lòng Nhập Mật Khẩu Vào Thanh Trò Chuyện Để Đăng Ký/Đăng Nhập§e⊰⊹"
+ login: "§e⊹⊱§aNhập Mật Khẩu Vào Thanh Trò Chuyện Để Đăng Ký/Đăng Nhập§e⊰⊹"
+ popup: "§e⊹⊱§aBạn Chưa Đăng Ký/Đăng Nhập§e⊰⊹"
+
+register:
+ usage: "/register <Mật Khẩu>"
+ description: "Tạo một tài khoản"
+ permission: "§e⊹⊱§cBạn Không Có Quyền Sử Dụng Câu Lệnh Này§e⊰⊹"
+ error:
+  password: "§e⊹⊱§cMật Khẩu Của Bạn Quá Ngắn§e⊰⊹"
+  registered: "§e⊹⊱§cTài Khoản Này Đã Được Đăng Ký§e⊰⊹"
+  general: "§e⊹⊱§cLỗi§e⊰⊹"
+
+login:
+ usage: "/login <mật khẩu>"
+ description: "Đăng nhập vào tài khoản"
+ permission: "§e⊹⊱§cBạn Không Có Quyền Sử Dụng Câu Lệnh Này§e⊰⊹"
+ success: "§e⊹⊱§aĐăng Nhập Thành Công§e⊰⊹"
+ error:
+  password: "§e⊹⊱§cMật Khẩu Không Chính Xác§e⊰⊹"
+  registered: "§e⊹⊱§cTài Khoản Này Chưa Được Đăng Ký§e⊰⊹"
+  block: "§e⊹⊱§cBạn Đã Nhập Sai Mật Khẩu Quá Nhiều Lần§e⊰⊹"

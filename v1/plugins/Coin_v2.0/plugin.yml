@@ -1,0 +1,40 @@
+name: Coin
+main: PTK\coinapi\Coin
+version: "2.0"
+author: PTK-KienPham
+#Edit: Ghast Noob
+api:
+- 2.0.0
+- 2.1.0
+- 3.0.0
+
+permissions:
+ coinapi.*:
+  default: op
+  description: Cho Phép Kiểm Soát Tất cả Các Chức Năng Trong Coin
+  children:
+   coinapi.command.*:
+    default: op
+    description: Cho Phép Sử Dụng Tất Cả Các Lệnh Trong Coin
+    children:
+     coinapi.command.setcoin:
+      default: op
+      description: Chỉnh Sửa Số Coin Ai Đó Thành Một Số Nguyên Bất Kỳ
+     coinapi.command.mycoin:
+      description: Kiêm Tra Số Coin Hiện Tại Của Bản Thân
+      default: true
+     coinapi.command.pay:
+      description: Chuyển Số Coin Bất Kỳ Cho Một Ai Đó
+      default: true
+     coinapi.command.seecoin:
+      description: Xem Số Lượng Coin Đang Có Của Một Người Nào Đó
+      default: true
+     coinapi.command.givecoin:
+      description: Cộng Thêm Coin Vào Tài Khoản Của Một Người Nào Đó
+      default: op
+     coinapi.command.takecoin:
+      description: Trừ Số Coin Của Tài Khoản Một Người Nào Đó
+      default: op
+     coinapi.command.topcoin:
+      description: Xem Xếp Hạng Coin Của Tất Cả Tài Khoản Coa Trong Máy Chủ
+      default: true

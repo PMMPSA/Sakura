@@ -1,0 +1,7 @@
+---
+banitem:
+  46: TNT
+protect: protect
+bancmds:
+  /topcoin: /topcoin
+...

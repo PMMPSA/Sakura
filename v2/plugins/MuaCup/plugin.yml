@@ -1,0 +1,14 @@
+name: MuaCup
+version: 1.0
+api: 2.0.0
+main: MuaCup\Main
+author: Ghast Noob
+commands:
+ muacup:
+  permisson: muacup.cmd
+  description: "Mua Cúp Dành Cho Người Chơi"
+permissions:
+ muacup:
+  children:
+   muacup.cmd:
+   default: true

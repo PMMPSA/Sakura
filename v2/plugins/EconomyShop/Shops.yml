@@ -1,0 +1,12 @@
+---
+125:35:123:LobbySimple:
+  x: 125
+  "y": 35
+  z: 123
+  level: LobbySimple
+  price: 3000
+  item: 346
+  itemName: Unknown
+  meta: 0
+  amount: 1
+...

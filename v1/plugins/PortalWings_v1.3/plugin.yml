@@ -1,0 +1,15 @@
+name: WingPortal
+main: PortalWings\Main
+version: 1.3
+api: [1.0.0]
+author: "vk.com/eddir"
+commands:
+  wingportal:
+    description: Lấy Cánh Portal
+    permission: wingportal.command
+    usage: /wingportal
+permissions:
+  wingportal.command:
+    default: op
+    description: Cho Phép Người Chơi Lấy Cánh Portal
+#Ghast Noob

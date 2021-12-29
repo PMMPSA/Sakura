@@ -1,0 +1,17 @@
+---
+Time changes: 0
+Tell time: true
+Tell time interval in minuts: 5
+LobbySimple: 6
+nether: 3
+ender: 3
+1o1: 6
+sb: 6
+world: 6
+LobbySimple-tick: 6001
+world-tick: 6001
+sb-tick: 6001
+1o1-tick: 6001
+Shop: 6
+Shop-tick: 6001
+...

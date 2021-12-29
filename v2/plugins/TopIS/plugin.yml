@@ -1,0 +1,11 @@
+name: TopIS
+version: 1.0
+api: [1.0.0, 2.0.0, 3.0.0]
+author: Ghast Noob
+main: TopIS\Main
+
+commands:
+  is:
+    description: Xem Thông Tin Đảo
+  topis:
+    description: Xem Xếp Hạng Đảo

@@ -1,0 +1,40 @@
+---
+groups:
+  SuperMem:
+    entrance:
+    - setgroup {name} SuperMem
+    exit: []
+    perms: []
+    members: []
+  Empire:
+    entrance:
+    - setgroup {name} Empire
+    exit: []
+    perms: []
+    members: []
+  GOD:
+    entrance:
+    - setgroup {name} GOD
+    exit: []
+    perms: []
+    members: []
+  TonNgoKhong:
+    entrance:
+    - setgroup {name} TonNgoKhong
+    exit: []
+    perms: []
+    members: []
+  BlackHole:
+    entrance:
+    - setgroup {name} BlackHole
+    exit: []
+    perms: []
+    members: []
+  MVP:
+    entrance:
+    - setgroup {name} MVP
+    exit: []
+    perms: []
+    members:
+    - Ghast_Noob
+...

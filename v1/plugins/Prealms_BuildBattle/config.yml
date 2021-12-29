@@ -1,0 +1,97 @@
+---
+temas:
+- Thú cưng - Pet
+- Kinh dị - Horror
+- Xe hơi - Car
+- Đảo - Island
+- Tivi - Tivi
+- Nhà ở - House
+- Mùa đông - Winter
+- Cầu - Bridge
+- Trái cây - Fruits
+- Mob MCPE - MCPE
+- Thuyền - Boat
+- Thác nước - WaterFall
+- Logo - Logo
+- Máy bay - AirPlane
+- Nội thất - Furniture
+- Skin - Skin
+- Biểu tượng - Icon
+bb1Spawn1:
+- 806
+- 6
+- -515
+bb1Spawn2:
+- 770
+- 6
+- -515
+bb1Spawn3:
+- 734
+- 6
+- -515
+bb1Spawn4:
+- 700
+- 6
+- -515
+bb1Spawn5:
+- 665
+- 6
+- -514
+bb1Spawn6:
+- 628
+- 6
+- -514
+bb1Spawn7:
+- 626
+- 6
+- -481
+bb1Spawn8:
+- 661
+- 6
+- -479
+bb1Spawn9:
+- 698
+- 6
+- -479
+bb1Spawn10:
+- 734
+- 6
+- -479
+bb1Spawn11:
+- 770
+- 6
+- -479
+bb1Spawn12:
+- 806
+- 6
+- -479
+bb1Spawn13:
+- 806
+- 6
+- -443
+bb1Spawn14:
+- 770
+- 6
+- -443
+bb1Spawn15:
+- 734
+- 6
+- -443
+bb1Spawn16:
+- 695
+- 6
+- -443
+bb1Spawn17:
+- 819
+- 5
+- -544
+arenas:
+- bb1
+bb1Start: 0
+bb1PlayTime: 470
+bb1StartTime: 30
+bb1start: 0
+bb1inicio: 0
+bb1tema: Pájaro - Bird
+actualbb1: Bill
+...

@@ -1,0 +1,13 @@
+name: AutoSell
+main: AutoSell\Main
+version: 2.0.0
+api: [1.0.0, 1.1.0, 1.2.0, 1.2.1, 2.0.0, 3.0.0-ALPHA6, 3.0.0-ALPHA5, 3.0.0-ALPHA4]
+load: POSTWORLD
+author: Ghast Noob
+commands:
+  autosell:
+    description: "Tự Động Bán Đồ Cho Người Chơi"
+    permission: "autosell.command"
+permissions:
+  autosell.command:
+    default: op

@@ -1,0 +1,6 @@
+name: AutoInv
+author: PocketMine-MP
+description: AutoInv
+version: 0.1
+main: PTK\AutoInv\AutoInv
+api: [2.0.0, 3.0.0]

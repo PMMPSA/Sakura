@@ -1,0 +1,452 @@
+---
+130:4:114:shop:
+  x: 130
+  "y": 4
+  z: 114
+  level: shop
+  price: 100
+  item: 17
+  itemName: Oak Wood
+  meta: 0
+  amount: 32
+136:4:114:shop:
+  x: 136
+  "y": 4
+  z: 114
+  level: shop
+  price: 20000
+  item: 138
+  itemName: Beacon
+  meta: 0
+  amount: 1
+143:4:114:shop:
+  x: 143
+  "y": 4
+  z: 114
+  level: shop
+  price: 100
+  item: 6
+  itemName: Oak Sapling
+  meta: 0
+  amount: 5
+146:4:114:shop:
+  x: 146
+  "y": 4
+  z: 114
+  level: shop
+  price: 100
+  item: 6
+  itemName: Spruce Sapling
+  meta: 1
+  amount: 5
+150:4:114:shop:
+  x: 150
+  "y": 4
+  z: 114
+  level: shop
+  price: 100
+  item: 6
+  itemName: Birch Sapling
+  meta: 2
+  amount: 5
+153:4:114:shop:
+  x: 153
+  "y": 4
+  z: 114
+  level: shop
+  price: 100
+  item: 6
+  itemName: Jungle Sapling
+  meta: 3
+  amount: 5
+156:4:114:shop:
+  x: 156
+  "y": 4
+  z: 114
+  level: shop
+  price: 100
+  item: 6
+  itemName: Acacia Sapling
+  meta: 4
+  amount: 5
+159:4:114:shop:
+  x: 159
+  "y": 4
+  z: 114
+  level: shop
+  price: 100
+  item: 6
+  itemName: Dark Oak Sapling
+  meta: 5
+  amount: 5
+162:4:114:shop:
+  x: 162
+  "y": 4
+  z: 114
+  level: shop
+  price: 200
+  item: 155
+  itemName: Quartz Block
+  meta: 0
+  amount: 32
+104:4:114:shop:
+  x: 104
+  "y": 4
+  z: 114
+  level: shop
+  price: 10
+  item: 8
+  itemName: Water
+  meta: 0
+  amount: 1
+161:4:109:shop:
+  x: 161
+  "y": 4
+  z: 109
+  level: shop
+  price: 20000
+  item: 261
+  itemName: Bow
+  meta: 0
+  amount: 1
+161:4:106:shop:
+  x: 161
+  "y": 4
+  z: 106
+  level: shop
+  price: 100
+  item: 262
+  itemName: Arrow
+  meta: 0
+  amount: 64
+161:4:103:shop:
+  x: 161
+  "y": 4
+  z: 103
+  level: shop
+  price: 100000
+  item: 379
+  itemName: Brewing Stand
+  meta: 0
+  amount: 1
+103:4:88:shop:
+  x: 103
+  "y": 4
+  z: 88
+  level: shop
+  price: 2000
+  item: 1
+  itemName: Stone
+  meta: 0
+  amount: 64
+139:4:114:shop:
+  x: 139
+  "y": 4
+  z: 114
+  level: shop
+  price: 1000
+  item: 2
+  itemName: Grass
+  meta: 0
+  amount: 32
+103:4:97:shop:
+  x: 103
+  "y": 4
+  z: 97
+  level: shop
+  price: 5000
+  item: 49
+  itemName: Obsidian
+  meta: 0
+  amount: 30
+161:4:112:shop:
+  x: 161
+  "y": 4
+  z: 112
+  level: shop
+  price: 1000000000
+  item: 397
+  itemName: Skull
+  meta: 5
+  amount: 1
+103:4:94:shop:
+  x: 103
+  "y": 4
+  z: 94
+  level: shop
+  price: 100000
+  item: 7
+  itemName: Bedrock
+  meta: 0
+  amount: 1
+133:4:114:shop:
+  x: 133
+  "y": 4
+  z: 114
+  level: shop
+  price: 10000
+  item: 466
+  itemName: Enchanted Golden Apple
+  meta: 0
+  amount: 10
+103:4:112:shop:
+  x: 103
+  "y": 4
+  z: 112
+  level: shop
+  price: 5000
+  item: 352
+  itemName: Bone
+  meta: 0
+  amount: 10
+103:4:109:shop:
+  x: 103
+  "y": 4
+  z: 109
+  level: shop
+  price: 5000
+  item: 12
+  itemName: Sand
+  meta: 0
+  amount: 10
+103:4:106:shop:
+  x: 103
+  "y": 4
+  z: 106
+  level: shop
+  price: 10000
+  item: 337
+  itemName: Clay
+  meta: 0
+  amount: 10
+103:4:103:shop:
+  x: 103
+  "y": 4
+  z: 103
+  level: shop
+  price: 2000
+  item: 169
+  itemName: Sea Lantern
+  meta: 0
+  amount: 5
+103:4:91:shop:
+  x: 103
+  "y": 4
+  z: 91
+  level: shop
+  price: 1000000
+  item: 444
+  itemName: Elytra Wings
+  meta: 0
+  amount: 1
+103:4:85:shop:
+  x: 103
+  "y": 4
+  z: 85
+  level: shop
+  price: 1000000
+  item: 378
+  itemName: Magma Cream
+  meta: 0
+  amount: 1
+103:4:82:shop:
+  x: 103
+  "y": 4
+  z: 82
+  level: shop
+  price: 1000000000
+  item: 399
+  itemName: Nether Star
+  meta: 0
+  amount: 10
+105:4:82:shop:
+  x: 105
+  "y": 4
+  z: 82
+  level: shop
+  price: 10000000
+  item: 370
+  itemName: Unknown
+  meta: 0
+  amount: 1
+132:4:82:shop:
+  x: 132
+  "y": 4
+  z: 82
+  level: shop
+  price: 500
+  item: 364
+  itemName: Steak
+  meta: 0
+  amount: 5
+135:4:82:shop:
+  x: 135
+  "y": 4
+  z: 82
+  level: shop
+  price: 1000
+  item: 20
+  itemName: Glass
+  meta: 0
+  amount: 5
+108:4:82:shop:
+  x: 108
+  "y": 4
+  z: 82
+  level: shop
+  price: 10000000
+  item: 369
+  itemName: Unknown
+  meta: 0
+  amount: 1
+111:4:82:shop:
+  x: 111
+  "y": 4
+  z: 82
+  level: shop
+  price: 10000000
+  item: 372
+  itemName: Nether Wart
+  meta: 0
+  amount: 5
+114:4:82:shop:
+  x: 114
+  "y": 4
+  z: 82
+  level: shop
+  price: 1000
+  item: 81
+  itemName: Cactus
+  meta: 0
+  amount: 10
+117:4:82:shop:
+  x: 117
+  "y": 4
+  z: 82
+  level: shop
+  price: 1000
+  item: 86
+  itemName: Pumpkin
+  meta: 0
+  amount: 5
+120:4:82:shop:
+  x: 120
+  "y": 4
+  z: 82
+  level: shop
+  price: 1000
+  item: 360
+  itemName: Melon
+  meta: 0
+  amount: 5
+123:4:82:shop:
+  x: 123
+  "y": 4
+  z: 82
+  level: shop
+  price: 1000
+  item: 295
+  itemName: Wheat Seeds
+  meta: 0
+  amount: 5
+126:4:82:shop:
+  x: 126
+  "y": 4
+  z: 82
+  level: shop
+  price: 1000
+  item: 458
+  itemName: Beetroot Seeds
+  meta: 0
+  amount: 5
+129:4:82:shop:
+  x: 129
+  "y": 4
+  z: 82
+  level: shop
+  price: 1000
+  item: 170
+  itemName: Hay Bale
+  meta: 0
+  amount: 5
+138:4:82:shop:
+  x: 138
+  "y": 4
+  z: 82
+  level: shop
+  price: 10000
+  item: 88
+  itemName: Soul Sand
+  meta: 0
+  amount: 32
+124:4:115:shop:
+  x: 124
+  "y": 4
+  z: 115
+  level: shop
+  price: 500
+  item: 331
+  itemName: Redstone
+  meta: 0
+  amount: 64
+121:4:115:shop:
+  x: 121
+  "y": 4
+  z: 115
+  level: shop
+  price: 500
+  item: 264
+  itemName: Diamond
+  meta: 0
+  amount: 64
+118:4:115:shop:
+  x: 118
+  "y": 4
+  z: 115
+  level: shop
+  price: 500
+  item: 388
+  itemName: Emerald
+  meta: 0
+  amount: 64
+115:4:115:shop:
+  x: 115
+  "y": 4
+  z: 115
+  level: shop
+  price: 300
+  item: 263
+  itemName: Coal
+  meta: 0
+  amount: 64
+112:4:115:shop:
+  x: 112
+  "y": 4
+  z: 115
+  level: shop
+  price: 500
+  item: 265
+  itemName: Iron Ingot
+  meta: 0
+  amount: 64
+109:4:115:shop:
+  x: 109
+  "y": 4
+  z: 115
+  level: shop
+  price: 500
+  item: 266
+  itemName: Gold Ingot
+  meta: 0
+  amount: 64
+106:4:115:shop:
+  x: 106
+  "y": 4
+  z: 115
+  level: shop
+  price: 300
+  item: 351
+  itemName: Lapis Lazuli
+  meta: 4
+  amount: 64
+...

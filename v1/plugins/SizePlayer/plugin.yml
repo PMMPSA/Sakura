@@ -1,0 +1,9 @@
+name: SizePLayer
+version: 1.5
+main: XxBoomer\SizePlayer\SizePLayer
+api: [2.1.0]
+author: XxBoomer
+
+permission:
+  size.command: 
+    default: op

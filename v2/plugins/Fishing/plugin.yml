@@ -1,0 +1,5 @@
+name: Fishing
+version: 1.0
+api: 2.0.0
+main: Fishing\Main
+author: Ghast Noob

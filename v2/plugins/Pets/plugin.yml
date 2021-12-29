@@ -1,0 +1,6 @@
+name: Pets
+author: Ghast Noob
+description: Triệu Hồi Thú 
+version: 2.0
+main: Pets\Main
+api: [1.0.0, 2.0.0, 3.0.0-ALPHA1, 3.0.0-ALPHA2]

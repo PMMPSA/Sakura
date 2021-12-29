@@ -1,0 +1,15 @@
+name: WingCritical
+main: CriticalWings\Main
+version: 1.3
+api: [1.0.0]
+author: "vk.com/eddir"
+commands:
+  wingcritical:
+    description: Lấy Cánh Critical
+    permission: wingcritical.command
+    usage: /wingcritical
+permissions:
+  wingcritical.command:
+    default: op
+    description: Cho Phép Người Chơi Lấy Cánh Critical
+#Ghast Noob

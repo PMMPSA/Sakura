@@ -1,0 +1,12 @@
+name: ClearInv
+description: Xóa Tất Cả Vật Phẩm Trong Tú Đồ Của Bạn
+author: Ghast Noob
+version: 1.0
+main: CI\CI\Main
+api: [1.0.0, 2.0.0]
+commands:
+ ci:
+    description: Xóa Tất Cả Vật Phẩm Trong Kho Đồ Của Bạn
+    usage: "Sử Dụng: /ci"
+    permission: ci.command
+    default: true

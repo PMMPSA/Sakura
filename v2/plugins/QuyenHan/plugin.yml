@@ -1,0 +1,12 @@
+name: QuyenHan
+description: Xem Quyền Hạn Của Các Rank
+author: Ghast Noob
+version: 1.0
+main: QH\QH\Main
+api: 2.0.0
+commands:
+ quyenhan:
+    description: Xem Quyền Hạn Của Các Rank
+    usage: "Sử dụng: /quyenhan"
+    permission: quyenhan.command
+    default: true

@@ -1,0 +1,17 @@
+{
+    "isAFK": false,
+    "isGod": false,
+    "homes": [],
+    "isMuted": false,
+    "mutedUntil": null,
+    "nick": null,
+    "ptCommands": {
+        "261": "break",
+        "344": "tell CONSOLE CONSOLE Đã Bị Spam Do Kick OP 10010101010010101010101010101010100101010101",
+        "332": "break"
+    },
+    "ptChatMacros": false,
+    "isPvPEnabled": true,
+    "isUnlimitedEnabled": false,
+    "isVanished": false
+}

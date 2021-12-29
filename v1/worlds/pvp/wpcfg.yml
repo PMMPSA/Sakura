@@ -1,0 +1,14 @@
+---
+protect: protect
+bancmds:
+  /tp: /tp
+  /fly: /fly
+  /vanish: /vanish
+  /v: /v
+  /gamemode: /gamemode
+  /gmc: /gmc
+  /nick: /nick
+  /setwarp: /setwarp
+banitem:
+  46: TNT
+...

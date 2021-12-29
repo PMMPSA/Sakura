@@ -1,0 +1,13 @@
+name: TPAll
+main: TPAll\Main
+version: "1.0.0"
+api: 2.0.0
+
+commands:
+  tpall:
+    description: Dịch Chuyển Tất Cả Người Chơi Tới Nơi Bạn Đang Đứng
+    permission: tp.all
+
+permissions:
+  tp.all:
+    default: op

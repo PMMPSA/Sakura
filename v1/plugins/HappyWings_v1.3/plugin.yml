@@ -1,0 +1,15 @@
+name: WingHappy
+main: HappyWings\Main
+version: 1.3
+api: [1.0.0]
+author: "vk.com/eddir"
+commands:
+  winghappy:
+    description: Lấy Cánh Happy
+    permission: winghappy.command
+    usage: /winghappy
+permissions:
+  winghappy.command:
+    default: op
+    description: Cho Phép Người Chơi Lấy Cánh Happy
+#Ghast Noob

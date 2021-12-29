@@ -1,0 +1,14 @@
+name: MuaVIP
+version: 1.0
+api: 2.0.0
+main: MuaVIP\Main
+author: Ghast Noob
+commands:
+ muavip:
+  permisson: muavip.cmd
+  description: "Mua VIP Dành Cho Người Chơi"
+permissions:
+ muavip:
+  children:
+   muavip.cmd:
+   default: true

@@ -1,0 +1,120 @@
+GenisysPro Crash Dump Thu Jul 18 07:27:00 +07 2019
+
+Error: Class Wing\Main not found
+File: /src/spl/BaseClassLoader
+Line: 131
+Type: notice
+
+THIS CRASH WAS CAUSED BY A PLUGIN
+
+Code:
+[122] 	 *
+[123] 	 * @return bool
+[124] 	 */
+[125] 	public function loadClass($name){
+[126] 		$path = $this->findClass($name);
+[127] 		if($path !== null){
+[128] 			include($path);
+[129] 			if(!class_exists($name, false) and !interface_exists($name, false) and !trait_exists($name, false)){
+[130] 				if($this->getParent() === null){
+[131] 					throw new ClassNotFoundException("Class $name not found");
+[132] 				}
+[133] 				return false;
+[134] 			}
+[135] 
+[136] 			if(method_exists($name, "onClassLoaded") and (new ReflectionClass($name))->getMethod("onClassLoaded")->isStatic()){
+[137] 				$name::onClassLoaded();
+[138] 			}
+[139] 			
+[140] 			$this->classes[] = $name;
+[141] 
+
+Backtrace:
+#0 (): spl_autoload_call(string Wing\Main)
+#1 /src/pocketmine/plugin/FolderPluginLoader(76): class_exists(string Wing\Main, boolean 1)
+#2 /src/pocketmine/plugin/PluginManager(159): pocketmine\plugin\FolderPluginLoader->loadPlugin(string /storage/emulated/0/PocketMine-MP/plugins/Wing)
+#3 /src/pocketmine/plugin/PluginManager(346): pocketmine\plugin\PluginManager->loadPlugin(string /storage/emulated/0/PocketMine-MP/plugins/Wing, array Array())
+#4 /src/pocketmine/Server(1898): pocketmine\plugin\PluginManager->loadPlugins(string /storage/emulated/0/PocketMine-MP/plugins/)
+#5 /src/pocketmine/PocketMine(492): pocketmine\Server->__construct(BaseClassLoader object, pocketmine\utils\MainLogger object, string phar:///storage/emulated/0/PocketMine-MP/PocketMine-MP.phar/, string /storage/emulated/0/PocketMine-MP/, string /storage/emulated/0/PocketMine-MP/plugins/)
+#6 (1): require_once(string phar:///storage/emulated/0/PocketMine-MP/PocketMine-MP.phar/src/pocketmine/PocketMine.php)
+
+GenisysPro version: 0000000000000000000000000000000000000000 [Protocol 113; API 3.0.1]
+uname -a: Linux localhost 3.18.14-14381225-QB21144449 #1 SMP PREEMPT Tue Dec 18 19:58:01 KST 2018 armv8l
+PHP version: 7.2.6
+Zend version: 3.2.0
+OS : Linux, android
+
+Server uptime: 2 seconds
+Number of loaded worlds: 0
+Players online: 0/20
+
+Loaded plugins:
+EconomyAPI 2.0.9 by onebone for API(s) 2.0.0
+EconomySell 2.0.7 by onebone for API(s) 1.12.0
+CoinAPI 2.0.9 by onebone for API(s) 2.0.0
+essentialsTP 1.1.0 by Ghast Noob for API(s) 2.0.0, 3.0.1, 3.0.0-ALPHA1, 3.0.0-ALPHA2, 3.0.0-ALPHA3, 3.0.0-ALPHA4, 3.0.0-ALPHA5, 3.0.0-ALPHA6, 3.0.0-ALPHA7
+QuyenHan 1 by Ghast Noob for API(s) 2.0.0
+FactionsPro 0.1 by SoraLifeVN for API(s) 1.14.0, 2.0.0- 3.0.0-ALPHA9
+Bar 1 by Ghast Noob for API(s) 1.0.0, 2.0.0, 2.1.0, 3.0.0, 3.0.0-ALPHA1, 3.0.0-ALPHA2, 3.0.0-ALPHA3, 3.0.0-ALPHA4
+Mask 2.0.0 by Ghast Noob for API(s) 1.0.0, 1.1.0, 1.2.0, 1.2.1, 2.0.0, 3.0.0-ALPHA6, 3.0.0-ALPHA5, 3.0.0-ALPHA4
+Slapper 1.1 by SoraLifeVN for API(s) 3.0.0-ALPHA5, 3.0.0-ALPHA6
+MuaVIP 1 by Ghast Noob for API(s) 2.0.0
+SimpleAuth 1.7.2 by PocketMine Team, shoghicp for API(s) 2.0.0
+Size 2 by Ghast Noob for API(s) 2.0.0, 2.1.0, 3.0.0APLHA1, 3.0.0
+MagicWE 0.2.6 by thebigsmileXD for API(s) 1.13.0, 2.0.0
+Sell 2 by Muqsit for API(s) 2.0.0
+Fly 2 by DragonPlayzMC for API(s) 2.0.0
+iProtector 3.1b by LDX for API(s) 1.9.0, 2.0.0
+Disable_TNT 0.1 by  for API(s) 2.0.0
+MuaCup 1 by Ghast Noob for API(s) 2.0.0
+AntiDamage 1 by Diogo07 for API(s) 2.0.0
+Broadcaster 1.16 by EvolSoft for API(s) 1.12.0
+Void 1.0.0 by Ghast Noob for API(s) 2.0.0
+OPS 1.0.0 by Ghast Noob for API(s) 2.0.0
+FireWorks 1 by Jaciel14 for API(s) 1.12.0
+SlapperRotation 1.1 by Ghast Noob for API(s) 3.0.0-ALPHA5, 3.0.0-ALPHA6
+PhucHoi 1 by Ghast Noob for API(s) 1.0.0, 2.0.0, 3.0.0
+WorldProtect 2.2.0 by aliuly for API(s) 1.10.0, 1.12.0
+BuyFix 1.0.0 by Ghast Noob for API(s) 1.0.0, 2.0.0, 3.0.0
+Lobby 1 by Ghast for API(s) 2.0.0
+RandomOre 2.0.0 by Ghast Noob for API(s) 3.0.0
+FrameKeeper 1.1 by KhoaGamingPro for API(s) 3.0.0, 3.0.1, 3.0.0-ALPHA1, 3.0.0-ALPHA2, 3.0.0-ALPHA3, 3.0.0-ALPHA3, 3.0.0-ALPHA4, 3.0.0-ALPHA5, 3.0.0-ALPHA6
+PurePerms 1.4.0 by PTK-KienPham for API(s) 2.0.0, 3.0.0
+BuyEc 2 by  for API(s) 2.0.0, 3.0.0
+ArmorRainbow 1 by Ghast Noob for API(s) 2.0.0, 3.0.0
+AutoSell 2.0.0 by Ghast Noob for API(s) 1.0.0, 1.1.0, 1.2.0, 1.2.1, 2.0.0, 3.0.0-ALPHA6, 3.0.0-ALPHA5, 3.0.0-ALPHA4
+FakeOnlines 1.0.0 by Ghast Noob for API(s) 2.0.0, 3.0.0
+Trampoline 1.0 by Ghast Noob for API(s) 2.0.0, 3.0.0
+WorldLoader 1 by Ghast Noob for API(s) 3.0.0, 3.0.0-ALPHA6
+AutoInv 0.1 by PocketMine-MP for API(s) 2.0.0, 3.0.0
+ManyWorlds 2.2.0 by aliuly for API(s) 2.0.0
+BlockEffects 1.0.5 by GmWM for API(s) 1.12.0
+ClearChat 1 by Ghast Noob for API(s) 1.0.0, 2.0.0
+ClearInv 1 by Ghast Noob for API(s) 1.0.0, 2.0.0
+CustomAlerts 1.6 by EvolSoft for API(s) 3.0.0-ALPHA5, 3.0.0-ALPHA7
+TapToDo 2.2.1 by Ghast Noob for API(s) 1.0.0, 2.0.0, 3.0.0
+TheoDoi 1.0.0 by HotshotHD & CodeRed2019 for API(s) 1.13.0, 2.0.0, 3.0.0, 3.0.0-ALPHA5
+RainbowBlock 1 by Ghast Noob for API(s) 2.0.0, 3.0.0
+SignEffect 1 by Ghast Noob for API(s) 2.0.0, 3.0.0
+SignEnchant 1.0.0 by Ghast Noob for API(s) 1.0.0, 1.1.0, 1.2.0, 1.2.1, 3.0.0-ALPHA6, 3.0.0-ALPHA5, 3.0.0-ALPHA4, 2.0.0
+VipArea 1 by Ghast Noob for API(s) 2.0.0, 3.0.0
+GameMode 1 by Ghast Noob for API(s) 2.0.0
+BoxSecret 1.0.0 by Ghast Noob for API(s) 1.0.0, 2.0.0
+ItemEffect 1.0.0 by KairusDarkSeeker for API(s) 3.0.0, 3.0.0-ALPHA5
+RealTime 2.1.1 by Guillaume351 for API(s) 1.0.0
+NoTP 1.0.5 by awzaw for API(s) 2.0.0, 3.0.0-ALPHA1, 3.0.0-ALPHA2, 3.0.0-ALPHA3, 3.0.0-ALPHA4
+AntiSpam 2 by xBeastMode for API(s) 2.0.0
+MuaChiaKhoa 1 by Ghast Noob for API(s) 1.0.0, 2.0.0, 3.0.0
+BuyFly 1 by Ghast Noob for API(s) 1.0.0, 2.0.0, 3.0.0
+TPAll 1.0.0 by  for API(s) 2.0.0
+SClearLagg 1 by Sergey_Dertan for API(s) 1.8.0
+Lv.Pickaxe 1 by  for API(s) 2.0.0, 3.0.0
+SETVIP 2.3 by MCPEVN TEAM for API(s) 3.0.0
+Fishing 1 by Ghast Noob for API(s) 2.0.0
+TopIS 1 by Ghast Noob for API(s) 1.0.0, 2.0.0, 3.0.0
+Pets 2 by Ghast Noob for API(s) 1.0.0, 2.0.0, 3.0.0-ALPHA1, 3.0.0-ALPHA2
+Vote 1 by Ghast Noob for API(s) 2.0.0
+SimpleAuthHelper 2.0.0 by aliuly for API(s) 2.0.0, 3.0.0-ALPHA7
+Alias 1.2.0 by Ghast Noob for API(s) 1.12.0
+ArcoLife 1 by CodersBr, YTkaio, zM360 for API(s) 2.0.0
+QuyenVIP 1 by Ghast Noob for API(s) 2.0.0

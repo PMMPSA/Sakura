@@ -1,0 +1,62 @@
+---
+language: en
+commands:
+  mycoin:
+    usage: /mycoin
+    description: Shows your coin
+  topcoin:
+    usage: /topcoin [page]
+    description: Shows top coin of this server
+  setcoin:
+    usage: /setcoin <player> <amount>
+    description: Set coin of player
+  seecoin:
+    usage: /seecoin <player>
+    description: Shows coin of player
+  givecoin:
+    usage: /givecoin <player> <amount>
+    description: Gives coin to player
+  takecoin:
+    usage: /takecoin <player> <amount>
+    description: Takes coin from player
+  paycoin:
+    usage: /paycoin <player> <amount>
+    description: Pays coin to player
+  setlangcoin:
+    usage: /setlangcoin <ccTLD>
+    description: Set your language
+  mystatuscoin:
+    usage: /mystatuscoin
+    description: Shows your status of coin
+language-set: '§c⊹⊱§eCoin§c⊰⊹§a Ngôn Ngữ Của Bạn Đã Được Chỉnh Thành: §b%1'
+request-cancelled: §c⊹⊱§eCoin§c⊰⊹§c Yêu Cầu Của Bạn Đã Bị Hủy
+player-not-connected: '§c⊹⊱§eCoin§c⊰⊹§c Người Chơi: §b%1§c Không Online'
+player-never-connected: '§c⊹⊱§eCoin§c⊰⊹§c Tài Khoản: §b%1§c Không Tồn Tại Tại Máy
+  Chủ'
+topcoin-tag: '§c⊹⊱§eXếp Hạng §bCoin§e Của Máy Chủ §f[§bTrang: §c%1§f/§c%2§f]§c⊰⊹'
+topcoin-format: '§e⊹⊱§a%1§e⊰⊹ §b%2 §f: §e%3 Coin'
+paycoin-failed: §c⊹⊱§eCoin§c⊰⊹§c Đã Xảy Ra Lỗi Khi Chuyển Coin
+paycoin-success: §c⊹⊱§eCoin§c⊰⊹§a Bạn Đã Chuyển §b%1§a Coin Cho:§b %2
+coin-paid: '§c⊹⊱§eCoin§c⊰⊹§a Tài Khoản: §b%1§a Đã Chuyển Cho Bạn: §b%2§a Coin'
+takecoin-must-be-number: §c⊹⊱§eCoin§c⊰⊹§c Số Coin Phải Là Số
+takecoin-invalid-number: §c⊹⊱§eCoin§c⊰⊹§c Số Coin Không Hợp Lệ
+takecoin-player-lack-of-coin: '§c⊹⊱§eCoin§c⊰⊹§c Tài Khoản:§b %1§c Không Đủ: §b%2§c
+  Coin. Số Coin Của: §b%1§c Đang Có Là: §b%3§c Coin'
+takecoin-coin-taken: '§c⊹⊱§eCoin§c⊰⊹§a Tài Khoản Của Bạn Đã Bị Trừ Đi: §b%1 §aCoin'
+takecoin-took-coin: '§c⊹⊱§eCoin§c⊰⊹§a Đã Trừ: §b%2§a Coin Của Tài Khoản: §b%1'
+takecoin-failed: §c⊹⊱§eCoin§c⊰⊹§c Đã Xảy Ra Lỗi Khi Trừ Coin
+givecoin-must-be-number: §c⊹⊱§eCoin§c⊰⊹§c Số Coin Phải Là Số
+givecoin-invalid-number: §c⊹⊱§eCoin§c⊰⊹§c Số Coin Không Hợp Lệ
+givecoin-coin-given: '§c⊹⊱§eCoin§c⊰⊹§a Tài Khoản Của Bạn Đã Được Tăng Thêm: §b%1§a
+  Coin'
+givecoin-gave-coin: '§c⊹⊱§eCoin§c⊰⊹§a Đã Tăng Thêm: §b%1 §aCoin Vào Tài Khoản:§b %2'
+seecoin-seecoin: '§c⊹⊱§eCoin§c⊰⊹§a Số Coin Của Người Chơi: §b%1§a Đang Có Là: §b%2§a
+  Coin'
+setcoin-setcoin: '§c⊹⊱§eCoin§c⊰⊹§a Số Coin Của Người Chơi: §b%1§a Đã Được Chỉnh Thành:
+  §b%2§a Coin'
+setcoin-set: '§c⊹⊱§eCoin§c⊰⊹§a Coin Của Bạn Đã Được Chỉnh Thành: §b%1 §aCoin'
+setcoin-failed: §c⊹⊱§eCoin§c⊰⊹§a Không Thể Chỉnh Sửa Coin Do Lỗi Không Sác Định
+setcoin-invalid-number: §c⊹⊱§eCoin§c⊰⊹§b %1 §cKhông Phải Là 1 Con Số
+mycoin-mycoin: '§c⊹⊱§eCoin§c⊰⊹§a Số Coin Hiện Tại Của Bạn Là: §b%1 §aCoin'
+mystatus-show: '§c⊹⊱§eCoin§c⊰⊹§a Thông Tin Coin Của Bạn Là: §b%1'
+...

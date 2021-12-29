@@ -1,0 +1,11 @@
+---
+plugin-name: essentalsTp+
+sqlite-dbname: essentials_tp
+tpa-here-cooldown: "30"
+tp-home-cooldown: "5"
+tp-warp-cooldown: "5"
+tp-spawn-cooldown: "5"
+MOTD: §4༺§eEssentialsTP§4༻§a Chào Mừng Bạn Vui Lòng Thay Đổi Motd Trong Config
+wild-MaxX: "300"
+wild-MaxY: "300"
+...

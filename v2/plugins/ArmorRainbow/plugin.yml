@@ -1,0 +1,10 @@
+name: ArmorRainbow
+version: 1.0
+main: ArmorRainbow\ArmorRainbow\ArmorRainbow
+api: [2.0.0, 3.0.0]
+author: Ghast Noob
+
+permissions:
+  ar.command:
+    default: op
+    description: Giáp Cầu Vồng

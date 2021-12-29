@@ -1,0 +1,2297 @@
+2019-07-10 [13:18:58] [Server thread/WARNING]: OpenSSL extension not found
+2019-07-10 [13:18:58] [Server thread/WARNING]: Please configure OpenSSL extension for PHP if you want to use Xbox Live authentication or global resource pack.
+2019-07-10 [13:18:58] [Server thread/INFO]: Chọn Vietnamese (vie) là ngôn ngữ chính
+2019-07-10 [13:18:58] [Server thread/WARNING]: Debugging assertions are enabled, this may impact on performance. To disable them, set `zend.assertions = -1` in php.ini.
+2019-07-10 [13:18:58] [Server thread/INFO]: Opening server on 0.0.0.0:19132
+2019-07-10 [13:18:58] [Server thread/INFO]: TerminatorVN is distributed under the LGPL License
+2019-07-10 [13:18:59] [Server thread/INFO]: Loading recipes...
+2019-07-10 [13:18:59] [Server thread/INFO]: Loading resource packs...
+2019-07-10 [13:19:00] [Server thread/INFO]: Loading EconomyAPI v2.0.9
+2019-07-10 [13:19:00] [Server thread/INFO]: Loading PurePerms v1.3.7
+2019-07-10 [13:19:00] [Server thread/NOTICE]: PurePerms by 64FF00 & ProjectInfinity! #LEET.CC
+
+  888  888    .d8888b.      d8888  8888888888 8888888888 .d8888b.   .d8888b. 
+  888  888   d88P  Y88b    d8P888  888        888       d88P  Y88b d88P  Y88b
+888888888888 888          d8P 888  888        888       888    888 888    888
+  888  888   888d888b.   d8P  888  8888888    8888888   888    888 888    888
+  888  888   888P "Y88b d88   888  888        888       888    888 888    888
+888888888888 888    888 8888888888 888        888       888    888 888    888
+  888  888   Y88b  d88P       888  888        888       Y88b  d88P Y88b  d88P
+  888  888    "Y8888P"        888  888        888        "Y8888P"   "Y8888P" 
+
+2019-07-10 [13:19:00] [Server thread/INFO]: [PurePerms] Setting default language to 'en'
+2019-07-10 [13:19:00] [Server thread/NOTICE]: [PurePerms] Multiworld support is currently disabled.
+2019-07-10 [13:19:00] [Server thread/NOTICE]: [PurePerms] Don't forget to set enable-multiworld-perms option in config.yml to true if you want to use per-world permissions!
+2019-07-10 [13:19:00] [Server thread/INFO]: Loading SimpleAuth v1.8.1
+2019-07-10 [13:19:00] [Server thread/INFO]: Loading Titler v0.1.0
+2019-07-10 [13:19:00] [Server thread/INFO]: [Titler] Đang tải dữ liệu...
+2019-07-10 [13:19:00] [Server thread/INFO]: Loading Broadcaster v1.16
+2019-07-10 [13:19:00] [Server thread/INFO]: Loading Fireworks_JJBH v1.0 by Jaciel
+2019-07-10 [13:19:00] [Server thread/INFO]: Loading FrameKeeper v1.1
+2019-07-10 [13:19:00] [Server thread/INFO]: Loading CustomAlerts v1.6
+2019-07-10 [13:19:00] [Server thread/INFO]: Loading Slapper_Việt_Hóa_By_Sói_Con v1.1
+2019-07-10 [13:19:00] [Server thread/INFO]: Loading ManyWorlds v2.0.3
+2019-07-10 [13:19:00] [Server thread/INFO]: Loading DevTools v1.10.0
+2019-07-10 [13:19:00] [Server thread/INFO]: Loading Bar v1
+2019-07-10 [13:19:00] [Server thread/INFO]: Loading ItemID v1.1.0
+2019-07-10 [13:19:00] [Server thread/INFO]: Loading AdvertisingKick v1.0.0
+2019-07-10 [13:19:00] [Server thread/INFO]: Loading AntiSpam v1.3
+2019-07-10 [13:19:00] [Server thread/INFO]: Loading iProtector v3.1b
+2019-07-10 [13:19:00] [Server thread/INFO]: Loading CommandTracker v1.1
+2019-07-10 [13:19:00] [Server thread/INFO]: Loading Sheep v5.0.0
+2019-07-10 [13:19:00] [Server thread/INFO]: Loading MagicWE v0.2.6
+2019-07-10 [13:19:00] [Server thread/INFO]: [MagicWE] MagicWE has been loaded!
+2019-07-10 [13:19:00] [Server thread/INFO]: Loading Lobby-by-DPMC v1
+2019-07-10 [13:19:00] [Server thread/INFO]: Loading BlockParticle v1
+2019-07-10 [13:19:00] [Server thread/INFO]: Loading TheMask v1.0.0
+2019-07-10 [13:19:00] [Server thread/INFO]: Loading SkinChanger v1.2.6
+2019-07-10 [13:19:00] [Server thread/INFO]: Loading Trampoline v1.2
+2019-07-10 [13:19:00] [Server thread/INFO]: Loading MagicTelePortal v1.3.2
+2019-07-10 [13:19:00] [Server thread/INFO]: Loading (Source) Tool[PTK] v2.0.0
+2019-07-10 [13:19:00] [Server thread/INFO]: Loading (Source) SizePLayer v1.5
+2019-07-10 [13:19:00] [Server thread/INFO]: Loading (Source) essentialsTP v1.1.0
+2019-07-10 [13:19:00] [Server thread/INFO]: Loading (Source) Disable_TNT v0.1
+2019-07-10 [13:19:00] [Server thread/INFO]: Loading (Source) Alias v1.2.0
+2019-07-10 [13:19:00] [Server thread/INFO]: Loading (Source) ALW v1
+2019-07-10 [13:19:00] [Server thread/INFO]: Loading (Source) Sell v2
+2019-07-10 [13:19:00] [Server thread/INFO]: Loading (Source) Report v1
+2019-07-10 [13:19:00] [Server thread/INFO]: Loading (Source) HopBiAn v1.0.0
+2019-07-10 [13:19:00] [Server thread/INFO]: Loading (Source) FactionsPro v0.1#Beta
+2019-07-10 [13:19:00] [Server thread/INFO]: Loading (Source) WorldProtect v2.2.0
+2019-07-10 [13:19:00] [Server thread/INFO]: Loading (Source) Buyfix v1.0.0
+2019-07-10 [13:19:00] [Server thread/INFO]: Loading (Source) Coin v2.0
+2019-07-10 [13:19:00] [Server thread/INFO]: Loading (Source) ArcoLife v1
+2019-07-10 [13:19:00] [Server thread/INFO]: Loading (Source) WingFire v1.3
+2019-07-10 [13:19:00] [Server thread/INFO]: Loading (Source) Muakey v2
+2019-07-10 [13:19:00] [Server thread/INFO]: Loading (Source) TopIS v2
+2019-07-10 [13:19:00] [Server thread/INFO]: Loading (Source) Trade v1
+2019-07-10 [13:19:00] [Server thread/INFO]: Loading (Source) NoTP v1.0.5
+2019-07-10 [13:19:00] [Server thread/INFO]: Loading (Source) WingWater v1.3
+2019-07-10 [13:19:00] [Server thread/INFO]: Loading (Source) WingSpore v1.3
+2019-07-10 [13:19:00] [Server thread/INFO]: Loading (Source) QuyenHang v1
+2019-07-10 [13:19:00] [Server thread/INFO]: Loading (Source) AntiDamage v1.3
+2019-07-10 [13:19:00] [Server thread/INFO]: Loading (Source) MuaRank v1
+2019-07-10 [13:19:00] [Server thread/INFO]: Loading (Source) WingWaterDrip v1.3
+2019-07-10 [13:19:00] [Server thread/INFO]: Loading (Source) WingSmoke v1.3
+2019-07-10 [13:19:00] [Server thread/INFO]: Loading (Source) WingRedstone v1.3
+2019-07-10 [13:19:00] [Server thread/INFO]: Loading (Source) WingRain v1.3
+2019-07-10 [13:19:00] [Server thread/INFO]: Loading (Source) WingPortal v1.3
+2019-07-10 [13:19:00] [Server thread/INFO]: Loading (Source) WingMobSpell v1.3
+2019-07-10 [13:19:00] [Server thread/INFO]: Loading (Source) WingLava v1.3
+2019-07-10 [13:19:00] [Server thread/INFO]: Loading (Source) WingLavaDrip v1.3
+2019-07-10 [13:19:00] [Server thread/INFO]: Loading (Source) WingHeart v1.3
+2019-07-10 [13:19:00] [Server thread/INFO]: Loading (Source) WingHappy v1.3
+2019-07-10 [13:19:00] [Server thread/INFO]: Loading (Source) WingFlame v1.3
+2019-07-10 [13:19:00] [Server thread/INFO]: Loading (Source) WingEnchant v1.3
+2019-07-10 [13:19:00] [Server thread/INFO]: Loading (Source) WingCritical v1.3
+2019-07-10 [13:19:00] [Server thread/INFO]: Loading (Source) WingBubble v1.3
+2019-07-10 [13:19:00] [Server thread/INFO]: Loading (Source) WingAngry v1.3
+2019-07-10 [13:19:00] [Server thread/INFO]: Loading (Source) BuyEnchant v1
+2019-07-10 [13:19:00] [Server thread/INFO]: Loading (Source) Prealms_BuildBattle v1.3.0
+2019-07-10 [13:19:00] [Server thread/INFO]: Loading (Source) DonRac[PTK] v2
+2019-07-10 [13:19:00] [Server thread/INFO]: Loading (Source) CopyPasteBuildDP v2.0.0
+2019-07-10 [13:19:00] [Server thread/INFO]: Loading EconomyShop v2.0.7
+2019-07-10 [13:19:00] [Server thread/INFO]: Loading EconomySell v2.0.7
+2019-07-10 [13:19:00] [Server thread/INFO]: Loading EconomyLand v2.0.9
+2019-07-10 [13:19:00] [Server thread/INFO]: Loading EconomyJob v2.0.4
+2019-07-10 [13:19:01] [Server thread/INFO]: Loading SimpleAuthHelper v2.0.1
+2019-07-10 [13:19:01] [Server thread/INFO]: Loading HealthBar v1.0.1
+2019-07-10 [13:19:01] [Server thread/INFO]: Loading SkyBlock v2
+2019-07-10 [13:19:01] [Server thread/INFO]: Loading PureChat v1.4.0
+2019-07-10 [13:19:01] [Server thread/INFO]: Enabling SimpleAuth v1.8.1
+2019-07-10 [13:19:01] [Server thread/INFO]: [SimpleAuth] Connected to PurePerms
+2019-07-10 [13:19:01] [Server thread/INFO]: [SimpleAuth] Everything loaded!
+2019-07-10 [13:19:01] [Server thread/INFO]: Enabling Broadcaster v1.16
+2019-07-10 [13:19:01] [Server thread/INFO]: Enabling CustomAlerts v1.6
+2019-07-10 [13:19:01] [Server thread/INFO]: Enabling DevTools v1.10.0
+2019-07-10 [13:19:01] [Server thread/ERROR]: Could not load plugin 'Tool[PTK]': plugin exists
+2019-07-10 [13:19:01] [Server thread/ERROR]: Could not load plugin 'SizePLayer': plugin exists
+2019-07-10 [13:19:01] [Server thread/ERROR]: Could not load plugin 'essentialsTP': plugin exists
+2019-07-10 [13:19:01] [Server thread/ERROR]: Could not load plugin 'Disable_TNT': plugin exists
+2019-07-10 [13:19:01] [Server thread/ERROR]: Could not load plugin 'Alias': plugin exists
+2019-07-10 [13:19:01] [Server thread/ERROR]: Could not load plugin 'ALW': plugin exists
+2019-07-10 [13:19:01] [Server thread/ERROR]: Could not load plugin 'Sell': plugin exists
+2019-07-10 [13:19:01] [Server thread/ERROR]: Could not load plugin 'Report': plugin exists
+2019-07-10 [13:19:01] [Server thread/ERROR]: Could not load plugin 'HopBiAn': plugin exists
+2019-07-10 [13:19:01] [Server thread/ERROR]: Could not load plugin 'FactionsPro': plugin exists
+2019-07-10 [13:19:01] [Server thread/ERROR]: Could not load plugin 'WorldProtect': plugin exists
+2019-07-10 [13:19:01] [Server thread/ERROR]: Could not load plugin 'Buyfix': plugin exists
+2019-07-10 [13:19:01] [Server thread/ERROR]: Could not load plugin 'Coin': plugin exists
+2019-07-10 [13:19:01] [Server thread/ERROR]: Could not load plugin 'ArcoLife': plugin exists
+2019-07-10 [13:19:01] [Server thread/ERROR]: Could not load plugin 'WingFire': plugin exists
+2019-07-10 [13:19:01] [Server thread/ERROR]: Could not load plugin 'Muakey': plugin exists
+2019-07-10 [13:19:01] [Server thread/ERROR]: Could not load plugin 'TopIS': plugin exists
+2019-07-10 [13:19:01] [Server thread/ERROR]: Could not load plugin 'Trade': plugin exists
+2019-07-10 [13:19:01] [Server thread/ERROR]: Could not load plugin 'NoTP': plugin exists
+2019-07-10 [13:19:01] [Server thread/ERROR]: Could not load plugin 'WingWater': plugin exists
+2019-07-10 [13:19:01] [Server thread/ERROR]: Could not load plugin 'WingSpore': plugin exists
+2019-07-10 [13:19:01] [Server thread/ERROR]: Could not load plugin 'QuyenHang': plugin exists
+2019-07-10 [13:19:01] [Server thread/ERROR]: Could not load plugin 'AntiDamage': plugin exists
+2019-07-10 [13:19:01] [Server thread/ERROR]: Could not load plugin 'MuaRank': plugin exists
+2019-07-10 [13:19:01] [Server thread/ERROR]: Could not load plugin 'WingWaterDrip': plugin exists
+2019-07-10 [13:19:01] [Server thread/ERROR]: Could not load plugin 'WingSmoke': plugin exists
+2019-07-10 [13:19:01] [Server thread/ERROR]: Could not load plugin 'WingRedstone': plugin exists
+2019-07-10 [13:19:01] [Server thread/ERROR]: Could not load plugin 'WingRain': plugin exists
+2019-07-10 [13:19:01] [Server thread/ERROR]: Could not load plugin 'WingPortal': plugin exists
+2019-07-10 [13:19:01] [Server thread/ERROR]: Could not load plugin 'WingMobSpell': plugin exists
+2019-07-10 [13:19:01] [Server thread/ERROR]: Could not load plugin 'WingLava': plugin exists
+2019-07-10 [13:19:01] [Server thread/ERROR]: Could not load plugin 'WingLavaDrip': plugin exists
+2019-07-10 [13:19:01] [Server thread/ERROR]: Could not load plugin 'WingHeart': plugin exists
+2019-07-10 [13:19:01] [Server thread/ERROR]: Could not load plugin 'WingHappy': plugin exists
+2019-07-10 [13:19:01] [Server thread/ERROR]: Could not load plugin 'WingFlame': plugin exists
+2019-07-10 [13:19:01] [Server thread/ERROR]: Could not load plugin 'WingEnchant': plugin exists
+2019-07-10 [13:19:01] [Server thread/ERROR]: Could not load plugin 'WingCritical': plugin exists
+2019-07-10 [13:19:01] [Server thread/ERROR]: Could not load plugin 'WingBubble': plugin exists
+2019-07-10 [13:19:01] [Server thread/ERROR]: Could not load plugin 'WingAngry': plugin exists
+2019-07-10 [13:19:01] [Server thread/ERROR]: Could not load plugin 'BuyEnchant': plugin exists
+2019-07-10 [13:19:01] [Server thread/ERROR]: Could not load plugin 'Prealms_BuildBattle': plugin exists
+2019-07-10 [13:19:01] [Server thread/ERROR]: Could not load plugin 'DonRac[PTK]': plugin exists
+2019-07-10 [13:19:01] [Server thread/ERROR]: Could not load plugin 'CopyPasteBuildDP': plugin exists
+2019-07-10 [13:19:01] [Server thread/INFO]: [DevTools] Registered folder plugin loader
+2019-07-10 [13:19:01] [Server thread/INFO]: Enabling AntiSpam v1.3
+2019-07-10 [13:19:01] [Server thread/INFO]: Enabling CommandTracker v1.1
+2019-07-10 [13:19:01] [Server thread/INFO]: Enabling MagicWE v0.2.6
+2019-07-10 [13:19:01] [Server thread/INFO]: [MagicWE] MagicWE enabled!
+2019-07-10 [13:19:01] [Server thread/INFO]: Enabling Disable_TNT v0.1
+2019-07-10 [13:19:01] [Server thread/INFO]: [Disable_TNT] Plugin Đã Được Kích Hoạt
+2019-07-10 [13:19:01] [Server thread/INFO]: Enabling HopBiAn v1.0.0
+2019-07-10 [13:19:01] [Server thread/INFO]: [HopBiAn] Plugin Đã hoạt động được code bở BOSS_CraftPE
+2019-07-10 [13:19:01] [Server thread/INFO]: Enabling WorldProtect v2.2.0
+2019-07-10 [13:19:01] [Server thread/INFO]: [WorldProtect] Enabled 9 features
+2019-07-10 [13:19:01] [Server thread/INFO]: Enabling DonRac[PTK] v2
+2019-07-10 [13:19:01] [Server thread/INFO]: [DonRac[PTK]] Plugin Dọn Rác Bởi PTK Đã Được Kích Hoạt Phiên Bản:2!
+2019-07-10 [13:19:01] [Server thread/INFO]: Enabling SkyBlock v2
+2019-07-10 [13:19:01] [Server thread/INFO]: [SkyBlock] Loading MyPlot
+2019-07-10 [13:19:01] [Server thread/INFO]: Preparing level "world"
+2019-07-10 [13:19:01] [Server thread/INFO]: Preparing level "nether"
+2019-07-10 [13:19:01] [Server thread/INFO]: Preparing level "ender"
+2019-07-10 [13:19:01] [Server thread/INFO]: Enabling EconomyAPI v2.0.9
+2019-07-10 [13:19:01] [Server thread/NOTICE]: [EconomyAPI] Provider was set to: Yaml
+2019-07-10 [13:19:01] [Server thread/NOTICE]: [EconomyAPI] Auto save has been set to interval : 10 min(s)
+2019-07-10 [13:19:01] [Server thread/INFO]: [EconomyAPI] Checking for updates... It may be take some while.
+2019-07-10 [13:19:07] [Server thread/NOTICE]: [EconomyAPI] 
+2019-07-10 [13:19:07] [Server thread/INFO]: Enabling PurePerms v1.3.7
+2019-07-10 [13:19:07] [Server thread/NOTICE]: [PurePerms] Set data provider to YAMLv1.
+2019-07-10 [13:19:07] [Server thread/INFO]: Enabling Titler v0.1.0
+2019-07-10 [13:19:07] [Server thread/INFO]: [Titler] Đã được kích hoạt!
+2019-07-10 [13:19:07] [Server thread/INFO]: Enabling Fireworks_JJBH v1.0 by Jaciel
+2019-07-10 [13:19:07] [Server thread/INFO]: [Fireworks_JJBH] PLUGIN BY jaciel14
+2019-07-10 [13:19:07] [Server thread/INFO]: Enabling FrameKeeper v1.1
+2019-07-10 [13:19:07] [Server thread/INFO]: [FrameKeeper v1.1] Đã kích hoạt thành công!
+2019-07-10 [13:19:07] [Server thread/INFO]: Enabling Slapper_Việt_Hóa_By_Sói_Con v1.1
+2019-07-10 [13:19:07] [Server thread/INFO]: Enabling ManyWorlds v2.0.3
+2019-07-10 [13:19:07] [Server thread/INFO]: Enabling Bar v1
+2019-07-10 [13:19:07] [Server thread/INFO]: [Bar] Đã bật
+2019-07-10 [13:19:07] [Server thread/INFO]: Enabling ItemID v1.1.0
+2019-07-10 [13:19:07] [Server thread/INFO]: [ItemID] ItemsID by KaitoDoDo
+2019-07-10 [13:19:07] [Server thread/INFO]: Enabling AdvertisingKick v1.0.0
+2019-07-10 [13:19:07] [Server thread/INFO]: [AdvertisingKick] AdvertisingKick Starterd
+2019-07-10 [13:19:07] [Server thread/INFO]: Enabling iProtector v3.1b
+2019-07-10 [13:19:07] [Server thread/INFO]: Enabling Sheep v5.0.0
+2019-07-10 [13:19:07] [Server thread/INFO]: [Sheep] Scanning loaded plugins for changes...
+2019-07-10 [13:19:07] [Server thread/INFO]: Enabling Lobby-by-DPMC v1
+2019-07-10 [13:19:07] [Server thread/INFO]: [Lobby-by-DPMC] >Activated!
+2019-07-10 [13:19:07] [Server thread/INFO]: Enabling BlockParticle v1
+2019-07-10 [13:19:07] [Server thread/INFO]: Enabling TheMask v1.0.0
+2019-07-10 [13:19:07] [Server thread/INFO]: [TheMask] Mask
+2019-07-10 [13:19:07] [Server thread/INFO]: [TheMask] Mask
+2019-07-10 [13:19:07] [Server thread/INFO]: Enabling SkinChanger v1.2.6
+2019-07-10 [13:19:07] [Server thread/INFO]: Enabling Trampoline v1.2
+2019-07-10 [13:19:07] [Server thread/INFO]: [Trampoline] Enabled!
+2019-07-10 [13:19:07] [Server thread/INFO]: Enabling MagicTelePortal v1.3.2
+2019-07-10 [13:19:07] [Server thread/INFO]: Enabling Tool[PTK] v2.0.0
+2019-07-10 [13:19:07] [Server thread/INFO]: [Tool[PTK]] →Đang chạy plugin Tool[PTK]...
+2019-07-10 [13:19:08] [Server thread/INFO]: [CONSOLE: Bổ nhiệm ghast_noob]
+2019-07-10 [13:19:08] [Server thread/INFO]: [PurePerms:64FF00] Added permission * to ghast_noob successfully.
+2019-07-10 [13:19:08] [Server thread/INFO]: [PurePerms:64FF00] Added ghast_noob to the group successfully.
+2019-07-10 [13:19:08] [Server thread/INFO]: [CONSOLE: Hủy cấm người chơi Ghast_Noob]
+2019-07-10 [13:19:08] [Server thread/INFO]: [CONSOLE: Unbanned CID -8332272655818828154]
+2019-07-10 [13:19:08] [Server thread/INFO]: [CONSOLE: Unbanned CID Ghast_Noob]
+2019-07-10 [13:19:08] [Server thread/INFO]: Enabling SizePLayer v1.5
+2019-07-10 [13:19:08] [Server thread/INFO]: [SizePLayer] » SizePlayer Loading!
+2019-07-10 [13:19:08] [Server thread/INFO]: Enabling essentialsTP v1.1.0
+2019-07-10 [13:19:08] [Server thread/INFO]: [essentialsTP] ༺EssentialsTP༻ EssentialsTP Đang Khởi Động...
+2019-07-10 [13:19:08] [Server thread/INFO]: [essentialsTP] ༺EssentialsTP༻ EssentialsTP Đang Khởi Động: [config.yml]....
+2019-07-10 [13:19:08] [Server thread/INFO]: [essentialsTP] ༺EssentialsTP༻ EssentialsTP Đã Khởi Động: [config.yml] Thành Công
+2019-07-10 [13:19:08] [Server thread/INFO]: [essentialsTP] ༺EssentialsTP༻ EssentialsTP Đã Hoạt Động
+2019-07-10 [13:19:08] [Server thread/INFO]: Enabling Alias v1.2.0
+2019-07-10 [13:19:08] [Server thread/INFO]: Enabling ALW v1
+2019-07-10 [13:19:08] [Server thread/INFO]: Plugin Đã Hoạt Động
+2019-07-10 [13:19:08] [Server thread/INFO]: Tất Cả Các World Đã Được Load
+2019-07-10 [13:19:08] [Server thread/INFO]: Preparing level "pvp"
+2019-07-10 [13:19:08] [Server thread/INFO]: Preparing level "sb"
+2019-07-10 [13:19:08] [Server thread/INFO]: Preparing level "shop"
+2019-07-10 [13:19:08] [Server thread/INFO]: Preparing level "Hypixel Build Battle map"
+2019-07-10 [13:19:08] [Server thread/INFO]: Preparing level "sur"
+2019-07-10 [13:19:08] [Server thread/INFO]: Preparing level "sur1"
+2019-07-10 [13:19:08] [Server thread/INFO]: Preparing level "bbhub"
+2019-07-10 [13:19:08] [Server thread/INFO]: Enabling Sell v2
+2019-07-10 [13:19:08] [Server thread/INFO]: [Sell] Đã Hoạt Động
+2019-07-10 [13:19:08] [Server thread/INFO]: Enabling Report v1
+2019-07-10 [13:19:08] [Server thread/INFO]: [Report] [Report] Plugin đã chạy
+2019-07-10 [13:19:08] [Server thread/INFO]: Enabling FactionsPro v0.1#Beta
+2019-07-10 [13:19:08] [Server thread/INFO]: Enabling Buyfix v1.0.0
+2019-07-10 [13:19:08] [Server thread/INFO]: [Buyfix] เปิดทำงานปลั๊กอิน fix
+2019-07-10 [13:19:08] [Server thread/INFO]: Enabling Coin v2.0
+2019-07-10 [13:19:08] [Server thread/NOTICE]: [Coin] Tự Động Lưu Đã Được Đặt Thời Gian Tối Thiểu Thành Khoảng: 1 Phút
+2019-07-10 [13:19:08] [Server thread/INFO]: [Coin] Kiểm Tra Cập Nhập... Có Thể Mất Một 
+2019-07-10 [13:19:14] [Server thread/NOTICE]: [Coin] 
+2019-07-10 [13:19:14] [Server thread/INFO]: Enabling ArcoLife v1
+2019-07-10 [13:19:14] [Server thread/INFO]: [ArcoLife] Đã Hoạt Động
+2019-07-10 [13:19:14] [Server thread/INFO]: [PurePerms:64FF00] Added permission * to ghast_noob successfully.
+2019-07-10 [13:19:14] [Server thread/INFO]: Enabling WingFire v1.3
+2019-07-10 [13:19:14] [Server thread/INFO]: Enabling Muakey v2
+2019-07-10 [13:19:14] [Server thread/INFO]: [Muakey] Plugin Đã hoạt động được code bở BOSS_CraftPE
+2019-07-10 [13:19:14] [Server thread/INFO]: Enabling TopIS v2
+2019-07-10 [13:19:14] [Server thread/INFO]: [TopIS] •Plugin Đã Hoạt Động
+2019-07-10 [13:19:14] [Server thread/INFO]: Enabling Trade v1
+2019-07-10 [13:19:14] [Server thread/INFO]: [Trade] 
+======================================
+
+- Trade Code Bởi Ghast Noob
+- Dành Cho Phiên Bản MCPE 1.1.x
+- Trạng Thái: Đã Hoạt Động
+
+======================================
+2019-07-10 [13:19:14] [Server thread/INFO]: Enabling NoTP v1.0.5
+2019-07-10 [13:19:14] [Server thread/INFO]: Enabling WingWater v1.3
+2019-07-10 [13:19:14] [Server thread/INFO]: Enabling WingSpore v1.3
+2019-07-10 [13:19:14] [Server thread/INFO]: Enabling QuyenHang v1
+2019-07-10 [13:19:14] [Server thread/INFO]: [QuyenHang] 
+======================================
+
+- Quyền Hạng Code Bởi Ghast Noob
+- Dành Cho Phiên Bản MCPE 1.1.x
+- Trạng Thái: Đã Hoạt Động
+
+======================================
+2019-07-10 [13:19:14] [Server thread/INFO]: Enabling AntiDamage v1.3
+2019-07-10 [13:19:14] [Server thread/INFO]: Enabling MuaRank v1
+2019-07-10 [13:19:14] [Server thread/INFO]: [MuaRank] 
+======================================
+
+- Mua Rank Code Bởi Ghast Noob
+- Dành Cho Phiên Bản MCPE 1.1.x
+- Trạng Thái: Đã Hoạt Động
+
+======================================
+2019-07-10 [13:19:14] [Server thread/INFO]: Enabling WingWaterDrip v1.3
+2019-07-10 [13:19:14] [Server thread/INFO]: Enabling WingSmoke v1.3
+2019-07-10 [13:19:14] [Server thread/INFO]: Enabling WingRedstone v1.3
+2019-07-10 [13:19:14] [Server thread/INFO]: Enabling WingRain v1.3
+2019-07-10 [13:19:14] [Server thread/INFO]: Enabling WingPortal v1.3
+2019-07-10 [13:19:14] [Server thread/INFO]: Enabling WingMobSpell v1.3
+2019-07-10 [13:19:14] [Server thread/INFO]: Enabling WingLava v1.3
+2019-07-10 [13:19:14] [Server thread/INFO]: Enabling WingLavaDrip v1.3
+2019-07-10 [13:19:14] [Server thread/INFO]: Enabling WingHeart v1.3
+2019-07-10 [13:19:14] [Server thread/INFO]: Enabling WingHappy v1.3
+2019-07-10 [13:19:14] [Server thread/INFO]: Enabling WingFlame v1.3
+2019-07-10 [13:19:14] [Server thread/INFO]: Enabling WingEnchant v1.3
+2019-07-10 [13:19:14] [Server thread/INFO]: Enabling WingCritical v1.3
+2019-07-10 [13:19:14] [Server thread/INFO]: Enabling WingBubble v1.3
+2019-07-10 [13:19:14] [Server thread/INFO]: Enabling WingAngry v1.3
+2019-07-10 [13:19:14] [Server thread/INFO]: Enabling BuyEnchant v1
+2019-07-10 [13:19:14] [Server thread/INFO]: Enabling Prealms_BuildBattle v1.3.0
+2019-07-10 [13:19:14] [Server thread/NOTICE]: [Prealms_BuildBattle] BuildBattle by DragonPlayzMC
+2019-07-10 [13:19:14] [Server thread/INFO]: Enabling CopyPasteBuildDP v2.0.0
+2019-07-10 [13:19:14] [Server thread/INFO]: Enabling EconomyShop v2.0.7
+2019-07-10 [13:19:14] [Server thread/INFO]: Enabling EconomySell v2.0.7
+2019-07-10 [13:19:14] [Server thread/INFO]: Enabling EconomyLand v2.0.9
+2019-07-10 [13:19:14] [Server thread/INFO]: Enabling EconomyJob v2.0.4
+2019-07-10 [13:19:14] [Server thread/INFO]: Enabling SimpleAuthHelper v2.0.1
+2019-07-10 [13:19:14] [Server thread/ERROR]: [SimpleAuthHelper] Your selected language "vie" is not supported
+2019-07-10 [13:19:14] [Server thread/ERROR]: [SimpleAuthHelper] Please consider translating "messages.ini"
+2019-07-10 [13:19:14] [Server thread/ERROR]: [SimpleAuthHelper] and submitting a translation to the  developer
+2019-07-10 [13:19:14] [Server thread/INFO]: Enabling HealthBar v1.0.1
+2019-07-10 [13:19:14] [Server thread/INFO]: Enabling PureChat v1.4.0
+2019-07-10 [13:19:14] [Server thread/NOTICE]: [PureChat] FactionsPro-OLD support enabled.
+2019-07-10 [13:19:17] [Server thread/INFO]: Starting GS4 status listener
+2019-07-10 [13:19:17] [Server thread/INFO]: Setting query port to 19132
+2019-07-10 [13:19:17] [Server thread/INFO]: Query running on 0.0.0.0:19132
+2019-07-10 [13:19:17] [Server thread/INFO]: Default game type: Chế độ sống sốt
+2019-07-10 [13:19:17] [Server thread/INFO]: Done (25.406s)! For help, type "help" or "?"
+2019-07-10 [13:19:17] [Server thread/INFO]: [Sakuraft]Hãy vote tại :bit.do/sakuraft để ủng hộ server
+2019-07-10 [13:19:17] [Server thread/INFO]: [Sakuraft] Watchdog đã dọn 0 vật phẩm rơi trên mặt đất!
+2019-07-10 [13:19:17] [Server thread/CRITICAL]: Could not execute task Sheep\Utils\ScanTask: Class React\Promise\Deferred not found
+2019-07-10 [13:19:17] [Server thread/CRITICAL]: ClassNotFoundException: "Class React\Promise\Deferred not found" (EXCEPTION) in "/src/spl/BaseClassLoader" at line 144
+2019-07-10 [13:19:17] [Server thread/INFO]: [Sakuraft] Rác sẽ được dọn sau 2 phút nữa!
+2019-07-10 [13:19:18] [Server thread/ERROR]: [SkinChanger] Could not check for Update: "Empty Response" !
+2019-07-10 [13:19:18] [Server thread/INFO]: [Tool[PTK]-System]→ Không có phiên bản cập nhật nào mới cho Tool[PTK].Bạn đang dùng bản mới nhất!
+2019-07-10 [13:19:32] [Server thread/INFO]: [Sakuraft]Phát hiện lỗi hãy báo với chủ server!
+2019-07-10 [13:20:30] [Server thread/INFO]: [Sakuraft]Vinh hạnh chào mừng bạn đến với server
+2019-07-10 [13:20:47] [Server thread/INFO]: Vohuynhnamviet[/14.252.6.13:46630] [ClientID: -3.6840627253135E+18] logged in with entity id 1 at (world, 109.386, 4, 126.1262)
+2019-07-10 [13:20:47] [Server thread/INFO]: [CommandTracker] <CONSOLE> /list
+2019-07-10 [13:20:47] [Server thread/INFO]: Có tất cả 1/50 đang online:
+2019-07-10 [13:20:47] [Server thread/INFO]: Vohuynhnamviet
+2019-07-10 [13:20:49] [Server thread/INFO]: [Tool[PTK]] Running
+2019-07-10 [13:20:49] [Server thread/INFO]: Chào Mừng "• Vohuynhnamviet đã vào SaKuRAFT."
+2019-07-10 [13:21:04] [Server thread/INFO]: [Sakuraft] Các minigames mới: BuildBattle, EggWars,...
+2019-07-10 [13:21:23] [Server thread/INFO]: [Sakuraft]Hãy vote tại :bit.do/sakuraft để ủng hộ server
+2019-07-10 [13:21:27] [Server thread/INFO]: [CommandTracker] <Vohuynhnamviet> /ci 
+2019-07-10 [13:21:39] [Server thread/INFO]: • Vohuynhnamviet đã thoát khỏi server.
+2019-07-10 [13:21:39] [Server thread/INFO]: Vohuynhnamviet[/14.252.6.13:46630] logged out due to client disconnect
+2019-07-10 [13:21:39] [Server thread/INFO]: [CommandTracker] <CONSOLE> /list
+2019-07-10 [13:21:39] [Server thread/INFO]: Có tất cả 0/50 đang online:
+2019-07-10 [13:21:39] [Server thread/INFO]: 
+2019-07-10 [13:21:39] [Server thread/INFO]: [Sakuraft]Phát hiện lỗi hãy báo với chủ server!
+2019-07-10 [13:21:46] [Server thread/INFO]: [CommandTracker] <CONSOLE> /stop
+2019-07-10 [13:21:46] [Server thread/INFO]: [CONSOLE: Đang dừng server...]
+2019-07-10 [13:21:46] [Server thread/INFO]: Disabling EconomyAPI v2.0.9
+2019-07-10 [13:21:46] [Server thread/INFO]: Disabling PurePerms v1.3.7
+2019-07-10 [13:21:46] [Server thread/INFO]: Disabling SimpleAuth v1.8.1
+2019-07-10 [13:21:46] [Server thread/INFO]: Disabling Titler v0.1.0
+2019-07-10 [13:21:46] [Server thread/INFO]: [Titler] Đã vô hiệu hóa
+2019-07-10 [13:21:46] [Server thread/INFO]: Disabling Broadcaster v1.16
+2019-07-10 [13:21:46] [Server thread/INFO]: Disabling Fireworks_JJBH v1.0 by Jaciel
+2019-07-10 [13:21:46] [Server thread/INFO]: Disabling FrameKeeper v1.1
+2019-07-10 [13:21:46] [Server thread/INFO]: Disabling CustomAlerts v1.6
+2019-07-10 [13:21:46] [Server thread/INFO]: Disabling Slapper_Việt_Hóa_By_Sói_Con v1.1
+2019-07-10 [13:21:46] [Server thread/INFO]: Disabling ManyWorlds v2.0.3
+2019-07-10 [13:21:46] [Server thread/INFO]: Disabling DevTools v1.10.0
+2019-07-10 [13:21:46] [Server thread/INFO]: Disabling Bar v1
+2019-07-10 [13:21:46] [Server thread/INFO]: [Bar] Bar closed
+2019-07-10 [13:21:46] [Server thread/INFO]: Disabling ItemID v1.1.0
+2019-07-10 [13:21:46] [Server thread/INFO]: Disabling AdvertisingKick v1.0.0
+2019-07-10 [13:21:46] [Server thread/INFO]: [AdvertisingKick] AdvertisingKick Stopped
+2019-07-10 [13:21:46] [Server thread/INFO]: Disabling AntiSpam v1.3
+2019-07-10 [13:21:46] [Server thread/INFO]: Disabling iProtector v3.1b
+2019-07-10 [13:21:46] [Server thread/INFO]: Disabling CommandTracker v1.1
+2019-07-10 [13:21:46] [Server thread/INFO]: Disabling Sheep v5.0.0
+2019-07-10 [13:21:46] [Server thread/INFO]: Disabling MagicWE v0.2.6
+2019-07-10 [13:21:46] [Server thread/INFO]: Disabling Lobby-by-DPMC v1
+2019-07-10 [13:21:46] [Server thread/INFO]: [Lobby-by-DPMC] >Deactivated!
+2019-07-10 [13:21:46] [Server thread/INFO]: Disabling BlockParticle v1
+2019-07-10 [13:21:46] [Server thread/INFO]: Disabling TheMask v1.0.0
+2019-07-10 [13:21:46] [Server thread/INFO]: Disabling SkinChanger v1.2.6
+2019-07-10 [13:21:46] [Server thread/INFO]: Disabling Trampoline v1.2
+2019-07-10 [13:21:46] [Server thread/INFO]: [Trampoline] Disabled!
+2019-07-10 [13:21:46] [Server thread/INFO]: Disabling MagicTelePortal v1.3.2
+2019-07-10 [13:21:46] [Server thread/INFO]: Disabling Tool[PTK] v2.0.0
+2019-07-10 [13:21:46] [Server thread/INFO]: Disabling SizePLayer v1.5
+2019-07-10 [13:21:46] [Server thread/INFO]: Disabling essentialsTP v1.1.0
+2019-07-10 [13:21:46] [Server thread/INFO]: [essentialsTP] ༺EssentialsTP༻ EssentialsTP Đã Ngừng Hoạt Động
+2019-07-10 [13:21:46] [Server thread/INFO]: Disabling Disable_TNT v0.1
+2019-07-10 [13:21:46] [Server thread/INFO]: [Disable_TNT] Plugin Đã Bị Vô Hiệu Hóa Do Bạn Dừng Máy Chủ Hoặc Có Lỗi Phát Sinh
+2019-07-10 [13:21:46] [Server thread/INFO]: Disabling Alias v1.2.0
+2019-07-10 [13:21:46] [Server thread/INFO]: Disabling ALW v1
+2019-07-10 [13:21:46] [Server thread/INFO]: Disabling Sell v2
+2019-07-10 [13:21:46] [Server thread/INFO]: Disabling Report v1
+2019-07-10 [13:21:46] [Server thread/INFO]: Disabling HopBiAn v1.0.0
+2019-07-10 [13:21:46] [Server thread/INFO]: Disabling FactionsPro v0.1#Beta
+2019-07-10 [13:21:46] [Server thread/INFO]: Disabling WorldProtect v2.2.0
+2019-07-10 [13:21:46] [Server thread/INFO]: Disabling Buyfix v1.0.0
+2019-07-10 [13:21:46] [Server thread/INFO]: Disabling Coin v2.0
+2019-07-10 [13:21:46] [Server thread/INFO]: Disabling ArcoLife v1
+2019-07-10 [13:21:46] [Server thread/INFO]: Disabling WingFire v1.3
+2019-07-10 [13:21:46] [Server thread/INFO]: Disabling Muakey v2
+2019-07-10 [13:21:46] [Server thread/INFO]: Disabling TopIS v2
+2019-07-10 [13:21:46] [Server thread/INFO]: Disabling Trade v1
+2019-07-10 [13:21:46] [Server thread/INFO]: Disabling NoTP v1.0.5
+2019-07-10 [13:21:46] [Server thread/INFO]: Disabling WingWater v1.3
+2019-07-10 [13:21:46] [Server thread/INFO]: Disabling WingSpore v1.3
+2019-07-10 [13:21:46] [Server thread/INFO]: Disabling QuyenHang v1
+2019-07-10 [13:21:46] [Server thread/INFO]: [QuyenHang] 
+======================================
+
+- Quyền Hạng Code Bởi Ghast Noob
+- Dành Cho Phiên Bản MCPE 1.1.x
+- Trạng Thái: Đã Vô Hiệu Hóa
+
+======================================
+2019-07-10 [13:21:46] [Server thread/INFO]: Disabling AntiDamage v1.3
+2019-07-10 [13:21:46] [Server thread/INFO]: Disabling MuaRank v1
+2019-07-10 [13:21:46] [Server thread/INFO]: Disabling WingWaterDrip v1.3
+2019-07-10 [13:21:46] [Server thread/INFO]: Disabling WingSmoke v1.3
+2019-07-10 [13:21:46] [Server thread/INFO]: Disabling WingRedstone v1.3
+2019-07-10 [13:21:46] [Server thread/INFO]: Disabling WingRain v1.3
+2019-07-10 [13:21:46] [Server thread/INFO]: Disabling WingPortal v1.3
+2019-07-10 [13:21:46] [Server thread/INFO]: Disabling WingMobSpell v1.3
+2019-07-10 [13:21:46] [Server thread/INFO]: Disabling WingLava v1.3
+2019-07-10 [13:21:46] [Server thread/INFO]: Disabling WingLavaDrip v1.3
+2019-07-10 [13:21:46] [Server thread/INFO]: Disabling WingHeart v1.3
+2019-07-10 [13:21:46] [Server thread/INFO]: Disabling WingHappy v1.3
+2019-07-10 [13:21:46] [Server thread/INFO]: Disabling WingFlame v1.3
+2019-07-10 [13:21:46] [Server thread/INFO]: Disabling WingEnchant v1.3
+2019-07-10 [13:21:46] [Server thread/INFO]: Disabling WingCritical v1.3
+2019-07-10 [13:21:46] [Server thread/INFO]: Disabling WingBubble v1.3
+2019-07-10 [13:21:46] [Server thread/INFO]: Disabling WingAngry v1.3
+2019-07-10 [13:21:46] [Server thread/INFO]: Disabling BuyEnchant v1
+2019-07-10 [13:21:46] [Server thread/INFO]: Disabling Prealms_BuildBattle v1.3.0
+2019-07-10 [13:21:46] [Server thread/INFO]: Unloading level "Hypixel Build Battle map"
+2019-07-10 [13:21:47] [Server thread/INFO]: Disabling DonRac[PTK] v2
+2019-07-10 [13:21:47] [Server thread/INFO]: [DonRac[PTK]]  Plugin Dọn Rác Bởi PTK Đã Tắt Phiên Bản:2!
+2019-07-10 [13:21:47] [Server thread/INFO]: Disabling CopyPasteBuildDP v2.0.0
+2019-07-10 [13:21:47] [Server thread/INFO]: Disabling EconomyShop v2.0.7
+2019-07-10 [13:21:47] [Server thread/INFO]: Disabling EconomySell v2.0.7
+2019-07-10 [13:21:47] [Server thread/INFO]: Disabling EconomyLand v2.0.9
+2019-07-10 [13:21:47] [Server thread/INFO]: Disabling EconomyJob v2.0.4
+2019-07-10 [13:21:47] [Server thread/INFO]: Disabling SimpleAuthHelper v2.0.1
+2019-07-10 [13:21:47] [Server thread/INFO]: Disabling HealthBar v1.0.1
+2019-07-10 [13:21:47] [Server thread/INFO]: Disabling SkyBlock v2
+2019-07-10 [13:21:47] [Server thread/INFO]: Disabling PureChat v1.4.0
+2019-07-10 [13:21:47] [Server thread/INFO]: Unloading level "world"
+2019-07-10 [13:21:47] [Server thread/INFO]: Unloading level "nether"
+2019-07-10 [13:21:47] [Server thread/INFO]: Unloading level "ender"
+2019-07-10 [13:21:47] [Server thread/INFO]: Unloading level "pvp"
+2019-07-10 [13:21:47] [Server thread/INFO]: Unloading level "sb"
+2019-07-10 [13:21:47] [Server thread/INFO]: Unloading level "shop"
+2019-07-10 [13:21:47] [Server thread/INFO]: Unloading level "sur"
+2019-07-10 [13:21:47] [Server thread/INFO]: Unloading level "sur1"
+2019-07-10 [13:21:47] [Server thread/INFO]: Unloading level "bbhub"
+2019-07-10 [13:21:52] [Server thread/INFO]: Stopping other threads
+2019-07-10 [13:26:15] [Server thread/WARNING]: OpenSSL extension not found
+2019-07-10 [13:26:15] [Server thread/WARNING]: Please configure OpenSSL extension for PHP if you want to use Xbox Live authentication or global resource pack.
+2019-07-10 [13:26:15] [Server thread/INFO]: Chọn Vietnamese (vie) là ngôn ngữ chính
+2019-07-10 [13:26:15] [Server thread/WARNING]: Debugging assertions are enabled, this may impact on performance. To disable them, set `zend.assertions = -1` in php.ini.
+2019-07-10 [13:26:15] [Server thread/INFO]: Opening server on 0.0.0.0:19132
+2019-07-10 [13:26:15] [Server thread/INFO]: TerminatorVN is distributed under the LGPL License
+2019-07-10 [13:26:16] [Server thread/INFO]: Loading recipes...
+2019-07-10 [13:26:17] [Server thread/INFO]: Loading resource packs...
+2019-07-10 [13:26:17] [Server thread/INFO]: Loading EconomyAPI v2.0.9
+2019-07-10 [13:26:17] [Server thread/INFO]: Loading PurePerms v1.3.7
+2019-07-10 [13:26:17] [Server thread/NOTICE]: PurePerms by 64FF00 & ProjectInfinity! #LEET.CC
+
+  888  888    .d8888b.      d8888  8888888888 8888888888 .d8888b.   .d8888b. 
+  888  888   d88P  Y88b    d8P888  888        888       d88P  Y88b d88P  Y88b
+888888888888 888          d8P 888  888        888       888    888 888    888
+  888  888   888d888b.   d8P  888  8888888    8888888   888    888 888    888
+  888  888   888P "Y88b d88   888  888        888       888    888 888    888
+888888888888 888    888 8888888888 888        888       888    888 888    888
+  888  888   Y88b  d88P       888  888        888       Y88b  d88P Y88b  d88P
+  888  888    "Y8888P"        888  888        888        "Y8888P"   "Y8888P" 
+
+2019-07-10 [13:26:17] [Server thread/INFO]: [PurePerms] Setting default language to 'en'
+2019-07-10 [13:26:17] [Server thread/NOTICE]: [PurePerms] Multiworld support is currently disabled.
+2019-07-10 [13:26:17] [Server thread/NOTICE]: [PurePerms] Don't forget to set enable-multiworld-perms option in config.yml to true if you want to use per-world permissions!
+2019-07-10 [13:26:17] [Server thread/INFO]: Loading SimpleAuth v1.8.1
+2019-07-10 [13:26:17] [Server thread/INFO]: Loading Titler v0.1.0
+2019-07-10 [13:26:17] [Server thread/INFO]: [Titler] Đang tải dữ liệu...
+2019-07-10 [13:26:17] [Server thread/INFO]: Loading Broadcaster v1.16
+2019-07-10 [13:26:17] [Server thread/INFO]: Loading Fireworks_JJBH v1.0 by Jaciel
+2019-07-10 [13:26:17] [Server thread/INFO]: Loading FrameKeeper v1.1
+2019-07-10 [13:26:17] [Server thread/INFO]: Loading CustomAlerts v1.6
+2019-07-10 [13:26:17] [Server thread/INFO]: Loading Slapper_Việt_Hóa_By_Sói_Con v1.1
+2019-07-10 [13:26:17] [Server thread/INFO]: Loading ManyWorlds v2.0.3
+2019-07-10 [13:26:17] [Server thread/INFO]: Loading DevTools v1.10.0
+2019-07-10 [13:26:17] [Server thread/INFO]: Loading Bar v1
+2019-07-10 [13:26:17] [Server thread/INFO]: Loading ItemID v1.1.0
+2019-07-10 [13:26:17] [Server thread/INFO]: Loading AdvertisingKick v1.0.0
+2019-07-10 [13:26:17] [Server thread/INFO]: Loading AntiSpam v1.3
+2019-07-10 [13:26:17] [Server thread/INFO]: Loading iProtector v3.1b
+2019-07-10 [13:26:17] [Server thread/INFO]: Loading CommandTracker v1.1
+2019-07-10 [13:26:17] [Server thread/INFO]: Loading Sheep v5.0.0
+2019-07-10 [13:26:17] [Server thread/INFO]: Loading MagicWE v0.2.6
+2019-07-10 [13:26:17] [Server thread/INFO]: [MagicWE] MagicWE has been loaded!
+2019-07-10 [13:26:17] [Server thread/INFO]: Loading Lobby-by-DPMC v1
+2019-07-10 [13:26:17] [Server thread/INFO]: Loading BlockParticle v1
+2019-07-10 [13:26:17] [Server thread/INFO]: Loading TheMask v1.0.0
+2019-07-10 [13:26:17] [Server thread/INFO]: Loading SkinChanger v1.2.6
+2019-07-10 [13:26:17] [Server thread/INFO]: Loading Trampoline v1.2
+2019-07-10 [13:26:17] [Server thread/INFO]: Loading MagicTelePortal v1.3.2
+2019-07-10 [13:26:17] [Server thread/INFO]: Loading (Source) Tool[PTK] v2.0.0
+2019-07-10 [13:26:17] [Server thread/INFO]: Loading (Source) SizePLayer v1.5
+2019-07-10 [13:26:17] [Server thread/INFO]: Loading (Source) essentialsTP v1.1.0
+2019-07-10 [13:26:17] [Server thread/INFO]: Loading (Source) Disable_TNT v0.1
+2019-07-10 [13:26:17] [Server thread/INFO]: Loading (Source) Alias v1.2.0
+2019-07-10 [13:26:17] [Server thread/INFO]: Loading (Source) ALW v1
+2019-07-10 [13:26:17] [Server thread/INFO]: Loading (Source) Sell v2
+2019-07-10 [13:26:17] [Server thread/INFO]: Loading (Source) Report v1
+2019-07-10 [13:26:17] [Server thread/INFO]: Loading (Source) HopBiAn v1.0.0
+2019-07-10 [13:26:17] [Server thread/INFO]: Loading (Source) FactionsPro v0.1#Beta
+2019-07-10 [13:26:17] [Server thread/INFO]: Loading (Source) WorldProtect v2.2.0
+2019-07-10 [13:26:18] [Server thread/INFO]: Loading (Source) Buyfix v1.0.0
+2019-07-10 [13:26:18] [Server thread/INFO]: Loading (Source) Coin v2.0
+2019-07-10 [13:26:18] [Server thread/INFO]: Loading (Source) ArcoLife v1
+2019-07-10 [13:26:18] [Server thread/INFO]: Loading (Source) WingFire v1.3
+2019-07-10 [13:26:18] [Server thread/INFO]: Loading (Source) Muakey v2
+2019-07-10 [13:26:18] [Server thread/INFO]: Loading (Source) TopIS v2
+2019-07-10 [13:26:18] [Server thread/INFO]: Loading (Source) Trade v1
+2019-07-10 [13:26:18] [Server thread/INFO]: Loading (Source) NoTP v1.0.5
+2019-07-10 [13:26:18] [Server thread/INFO]: Loading (Source) WingWater v1.3
+2019-07-10 [13:26:18] [Server thread/INFO]: Loading (Source) WingSpore v1.3
+2019-07-10 [13:26:18] [Server thread/INFO]: Loading (Source) QuyenHang v1
+2019-07-10 [13:26:18] [Server thread/INFO]: Loading (Source) AntiDamage v1.3
+2019-07-10 [13:26:18] [Server thread/INFO]: Loading (Source) MuaRank v1
+2019-07-10 [13:26:18] [Server thread/INFO]: Loading (Source) WingWaterDrip v1.3
+2019-07-10 [13:26:18] [Server thread/INFO]: Loading (Source) WingSmoke v1.3
+2019-07-10 [13:26:18] [Server thread/INFO]: Loading (Source) WingRedstone v1.3
+2019-07-10 [13:26:18] [Server thread/INFO]: Loading (Source) WingRain v1.3
+2019-07-10 [13:26:18] [Server thread/INFO]: Loading (Source) WingPortal v1.3
+2019-07-10 [13:26:18] [Server thread/INFO]: Loading (Source) WingMobSpell v1.3
+2019-07-10 [13:26:18] [Server thread/INFO]: Loading (Source) WingLava v1.3
+2019-07-10 [13:26:18] [Server thread/INFO]: Loading (Source) WingLavaDrip v1.3
+2019-07-10 [13:26:18] [Server thread/INFO]: Loading (Source) WingHeart v1.3
+2019-07-10 [13:26:18] [Server thread/INFO]: Loading (Source) WingHappy v1.3
+2019-07-10 [13:26:18] [Server thread/INFO]: Loading (Source) WingFlame v1.3
+2019-07-10 [13:26:18] [Server thread/INFO]: Loading (Source) WingEnchant v1.3
+2019-07-10 [13:26:18] [Server thread/INFO]: Loading (Source) WingCritical v1.3
+2019-07-10 [13:26:18] [Server thread/INFO]: Loading (Source) WingBubble v1.3
+2019-07-10 [13:26:18] [Server thread/INFO]: Loading (Source) WingAngry v1.3
+2019-07-10 [13:26:18] [Server thread/INFO]: Loading (Source) BuyEnchant v1
+2019-07-10 [13:26:18] [Server thread/INFO]: Loading (Source) Prealms_BuildBattle v1.3.0
+2019-07-10 [13:26:18] [Server thread/INFO]: Loading (Source) DonRac[PTK] v2
+2019-07-10 [13:26:18] [Server thread/INFO]: Loading (Source) CopyPasteBuildDP v2.0.0
+2019-07-10 [13:26:18] [Server thread/INFO]: Loading EconomyShop v2.0.7
+2019-07-10 [13:26:18] [Server thread/INFO]: Loading EconomySell v2.0.7
+2019-07-10 [13:26:18] [Server thread/INFO]: Loading EconomyLand v2.0.9
+2019-07-10 [13:26:18] [Server thread/INFO]: Loading EconomyJob v2.0.4
+2019-07-10 [13:26:18] [Server thread/INFO]: Loading SimpleAuthHelper v2.0.1
+2019-07-10 [13:26:18] [Server thread/INFO]: Loading HealthBar v1.0.1
+2019-07-10 [13:26:18] [Server thread/INFO]: Loading SkyBlock v2
+2019-07-10 [13:26:18] [Server thread/INFO]: Loading PureChat v1.4.0
+2019-07-10 [13:26:18] [Server thread/INFO]: Enabling SimpleAuth v1.8.1
+2019-07-10 [13:26:18] [Server thread/INFO]: [SimpleAuth] Connected to PurePerms
+2019-07-10 [13:26:18] [Server thread/INFO]: [SimpleAuth] Everything loaded!
+2019-07-10 [13:26:18] [Server thread/INFO]: Enabling Broadcaster v1.16
+2019-07-10 [13:26:18] [Server thread/INFO]: Enabling CustomAlerts v1.6
+2019-07-10 [13:26:18] [Server thread/INFO]: Enabling DevTools v1.10.0
+2019-07-10 [13:26:18] [Server thread/ERROR]: Could not load plugin 'Tool[PTK]': plugin exists
+2019-07-10 [13:26:18] [Server thread/ERROR]: Could not load plugin 'SizePLayer': plugin exists
+2019-07-10 [13:26:18] [Server thread/ERROR]: Could not load plugin 'essentialsTP': plugin exists
+2019-07-10 [13:26:18] [Server thread/ERROR]: Could not load plugin 'Disable_TNT': plugin exists
+2019-07-10 [13:26:18] [Server thread/ERROR]: Could not load plugin 'Alias': plugin exists
+2019-07-10 [13:26:18] [Server thread/ERROR]: Could not load plugin 'ALW': plugin exists
+2019-07-10 [13:26:18] [Server thread/ERROR]: Could not load plugin 'Sell': plugin exists
+2019-07-10 [13:26:18] [Server thread/ERROR]: Could not load plugin 'Report': plugin exists
+2019-07-10 [13:26:18] [Server thread/ERROR]: Could not load plugin 'HopBiAn': plugin exists
+2019-07-10 [13:26:18] [Server thread/ERROR]: Could not load plugin 'FactionsPro': plugin exists
+2019-07-10 [13:26:18] [Server thread/ERROR]: Could not load plugin 'WorldProtect': plugin exists
+2019-07-10 [13:26:18] [Server thread/ERROR]: Could not load plugin 'Buyfix': plugin exists
+2019-07-10 [13:26:18] [Server thread/ERROR]: Could not load plugin 'Coin': plugin exists
+2019-07-10 [13:26:18] [Server thread/ERROR]: Could not load plugin 'ArcoLife': plugin exists
+2019-07-10 [13:26:18] [Server thread/ERROR]: Could not load plugin 'WingFire': plugin exists
+2019-07-10 [13:26:18] [Server thread/ERROR]: Could not load plugin 'Muakey': plugin exists
+2019-07-10 [13:26:18] [Server thread/ERROR]: Could not load plugin 'TopIS': plugin exists
+2019-07-10 [13:26:18] [Server thread/ERROR]: Could not load plugin 'Trade': plugin exists
+2019-07-10 [13:26:18] [Server thread/ERROR]: Could not load plugin 'NoTP': plugin exists
+2019-07-10 [13:26:18] [Server thread/ERROR]: Could not load plugin 'WingWater': plugin exists
+2019-07-10 [13:26:18] [Server thread/ERROR]: Could not load plugin 'WingSpore': plugin exists
+2019-07-10 [13:26:18] [Server thread/ERROR]: Could not load plugin 'QuyenHang': plugin exists
+2019-07-10 [13:26:18] [Server thread/ERROR]: Could not load plugin 'AntiDamage': plugin exists
+2019-07-10 [13:26:18] [Server thread/ERROR]: Could not load plugin 'MuaRank': plugin exists
+2019-07-10 [13:26:18] [Server thread/ERROR]: Could not load plugin 'WingWaterDrip': plugin exists
+2019-07-10 [13:26:18] [Server thread/ERROR]: Could not load plugin 'WingSmoke': plugin exists
+2019-07-10 [13:26:18] [Server thread/ERROR]: Could not load plugin 'WingRedstone': plugin exists
+2019-07-10 [13:26:18] [Server thread/ERROR]: Could not load plugin 'WingRain': plugin exists
+2019-07-10 [13:26:18] [Server thread/ERROR]: Could not load plugin 'WingPortal': plugin exists
+2019-07-10 [13:26:18] [Server thread/ERROR]: Could not load plugin 'WingMobSpell': plugin exists
+2019-07-10 [13:26:18] [Server thread/ERROR]: Could not load plugin 'WingLava': plugin exists
+2019-07-10 [13:26:18] [Server thread/ERROR]: Could not load plugin 'WingLavaDrip': plugin exists
+2019-07-10 [13:26:18] [Server thread/ERROR]: Could not load plugin 'WingHeart': plugin exists
+2019-07-10 [13:26:18] [Server thread/ERROR]: Could not load plugin 'WingHappy': plugin exists
+2019-07-10 [13:26:18] [Server thread/ERROR]: Could not load plugin 'WingFlame': plugin exists
+2019-07-10 [13:26:18] [Server thread/ERROR]: Could not load plugin 'WingEnchant': plugin exists
+2019-07-10 [13:26:18] [Server thread/ERROR]: Could not load plugin 'WingCritical': plugin exists
+2019-07-10 [13:26:18] [Server thread/ERROR]: Could not load plugin 'WingBubble': plugin exists
+2019-07-10 [13:26:18] [Server thread/ERROR]: Could not load plugin 'WingAngry': plugin exists
+2019-07-10 [13:26:18] [Server thread/ERROR]: Could not load plugin 'BuyEnchant': plugin exists
+2019-07-10 [13:26:18] [Server thread/ERROR]: Could not load plugin 'Prealms_BuildBattle': plugin exists
+2019-07-10 [13:26:18] [Server thread/ERROR]: Could not load plugin 'DonRac[PTK]': plugin exists
+2019-07-10 [13:26:18] [Server thread/ERROR]: Could not load plugin 'CopyPasteBuildDP': plugin exists
+2019-07-10 [13:26:18] [Server thread/INFO]: [DevTools] Registered folder plugin loader
+2019-07-10 [13:26:18] [Server thread/INFO]: Enabling AntiSpam v1.3
+2019-07-10 [13:26:18] [Server thread/INFO]: Enabling CommandTracker v1.1
+2019-07-10 [13:26:18] [Server thread/INFO]: Enabling MagicWE v0.2.6
+2019-07-10 [13:26:18] [Server thread/INFO]: [MagicWE] MagicWE enabled!
+2019-07-10 [13:26:18] [Server thread/INFO]: Enabling Disable_TNT v0.1
+2019-07-10 [13:26:18] [Server thread/INFO]: [Disable_TNT] Plugin Đã Được Kích Hoạt
+2019-07-10 [13:26:18] [Server thread/INFO]: Enabling HopBiAn v1.0.0
+2019-07-10 [13:26:18] [Server thread/INFO]: [HopBiAn] Plugin Đã hoạt động được code bở BOSS_CraftPE
+2019-07-10 [13:26:18] [Server thread/INFO]: Enabling WorldProtect v2.2.0
+2019-07-10 [13:26:18] [Server thread/INFO]: [WorldProtect] Enabled 9 features
+2019-07-10 [13:26:18] [Server thread/INFO]: Enabling DonRac[PTK] v2
+2019-07-10 [13:26:18] [Server thread/INFO]: [DonRac[PTK]] Plugin Dọn Rác Bởi PTK Đã Được Kích Hoạt Phiên Bản:2!
+2019-07-10 [13:26:18] [Server thread/INFO]: Enabling SkyBlock v2
+2019-07-10 [13:26:18] [Server thread/INFO]: [SkyBlock] Loading MyPlot
+2019-07-10 [13:26:18] [Server thread/INFO]: Preparing level "world"
+2019-07-10 [13:26:19] [Server thread/INFO]: Preparing level "nether"
+2019-07-10 [13:26:19] [Server thread/INFO]: Preparing level "ender"
+2019-07-10 [13:26:19] [Server thread/INFO]: Enabling EconomyAPI v2.0.9
+2019-07-10 [13:26:19] [Server thread/NOTICE]: [EconomyAPI] Provider was set to: Yaml
+2019-07-10 [13:26:19] [Server thread/NOTICE]: [EconomyAPI] Auto save has been set to interval : 10 min(s)
+2019-07-10 [13:26:19] [Server thread/INFO]: [EconomyAPI] Checking for updates... It may be take some while.
+2019-07-10 [13:26:24] [Server thread/NOTICE]: [EconomyAPI] 
+2019-07-10 [13:26:24] [Server thread/INFO]: Enabling PurePerms v1.3.7
+2019-07-10 [13:26:24] [Server thread/NOTICE]: [PurePerms] Set data provider to YAMLv1.
+2019-07-10 [13:26:24] [Server thread/INFO]: Enabling Titler v0.1.0
+2019-07-10 [13:26:24] [Server thread/INFO]: [Titler] Đã được kích hoạt!
+2019-07-10 [13:26:24] [Server thread/INFO]: Enabling Fireworks_JJBH v1.0 by Jaciel
+2019-07-10 [13:26:24] [Server thread/INFO]: [Fireworks_JJBH] PLUGIN BY jaciel14
+2019-07-10 [13:26:24] [Server thread/INFO]: Enabling FrameKeeper v1.1
+2019-07-10 [13:26:24] [Server thread/INFO]: [FrameKeeper v1.1] Đã kích hoạt thành công!
+2019-07-10 [13:26:24] [Server thread/INFO]: Enabling Slapper_Việt_Hóa_By_Sói_Con v1.1
+2019-07-10 [13:26:24] [Server thread/INFO]: Enabling ManyWorlds v2.0.3
+2019-07-10 [13:26:24] [Server thread/INFO]: Enabling Bar v1
+2019-07-10 [13:26:24] [Server thread/INFO]: [Bar] Đã bật
+2019-07-10 [13:26:24] [Server thread/INFO]: Enabling ItemID v1.1.0
+2019-07-10 [13:26:24] [Server thread/INFO]: [ItemID] ItemsID by KaitoDoDo
+2019-07-10 [13:26:24] [Server thread/INFO]: Enabling AdvertisingKick v1.0.0
+2019-07-10 [13:26:24] [Server thread/INFO]: [AdvertisingKick] AdvertisingKick Starterd
+2019-07-10 [13:26:24] [Server thread/INFO]: Enabling iProtector v3.1b
+2019-07-10 [13:26:24] [Server thread/INFO]: Enabling Sheep v5.0.0
+2019-07-10 [13:26:24] [Server thread/INFO]: [Sheep] Scanning loaded plugins for changes...
+2019-07-10 [13:26:24] [Server thread/INFO]: Enabling Lobby-by-DPMC v1
+2019-07-10 [13:26:24] [Server thread/INFO]: [Lobby-by-DPMC] >Activated!
+2019-07-10 [13:26:24] [Server thread/INFO]: Enabling BlockParticle v1
+2019-07-10 [13:26:24] [Server thread/INFO]: Enabling TheMask v1.0.0
+2019-07-10 [13:26:24] [Server thread/INFO]: [TheMask] Mask
+2019-07-10 [13:26:24] [Server thread/INFO]: [TheMask] Mask
+2019-07-10 [13:26:24] [Server thread/INFO]: Enabling SkinChanger v1.2.6
+2019-07-10 [13:26:24] [Server thread/INFO]: Enabling Trampoline v1.2
+2019-07-10 [13:26:24] [Server thread/INFO]: [Trampoline] Enabled!
+2019-07-10 [13:26:24] [Server thread/INFO]: Enabling MagicTelePortal v1.3.2
+2019-07-10 [13:26:24] [Server thread/INFO]: Enabling Tool[PTK] v2.0.0
+2019-07-10 [13:26:25] [Server thread/INFO]: [Tool[PTK]] →Đang chạy plugin Tool[PTK]...
+2019-07-10 [13:26:25] [Server thread/INFO]: [CONSOLE: Bổ nhiệm ghast_noob]
+2019-07-10 [13:26:25] [Server thread/INFO]: [PurePerms:64FF00] Added permission * to ghast_noob successfully.
+2019-07-10 [13:26:25] [Server thread/INFO]: [PurePerms:64FF00] Added ghast_noob to the group successfully.
+2019-07-10 [13:26:25] [Server thread/INFO]: [CONSOLE: Hủy cấm người chơi Ghast_Noob]
+2019-07-10 [13:26:25] [Server thread/INFO]: [CONSOLE: Unbanned CID -8332272655818828154]
+2019-07-10 [13:26:25] [Server thread/INFO]: [CONSOLE: Unbanned CID Ghast_Noob]
+2019-07-10 [13:26:25] [Server thread/INFO]: Enabling SizePLayer v1.5
+2019-07-10 [13:26:25] [Server thread/INFO]: [SizePLayer] » SizePlayer Loading!
+2019-07-10 [13:26:25] [Server thread/INFO]: Enabling essentialsTP v1.1.0
+2019-07-10 [13:26:25] [Server thread/INFO]: [essentialsTP] ༺EssentialsTP༻ EssentialsTP Đang Khởi Động...
+2019-07-10 [13:26:25] [Server thread/INFO]: [essentialsTP] ༺EssentialsTP༻ EssentialsTP Đang Khởi Động: [config.yml]....
+2019-07-10 [13:26:25] [Server thread/INFO]: [essentialsTP] ༺EssentialsTP༻ EssentialsTP Đã Khởi Động: [config.yml] Thành Công
+2019-07-10 [13:26:25] [Server thread/INFO]: [essentialsTP] ༺EssentialsTP༻ EssentialsTP Đã Hoạt Động
+2019-07-10 [13:26:25] [Server thread/INFO]: Enabling Alias v1.2.0
+2019-07-10 [13:26:25] [Server thread/INFO]: Enabling ALW v1
+2019-07-10 [13:26:25] [Server thread/INFO]: Plugin Đã Hoạt Động
+2019-07-10 [13:26:25] [Server thread/INFO]: Tất Cả Các World Đã Được Load
+2019-07-10 [13:26:25] [Server thread/INFO]: Preparing level "pvp"
+2019-07-10 [13:26:25] [Server thread/INFO]: Preparing level "sb"
+2019-07-10 [13:26:25] [Server thread/INFO]: Preparing level "shop"
+2019-07-10 [13:26:25] [Server thread/INFO]: Preparing level "Hypixel Build Battle map"
+2019-07-10 [13:26:25] [Server thread/INFO]: Preparing level "sur"
+2019-07-10 [13:26:25] [Server thread/INFO]: Preparing level "sur1"
+2019-07-10 [13:26:25] [Server thread/INFO]: Preparing level "bbhub"
+2019-07-10 [13:26:25] [Server thread/INFO]: Enabling Sell v2
+2019-07-10 [13:26:25] [Server thread/INFO]: [Sell] Đã Hoạt Động
+2019-07-10 [13:26:25] [Server thread/INFO]: Enabling Report v1
+2019-07-10 [13:26:25] [Server thread/INFO]: [Report] [Report] Plugin đã chạy
+2019-07-10 [13:26:25] [Server thread/INFO]: Enabling FactionsPro v0.1#Beta
+2019-07-10 [13:26:25] [Server thread/INFO]: Enabling Buyfix v1.0.0
+2019-07-10 [13:26:25] [Server thread/INFO]: [Buyfix] เปิดทำงานปลั๊กอิน fix
+2019-07-10 [13:26:25] [Server thread/INFO]: Enabling Coin v2.0
+2019-07-10 [13:26:25] [Server thread/NOTICE]: [Coin] Tự Động Lưu Đã Được Đặt Thời Gian Tối Thiểu Thành Khoảng: 1 Phút
+2019-07-10 [13:26:25] [Server thread/INFO]: [Coin] Kiểm Tra Cập Nhập... Có Thể Mất Một 
+2019-07-10 [13:26:31] [Server thread/NOTICE]: [Coin] 
+2019-07-10 [13:26:31] [Server thread/INFO]: Enabling ArcoLife v1
+2019-07-10 [13:26:31] [Server thread/INFO]: [ArcoLife] Đã Hoạt Động
+2019-07-10 [13:26:31] [Server thread/INFO]: [PurePerms:64FF00] Added permission * to ghast_noob successfully.
+2019-07-10 [13:26:31] [Server thread/INFO]: Enabling WingFire v1.3
+2019-07-10 [13:26:31] [Server thread/INFO]: Enabling Muakey v2
+2019-07-10 [13:26:31] [Server thread/INFO]: [Muakey] Plugin Đã hoạt động được code bở BOSS_CraftPE
+2019-07-10 [13:26:31] [Server thread/INFO]: Enabling TopIS v2
+2019-07-10 [13:26:31] [Server thread/INFO]: [TopIS] •Plugin Đã Hoạt Động
+2019-07-10 [13:26:31] [Server thread/INFO]: Enabling Trade v1
+2019-07-10 [13:26:31] [Server thread/INFO]: [Trade] 
+======================================
+
+- Trade Code Bởi Ghast Noob
+- Dành Cho Phiên Bản MCPE 1.1.x
+- Trạng Thái: Đã Hoạt Động
+
+======================================
+2019-07-10 [13:26:31] [Server thread/INFO]: Enabling NoTP v1.0.5
+2019-07-10 [13:26:31] [Server thread/INFO]: Enabling WingWater v1.3
+2019-07-10 [13:26:31] [Server thread/INFO]: Enabling WingSpore v1.3
+2019-07-10 [13:26:31] [Server thread/INFO]: Enabling QuyenHang v1
+2019-07-10 [13:26:31] [Server thread/INFO]: [QuyenHang] 
+======================================
+
+- Quyền Hạng Code Bởi Ghast Noob
+- Dành Cho Phiên Bản MCPE 1.1.x
+- Trạng Thái: Đã Hoạt Động
+
+======================================
+2019-07-10 [13:26:31] [Server thread/INFO]: Enabling AntiDamage v1.3
+2019-07-10 [13:26:31] [Server thread/INFO]: Enabling MuaRank v1
+2019-07-10 [13:26:31] [Server thread/INFO]: [MuaRank] 
+======================================
+
+- Mua Rank Code Bởi Ghast Noob
+- Dành Cho Phiên Bản MCPE 1.1.x
+- Trạng Thái: Đã Hoạt Động
+
+======================================
+2019-07-10 [13:26:31] [Server thread/INFO]: Enabling WingWaterDrip v1.3
+2019-07-10 [13:26:31] [Server thread/INFO]: Enabling WingSmoke v1.3
+2019-07-10 [13:26:31] [Server thread/INFO]: Enabling WingRedstone v1.3
+2019-07-10 [13:26:31] [Server thread/INFO]: Enabling WingRain v1.3
+2019-07-10 [13:26:31] [Server thread/INFO]: Enabling WingPortal v1.3
+2019-07-10 [13:26:31] [Server thread/INFO]: Enabling WingMobSpell v1.3
+2019-07-10 [13:26:31] [Server thread/INFO]: Enabling WingLava v1.3
+2019-07-10 [13:26:31] [Server thread/INFO]: Enabling WingLavaDrip v1.3
+2019-07-10 [13:26:31] [Server thread/INFO]: Enabling WingHeart v1.3
+2019-07-10 [13:26:31] [Server thread/INFO]: Enabling WingHappy v1.3
+2019-07-10 [13:26:31] [Server thread/INFO]: Enabling WingFlame v1.3
+2019-07-10 [13:26:31] [Server thread/INFO]: Enabling WingEnchant v1.3
+2019-07-10 [13:26:31] [Server thread/INFO]: Enabling WingCritical v1.3
+2019-07-10 [13:26:31] [Server thread/INFO]: Enabling WingBubble v1.3
+2019-07-10 [13:26:31] [Server thread/INFO]: Enabling WingAngry v1.3
+2019-07-10 [13:26:31] [Server thread/INFO]: Enabling BuyEnchant v1
+2019-07-10 [13:26:31] [Server thread/INFO]: Enabling Prealms_BuildBattle v1.3.0
+2019-07-10 [13:26:31] [Server thread/NOTICE]: [Prealms_BuildBattle] BuildBattle by DragonPlayzMC
+2019-07-10 [13:26:31] [Server thread/INFO]: Enabling CopyPasteBuildDP v2.0.0
+2019-07-10 [13:26:31] [Server thread/INFO]: Enabling EconomyShop v2.0.7
+2019-07-10 [13:26:31] [Server thread/INFO]: Enabling EconomySell v2.0.7
+2019-07-10 [13:26:31] [Server thread/INFO]: Enabling EconomyLand v2.0.9
+2019-07-10 [13:26:31] [Server thread/INFO]: Enabling EconomyJob v2.0.4
+2019-07-10 [13:26:31] [Server thread/INFO]: Enabling SimpleAuthHelper v2.0.1
+2019-07-10 [13:26:31] [Server thread/ERROR]: [SimpleAuthHelper] Your selected language "vie" is not supported
+2019-07-10 [13:26:31] [Server thread/ERROR]: [SimpleAuthHelper] Please consider translating "messages.ini"
+2019-07-10 [13:26:31] [Server thread/ERROR]: [SimpleAuthHelper] and submitting a translation to the  developer
+2019-07-10 [13:26:31] [Server thread/INFO]: Enabling HealthBar v1.0.1
+2019-07-10 [13:26:31] [Server thread/INFO]: Enabling PureChat v1.4.0
+2019-07-10 [13:26:31] [Server thread/NOTICE]: [PureChat] FactionsPro-OLD support enabled.
+2019-07-10 [13:26:35] [Server thread/INFO]: Starting GS4 status listener
+2019-07-10 [13:26:35] [Server thread/INFO]: Setting query port to 19132
+2019-07-10 [13:26:35] [Server thread/INFO]: Query running on 0.0.0.0:19132
+2019-07-10 [13:26:35] [Server thread/INFO]: Default game type: Chế độ sống sốt
+2019-07-10 [13:26:35] [Server thread/INFO]: Done (25.191s)! For help, type "help" or "?"
+2019-07-10 [13:26:35] [Server thread/INFO]: [Sakuraft]Hãy vote tại :bit.do/sakuraft để ủng hộ server
+2019-07-10 [13:26:35] [Server thread/INFO]: [Sakuraft] Watchdog đã dọn 0 vật phẩm rơi trên mặt đất!
+2019-07-10 [13:26:35] [Server thread/CRITICAL]: Could not execute task Sheep\Utils\ScanTask: Class React\Promise\Deferred not found
+2019-07-10 [13:26:35] [Server thread/CRITICAL]: ClassNotFoundException: "Class React\Promise\Deferred not found" (EXCEPTION) in "/src/spl/BaseClassLoader" at line 144
+2019-07-10 [13:26:35] [Server thread/INFO]: [Sakuraft] Rác sẽ được dọn sau 2 phút nữa!
+2019-07-10 [13:26:35] [Server thread/ERROR]: [SkinChanger] Could not check for Update: "Empty Response" !
+2019-07-10 [13:26:35] [Server thread/INFO]: [Tool[PTK]-System]→ Không có phiên bản cập nhật nào mới cho Tool[PTK].Bạn đang dùng bản mới nhất!
+2019-07-10 [13:26:59] [Server thread/INFO]: Vohuynhnamviet[/14.252.6.13:46630] [ClientID: -3.6840627253135E+18] logged in with entity id 1 at (world, 109.4715, 4, 124.9442)
+2019-07-10 [13:26:59] [Server thread/INFO]: [CommandTracker] <CONSOLE> /list
+2019-07-10 [13:26:59] [Server thread/INFO]: Có tất cả 1/50 đang online:
+2019-07-10 [13:26:59] [Server thread/INFO]: Vohuynhnamviet
+2019-07-10 [13:27:00] [Server thread/INFO]: [Sakuraft]Phát hiện lỗi hãy báo với chủ server!
+2019-07-10 [13:27:03] [Server thread/INFO]: [Tool[PTK]] Running
+2019-07-10 [13:27:03] [Server thread/INFO]: Chào Mừng "• Vohuynhnamviet đã vào SaKuRAFT."
+2019-07-10 [13:27:16] [Server thread/INFO]: [Sakuraft]Vinh hạnh chào mừng bạn đến với server
+2019-07-10 [13:27:19] [Server thread/INFO]: [CommandTracker] <Vohuynhnamviet> /muakey 2
+2019-07-10 [13:27:32] [Server thread/INFO]: [Sakuraft] Các minigames mới: BuildBattle, EggWars,...
+2019-07-10 [13:27:47] [Server thread/INFO]: [Sakuraft]Hãy vote tại :bit.do/sakuraft để ủng hộ server
+2019-07-10 [13:28:02] [Server thread/INFO]: [Sakuraft]Phát hiện lỗi hãy báo với chủ server!
+2019-07-10 [13:28:17] [Server thread/INFO]: [Sakuraft]Vinh hạnh chào mừng bạn đến với server
+2019-07-10 [13:28:32] [Server thread/INFO]: [Sakuraft] Các minigames mới: BuildBattle, EggWars,...
+2019-07-10 [13:28:47] [Server thread/INFO]: [Sakuraft]Hãy vote tại :bit.do/sakuraft để ủng hộ server
+2019-07-10 [13:29:02] [Server thread/INFO]: [Sakuraft]Phát hiện lỗi hãy báo với chủ server!
+2019-07-10 [13:29:13] [Server thread/INFO]: • Vohuynhnamviet đã thoát khỏi server.
+2019-07-10 [13:29:13] [Server thread/INFO]: Vohuynhnamviet[/14.252.6.13:46630] logged out due to timeout
+2019-07-10 [13:29:13] [Server thread/INFO]: [CommandTracker] <CONSOLE> /list
+2019-07-10 [13:29:13] [Server thread/INFO]: Có tất cả 0/50 đang online:
+2019-07-10 [13:29:13] [Server thread/INFO]: 
+2019-07-10 [13:29:28] [Server thread/INFO]: [Sakuraft]Vinh hạnh chào mừng bạn đến với server
+2019-07-10 [13:29:43] [Server thread/INFO]: [Sakuraft] Các minigames mới: BuildBattle, EggWars,...
+2019-07-10 [13:29:58] [Server thread/INFO]: [Sakuraft] Rác sẽ được dọn sau 2 phút nữa!
+2019-07-10 [13:29:58] [Server thread/INFO]: [Sakuraft]Hãy vote tại :bit.do/sakuraft để ủng hộ server
+2019-07-10 [13:30:13] [Server thread/INFO]: [Sakuraft]Phát hiện lỗi hãy báo với chủ server!
+2019-07-10 [13:30:46] [Server thread/INFO]: [Sakuraft]Vinh hạnh chào mừng bạn đến với server
+2019-07-10 [13:31:53] [Server thread/INFO]: [Sakuraft] Các minigames mới: BuildBattle, EggWars,...
+2019-07-10 [13:32:41] [Server thread/INFO]: [Sakuraft] Watchdog đã dọn 0 vật phẩm rơi trên mặt đất!
+2019-07-10 [13:32:41] [Server thread/INFO]: [Sakuraft]Hãy vote tại :bit.do/sakuraft để ủng hộ server
+2019-07-10 [13:33:45] [Server thread/INFO]: [Sakuraft]Phát hiện lỗi hãy báo với chủ server!
+2019-07-10 [13:34:29] [Server thread/INFO]: [Sakuraft]Vinh hạnh chào mừng bạn đến với server
+2019-07-10 [13:35:48] [Server thread/INFO]: [Sakuraft] Các minigames mới: BuildBattle, EggWars,...
+2019-07-10 [13:36:55] [Server thread/INFO]: [Sakuraft]Hãy vote tại :bit.do/sakuraft để ủng hộ server
+2019-07-10 [13:37:57] [Server thread/INFO]: [Sakuraft]Phát hiện lỗi hãy báo với chủ server!
+2019-07-10 [13:39:02] [Server thread/INFO]: [Sakuraft]Vinh hạnh chào mừng bạn đến với server
+2019-07-10 [13:40:04] [Server thread/INFO]: [Sakuraft] Các minigames mới: BuildBattle, EggWars,...
+2019-07-10 [13:41:18] [Server thread/INFO]: [Sakuraft]Hãy vote tại :bit.do/sakuraft để ủng hộ server
+2019-07-10 [13:41:18] [Server thread/INFO]: [Sakuraft] Rác sẽ được dọn sau 2 phút nữa!
+2019-07-10 [13:41:33] [Server thread/INFO]: [Sakuraft]Phát hiện lỗi hãy báo với chủ server!
+2019-07-10 [13:41:48] [Server thread/INFO]: [Sakuraft]Vinh hạnh chào mừng bạn đến với server
+2019-07-10 [13:42:03] [Server thread/INFO]: [Sakuraft] Các minigames mới: BuildBattle, EggWars,...
+2019-07-10 [13:42:18] [Server thread/INFO]: [Sakuraft]Hãy vote tại :bit.do/sakuraft để ủng hộ server
+2019-07-10 [13:42:33] [Server thread/INFO]: [Sakuraft]Phát hiện lỗi hãy báo với chủ server!
+2019-07-10 [13:42:48] [Server thread/INFO]: [Sakuraft]Vinh hạnh chào mừng bạn đến với server
+2019-07-10 [13:43:03] [Server thread/INFO]: [Sakuraft] Các minigames mới: BuildBattle, EggWars,...
+2019-07-10 [13:43:18] [Server thread/INFO]: [Sakuraft] Watchdog đã dọn 0 vật phẩm rơi trên mặt đất!
+2019-07-10 [13:43:18] [Server thread/INFO]: [Sakuraft]Hãy vote tại :bit.do/sakuraft để ủng hộ server
+2019-07-10 [13:43:51] [Server thread/INFO]: [Sakuraft]Phát hiện lỗi hãy báo với chủ server!
+2019-07-10 [13:44:41] [Server thread/INFO]: [Sakuraft]Vinh hạnh chào mừng bạn đến với server
+2019-07-10 [13:45:23] [Server thread/INFO]: [Sakuraft] Các minigames mới: BuildBattle, EggWars,...
+2019-07-10 [13:45:57] [Server thread/INFO]: [Sakuraft]Hãy vote tại :bit.do/sakuraft để ủng hộ server
+2019-07-10 [13:45:57] [Server thread/INFO]: [Sakuraft] Rác sẽ được dọn sau 2 phút nữa!
+2019-07-10 [13:46:54] [Server thread/INFO]: [Sakuraft]Phát hiện lỗi hãy báo với chủ server!
+2019-07-10 [13:47:49] [Server thread/INFO]: [Sakuraft]Vinh hạnh chào mừng bạn đến với server
+2019-07-10 [13:48:05] [Server thread/INFO]: Vohuynhnamviet[/14.252.6.13:38961] [ClientID: -3.6840627253135E+18] logged in with entity id 40 at (world, 113.3149, 4, 125.4744)
+2019-07-10 [13:48:05] [Server thread/INFO]: [CommandTracker] <CONSOLE> /list
+2019-07-10 [13:48:05] [Server thread/INFO]: Có tất cả 1/50 đang online:
+2019-07-10 [13:48:05] [Server thread/INFO]: Vohuynhnamviet
+2019-07-10 [13:48:10] [Server thread/INFO]: [Tool[PTK]] Running
+2019-07-10 [13:48:11] [Server thread/INFO]: Chào Mừng "• Vohuynhnamviet đã vào SaKuRAFT."
+2019-07-10 [13:48:18] [Server thread/INFO]: [Sakuraft] Các minigames mới: BuildBattle, EggWars,...
+2019-07-10 [13:48:33] [Server thread/INFO]: [Sakuraft]Hãy vote tại :bit.do/sakuraft để ủng hộ server
+2019-07-10 [13:48:48] [Server thread/INFO]: [Sakuraft]Phát hiện lỗi hãy báo với chủ server!
+2019-07-10 [13:49:03] [Server thread/INFO]: [Sakuraft]Vinh hạnh chào mừng bạn đến với server
+2019-07-10 [13:49:21] [Server thread/INFO]: [Sakuraft] Các minigames mới: BuildBattle, EggWars,...
+2019-07-10 [13:49:41] [Server thread/INFO]: [Sakuraft]Hãy vote tại :bit.do/sakuraft để ủng hộ server
+2019-07-10 [13:50:00] [Server thread/INFO]: [Sakuraft]Phát hiện lỗi hãy báo với chủ server!
+2019-07-10 [13:50:15] [Server thread/INFO]: [Sakuraft]Vinh hạnh chào mừng bạn đến với server
+2019-07-10 [13:50:32] [Server thread/INFO]: [Sakuraft] Các minigames mới: BuildBattle, EggWars,...
+2019-07-10 [13:50:41] [Server thread/INFO]: [CommandTracker] <Vohuynhnamviet> /gmc 
+2019-07-10 [13:50:48] [Server thread/INFO]: [Sakuraft]Hãy vote tại :bit.do/sakuraft để ủng hộ server
+2019-07-10 [13:50:48] [Server thread/INFO]: [Sakuraft] Watchdog đã dọn 1 vật phẩm rơi trên mặt đất!
+2019-07-10 [13:50:48] [Server thread/INFO]: [Sakuraft] Rác sẽ được dọn sau 2 phút nữa!
+2019-07-10 [13:51:03] [Server thread/INFO]: [Sakuraft]Phát hiện lỗi hãy báo với chủ server!
+2019-07-10 [13:51:19] [Server thread/INFO]: [Sakuraft]Vinh hạnh chào mừng bạn đến với server
+2019-07-10 [13:51:24] [Server thread/INFO]: [CommandTracker] <Vohuynhnamviet> /muakey 2
+2019-07-10 [13:51:39] [Server thread/INFO]: [Sakuraft] Các minigames mới: BuildBattle, EggWars,...
+2019-07-10 [13:51:56] [Server thread/INFO]: [Sakuraft]Hãy vote tại :bit.do/sakuraft để ủng hộ server
+2019-07-10 [13:52:19] [Server thread/INFO]: [Sakuraft]Phát hiện lỗi hãy báo với chủ server!
+2019-07-10 [13:52:38] [Server thread/INFO]: [Sakuraft]Vinh hạnh chào mừng bạn đến với server
+2019-07-10 [13:52:58] [Server thread/INFO]: [Sakuraft] Các minigames mới: BuildBattle, EggWars,...
+2019-07-10 [13:53:14] [Server thread/INFO]: [Sakuraft]Hãy vote tại :bit.do/sakuraft để ủng hộ server
+2019-07-10 [13:53:31] [Server thread/INFO]: [Sakuraft]Phát hiện lỗi hãy báo với chủ server!
+2019-07-10 [13:53:46] [Server thread/INFO]: [Sakuraft]Vinh hạnh chào mừng bạn đến với server
+2019-07-10 [13:54:03] [Server thread/INFO]: [Sakuraft] Các minigames mới: BuildBattle, EggWars,...
+2019-07-10 [13:54:18] [Server thread/INFO]: [Sakuraft] Rác sẽ được dọn sau 2 phút nữa!
+2019-07-10 [13:54:18] [Server thread/INFO]: [Sakuraft]Hãy vote tại :bit.do/sakuraft để ủng hộ server
+2019-07-10 [13:54:35] [Server thread/INFO]: [Sakuraft]Phát hiện lỗi hãy báo với chủ server!
+2019-07-10 [13:54:51] [Server thread/INFO]: [Sakuraft]Vinh hạnh chào mừng bạn đến với server
+2019-07-10 [13:55:07] [Server thread/INFO]: [Sakuraft] Các minigames mới: BuildBattle, EggWars,...
+2019-07-10 [13:55:22] [Server thread/INFO]: [Sakuraft]Hãy vote tại :bit.do/sakuraft để ủng hộ server
+2019-07-10 [13:55:22] [Server thread/INFO]: [Sakuraft] Watchdog đã dọn 0 vật phẩm rơi trên mặt đất!
+2019-07-10 [13:55:37] [Server thread/INFO]: [Sakuraft]Phát hiện lỗi hãy báo với chủ server!
+2019-07-10 [13:55:52] [Server thread/INFO]: [Sakuraft]Vinh hạnh chào mừng bạn đến với server
+2019-07-10 [13:56:07] [Server thread/INFO]: [Sakuraft] Các minigames mới: BuildBattle, EggWars,...
+2019-07-10 [13:56:22] [Server thread/INFO]: [Sakuraft]Hãy vote tại :bit.do/sakuraft để ủng hộ server
+2019-07-10 [13:56:37] [Server thread/INFO]: [Sakuraft]Phát hiện lỗi hãy báo với chủ server!
+2019-07-10 [13:56:40] [Server thread/INFO]: [CommandTracker] <Vohuynhnamviet> /slapper edit 47 name ßųyrąnķ
+2019-07-10 [13:56:52] [Server thread/INFO]: [Sakuraft]Vinh hạnh chào mừng bạn đến với server
+2019-07-10 [13:57:08] [Server thread/INFO]: [Sakuraft] Các minigames mới: BuildBattle, EggWars,...
+2019-07-10 [13:57:15] [Server thread/INFO]: [CommandTracker] <Vohuynhnamviet> /muakey 2
+2019-07-10 [13:57:25] [Server thread/INFO]: [Sakuraft]Hãy vote tại :bit.do/sakuraft để ủng hộ server
+2019-07-10 [13:57:25] [Server thread/INFO]: [Sakuraft] Rác sẽ được dọn sau 2 phút nữa!
+2019-07-10 [13:57:40] [Server thread/INFO]: [Sakuraft]Phát hiện lỗi hãy báo với chủ server!
+2019-07-10 [13:57:55] [Server thread/INFO]: [Sakuraft]Vinh hạnh chào mừng bạn đến với server
+2019-07-10 [13:58:11] [Server thread/INFO]: [Sakuraft] Các minigames mới: BuildBattle, EggWars,...
+2019-07-10 [13:58:26] [Server thread/INFO]: [Sakuraft]Hãy vote tại :bit.do/sakuraft để ủng hộ server
+2019-07-10 [13:58:41] [Server thread/INFO]: [Sakuraft]Phát hiện lỗi hãy báo với chủ server!
+2019-07-10 [13:58:51] [Server thread/INFO]: • Vohuynhnamviet đã thoát khỏi server.
+2019-07-10 [13:58:51] [Server thread/INFO]: Vohuynhnamviet[/14.252.6.13:38961] logged out due to timeout
+2019-07-10 [13:58:51] [Server thread/INFO]: [CommandTracker] <CONSOLE> /list
+2019-07-10 [13:58:51] [Server thread/INFO]: Có tất cả 0/50 đang online:
+2019-07-10 [13:58:51] [Server thread/INFO]: 
+2019-07-10 [13:59:05] [Server thread/INFO]: GroupBulb863731[/14.237.109.166:44430] [ClientID: -1.4266932901889E+18] logged in with entity id 52 at (sb, 457.7012, 67.4985, 76.6697)
+2019-07-10 [13:59:05] [Server thread/INFO]: [CommandTracker] <CONSOLE> /list
+2019-07-10 [13:59:05] [Server thread/INFO]: Có tất cả 1/50 đang online:
+2019-07-10 [13:59:05] [Server thread/INFO]: GroupBulb863731
+2019-07-10 [13:59:10] [Server thread/INFO]: [Tool[PTK]] Running
+2019-07-10 [13:59:10] [Server thread/INFO]: [Tool[PTK]] GroupBulb863731 is also known as Giant
+2019-07-10 [13:59:10] [Server thread/INFO]: [Sakuraft]Vinh hạnh chào mừng bạn đến với server
+2019-07-10 [13:59:14] [Server thread/INFO]: Chào Mừng "• GroupBulb863731 đã vào SaKuRAFT."
+2019-07-10 [13:59:17] [Server thread/INFO]: •GroupBulb863731 rơi xuống vực
+2019-07-10 [13:59:21] [Server thread/INFO]: [CommandTracker] <Giant> /sb h
+2019-07-10 [13:59:27] [Server thread/INFO]: [CommandTracker] <Giant> /gmc 
+2019-07-10 [13:59:28] [Server thread/INFO]: [Sakuraft] Các minigames mới: BuildBattle, EggWars,...
+2019-07-10 [13:59:43] [Server thread/INFO]: [Sakuraft]Hãy vote tại :bit.do/sakuraft để ủng hộ server
+2019-07-10 [13:59:43] [Server thread/INFO]: [Sakuraft] Watchdog đã dọn 0 vật phẩm rơi trên mặt đất!
+2019-07-10 [13:59:49] [Server thread/INFO]: • GroupBulb863731 đã thoát khỏi server.
+2019-07-10 [13:59:49] [Server thread/INFO]: GroupBulb863731[/14.237.109.166:44430] logged out due to client disconnect
+2019-07-10 [13:59:49] [Server thread/INFO]: [CommandTracker] <CONSOLE> /list
+2019-07-10 [13:59:49] [Server thread/INFO]: Có tất cả 0/50 đang online:
+2019-07-10 [13:59:49] [Server thread/INFO]: 
+2019-07-10 [14:00:42] [Server thread/INFO]: [Sakuraft]Phát hiện lỗi hãy báo với chủ server!
+2019-07-10 [14:00:59] [Server thread/INFO]: GroupBulb863731[/14.237.109.166:44430] [ClientID: -1.4266932901889E+18] logged in with entity id 56 at (sb, 458.9626, 64, 84.1813)
+2019-07-10 [14:00:59] [Server thread/INFO]: [CommandTracker] <CONSOLE> /list
+2019-07-10 [14:00:59] [Server thread/INFO]: Có tất cả 1/50 đang online:
+2019-07-10 [14:00:59] [Server thread/INFO]: GroupBulb863731
+2019-07-10 [14:01:08] [Server thread/INFO]: [Tool[PTK]] Running
+2019-07-10 [14:01:08] [Server thread/INFO]: [Tool[PTK]] GroupBulb863731 is also known as Giant
+2019-07-10 [14:01:08] [Server thread/INFO]: Chào Mừng "• GroupBulb863731 đã vào SaKuRAFT."
+2019-07-10 [14:01:15] [Server thread/INFO]: [Sakuraft]Vinh hạnh chào mừng bạn đến với server
+2019-07-10 [14:01:16] [Server thread/INFO]: [CommandTracker] <Giant> /gmc 
+2019-07-10 [14:01:30] [Server thread/INFO]: [Sakuraft] Các minigames mới: BuildBattle, EggWars,...
+2019-07-10 [14:01:45] [Server thread/INFO]: [Sakuraft]Hãy vote tại :bit.do/sakuraft để ủng hộ server
+2019-07-10 [14:01:45] [Server thread/INFO]: [Sakuraft] Rác sẽ được dọn sau 2 phút nữa!
+2019-07-10 [14:02:00] [Server thread/INFO]: [Sakuraft]Phát hiện lỗi hãy báo với chủ server!
+2019-07-10 [14:02:15] [Server thread/INFO]: [Sakuraft]Vinh hạnh chào mừng bạn đến với server
+2019-07-10 [14:02:30] [Server thread/INFO]: [Sakuraft] Các minigames mới: BuildBattle, EggWars,...
+2019-07-10 [14:02:39] [Server thread/INFO]: • GroupBulb863731 đã thoát khỏi server.
+2019-07-10 [14:02:39] [Server thread/INFO]: GroupBulb863731[/14.237.109.166:44430] logged out due to client disconnect
+2019-07-10 [14:02:39] [Server thread/INFO]: [CommandTracker] <CONSOLE> /list
+2019-07-10 [14:02:39] [Server thread/INFO]: Có tất cả 0/50 đang online:
+2019-07-10 [14:02:39] [Server thread/INFO]: 
+2019-07-10 [14:02:52] [Server thread/INFO]: [Sakuraft]Hãy vote tại :bit.do/sakuraft để ủng hộ server
+2019-07-10 [14:04:08] [Server thread/INFO]: [Sakuraft]Phát hiện lỗi hãy báo với chủ server!
+2019-07-10 [14:04:18] [Server thread/INFO]: GroupBulb863731[/14.237.109.166:44430] [ClientID: -1.4266932901889E+18] logged in with entity id 62 at (sb, 443.1837, 68, 89.5623)
+2019-07-10 [14:04:18] [Server thread/INFO]: [CommandTracker] <CONSOLE> /list
+2019-07-10 [14:04:18] [Server thread/INFO]: Có tất cả 1/50 đang online:
+2019-07-10 [14:04:18] [Server thread/INFO]: GroupBulb863731
+2019-07-10 [14:04:27] [Server thread/INFO]: [Tool[PTK]] Running
+2019-07-10 [14:04:27] [Server thread/INFO]: [Tool[PTK]] GroupBulb863731 is also known as Giant
+2019-07-10 [14:04:27] [Server thread/INFO]: Chào Mừng "• GroupBulb863731 đã vào SaKuRAFT."
+2019-07-10 [14:04:36] [Server thread/INFO]: [Sakuraft]Vinh hạnh chào mừng bạn đến với server
+2019-07-10 [14:04:37] [Server thread/INFO]: [CommandTracker] <Giant> /hub 
+2019-07-10 [14:04:48] [Server thread/INFO]: [CommandTracker] <Giant> /nick GroupBulb863731
+2019-07-10 [14:04:51] [Server thread/INFO]: [Sakuraft] Các minigames mới: BuildBattle, EggWars,...
+2019-07-10 [14:05:06] [Server thread/INFO]: [Sakuraft]Hãy vote tại :bit.do/sakuraft để ủng hộ server
+2019-07-10 [14:05:22] [Server thread/INFO]: [Sakuraft]Phát hiện lỗi hãy báo với chủ server!
+2019-07-10 [14:05:22] [Server thread/INFO]: [CommandTracker] <Giant> /nick GroupBulb863731
+2019-07-10 [14:05:37] [Server thread/INFO]: [Sakuraft]Vinh hạnh chào mừng bạn đến với server
+2019-07-10 [14:05:47] [Server thread/INFO]: [CommandTracker] <Giant> /gmc 
+2019-07-10 [14:05:52] [Server thread/INFO]: [Sakuraft] Các minigames mới: BuildBattle, EggWars,...
+2019-07-10 [14:05:55] [Server thread/INFO]: [CommandTracker] <Giant> /nick Culi
+2019-07-10 [14:06:07] [Server thread/INFO]: [Sakuraft] Watchdog đã dọn 0 vật phẩm rơi trên mặt đất!
+2019-07-10 [14:06:07] [Server thread/INFO]: [Sakuraft] Rác sẽ được dọn sau 2 phút nữa!
+2019-07-10 [14:06:07] [Server thread/INFO]: [Sakuraft]Hãy vote tại :bit.do/sakuraft để ủng hộ server
+2019-07-10 [14:06:22] [Server thread/INFO]: [Sakuraft]Phát hiện lỗi hãy báo với chủ server!
+2019-07-10 [14:06:37] [Server thread/INFO]: [Sakuraft]Vinh hạnh chào mừng bạn đến với server
+2019-07-10 [14:06:52] [Server thread/INFO]: [Sakuraft] Các minigames mới: BuildBattle, EggWars,...
+2019-07-10 [14:07:07] [Server thread/INFO]: [Sakuraft]Hãy vote tại :bit.do/sakuraft để ủng hộ server
+2019-07-10 [14:07:22] [Server thread/INFO]: [Sakuraft]Phát hiện lỗi hãy báo với chủ server!
+2019-07-10 [14:07:37] [Server thread/INFO]: [Sakuraft]Vinh hạnh chào mừng bạn đến với server
+2019-07-10 [14:07:56] [Server thread/INFO]: • GroupBulb863731 đã thoát khỏi server.
+2019-07-10 [14:07:56] [Server thread/INFO]: GroupBulb863731[/14.237.109.166:44430] logged out due to client disconnect
+2019-07-10 [14:07:56] [Server thread/INFO]: [CommandTracker] <CONSOLE> /list
+2019-07-10 [14:07:56] [Server thread/INFO]: Có tất cả 0/50 đang online:
+2019-07-10 [14:07:56] [Server thread/INFO]: 
+2019-07-10 [14:08:03] [Server thread/INFO]: [Sakuraft] Các minigames mới: BuildBattle, EggWars,...
+2019-07-10 [14:08:36] [Server thread/INFO]: GroupBulb863731[/14.237.109.166:44430] [ClientID: -1.4266932901889E+18] logged in with entity id 74 at (world, 130.2815, 7.5, 126.8037)
+2019-07-10 [14:08:36] [Server thread/INFO]: [CommandTracker] <CONSOLE> /list
+2019-07-10 [14:08:36] [Server thread/INFO]: Có tất cả 1/50 đang online:
+2019-07-10 [14:08:36] [Server thread/INFO]: GroupBulb863731
+2019-07-10 [14:08:38] [Server thread/INFO]: [Tool[PTK]] Running
+2019-07-10 [14:08:38] [Server thread/INFO]: [Tool[PTK]] GroupBulb863731 is also known as Giant
+2019-07-10 [14:08:38] [Server thread/INFO]: [Sakuraft]Hãy vote tại :bit.do/sakuraft để ủng hộ server
+2019-07-10 [14:08:42] [Server thread/INFO]: Chào Mừng "• GroupBulb863731 đã vào SaKuRAFT."
+2019-07-10 [14:08:49] [Server thread/INFO]: • GroupBulb863731 đã thoát khỏi server.
+2019-07-10 [14:08:49] [Server thread/INFO]: GroupBulb863731[/14.237.109.166:44430] logged out due to Kicked by admin. Reason: logged in from another location
+2019-07-10 [14:08:49] [Server thread/INFO]: [CommandTracker] <CONSOLE> /list
+2019-07-10 [14:08:49] [Server thread/INFO]: Có tất cả 0/50 đang online:
+2019-07-10 [14:08:49] [Server thread/INFO]: 
+2019-07-10 [14:09:24] [Server thread/INFO]: GroupBulb863731[/14.237.109.166:44430] logged out due to Kicked by admin. Reason: already logged in
+2019-07-10 [14:09:24] [Server thread/INFO]: [CommandTracker] <CONSOLE> /list
+2019-07-10 [14:09:24] [Server thread/INFO]: Có tất cả 0/50 đang online:
+2019-07-10 [14:09:24] [Server thread/INFO]: 
+2019-07-10 [14:09:34] [Server thread/INFO]: [Sakuraft]Phát hiện lỗi hãy báo với chủ server!
+2019-07-10 [14:09:51] [Server thread/INFO]: GroupBulb863731[/14.237.109.166:44430] logged out due to Kicked by admin. Reason: already logged in
+2019-07-10 [14:09:51] [Server thread/INFO]: [CommandTracker] <CONSOLE> /list
+2019-07-10 [14:09:51] [Server thread/INFO]: Có tất cả 0/50 đang online:
+2019-07-10 [14:09:51] [Server thread/INFO]: 
+2019-07-10 [14:10:20] [Server thread/INFO]: GroupBulb863731[/14.237.109.166:44430] logged out due to Kicked by admin. Reason: already logged in
+2019-07-10 [14:10:20] [Server thread/INFO]: [CommandTracker] <CONSOLE> /list
+2019-07-10 [14:10:20] [Server thread/INFO]: Có tất cả 0/50 đang online:
+2019-07-10 [14:10:20] [Server thread/INFO]: 
+2019-07-10 [14:10:25] [Server thread/INFO]: [Tool[PTK]] Running
+2019-07-10 [14:10:25] [Server thread/INFO]: [Tool[PTK]] GroupBulb863731 is also known as Giant
+2019-07-10 [14:10:25] [Server thread/CRITICAL]: Could not execute task Tool\Tasks\AFK\AFKSetterTask: Trying to get permissions of closed player
+2019-07-10 [14:10:25] [Server thread/CRITICAL]: InvalidStateException: "Trying to get permissions of closed player" (EXCEPTION) in "/src/pocketmine/Player" at line 686
+2019-07-10 [14:10:25] [Server thread/INFO]: [Sakuraft]Vinh hạnh chào mừng bạn đến với server
+2019-07-10 [14:10:52] [Server thread/INFO]: GroupBulb863731[/14.237.109.166:44430] logged out due to Kicked by admin. Reason: already logged in
+2019-07-10 [14:10:52] [Server thread/INFO]: [CommandTracker] <CONSOLE> /list
+2019-07-10 [14:10:52] [Server thread/INFO]: Có tất cả 0/50 đang online:
+2019-07-10 [14:10:52] [Server thread/INFO]: 
+2019-07-10 [14:10:59] [Server thread/INFO]: [Sakuraft] Các minigames mới: BuildBattle, EggWars,...
+2019-07-10 [14:11:14] [Server thread/INFO]: [Sakuraft]Hãy vote tại :bit.do/sakuraft để ủng hộ server
+2019-07-10 [14:11:14] [Server thread/INFO]: [Sakuraft] Rác sẽ được dọn sau 2 phút nữa!
+2019-07-10 [14:11:29] [Server thread/INFO]: [Sakuraft]Phát hiện lỗi hãy báo với chủ server!
+2019-07-10 [14:11:44] [Server thread/INFO]: [Sakuraft]Vinh hạnh chào mừng bạn đến với server
+2019-07-10 [14:11:59] [Server thread/INFO]: [Sakuraft] Các minigames mới: BuildBattle, EggWars,...
+2019-07-10 [14:12:14] [Server thread/INFO]: [Sakuraft]Hãy vote tại :bit.do/sakuraft để ủng hộ server
+2019-07-10 [14:12:14] [Server thread/INFO]: [Sakuraft] Watchdog đã dọn 0 vật phẩm rơi trên mặt đất!
+2019-07-10 [14:12:29] [Server thread/INFO]: [Sakuraft]Phát hiện lỗi hãy báo với chủ server!
+2019-07-10 [14:12:44] [Server thread/INFO]: [Sakuraft]Vinh hạnh chào mừng bạn đến với server
+2019-07-10 [14:12:59] [Server thread/INFO]: [Sakuraft] Các minigames mới: BuildBattle, EggWars,...
+2019-07-10 [14:13:14] [Server thread/INFO]: [Sakuraft]Hãy vote tại :bit.do/sakuraft để ủng hộ server
+2019-07-10 [14:13:29] [Server thread/INFO]: [Sakuraft]Phát hiện lỗi hãy báo với chủ server!
+2019-07-10 [14:13:44] [Server thread/INFO]: [Sakuraft]Vinh hạnh chào mừng bạn đến với server
+2019-07-10 [14:13:59] [Server thread/INFO]: [Sakuraft] Các minigames mới: BuildBattle, EggWars,...
+2019-07-10 [14:14:14] [Server thread/INFO]: [Sakuraft]Hãy vote tại :bit.do/sakuraft để ủng hộ server
+2019-07-10 [14:14:14] [Server thread/INFO]: [Sakuraft] Rác sẽ được dọn sau 2 phút nữa!
+2019-07-10 [14:14:29] [Server thread/INFO]: [Sakuraft]Phát hiện lỗi hãy báo với chủ server!
+2019-07-10 [14:14:44] [Server thread/INFO]: [Sakuraft]Vinh hạnh chào mừng bạn đến với server
+2019-07-10 [14:14:59] [Server thread/INFO]: [Sakuraft] Các minigames mới: BuildBattle, EggWars,...
+2019-07-10 [14:15:14] [Server thread/INFO]: [Sakuraft]Hãy vote tại :bit.do/sakuraft để ủng hộ server
+2019-07-10 [14:15:29] [Server thread/INFO]: [Sakuraft]Phát hiện lỗi hãy báo với chủ server!
+2019-07-10 [14:15:44] [Server thread/INFO]: [Sakuraft]Vinh hạnh chào mừng bạn đến với server
+2019-07-10 [14:15:59] [Server thread/INFO]: [Sakuraft] Các minigames mới: BuildBattle, EggWars,...
+2019-07-10 [14:16:14] [Server thread/INFO]: [Sakuraft] Watchdog đã dọn 0 vật phẩm rơi trên mặt đất!
+2019-07-10 [14:16:14] [Server thread/INFO]: [Sakuraft]Hãy vote tại :bit.do/sakuraft để ủng hộ server
+2019-07-10 [14:16:29] [Server thread/INFO]: [Sakuraft]Phát hiện lỗi hãy báo với chủ server!
+2019-07-10 [14:16:44] [Server thread/INFO]: [Sakuraft]Vinh hạnh chào mừng bạn đến với server
+2019-07-10 [14:16:59] [Server thread/INFO]: [Sakuraft] Các minigames mới: BuildBattle, EggWars,...
+2019-07-10 [14:17:14] [Server thread/INFO]: [Sakuraft]Hãy vote tại :bit.do/sakuraft để ủng hộ server
+2019-07-10 [14:17:14] [Server thread/INFO]: [Sakuraft] Rác sẽ được dọn sau 2 phút nữa!
+2019-07-10 [14:17:29] [Server thread/INFO]: [Sakuraft]Phát hiện lỗi hãy báo với chủ server!
+2019-07-10 [14:17:44] [Server thread/INFO]: [Sakuraft]Vinh hạnh chào mừng bạn đến với server
+2019-07-10 [14:17:59] [Server thread/INFO]: [Sakuraft] Các minigames mới: BuildBattle, EggWars,...
+2019-07-10 [14:18:14] [Server thread/INFO]: [Sakuraft]Hãy vote tại :bit.do/sakuraft để ủng hộ server
+2019-07-10 [14:18:29] [Server thread/INFO]: [Sakuraft]Phát hiện lỗi hãy báo với chủ server!
+2019-07-10 [14:18:44] [Server thread/INFO]: [Sakuraft]Vinh hạnh chào mừng bạn đến với server
+2019-07-10 [14:18:59] [Server thread/INFO]: [Sakuraft] Các minigames mới: BuildBattle, EggWars,...
+2019-07-10 [14:19:14] [Server thread/INFO]: [Sakuraft]Hãy vote tại :bit.do/sakuraft để ủng hộ server
+2019-07-10 [14:19:29] [Server thread/INFO]: [Sakuraft]Phát hiện lỗi hãy báo với chủ server!
+2019-07-10 [14:19:44] [Server thread/INFO]: [Sakuraft]Vinh hạnh chào mừng bạn đến với server
+2019-07-10 [14:19:59] [Server thread/INFO]: [Sakuraft] Các minigames mới: BuildBattle, EggWars,...
+2019-07-10 [14:20:14] [Server thread/INFO]: [Sakuraft] Watchdog đã dọn 0 vật phẩm rơi trên mặt đất!
+2019-07-10 [14:20:14] [Server thread/INFO]: [Sakuraft]Hãy vote tại :bit.do/sakuraft để ủng hộ server
+2019-07-10 [14:20:14] [Server thread/INFO]: [Sakuraft] Rác sẽ được dọn sau 2 phút nữa!
+2019-07-10 [14:20:29] [Server thread/INFO]: [Sakuraft]Phát hiện lỗi hãy báo với chủ server!
+2019-07-10 [14:20:44] [Server thread/INFO]: [Sakuraft]Vinh hạnh chào mừng bạn đến với server
+2019-07-10 [14:20:59] [Server thread/INFO]: [Sakuraft] Các minigames mới: BuildBattle, EggWars,...
+2019-07-10 [14:21:14] [Server thread/INFO]: [Sakuraft]Hãy vote tại :bit.do/sakuraft để ủng hộ server
+2019-07-10 [14:21:29] [Server thread/INFO]: [Sakuraft]Phát hiện lỗi hãy báo với chủ server!
+2019-07-10 [14:21:44] [Server thread/INFO]: [Sakuraft]Vinh hạnh chào mừng bạn đến với server
+2019-07-10 [14:21:59] [Server thread/INFO]: [Sakuraft] Các minigames mới: BuildBattle, EggWars,...
+2019-07-10 [14:22:14] [Server thread/INFO]: [Sakuraft]Hãy vote tại :bit.do/sakuraft để ủng hộ server
+2019-07-10 [14:22:29] [Server thread/INFO]: [Sakuraft]Phát hiện lỗi hãy báo với chủ server!
+2019-07-10 [14:22:44] [Server thread/INFO]: [Sakuraft]Vinh hạnh chào mừng bạn đến với server
+2019-07-10 [14:22:59] [Server thread/INFO]: [Sakuraft] Các minigames mới: BuildBattle, EggWars,...
+2019-07-10 [14:23:14] [Server thread/INFO]: [Sakuraft]Hãy vote tại :bit.do/sakuraft để ủng hộ server
+2019-07-10 [14:23:14] [Server thread/INFO]: [Sakuraft] Rác sẽ được dọn sau 2 phút nữa!
+2019-07-10 [14:23:29] [Server thread/INFO]: [Sakuraft]Phát hiện lỗi hãy báo với chủ server!
+2019-07-10 [14:23:44] [Server thread/INFO]: [Sakuraft]Vinh hạnh chào mừng bạn đến với server
+2019-07-10 [14:23:59] [Server thread/INFO]: [Sakuraft] Các minigames mới: BuildBattle, EggWars,...
+2019-07-10 [14:24:14] [Server thread/INFO]: [Sakuraft]Hãy vote tại :bit.do/sakuraft để ủng hộ server
+2019-07-10 [14:24:14] [Server thread/INFO]: [Sakuraft] Watchdog đã dọn 0 vật phẩm rơi trên mặt đất!
+2019-07-10 [14:24:29] [Server thread/INFO]: [Sakuraft]Phát hiện lỗi hãy báo với chủ server!
+2019-07-10 [14:24:44] [Server thread/INFO]: [Sakuraft]Vinh hạnh chào mừng bạn đến với server
+2019-07-10 [14:24:59] [Server thread/INFO]: [Sakuraft] Các minigames mới: BuildBattle, EggWars,...
+2019-07-10 [14:25:14] [Server thread/INFO]: [Sakuraft]Hãy vote tại :bit.do/sakuraft để ủng hộ server
+2019-07-10 [14:25:29] [Server thread/INFO]: [Sakuraft]Phát hiện lỗi hãy báo với chủ server!
+2019-07-10 [14:25:44] [Server thread/INFO]: [Sakuraft]Vinh hạnh chào mừng bạn đến với server
+2019-07-10 [14:25:59] [Server thread/INFO]: [Sakuraft] Các minigames mới: BuildBattle, EggWars,...
+2019-07-10 [14:26:14] [Server thread/INFO]: [Sakuraft] Rác sẽ được dọn sau 2 phút nữa!
+2019-07-10 [14:26:14] [Server thread/INFO]: [Sakuraft]Hãy vote tại :bit.do/sakuraft để ủng hộ server
+2019-07-10 [14:26:29] [Server thread/INFO]: [Sakuraft]Phát hiện lỗi hãy báo với chủ server!
+2019-07-10 [14:26:44] [Server thread/INFO]: [Sakuraft]Vinh hạnh chào mừng bạn đến với server
+2019-07-10 [14:26:59] [Server thread/INFO]: [Sakuraft] Các minigames mới: BuildBattle, EggWars,...
+2019-07-10 [14:27:14] [Server thread/INFO]: [Sakuraft]Hãy vote tại :bit.do/sakuraft để ủng hộ server
+2019-07-10 [14:27:29] [Server thread/INFO]: [Sakuraft]Phát hiện lỗi hãy báo với chủ server!
+2019-07-10 [14:27:44] [Server thread/INFO]: [Sakuraft]Vinh hạnh chào mừng bạn đến với server
+2019-07-10 [14:27:59] [Server thread/INFO]: [Sakuraft] Các minigames mới: BuildBattle, EggWars,...
+2019-07-10 [14:28:14] [Server thread/INFO]: [Sakuraft] Watchdog đã dọn 0 vật phẩm rơi trên mặt đất!
+2019-07-10 [14:28:14] [Server thread/INFO]: [Sakuraft]Hãy vote tại :bit.do/sakuraft để ủng hộ server
+2019-07-10 [14:28:29] [Server thread/INFO]: [Sakuraft]Phát hiện lỗi hãy báo với chủ server!
+2019-07-10 [14:28:44] [Server thread/INFO]: [Sakuraft]Vinh hạnh chào mừng bạn đến với server
+2019-07-10 [14:28:59] [Server thread/INFO]: [Sakuraft] Các minigames mới: BuildBattle, EggWars,...
+2019-07-10 [14:29:14] [Server thread/INFO]: [Sakuraft] Rác sẽ được dọn sau 2 phút nữa!
+2019-07-10 [14:29:14] [Server thread/INFO]: [Sakuraft]Hãy vote tại :bit.do/sakuraft để ủng hộ server
+2019-07-10 [14:29:29] [Server thread/INFO]: [Sakuraft]Phát hiện lỗi hãy báo với chủ server!
+2019-07-10 [14:29:44] [Server thread/INFO]: [Sakuraft]Vinh hạnh chào mừng bạn đến với server
+2019-07-10 [14:29:59] [Server thread/INFO]: [Sakuraft] Các minigames mới: BuildBattle, EggWars,...
+2019-07-10 [14:30:14] [Server thread/INFO]: [Sakuraft]Hãy vote tại :bit.do/sakuraft để ủng hộ server
+2019-07-10 [14:30:29] [Server thread/INFO]: [Sakuraft]Phát hiện lỗi hãy báo với chủ server!
+2019-07-10 [14:30:44] [Server thread/INFO]: [Sakuraft]Vinh hạnh chào mừng bạn đến với server
+2019-07-10 [14:30:59] [Server thread/INFO]: [Sakuraft] Các minigames mới: BuildBattle, EggWars,...
+2019-07-10 [14:31:14] [Server thread/INFO]: [Sakuraft]Hãy vote tại :bit.do/sakuraft để ủng hộ server
+2019-07-10 [14:31:29] [Server thread/INFO]: [Sakuraft]Phát hiện lỗi hãy báo với chủ server!
+2019-07-10 [14:31:44] [Server thread/INFO]: [Sakuraft]Vinh hạnh chào mừng bạn đến với server
+2019-07-10 [14:31:59] [Server thread/INFO]: [Sakuraft] Các minigames mới: BuildBattle, EggWars,...
+2019-07-10 [14:32:14] [Server thread/INFO]: [Sakuraft]Hãy vote tại :bit.do/sakuraft để ủng hộ server
+2019-07-10 [14:32:14] [Server thread/INFO]: [Sakuraft] Watchdog đã dọn 0 vật phẩm rơi trên mặt đất!
+2019-07-10 [14:32:14] [Server thread/INFO]: [Sakuraft] Rác sẽ được dọn sau 2 phút nữa!
+2019-07-10 [14:32:29] [Server thread/INFO]: [Sakuraft]Phát hiện lỗi hãy báo với chủ server!
+2019-07-10 [14:32:44] [Server thread/INFO]: [Sakuraft]Vinh hạnh chào mừng bạn đến với server
+2019-07-10 [14:32:59] [Server thread/INFO]: [Sakuraft] Các minigames mới: BuildBattle, EggWars,...
+2019-07-10 [14:33:14] [Server thread/INFO]: [Sakuraft]Hãy vote tại :bit.do/sakuraft để ủng hộ server
+2019-07-10 [14:33:29] [Server thread/INFO]: [Sakuraft]Phát hiện lỗi hãy báo với chủ server!
+2019-07-10 [14:33:44] [Server thread/INFO]: [Sakuraft]Vinh hạnh chào mừng bạn đến với server
+2019-07-10 [14:33:59] [Server thread/INFO]: [Sakuraft] Các minigames mới: BuildBattle, EggWars,...
+2019-07-10 [14:34:14] [Server thread/INFO]: [Sakuraft]Hãy vote tại :bit.do/sakuraft để ủng hộ server
+2019-07-10 [14:34:29] [Server thread/INFO]: [Sakuraft]Phát hiện lỗi hãy báo với chủ server!
+2019-07-10 [14:34:44] [Server thread/INFO]: [Sakuraft]Vinh hạnh chào mừng bạn đến với server
+2019-07-10 [14:34:59] [Server thread/INFO]: [Sakuraft] Các minigames mới: BuildBattle, EggWars,...
+2019-07-10 [14:35:14] [Server thread/INFO]: [Sakuraft]Hãy vote tại :bit.do/sakuraft để ủng hộ server
+2019-07-10 [14:35:14] [Server thread/INFO]: [Sakuraft] Rác sẽ được dọn sau 2 phút nữa!
+2019-07-10 [14:35:29] [Server thread/INFO]: [Sakuraft]Phát hiện lỗi hãy báo với chủ server!
+2019-07-10 [14:35:44] [Server thread/INFO]: [Sakuraft]Vinh hạnh chào mừng bạn đến với server
+2019-07-10 [14:35:59] [Server thread/INFO]: [Sakuraft] Các minigames mới: BuildBattle, EggWars,...
+2019-07-10 [14:36:14] [Server thread/INFO]: [Sakuraft] Watchdog đã dọn 0 vật phẩm rơi trên mặt đất!
+2019-07-10 [14:36:14] [Server thread/INFO]: [Sakuraft]Hãy vote tại :bit.do/sakuraft để ủng hộ server
+2019-07-10 [14:36:29] [Server thread/INFO]: [Sakuraft]Phát hiện lỗi hãy báo với chủ server!
+2019-07-10 [14:36:44] [Server thread/INFO]: [Sakuraft]Vinh hạnh chào mừng bạn đến với server
+2019-07-10 [14:36:59] [Server thread/INFO]: [Sakuraft] Các minigames mới: BuildBattle, EggWars,...
+2019-07-10 [14:37:14] [Server thread/INFO]: [Sakuraft]Hãy vote tại :bit.do/sakuraft để ủng hộ server
+2019-07-10 [14:37:29] [Server thread/INFO]: [Sakuraft]Phát hiện lỗi hãy báo với chủ server!
+2019-07-10 [14:37:44] [Server thread/INFO]: [Sakuraft]Vinh hạnh chào mừng bạn đến với server
+2019-07-10 [14:37:59] [Server thread/INFO]: [Sakuraft] Các minigames mới: BuildBattle, EggWars,...
+2019-07-10 [14:38:14] [Server thread/INFO]: [Sakuraft]Hãy vote tại :bit.do/sakuraft để ủng hộ server
+2019-07-10 [14:38:14] [Server thread/INFO]: [Sakuraft] Rác sẽ được dọn sau 2 phút nữa!
+2019-07-10 [14:38:29] [Server thread/INFO]: [Sakuraft]Phát hiện lỗi hãy báo với chủ server!
+2019-07-10 [14:38:44] [Server thread/INFO]: [Sakuraft]Vinh hạnh chào mừng bạn đến với server
+2019-07-10 [14:38:59] [Server thread/INFO]: [Sakuraft] Các minigames mới: BuildBattle, EggWars,...
+2019-07-10 [14:39:14] [Server thread/INFO]: [Sakuraft]Hãy vote tại :bit.do/sakuraft để ủng hộ server
+2019-07-10 [14:39:29] [Server thread/INFO]: [Sakuraft]Phát hiện lỗi hãy báo với chủ server!
+2019-07-10 [14:39:44] [Server thread/INFO]: [Sakuraft]Vinh hạnh chào mừng bạn đến với server
+2019-07-10 [14:39:59] [Server thread/INFO]: [Sakuraft] Các minigames mới: BuildBattle, EggWars,...
+2019-07-10 [14:40:14] [Server thread/INFO]: [Sakuraft]Hãy vote tại :bit.do/sakuraft để ủng hộ server
+2019-07-10 [14:40:14] [Server thread/INFO]: [Sakuraft] Watchdog đã dọn 0 vật phẩm rơi trên mặt đất!
+2019-07-10 [14:40:29] [Server thread/INFO]: [Sakuraft]Phát hiện lỗi hãy báo với chủ server!
+2019-07-10 [14:40:44] [Server thread/INFO]: [Sakuraft]Vinh hạnh chào mừng bạn đến với server
+2019-07-10 [14:40:59] [Server thread/INFO]: [Sakuraft] Các minigames mới: BuildBattle, EggWars,...
+2019-07-10 [14:41:14] [Server thread/INFO]: [Sakuraft] Rác sẽ được dọn sau 2 phút nữa!
+2019-07-10 [14:41:14] [Server thread/INFO]: [Sakuraft]Hãy vote tại :bit.do/sakuraft để ủng hộ server
+2019-07-10 [14:41:29] [Server thread/INFO]: [Sakuraft]Phát hiện lỗi hãy báo với chủ server!
+2019-07-10 [14:41:44] [Server thread/INFO]: [Sakuraft]Vinh hạnh chào mừng bạn đến với server
+2019-07-10 [14:41:59] [Server thread/INFO]: [Sakuraft] Các minigames mới: BuildBattle, EggWars,...
+2019-07-10 [14:42:14] [Server thread/INFO]: [Sakuraft]Hãy vote tại :bit.do/sakuraft để ủng hộ server
+2019-07-10 [14:42:29] [Server thread/INFO]: [Sakuraft]Phát hiện lỗi hãy báo với chủ server!
+2019-07-10 [14:42:44] [Server thread/INFO]: [Sakuraft]Vinh hạnh chào mừng bạn đến với server
+2019-07-10 [14:42:59] [Server thread/INFO]: [Sakuraft] Các minigames mới: BuildBattle, EggWars,...
+2019-07-10 [14:43:14] [Server thread/INFO]: [Sakuraft]Hãy vote tại :bit.do/sakuraft để ủng hộ server
+2019-07-10 [14:43:29] [Server thread/INFO]: [Sakuraft]Phát hiện lỗi hãy báo với chủ server!
+2019-07-10 [14:43:44] [Server thread/INFO]: [Sakuraft]Vinh hạnh chào mừng bạn đến với server
+2019-07-10 [14:43:59] [Server thread/INFO]: [Sakuraft] Các minigames mới: BuildBattle, EggWars,...
+2019-07-10 [14:44:14] [Server thread/INFO]: [Sakuraft] Rác sẽ được dọn sau 2 phút nữa!
+2019-07-10 [14:44:14] [Server thread/INFO]: [Sakuraft]Hãy vote tại :bit.do/sakuraft để ủng hộ server
+2019-07-10 [14:44:14] [Server thread/INFO]: [Sakuraft] Watchdog đã dọn 0 vật phẩm rơi trên mặt đất!
+2019-07-10 [14:44:29] [Server thread/INFO]: [Sakuraft]Phát hiện lỗi hãy báo với chủ server!
+2019-07-10 [14:44:44] [Server thread/INFO]: [Sakuraft]Vinh hạnh chào mừng bạn đến với server
+2019-07-10 [14:44:59] [Server thread/INFO]: [Sakuraft] Các minigames mới: BuildBattle, EggWars,...
+2019-07-10 [14:45:14] [Server thread/INFO]: [Sakuraft]Hãy vote tại :bit.do/sakuraft để ủng hộ server
+2019-07-10 [14:45:29] [Server thread/INFO]: [Sakuraft]Phát hiện lỗi hãy báo với chủ server!
+2019-07-10 [14:45:44] [Server thread/INFO]: [Sakuraft]Vinh hạnh chào mừng bạn đến với server
+2019-07-10 [14:45:59] [Server thread/INFO]: [Sakuraft] Các minigames mới: BuildBattle, EggWars,...
+2019-07-10 [14:46:14] [Server thread/INFO]: [Sakuraft]Hãy vote tại :bit.do/sakuraft để ủng hộ server
+2019-07-10 [14:46:29] [Server thread/INFO]: [Sakuraft]Phát hiện lỗi hãy báo với chủ server!
+2019-07-10 [14:49:37] [Server thread/INFO]: [Sakuraft]Vinh hạnh chào mừng bạn đến với server
+2019-07-10 [14:52:03] [Server thread/INFO]: [Sakuraft] Các minigames mới: BuildBattle, EggWars,...
+2019-07-10 [14:58:29] [Server thread/INFO]: [Sakuraft]Hãy vote tại :bit.do/sakuraft để ủng hộ server
+2019-07-10 [14:58:29] [Server thread/INFO]: [Sakuraft] Rác sẽ được dọn sau 2 phút nữa!
+2019-07-10 [15:06:17] [Server thread/INFO]: [Sakuraft]Phát hiện lỗi hãy báo với chủ server!
+2019-07-10 [15:17:43] [Server thread/INFO]: [Sakuraft]Vinh hạnh chào mừng bạn đến với server
+2019-07-10 [15:23:04] [Server thread/INFO]: [Sakuraft] Các minigames mới: BuildBattle, EggWars,...
+2019-07-10 [15:48:19] [Server thread/INFO]: [Sakuraft]Hãy vote tại :bit.do/sakuraft để ủng hộ server
+2019-07-10 [15:48:19] [Server thread/INFO]: [Sakuraft] Watchdog đã dọn 0 vật phẩm rơi trên mặt đất!
+2019-07-10 [16:08:32] [Server thread/INFO]: [Sakuraft]Phát hiện lỗi hãy báo với chủ server!
+2019-07-10 [16:08:47] [Server thread/INFO]: [Sakuraft]Vinh hạnh chào mừng bạn đến với server
+2019-07-10 [16:09:02] [Server thread/INFO]: [Sakuraft] Các minigames mới: BuildBattle, EggWars,...
+2019-07-10 [16:09:17] [Server thread/INFO]: [Sakuraft]Hãy vote tại :bit.do/sakuraft để ủng hộ server
+2019-07-10 [16:09:32] [Server thread/INFO]: [Sakuraft]Phát hiện lỗi hãy báo với chủ server!
+2019-07-10 [16:09:47] [Server thread/INFO]: [Sakuraft]Vinh hạnh chào mừng bạn đến với server
+2019-07-10 [16:10:02] [Server thread/INFO]: [Sakuraft] Các minigames mới: BuildBattle, EggWars,...
+2019-07-10 [16:10:17] [Server thread/INFO]: [Sakuraft]Hãy vote tại :bit.do/sakuraft để ủng hộ server
+2019-07-10 [16:10:17] [Server thread/INFO]: [Sakuraft] Rác sẽ được dọn sau 2 phút nữa!
+2019-07-10 [16:10:32] [Server thread/INFO]: [Sakuraft]Phát hiện lỗi hãy báo với chủ server!
+2019-07-10 [16:10:47] [Server thread/INFO]: [Sakuraft]Vinh hạnh chào mừng bạn đến với server
+2019-07-10 [16:11:02] [Server thread/INFO]: [Sakuraft] Các minigames mới: BuildBattle, EggWars,...
+2019-07-10 [16:11:17] [Server thread/INFO]: [Sakuraft]Hãy vote tại :bit.do/sakuraft để ủng hộ server
+2019-07-10 [16:11:32] [Server thread/INFO]: [Sakuraft]Phát hiện lỗi hãy báo với chủ server!
+2019-07-10 [16:19:34] [Server thread/INFO]: [Sakuraft]Vinh hạnh chào mừng bạn đến với server
+2019-07-10 [16:45:13] [Server thread/INFO]: [Sakuraft] Các minigames mới: BuildBattle, EggWars,...
+2019-07-10 [16:49:33] [Server thread/INFO]: [Sakuraft]Hãy vote tại :bit.do/sakuraft để ủng hộ server
+2019-07-10 [16:49:33] [Server thread/INFO]: [Sakuraft] Watchdog đã dọn 0 vật phẩm rơi trên mặt đất!
+2019-07-10 [16:49:48] [Server thread/INFO]: [Sakuraft]Phát hiện lỗi hãy báo với chủ server!
+2019-07-10 [16:50:03] [Server thread/INFO]: [Sakuraft]Vinh hạnh chào mừng bạn đến với server
+2019-07-10 [16:50:18] [Server thread/INFO]: [Sakuraft] Các minigames mới: BuildBattle, EggWars,...
+2019-07-10 [16:54:47] [Server thread/INFO]: [Sakuraft]Hãy vote tại :bit.do/sakuraft để ủng hộ server
+2019-07-10 [16:54:47] [Server thread/INFO]: [Sakuraft] Rác sẽ được dọn sau 2 phút nữa!
+2019-07-10 [16:55:02] [Server thread/INFO]: [Sakuraft]Phát hiện lỗi hãy báo với chủ server!
+2019-07-10 [17:05:11] [Server thread/INFO]: [Sakuraft]Vinh hạnh chào mừng bạn đến với server
+2019-07-10 [17:25:47] [Server thread/INFO]: [Sakuraft] Các minigames mới: BuildBattle, EggWars,...
+2019-07-10 [17:43:02] [Server thread/INFO]: [Sakuraft]Hãy vote tại :bit.do/sakuraft để ủng hộ server
+2019-07-10 [17:53:15] [Server thread/INFO]: [Sakuraft]Phát hiện lỗi hãy báo với chủ server!
+2019-07-10 [18:14:02] [Server thread/INFO]: [Sakuraft]Vinh hạnh chào mừng bạn đến với server
+2019-07-10 [18:36:30] [Server thread/INFO]: [Sakuraft] Các minigames mới: BuildBattle, EggWars,...
+2019-07-10 [18:50:54] [Server thread/INFO]: [Sakuraft]Hãy vote tại :bit.do/sakuraft để ủng hộ server
+2019-07-10 [18:57:07] [Server thread/INFO]: [Sakuraft]Phát hiện lỗi hãy báo với chủ server!
+2019-07-10 [18:57:22] [Server thread/INFO]: [Sakuraft]Vinh hạnh chào mừng bạn đến với server
+2019-07-10 [18:57:37] [Server thread/INFO]: [Sakuraft] Các minigames mới: BuildBattle, EggWars,...
+2019-07-10 [18:57:52] [Server thread/INFO]: [Sakuraft] Watchdog đã dọn 0 vật phẩm rơi trên mặt đất!
+2019-07-10 [18:57:52] [Server thread/INFO]: [Sakuraft] Rác sẽ được dọn sau 2 phút nữa!
+2019-07-10 [18:57:52] [Server thread/INFO]: [Sakuraft]Hãy vote tại :bit.do/sakuraft để ủng hộ server
+2019-07-10 [18:58:07] [Server thread/INFO]: [Sakuraft]Phát hiện lỗi hãy báo với chủ server!
+2019-07-10 [18:58:22] [Server thread/INFO]: [Sakuraft]Vinh hạnh chào mừng bạn đến với server
+2019-07-10 [18:58:37] [Server thread/INFO]: [Sakuraft] Các minigames mới: BuildBattle, EggWars,...
+2019-07-10 [18:58:52] [Server thread/INFO]: [Sakuraft]Hãy vote tại :bit.do/sakuraft để ủng hộ server
+2019-07-10 [18:59:07] [Server thread/INFO]: [Sakuraft]Phát hiện lỗi hãy báo với chủ server!
+2019-07-10 [18:59:22] [Server thread/INFO]: [Sakuraft]Vinh hạnh chào mừng bạn đến với server
+2019-07-10 [19:01:37] [Server thread/INFO]: [Sakuraft] Các minigames mới: BuildBattle, EggWars,...
+2019-07-10 [19:22:13] [Server thread/INFO]: [Sakuraft]Hãy vote tại :bit.do/sakuraft để ủng hộ server
+2019-07-10 [19:41:45] [Server thread/INFO]: [Sakuraft]Phát hiện lỗi hãy báo với chủ server!
+2019-07-10 [19:57:58] [Server thread/INFO]: [Sakuraft]Vinh hạnh chào mừng bạn đến với server
+2019-07-10 [20:12:14] [Server thread/INFO]: [Sakuraft] Các minigames mới: BuildBattle, EggWars,...
+2019-07-10 [20:12:29] [Server thread/INFO]: [Sakuraft]Hãy vote tại :bit.do/sakuraft để ủng hộ server
+2019-07-10 [20:12:29] [Server thread/INFO]: [Sakuraft] Rác sẽ được dọn sau 2 phút nữa!
+2019-07-10 [20:12:44] [Server thread/INFO]: [Sakuraft]Phát hiện lỗi hãy báo với chủ server!
+2019-07-10 [20:12:59] [Server thread/INFO]: [Sakuraft]Vinh hạnh chào mừng bạn đến với server
+2019-07-10 [20:16:09] [Server thread/INFO]: [Sakuraft] Các minigames mới: BuildBattle, EggWars,...
+2019-07-10 [20:30:09] [Server thread/INFO]: [Sakuraft] Watchdog đã dọn 0 vật phẩm rơi trên mặt đất!
+2019-07-10 [20:30:09] [Server thread/INFO]: [Sakuraft]Hãy vote tại :bit.do/sakuraft để ủng hộ server
+2019-07-10 [20:46:56] [Server thread/INFO]: [Sakuraft]Phát hiện lỗi hãy báo với chủ server!
+2019-07-10 [21:12:01] [Server thread/INFO]: [Sakuraft]Vinh hạnh chào mừng bạn đến với server
+2019-07-10 [21:21:51] [Server thread/INFO]: [Sakuraft] Các minigames mới: BuildBattle, EggWars,...
+2019-07-10 [21:47:31] [Server thread/INFO]: [Sakuraft]Hãy vote tại :bit.do/sakuraft để ủng hộ server
+2019-07-10 [21:54:51] [Server thread/INFO]: [Sakuraft]Phát hiện lỗi hãy báo với chủ server!
+2019-07-10 [21:56:06] [Server thread/INFO]: [Sakuraft]Vinh hạnh chào mừng bạn đến với server
+2019-07-10 [21:56:21] [Server thread/INFO]: [Sakuraft] Các minigames mới: BuildBattle, EggWars,...
+2019-07-10 [21:56:36] [Server thread/INFO]: [Sakuraft] Rác sẽ được dọn sau 2 phút nữa!
+2019-07-10 [21:56:36] [Server thread/INFO]: [Sakuraft]Hãy vote tại :bit.do/sakuraft để ủng hộ server
+2019-07-10 [21:56:51] [Server thread/INFO]: [Sakuraft]Phát hiện lỗi hãy báo với chủ server!
+2019-07-10 [21:57:06] [Server thread/INFO]: [Sakuraft]Vinh hạnh chào mừng bạn đến với server
+2019-07-10 [21:57:21] [Server thread/INFO]: [Sakuraft] Các minigames mới: BuildBattle, EggWars,...
+2019-07-10 [21:57:36] [Server thread/INFO]: [Sakuraft]Hãy vote tại :bit.do/sakuraft để ủng hộ server
+2019-07-10 [21:57:51] [Server thread/INFO]: [Sakuraft]Phát hiện lỗi hãy báo với chủ server!
+2019-07-10 [21:58:06] [Server thread/INFO]: [Sakuraft]Vinh hạnh chào mừng bạn đến với server
+2019-07-10 [21:58:21] [Server thread/INFO]: [Sakuraft] Các minigames mới: BuildBattle, EggWars,...
+2019-07-10 [22:03:03] [Server thread/INFO]: [Sakuraft] Watchdog đã dọn 0 vật phẩm rơi trên mặt đất!
+2019-07-10 [22:03:03] [Server thread/INFO]: [Sakuraft]Hãy vote tại :bit.do/sakuraft để ủng hộ server
+2019-07-10 [22:08:21] [Server thread/INFO]: [Sakuraft]Phát hiện lỗi hãy báo với chủ server!
+2019-07-10 [22:16:21] [Server thread/INFO]: [Sakuraft]Vinh hạnh chào mừng bạn đến với server
+2019-07-10 [22:19:58] [Server thread/INFO]: [Sakuraft] Các minigames mới: BuildBattle, EggWars,...
+2019-07-10 [22:28:02] [Server thread/INFO]: [Sakuraft] Rác sẽ được dọn sau 2 phút nữa!
+2019-07-10 [22:28:02] [Server thread/INFO]: [Sakuraft]Hãy vote tại :bit.do/sakuraft để ủng hộ server
+2019-07-10 [22:35:32] [Server thread/INFO]: [Sakuraft]Phát hiện lỗi hãy báo với chủ server!
+2019-07-10 [22:40:22] [Server thread/INFO]: [Sakuraft]Vinh hạnh chào mừng bạn đến với server
+2019-07-10 [22:47:09] [Server thread/INFO]: [Sakuraft] Các minigames mới: BuildBattle, EggWars,...
+2019-07-10 [22:47:24] [Server thread/INFO]: [Sakuraft]Hãy vote tại :bit.do/sakuraft để ủng hộ server
+2019-07-10 [22:48:42] [Server thread/INFO]: [Sakuraft]Phát hiện lỗi hãy báo với chủ server!
+2019-07-10 [22:52:08] [Server thread/INFO]: [Sakuraft]Vinh hạnh chào mừng bạn đến với server
+2019-07-10 [22:52:23] [Server thread/INFO]: [Sakuraft] Các minigames mới: BuildBattle, EggWars,...
+2019-07-10 [22:52:38] [Server thread/INFO]: [Sakuraft]Hãy vote tại :bit.do/sakuraft để ủng hộ server
+2019-07-10 [22:52:53] [Server thread/INFO]: [Sakuraft]Phát hiện lỗi hãy báo với chủ server!
+2019-07-10 [22:53:08] [Server thread/INFO]: [Sakuraft]Vinh hạnh chào mừng bạn đến với server
+2019-07-10 [22:53:31] [Server thread/INFO]: [Sakuraft] Các minigames mới: BuildBattle, EggWars,...
+2019-07-10 [22:54:25] [Server thread/INFO]: [Sakuraft] Rác sẽ được dọn sau 2 phút nữa!
+2019-07-10 [22:54:25] [Server thread/INFO]: [Sakuraft] Watchdog đã dọn 0 vật phẩm rơi trên mặt đất!
+2019-07-10 [22:54:25] [Server thread/INFO]: [Sakuraft]Hãy vote tại :bit.do/sakuraft để ủng hộ server
+2019-07-10 [22:56:14] [Server thread/INFO]: [Sakuraft]Phát hiện lỗi hãy báo với chủ server!
+2019-07-10 [22:57:33] [Server thread/INFO]: [Sakuraft]Vinh hạnh chào mừng bạn đến với server
+2019-07-10 [22:58:07] [Server thread/INFO]: [Sakuraft] Các minigames mới: BuildBattle, EggWars,...
+2019-07-10 [22:58:22] [Server thread/INFO]: [Sakuraft]Hãy vote tại :bit.do/sakuraft để ủng hộ server
+2019-07-10 [22:58:29] [Server thread/INFO]: [CommandTracker] <CONSOLE> /list
+2019-07-10 [22:58:29] [Server thread/INFO]: Có tất cả 0/50 đang online:
+2019-07-10 [22:58:29] [Server thread/INFO]: 
+2019-07-10 [22:58:37] [Server thread/INFO]: [Sakuraft]Phát hiện lỗi hãy báo với chủ server!
+2019-07-10 [22:58:49] [Server thread/INFO]: [CommandTracker] <CONSOLE> /stop
+2019-07-10 [22:58:49] [Server thread/INFO]: [CONSOLE: Đang dừng server...]
+2019-07-10 [22:58:49] [Server thread/INFO]: Disabling EconomyAPI v2.0.9
+2019-07-10 [22:58:49] [Server thread/INFO]: Disabling PurePerms v1.3.7
+2019-07-10 [22:58:49] [Server thread/INFO]: Disabling SimpleAuth v1.8.1
+2019-07-10 [22:58:49] [Server thread/INFO]: Disabling Titler v0.1.0
+2019-07-10 [22:58:49] [Server thread/INFO]: [Titler] Đã vô hiệu hóa
+2019-07-10 [22:58:49] [Server thread/INFO]: Disabling Broadcaster v1.16
+2019-07-10 [22:58:49] [Server thread/INFO]: Disabling Fireworks_JJBH v1.0 by Jaciel
+2019-07-10 [22:58:49] [Server thread/INFO]: Disabling FrameKeeper v1.1
+2019-07-10 [22:58:49] [Server thread/INFO]: Disabling CustomAlerts v1.6
+2019-07-10 [22:58:49] [Server thread/INFO]: Disabling Slapper_Việt_Hóa_By_Sói_Con v1.1
+2019-07-10 [22:58:49] [Server thread/INFO]: Disabling ManyWorlds v2.0.3
+2019-07-10 [22:58:49] [Server thread/INFO]: Disabling DevTools v1.10.0
+2019-07-10 [22:58:49] [Server thread/INFO]: Disabling Bar v1
+2019-07-10 [22:58:49] [Server thread/INFO]: [Bar] Bar closed
+2019-07-10 [22:58:49] [Server thread/INFO]: Disabling ItemID v1.1.0
+2019-07-10 [22:58:49] [Server thread/INFO]: Disabling AdvertisingKick v1.0.0
+2019-07-10 [22:58:49] [Server thread/INFO]: [AdvertisingKick] AdvertisingKick Stopped
+2019-07-10 [22:58:49] [Server thread/INFO]: Disabling AntiSpam v1.3
+2019-07-10 [22:58:49] [Server thread/INFO]: Disabling iProtector v3.1b
+2019-07-10 [22:58:49] [Server thread/INFO]: Disabling CommandTracker v1.1
+2019-07-10 [22:58:49] [Server thread/INFO]: Disabling Sheep v5.0.0
+2019-07-10 [22:58:49] [Server thread/INFO]: Disabling MagicWE v0.2.6
+2019-07-10 [22:58:49] [Server thread/INFO]: Disabling Lobby-by-DPMC v1
+2019-07-10 [22:58:49] [Server thread/INFO]: [Lobby-by-DPMC] >Deactivated!
+2019-07-10 [22:58:49] [Server thread/INFO]: Disabling BlockParticle v1
+2019-07-10 [22:58:49] [Server thread/INFO]: Disabling TheMask v1.0.0
+2019-07-10 [22:58:49] [Server thread/INFO]: Disabling SkinChanger v1.2.6
+2019-07-10 [22:58:49] [Server thread/INFO]: Disabling Trampoline v1.2
+2019-07-10 [22:58:49] [Server thread/INFO]: [Trampoline] Disabled!
+2019-07-10 [22:58:49] [Server thread/INFO]: Disabling MagicTelePortal v1.3.2
+2019-07-10 [22:58:49] [Server thread/INFO]: Disabling Tool[PTK] v2.0.0
+2019-07-10 [22:58:49] [Server thread/INFO]: Disabling SizePLayer v1.5
+2019-07-10 [22:58:49] [Server thread/INFO]: Disabling essentialsTP v1.1.0
+2019-07-10 [22:58:49] [Server thread/INFO]: [essentialsTP] ༺EssentialsTP༻ EssentialsTP Đã Ngừng Hoạt Động
+2019-07-10 [22:58:49] [Server thread/INFO]: Disabling Disable_TNT v0.1
+2019-07-10 [22:58:49] [Server thread/INFO]: [Disable_TNT] Plugin Đã Bị Vô Hiệu Hóa Do Bạn Dừng Máy Chủ Hoặc Có Lỗi Phát Sinh
+2019-07-10 [22:58:49] [Server thread/INFO]: Disabling Alias v1.2.0
+2019-07-10 [22:58:49] [Server thread/INFO]: Disabling ALW v1
+2019-07-10 [22:58:49] [Server thread/INFO]: Disabling Sell v2
+2019-07-10 [22:58:49] [Server thread/INFO]: Disabling Report v1
+2019-07-10 [22:58:49] [Server thread/INFO]: Disabling HopBiAn v1.0.0
+2019-07-10 [22:58:49] [Server thread/INFO]: Disabling FactionsPro v0.1#Beta
+2019-07-10 [22:58:49] [Server thread/INFO]: Disabling WorldProtect v2.2.0
+2019-07-10 [22:58:49] [Server thread/INFO]: Disabling Buyfix v1.0.0
+2019-07-10 [22:58:49] [Server thread/INFO]: Disabling Coin v2.0
+2019-07-10 [22:58:49] [Server thread/INFO]: Disabling ArcoLife v1
+2019-07-10 [22:58:49] [Server thread/INFO]: Disabling WingFire v1.3
+2019-07-10 [22:58:49] [Server thread/INFO]: Disabling Muakey v2
+2019-07-10 [22:58:49] [Server thread/INFO]: Disabling TopIS v2
+2019-07-10 [22:58:49] [Server thread/INFO]: Disabling Trade v1
+2019-07-10 [22:58:49] [Server thread/INFO]: Disabling NoTP v1.0.5
+2019-07-10 [22:58:49] [Server thread/INFO]: Disabling WingWater v1.3
+2019-07-10 [22:58:49] [Server thread/INFO]: Disabling WingSpore v1.3
+2019-07-10 [22:58:49] [Server thread/INFO]: Disabling QuyenHang v1
+2019-07-10 [22:58:49] [Server thread/INFO]: [QuyenHang] 
+======================================
+
+- Quyền Hạng Code Bởi Ghast Noob
+- Dành Cho Phiên Bản MCPE 1.1.x
+- Trạng Thái: Đã Vô Hiệu Hóa
+
+======================================
+2019-07-10 [22:58:49] [Server thread/INFO]: Disabling AntiDamage v1.3
+2019-07-10 [22:58:49] [Server thread/INFO]: Disabling MuaRank v1
+2019-07-10 [22:58:49] [Server thread/INFO]: Disabling WingWaterDrip v1.3
+2019-07-10 [22:58:49] [Server thread/INFO]: Disabling WingSmoke v1.3
+2019-07-10 [22:58:49] [Server thread/INFO]: Disabling WingRedstone v1.3
+2019-07-10 [22:58:49] [Server thread/INFO]: Disabling WingRain v1.3
+2019-07-10 [22:58:49] [Server thread/INFO]: Disabling WingPortal v1.3
+2019-07-10 [22:58:49] [Server thread/INFO]: Disabling WingMobSpell v1.3
+2019-07-10 [22:58:49] [Server thread/INFO]: Disabling WingLava v1.3
+2019-07-10 [22:58:49] [Server thread/INFO]: Disabling WingLavaDrip v1.3
+2019-07-10 [22:58:49] [Server thread/INFO]: Disabling WingHeart v1.3
+2019-07-10 [22:58:49] [Server thread/INFO]: Disabling WingHappy v1.3
+2019-07-10 [22:58:49] [Server thread/INFO]: Disabling WingFlame v1.3
+2019-07-10 [22:58:49] [Server thread/INFO]: Disabling WingEnchant v1.3
+2019-07-10 [22:58:49] [Server thread/INFO]: Disabling WingCritical v1.3
+2019-07-10 [22:58:49] [Server thread/INFO]: Disabling WingBubble v1.3
+2019-07-10 [22:58:49] [Server thread/INFO]: Disabling WingAngry v1.3
+2019-07-10 [22:58:49] [Server thread/INFO]: Disabling BuyEnchant v1
+2019-07-10 [22:58:49] [Server thread/INFO]: Disabling Prealms_BuildBattle v1.3.0
+2019-07-10 [22:58:49] [Server thread/INFO]: Unloading level "Hypixel Build Battle map"
+2019-07-10 [22:58:50] [Server thread/INFO]: Disabling DonRac[PTK] v2
+2019-07-10 [22:58:50] [Server thread/INFO]: [DonRac[PTK]]  Plugin Dọn Rác Bởi PTK Đã Tắt Phiên Bản:2!
+2019-07-10 [22:58:50] [Server thread/INFO]: Disabling CopyPasteBuildDP v2.0.0
+2019-07-10 [22:58:50] [Server thread/INFO]: Disabling EconomyShop v2.0.7
+2019-07-10 [22:58:50] [Server thread/INFO]: Disabling EconomySell v2.0.7
+2019-07-10 [22:58:50] [Server thread/INFO]: Disabling EconomyLand v2.0.9
+2019-07-10 [22:58:50] [Server thread/INFO]: Disabling EconomyJob v2.0.4
+2019-07-10 [22:58:50] [Server thread/INFO]: Disabling SimpleAuthHelper v2.0.1
+2019-07-10 [22:58:50] [Server thread/INFO]: Disabling HealthBar v1.0.1
+2019-07-10 [22:58:50] [Server thread/INFO]: Disabling SkyBlock v2
+2019-07-10 [22:58:50] [Server thread/INFO]: Disabling PureChat v1.4.0
+2019-07-10 [22:58:50] [Server thread/INFO]: Unloading level "world"
+2019-07-10 [22:58:50] [Server thread/INFO]: Unloading level "nether"
+2019-07-10 [22:58:50] [Server thread/INFO]: Unloading level "ender"
+2019-07-10 [22:58:50] [Server thread/INFO]: Unloading level "pvp"
+2019-07-10 [22:58:50] [Server thread/INFO]: Unloading level "sb"
+2019-07-10 [22:58:50] [Server thread/INFO]: Unloading level "shop"
+2019-07-10 [22:58:50] [Server thread/INFO]: Unloading level "sur"
+2019-07-10 [22:58:50] [Server thread/INFO]: Unloading level "sur1"
+2019-07-10 [22:58:50] [Server thread/INFO]: Unloading level "bbhub"
+2019-07-10 [22:58:55] [Server thread/INFO]: Stopping other threads
+2019-07-10 [23:01:19] [Server thread/WARNING]: OpenSSL extension not found
+2019-07-10 [23:01:19] [Server thread/WARNING]: Please configure OpenSSL extension for PHP if you want to use Xbox Live authentication or global resource pack.
+2019-07-10 [23:01:19] [Server thread/INFO]: Chọn Vietnamese (vie) là ngôn ngữ chính
+2019-07-10 [23:01:20] [Server thread/WARNING]: Debugging assertions are enabled, this may impact on performance. To disable them, set `zend.assertions = -1` in php.ini.
+2019-07-10 [23:01:20] [Server thread/INFO]: Opening server on 0.0.0.0:19132
+2019-07-10 [23:01:20] [Server thread/INFO]: TerminatorVN is distributed under the LGPL License
+2019-07-10 [23:01:20] [Server thread/INFO]: Loading recipes...
+2019-07-10 [23:01:21] [Server thread/INFO]: Loading resource packs...
+2019-07-10 [23:01:22] [Server thread/INFO]: Loading EconomyAPI v2.0.9
+2019-07-10 [23:01:22] [Server thread/INFO]: Loading PurePerms v1.3.7
+2019-07-10 [23:01:22] [Server thread/NOTICE]: PurePerms by 64FF00 & ProjectInfinity! #LEET.CC
+
+  888  888    .d8888b.      d8888  8888888888 8888888888 .d8888b.   .d8888b. 
+  888  888   d88P  Y88b    d8P888  888        888       d88P  Y88b d88P  Y88b
+888888888888 888          d8P 888  888        888       888    888 888    888
+  888  888   888d888b.   d8P  888  8888888    8888888   888    888 888    888
+  888  888   888P "Y88b d88   888  888        888       888    888 888    888
+888888888888 888    888 8888888888 888        888       888    888 888    888
+  888  888   Y88b  d88P       888  888        888       Y88b  d88P Y88b  d88P
+  888  888    "Y8888P"        888  888        888        "Y8888P"   "Y8888P" 
+
+2019-07-10 [23:01:22] [Server thread/INFO]: [PurePerms] Setting default language to 'en'
+2019-07-10 [23:01:22] [Server thread/NOTICE]: [PurePerms] Multiworld support is currently disabled.
+2019-07-10 [23:01:22] [Server thread/NOTICE]: [PurePerms] Don't forget to set enable-multiworld-perms option in config.yml to true if you want to use per-world permissions!
+2019-07-10 [23:01:22] [Server thread/INFO]: Loading SimpleAuth v1.8.1
+2019-07-10 [23:01:22] [Server thread/INFO]: Loading Titler v0.1.0
+2019-07-10 [23:01:22] [Server thread/INFO]: [Titler] Đang tải dữ liệu...
+2019-07-10 [23:01:22] [Server thread/INFO]: Loading Broadcaster v1.16
+2019-07-10 [23:01:22] [Server thread/INFO]: Loading Fireworks_JJBH v1.0 by Jaciel
+2019-07-10 [23:01:22] [Server thread/INFO]: Loading FrameKeeper v1.1
+2019-07-10 [23:01:22] [Server thread/INFO]: Loading CustomAlerts v1.6
+2019-07-10 [23:01:22] [Server thread/INFO]: Loading Slapper_Việt_Hóa_By_Sói_Con v1.1
+2019-07-10 [23:01:22] [Server thread/INFO]: Loading ManyWorlds v2.0.3
+2019-07-10 [23:01:22] [Server thread/INFO]: Loading DevTools v1.10.0
+2019-07-10 [23:01:22] [Server thread/INFO]: Loading Bar v1
+2019-07-10 [23:01:22] [Server thread/INFO]: Loading ItemID v1.1.0
+2019-07-10 [23:01:22] [Server thread/INFO]: Loading AdvertisingKick v1.0.0
+2019-07-10 [23:01:22] [Server thread/INFO]: Loading AntiSpam v1.3
+2019-07-10 [23:01:22] [Server thread/INFO]: Loading iProtector v3.1b
+2019-07-10 [23:01:22] [Server thread/INFO]: Loading CommandTracker v1.1
+2019-07-10 [23:01:22] [Server thread/INFO]: Loading Sheep v5.0.0
+2019-07-10 [23:01:22] [Server thread/INFO]: Loading MagicWE v0.2.6
+2019-07-10 [23:01:22] [Server thread/INFO]: [MagicWE] MagicWE has been loaded!
+2019-07-10 [23:01:22] [Server thread/INFO]: Loading Lobby-by-DPMC v1
+2019-07-10 [23:01:22] [Server thread/INFO]: Loading BlockParticle v1
+2019-07-10 [23:01:22] [Server thread/INFO]: Loading TheMask v1.0.0
+2019-07-10 [23:01:22] [Server thread/INFO]: Loading SkinChanger v1.2.6
+2019-07-10 [23:01:22] [Server thread/INFO]: Loading Trampoline v1.2
+2019-07-10 [23:01:22] [Server thread/INFO]: Loading MagicTelePortal v1.3.2
+2019-07-10 [23:01:22] [Server thread/INFO]: Loading (Source) Tool[PTK] v2.0.0
+2019-07-10 [23:01:22] [Server thread/INFO]: Loading (Source) SizePLayer v1.5
+2019-07-10 [23:01:22] [Server thread/INFO]: Loading (Source) essentialsTP v1.1.0
+2019-07-10 [23:01:22] [Server thread/INFO]: Loading (Source) Disable_TNT v0.1
+2019-07-10 [23:01:22] [Server thread/INFO]: Loading (Source) Alias v1.2.0
+2019-07-10 [23:01:22] [Server thread/INFO]: Loading (Source) ALW v1
+2019-07-10 [23:01:22] [Server thread/INFO]: Loading (Source) Sell v2
+2019-07-10 [23:01:22] [Server thread/INFO]: Loading (Source) Report v1
+2019-07-10 [23:01:22] [Server thread/INFO]: Loading (Source) HopBiAn v1.0.0
+2019-07-10 [23:01:22] [Server thread/INFO]: Loading (Source) FactionsPro v0.1#Beta
+2019-07-10 [23:01:22] [Server thread/INFO]: Loading (Source) WorldProtect v2.2.0
+2019-07-10 [23:01:22] [Server thread/INFO]: Loading (Source) Buyfix v1.0.0
+2019-07-10 [23:01:22] [Server thread/INFO]: Loading (Source) Coin v2.0
+2019-07-10 [23:01:22] [Server thread/INFO]: Loading (Source) ArcoLife v1
+2019-07-10 [23:01:22] [Server thread/INFO]: Loading (Source) WingFire v1.3
+2019-07-10 [23:01:22] [Server thread/INFO]: Loading (Source) Muakey v2
+2019-07-10 [23:01:22] [Server thread/INFO]: Loading (Source) TopIS v2
+2019-07-10 [23:01:22] [Server thread/INFO]: Loading (Source) Trade v1
+2019-07-10 [23:01:22] [Server thread/INFO]: Loading (Source) NoTP v1.0.5
+2019-07-10 [23:01:22] [Server thread/INFO]: Loading (Source) WingWater v1.3
+2019-07-10 [23:01:22] [Server thread/INFO]: Loading (Source) WingSpore v1.3
+2019-07-10 [23:01:22] [Server thread/INFO]: Loading (Source) QuyenHang v1
+2019-07-10 [23:01:22] [Server thread/INFO]: Loading (Source) AntiDamage v1.3
+2019-07-10 [23:01:22] [Server thread/INFO]: Loading (Source) MuaRank v1
+2019-07-10 [23:01:22] [Server thread/INFO]: Loading (Source) WingWaterDrip v1.3
+2019-07-10 [23:01:22] [Server thread/INFO]: Loading (Source) WingSmoke v1.3
+2019-07-10 [23:01:22] [Server thread/INFO]: Loading (Source) WingRedstone v1.3
+2019-07-10 [23:01:22] [Server thread/INFO]: Loading (Source) WingRain v1.3
+2019-07-10 [23:01:22] [Server thread/INFO]: Loading (Source) WingPortal v1.3
+2019-07-10 [23:01:22] [Server thread/INFO]: Loading (Source) WingMobSpell v1.3
+2019-07-10 [23:01:22] [Server thread/INFO]: Loading (Source) WingLava v1.3
+2019-07-10 [23:01:22] [Server thread/INFO]: Loading (Source) WingLavaDrip v1.3
+2019-07-10 [23:01:22] [Server thread/INFO]: Loading (Source) WingHeart v1.3
+2019-07-10 [23:01:22] [Server thread/INFO]: Loading (Source) WingHappy v1.3
+2019-07-10 [23:01:22] [Server thread/INFO]: Loading (Source) WingFlame v1.3
+2019-07-10 [23:01:22] [Server thread/INFO]: Loading (Source) WingEnchant v1.3
+2019-07-10 [23:01:22] [Server thread/INFO]: Loading (Source) WingCritical v1.3
+2019-07-10 [23:01:22] [Server thread/INFO]: Loading (Source) WingBubble v1.3
+2019-07-10 [23:01:22] [Server thread/INFO]: Loading (Source) WingAngry v1.3
+2019-07-10 [23:01:22] [Server thread/INFO]: Loading (Source) BuyEnchant v1
+2019-07-10 [23:01:22] [Server thread/INFO]: Loading (Source) Prealms_BuildBattle v1.3.0
+2019-07-10 [23:01:22] [Server thread/INFO]: Loading (Source) DonRac[PTK] v2
+2019-07-10 [23:01:22] [Server thread/INFO]: Loading (Source) CopyPasteBuildDP v2.0.0
+2019-07-10 [23:01:22] [Server thread/INFO]: Loading EconomyShop v2.0.7
+2019-07-10 [23:01:22] [Server thread/INFO]: Loading EconomySell v2.0.7
+2019-07-10 [23:01:22] [Server thread/INFO]: Loading EconomyLand v2.0.9
+2019-07-10 [23:01:22] [Server thread/INFO]: Loading EconomyJob v2.0.4
+2019-07-10 [23:01:22] [Server thread/INFO]: Loading SimpleAuthHelper v2.0.1
+2019-07-10 [23:01:22] [Server thread/INFO]: Loading HealthBar v1.0.1
+2019-07-10 [23:01:22] [Server thread/INFO]: Loading SkyBlock v2
+2019-07-10 [23:01:23] [Server thread/INFO]: Loading PureChat v1.4.0
+2019-07-10 [23:01:23] [Server thread/INFO]: Enabling SimpleAuth v1.8.1
+2019-07-10 [23:01:23] [Server thread/INFO]: [SimpleAuth] Connected to PurePerms
+2019-07-10 [23:01:23] [Server thread/INFO]: [SimpleAuth] Everything loaded!
+2019-07-10 [23:01:23] [Server thread/INFO]: Enabling Broadcaster v1.16
+2019-07-10 [23:01:23] [Server thread/INFO]: Enabling CustomAlerts v1.6
+2019-07-10 [23:01:23] [Server thread/INFO]: Enabling DevTools v1.10.0
+2019-07-10 [23:01:23] [Server thread/ERROR]: Could not load plugin 'Tool[PTK]': plugin exists
+2019-07-10 [23:01:23] [Server thread/ERROR]: Could not load plugin 'SizePLayer': plugin exists
+2019-07-10 [23:01:23] [Server thread/ERROR]: Could not load plugin 'essentialsTP': plugin exists
+2019-07-10 [23:01:23] [Server thread/ERROR]: Could not load plugin 'Disable_TNT': plugin exists
+2019-07-10 [23:01:23] [Server thread/ERROR]: Could not load plugin 'Alias': plugin exists
+2019-07-10 [23:01:23] [Server thread/ERROR]: Could not load plugin 'ALW': plugin exists
+2019-07-10 [23:01:23] [Server thread/ERROR]: Could not load plugin 'Sell': plugin exists
+2019-07-10 [23:01:23] [Server thread/ERROR]: Could not load plugin 'Report': plugin exists
+2019-07-10 [23:01:23] [Server thread/ERROR]: Could not load plugin 'HopBiAn': plugin exists
+2019-07-10 [23:01:23] [Server thread/ERROR]: Could not load plugin 'FactionsPro': plugin exists
+2019-07-10 [23:01:23] [Server thread/ERROR]: Could not load plugin 'WorldProtect': plugin exists
+2019-07-10 [23:01:23] [Server thread/ERROR]: Could not load plugin 'Buyfix': plugin exists
+2019-07-10 [23:01:23] [Server thread/ERROR]: Could not load plugin 'Coin': plugin exists
+2019-07-10 [23:01:23] [Server thread/ERROR]: Could not load plugin 'ArcoLife': plugin exists
+2019-07-10 [23:01:23] [Server thread/ERROR]: Could not load plugin 'WingFire': plugin exists
+2019-07-10 [23:01:23] [Server thread/ERROR]: Could not load plugin 'Muakey': plugin exists
+2019-07-10 [23:01:23] [Server thread/ERROR]: Could not load plugin 'TopIS': plugin exists
+2019-07-10 [23:01:23] [Server thread/ERROR]: Could not load plugin 'Trade': plugin exists
+2019-07-10 [23:01:23] [Server thread/ERROR]: Could not load plugin 'NoTP': plugin exists
+2019-07-10 [23:01:23] [Server thread/ERROR]: Could not load plugin 'WingWater': plugin exists
+2019-07-10 [23:01:23] [Server thread/ERROR]: Could not load plugin 'WingSpore': plugin exists
+2019-07-10 [23:01:23] [Server thread/ERROR]: Could not load plugin 'QuyenHang': plugin exists
+2019-07-10 [23:01:23] [Server thread/ERROR]: Could not load plugin 'AntiDamage': plugin exists
+2019-07-10 [23:01:23] [Server thread/ERROR]: Could not load plugin 'MuaRank': plugin exists
+2019-07-10 [23:01:23] [Server thread/ERROR]: Could not load plugin 'WingWaterDrip': plugin exists
+2019-07-10 [23:01:23] [Server thread/ERROR]: Could not load plugin 'WingSmoke': plugin exists
+2019-07-10 [23:01:23] [Server thread/ERROR]: Could not load plugin 'WingRedstone': plugin exists
+2019-07-10 [23:01:23] [Server thread/ERROR]: Could not load plugin 'WingRain': plugin exists
+2019-07-10 [23:01:23] [Server thread/ERROR]: Could not load plugin 'WingPortal': plugin exists
+2019-07-10 [23:01:23] [Server thread/ERROR]: Could not load plugin 'WingMobSpell': plugin exists
+2019-07-10 [23:01:23] [Server thread/ERROR]: Could not load plugin 'WingLava': plugin exists
+2019-07-10 [23:01:23] [Server thread/ERROR]: Could not load plugin 'WingLavaDrip': plugin exists
+2019-07-10 [23:01:23] [Server thread/ERROR]: Could not load plugin 'WingHeart': plugin exists
+2019-07-10 [23:01:23] [Server thread/ERROR]: Could not load plugin 'WingHappy': plugin exists
+2019-07-10 [23:01:23] [Server thread/ERROR]: Could not load plugin 'WingFlame': plugin exists
+2019-07-10 [23:01:23] [Server thread/ERROR]: Could not load plugin 'WingEnchant': plugin exists
+2019-07-10 [23:01:23] [Server thread/ERROR]: Could not load plugin 'WingCritical': plugin exists
+2019-07-10 [23:01:23] [Server thread/ERROR]: Could not load plugin 'WingBubble': plugin exists
+2019-07-10 [23:01:23] [Server thread/ERROR]: Could not load plugin 'WingAngry': plugin exists
+2019-07-10 [23:01:23] [Server thread/ERROR]: Could not load plugin 'BuyEnchant': plugin exists
+2019-07-10 [23:01:23] [Server thread/ERROR]: Could not load plugin 'Prealms_BuildBattle': plugin exists
+2019-07-10 [23:01:23] [Server thread/ERROR]: Could not load plugin 'DonRac[PTK]': plugin exists
+2019-07-10 [23:01:23] [Server thread/ERROR]: Could not load plugin 'CopyPasteBuildDP': plugin exists
+2019-07-10 [23:01:23] [Server thread/INFO]: [DevTools] Registered folder plugin loader
+2019-07-10 [23:01:23] [Server thread/INFO]: Enabling AntiSpam v1.3
+2019-07-10 [23:01:23] [Server thread/INFO]: Enabling CommandTracker v1.1
+2019-07-10 [23:01:23] [Server thread/INFO]: Enabling MagicWE v0.2.6
+2019-07-10 [23:01:23] [Server thread/INFO]: [MagicWE] MagicWE enabled!
+2019-07-10 [23:01:23] [Server thread/INFO]: Enabling Disable_TNT v0.1
+2019-07-10 [23:01:23] [Server thread/INFO]: [Disable_TNT] Plugin Đã Được Kích Hoạt
+2019-07-10 [23:01:23] [Server thread/INFO]: Enabling HopBiAn v1.0.0
+2019-07-10 [23:01:23] [Server thread/INFO]: [HopBiAn] Plugin Đã hoạt động được code bở BOSS_CraftPE
+2019-07-10 [23:01:23] [Server thread/INFO]: Enabling WorldProtect v2.2.0
+2019-07-10 [23:01:23] [Server thread/INFO]: [WorldProtect] Enabled 9 features
+2019-07-10 [23:01:23] [Server thread/INFO]: Enabling DonRac[PTK] v2
+2019-07-10 [23:01:23] [Server thread/INFO]: [DonRac[PTK]] Plugin Dọn Rác Bởi PTK Đã Được Kích Hoạt Phiên Bản:2!
+2019-07-10 [23:01:23] [Server thread/INFO]: Enabling SkyBlock v2
+2019-07-10 [23:01:23] [Server thread/INFO]: [SkyBlock] Loading MyPlot
+2019-07-10 [23:01:23] [Server thread/INFO]: Preparing level "world"
+2019-07-10 [23:01:23] [Server thread/INFO]: Preparing level "nether"
+2019-07-10 [23:01:23] [Server thread/INFO]: Preparing level "ender"
+2019-07-10 [23:01:23] [Server thread/INFO]: Enabling EconomyAPI v2.0.9
+2019-07-10 [23:01:23] [Server thread/NOTICE]: [EconomyAPI] Provider was set to: Yaml
+2019-07-10 [23:01:23] [Server thread/NOTICE]: [EconomyAPI] Auto save has been set to interval : 10 min(s)
+2019-07-10 [23:01:23] [Server thread/INFO]: [EconomyAPI] Checking for updates... It may be take some while.
+2019-07-10 [23:01:29] [Server thread/NOTICE]: [EconomyAPI] 
+2019-07-10 [23:01:29] [Server thread/INFO]: Enabling PurePerms v1.3.7
+2019-07-10 [23:01:29] [Server thread/NOTICE]: [PurePerms] Set data provider to YAMLv1.
+2019-07-10 [23:01:29] [Server thread/INFO]: Enabling Titler v0.1.0
+2019-07-10 [23:01:29] [Server thread/INFO]: [Titler] Đã được kích hoạt!
+2019-07-10 [23:01:29] [Server thread/INFO]: Enabling Fireworks_JJBH v1.0 by Jaciel
+2019-07-10 [23:01:29] [Server thread/INFO]: [Fireworks_JJBH] PLUGIN BY jaciel14
+2019-07-10 [23:01:29] [Server thread/INFO]: Enabling FrameKeeper v1.1
+2019-07-10 [23:01:29] [Server thread/INFO]: [FrameKeeper v1.1] Đã kích hoạt thành công!
+2019-07-10 [23:01:29] [Server thread/INFO]: Enabling Slapper_Việt_Hóa_By_Sói_Con v1.1
+2019-07-10 [23:01:29] [Server thread/INFO]: Enabling ManyWorlds v2.0.3
+2019-07-10 [23:01:29] [Server thread/INFO]: Enabling Bar v1
+2019-07-10 [23:01:29] [Server thread/INFO]: [Bar] Đã bật
+2019-07-10 [23:01:29] [Server thread/INFO]: Enabling ItemID v1.1.0
+2019-07-10 [23:01:29] [Server thread/INFO]: [ItemID] ItemsID by KaitoDoDo
+2019-07-10 [23:01:29] [Server thread/INFO]: Enabling AdvertisingKick v1.0.0
+2019-07-10 [23:01:29] [Server thread/INFO]: [AdvertisingKick] AdvertisingKick Starterd
+2019-07-10 [23:01:29] [Server thread/INFO]: Enabling iProtector v3.1b
+2019-07-10 [23:01:29] [Server thread/INFO]: Enabling Sheep v5.0.0
+2019-07-10 [23:01:29] [Server thread/INFO]: [Sheep] Scanning loaded plugins for changes...
+2019-07-10 [23:01:29] [Server thread/INFO]: Enabling Lobby-by-DPMC v1
+2019-07-10 [23:01:29] [Server thread/INFO]: [Lobby-by-DPMC] >Activated!
+2019-07-10 [23:01:29] [Server thread/INFO]: Enabling BlockParticle v1
+2019-07-10 [23:01:29] [Server thread/INFO]: Enabling TheMask v1.0.0
+2019-07-10 [23:01:29] [Server thread/INFO]: [TheMask] Mask
+2019-07-10 [23:01:29] [Server thread/INFO]: [TheMask] Mask
+2019-07-10 [23:01:29] [Server thread/INFO]: Enabling SkinChanger v1.2.6
+2019-07-10 [23:01:29] [Server thread/INFO]: Enabling Trampoline v1.2
+2019-07-10 [23:01:29] [Server thread/INFO]: [Trampoline] Enabled!
+2019-07-10 [23:01:29] [Server thread/INFO]: Enabling MagicTelePortal v1.3.2
+2019-07-10 [23:01:29] [Server thread/INFO]: Enabling Tool[PTK] v2.0.0
+2019-07-10 [23:01:29] [Server thread/INFO]: [Tool[PTK]] →Đang chạy plugin Tool[PTK]...
+2019-07-10 [23:01:30] [Server thread/INFO]: [CONSOLE: Bổ nhiệm ghast_noob]
+2019-07-10 [23:01:30] [Server thread/INFO]: [PurePerms:64FF00] Added permission * to ghast_noob successfully.
+2019-07-10 [23:01:30] [Server thread/INFO]: [PurePerms:64FF00] Added ghast_noob to the group successfully.
+2019-07-10 [23:01:30] [Server thread/INFO]: [CONSOLE: Hủy cấm người chơi Ghast_Noob]
+2019-07-10 [23:01:30] [Server thread/INFO]: [CONSOLE: Unbanned CID -8332272655818828154]
+2019-07-10 [23:01:30] [Server thread/INFO]: [CONSOLE: Unbanned CID Ghast_Noob]
+2019-07-10 [23:01:30] [Server thread/INFO]: Enabling SizePLayer v1.5
+2019-07-10 [23:01:30] [Server thread/INFO]: [SizePLayer] » SizePlayer Loading!
+2019-07-10 [23:01:30] [Server thread/INFO]: Enabling essentialsTP v1.1.0
+2019-07-10 [23:01:30] [Server thread/INFO]: [essentialsTP] ༺EssentialsTP༻ EssentialsTP Đang Khởi Động...
+2019-07-10 [23:01:30] [Server thread/INFO]: [essentialsTP] ༺EssentialsTP༻ EssentialsTP Đang Khởi Động: [config.yml]....
+2019-07-10 [23:01:30] [Server thread/INFO]: [essentialsTP] ༺EssentialsTP༻ EssentialsTP Đã Khởi Động: [config.yml] Thành Công
+2019-07-10 [23:01:30] [Server thread/INFO]: [essentialsTP] ༺EssentialsTP༻ EssentialsTP Đã Hoạt Động
+2019-07-10 [23:01:30] [Server thread/INFO]: Enabling Alias v1.2.0
+2019-07-10 [23:01:30] [Server thread/INFO]: Enabling ALW v1
+2019-07-10 [23:01:30] [Server thread/INFO]: Plugin Đã Hoạt Động
+2019-07-10 [23:01:30] [Server thread/INFO]: Tất Cả Các World Đã Được Load
+2019-07-10 [23:01:30] [Server thread/INFO]: Preparing level "pvp"
+2019-07-10 [23:01:30] [Server thread/INFO]: Preparing level "sb"
+2019-07-10 [23:01:30] [Server thread/INFO]: Preparing level "shop"
+2019-07-10 [23:01:30] [Server thread/INFO]: Preparing level "Hypixel Build Battle map"
+2019-07-10 [23:01:30] [Server thread/INFO]: Preparing level "sur"
+2019-07-10 [23:01:30] [Server thread/INFO]: Preparing level "sur1"
+2019-07-10 [23:01:30] [Server thread/INFO]: Preparing level "bbhub"
+2019-07-10 [23:01:30] [Server thread/INFO]: Enabling Sell v2
+2019-07-10 [23:01:30] [Server thread/INFO]: [Sell] Đã Hoạt Động
+2019-07-10 [23:01:30] [Server thread/INFO]: Enabling Report v1
+2019-07-10 [23:01:30] [Server thread/INFO]: [Report] [Report] Plugin đã chạy
+2019-07-10 [23:01:30] [Server thread/INFO]: Enabling FactionsPro v0.1#Beta
+2019-07-10 [23:01:30] [Server thread/INFO]: Enabling Buyfix v1.0.0
+2019-07-10 [23:01:30] [Server thread/INFO]: [Buyfix] เปิดทำงานปลั๊กอิน fix
+2019-07-10 [23:01:30] [Server thread/INFO]: Enabling Coin v2.0
+2019-07-10 [23:01:30] [Server thread/NOTICE]: [Coin] Tự Động Lưu Đã Được Đặt Thời Gian Tối Thiểu Thành Khoảng: 1 Phút
+2019-07-10 [23:01:30] [Server thread/INFO]: [Coin] Kiểm Tra Cập Nhập... Có Thể Mất Một 
+2019-07-10 [23:01:35] [Server thread/NOTICE]: [Coin] 
+2019-07-10 [23:01:35] [Server thread/INFO]: Enabling ArcoLife v1
+2019-07-10 [23:01:35] [Server thread/INFO]: [ArcoLife] Đã Hoạt Động
+2019-07-10 [23:01:36] [Server thread/INFO]: [PurePerms:64FF00] Added permission * to ghast_noob successfully.
+2019-07-10 [23:01:36] [Server thread/INFO]: Enabling WingFire v1.3
+2019-07-10 [23:01:36] [Server thread/INFO]: Enabling Muakey v2
+2019-07-10 [23:01:36] [Server thread/INFO]: [Muakey] Plugin Đã hoạt động được code bở BOSS_CraftPE
+2019-07-10 [23:01:36] [Server thread/INFO]: Enabling TopIS v2
+2019-07-10 [23:01:36] [Server thread/INFO]: [TopIS] •Plugin Đã Hoạt Động
+2019-07-10 [23:01:36] [Server thread/INFO]: Enabling Trade v1
+2019-07-10 [23:01:36] [Server thread/INFO]: [Trade] 
+======================================
+
+- Trade Code Bởi Ghast Noob
+- Dành Cho Phiên Bản MCPE 1.1.x
+- Trạng Thái: Đã Hoạt Động
+
+======================================
+2019-07-10 [23:01:36] [Server thread/INFO]: Enabling NoTP v1.0.5
+2019-07-10 [23:01:36] [Server thread/INFO]: Enabling WingWater v1.3
+2019-07-10 [23:01:36] [Server thread/INFO]: Enabling WingSpore v1.3
+2019-07-10 [23:01:36] [Server thread/INFO]: Enabling QuyenHang v1
+2019-07-10 [23:01:36] [Server thread/INFO]: [QuyenHang] 
+======================================
+
+- Quyền Hạng Code Bởi Ghast Noob
+- Dành Cho Phiên Bản MCPE 1.1.x
+- Trạng Thái: Đã Hoạt Động
+
+======================================
+2019-07-10 [23:01:36] [Server thread/INFO]: Enabling AntiDamage v1.3
+2019-07-10 [23:01:36] [Server thread/INFO]: Enabling MuaRank v1
+2019-07-10 [23:01:36] [Server thread/INFO]: [MuaRank] 
+======================================
+
+- Mua Rank Code Bởi Ghast Noob
+- Dành Cho Phiên Bản MCPE 1.1.x
+- Trạng Thái: Đã Hoạt Động
+
+======================================
+2019-07-10 [23:01:36] [Server thread/INFO]: Enabling WingWaterDrip v1.3
+2019-07-10 [23:01:36] [Server thread/INFO]: Enabling WingSmoke v1.3
+2019-07-10 [23:01:36] [Server thread/INFO]: Enabling WingRedstone v1.3
+2019-07-10 [23:01:36] [Server thread/INFO]: Enabling WingRain v1.3
+2019-07-10 [23:01:36] [Server thread/INFO]: Enabling WingPortal v1.3
+2019-07-10 [23:01:36] [Server thread/INFO]: Enabling WingMobSpell v1.3
+2019-07-10 [23:01:36] [Server thread/INFO]: Enabling WingLava v1.3
+2019-07-10 [23:01:36] [Server thread/INFO]: Enabling WingLavaDrip v1.3
+2019-07-10 [23:01:36] [Server thread/INFO]: Enabling WingHeart v1.3
+2019-07-10 [23:01:36] [Server thread/INFO]: Enabling WingHappy v1.3
+2019-07-10 [23:01:36] [Server thread/INFO]: Enabling WingFlame v1.3
+2019-07-10 [23:01:36] [Server thread/INFO]: Enabling WingEnchant v1.3
+2019-07-10 [23:01:36] [Server thread/INFO]: Enabling WingCritical v1.3
+2019-07-10 [23:01:36] [Server thread/INFO]: Enabling WingBubble v1.3
+2019-07-10 [23:01:36] [Server thread/INFO]: Enabling WingAngry v1.3
+2019-07-10 [23:01:36] [Server thread/INFO]: Enabling BuyEnchant v1
+2019-07-10 [23:01:36] [Server thread/INFO]: Enabling Prealms_BuildBattle v1.3.0
+2019-07-10 [23:01:36] [Server thread/NOTICE]: [Prealms_BuildBattle] BuildBattle by DragonPlayzMC
+2019-07-10 [23:01:36] [Server thread/INFO]: Enabling CopyPasteBuildDP v2.0.0
+2019-07-10 [23:01:36] [Server thread/INFO]: Enabling EconomyShop v2.0.7
+2019-07-10 [23:01:36] [Server thread/INFO]: Enabling EconomySell v2.0.7
+2019-07-10 [23:01:36] [Server thread/INFO]: Enabling EconomyLand v2.0.9
+2019-07-10 [23:01:36] [Server thread/INFO]: Enabling EconomyJob v2.0.4
+2019-07-10 [23:01:36] [Server thread/INFO]: Enabling SimpleAuthHelper v2.0.1
+2019-07-10 [23:01:36] [Server thread/ERROR]: [SimpleAuthHelper] Your selected language "vie" is not supported
+2019-07-10 [23:01:36] [Server thread/ERROR]: [SimpleAuthHelper] Please consider translating "messages.ini"
+2019-07-10 [23:01:36] [Server thread/ERROR]: [SimpleAuthHelper] and submitting a translation to the  developer
+2019-07-10 [23:01:36] [Server thread/INFO]: Enabling HealthBar v1.0.1
+2019-07-10 [23:01:36] [Server thread/INFO]: Enabling PureChat v1.4.0
+2019-07-10 [23:01:36] [Server thread/NOTICE]: [PureChat] FactionsPro-OLD support enabled.
+2019-07-10 [23:01:40] [Server thread/INFO]: Starting GS4 status listener
+2019-07-10 [23:01:40] [Server thread/INFO]: Setting query port to 19132
+2019-07-10 [23:01:40] [Server thread/INFO]: Query running on 0.0.0.0:19132
+2019-07-10 [23:01:40] [Server thread/INFO]: Default game type: Chế độ sống sốt
+2019-07-10 [23:01:40] [Server thread/INFO]: Done (26.076s)! For help, type "help" or "?"
+2019-07-10 [23:01:40] [Server thread/INFO]: [Sakuraft]Hãy vote tại :bit.do/sakuraft để ủng hộ server
+2019-07-10 [23:01:40] [Server thread/INFO]: [Sakuraft] Watchdog đã dọn 0 vật phẩm rơi trên mặt đất!
+2019-07-10 [23:01:40] [Server thread/CRITICAL]: Could not execute task Sheep\Utils\ScanTask: Class React\Promise\Deferred not found
+2019-07-10 [23:01:40] [Server thread/CRITICAL]: ClassNotFoundException: "Class React\Promise\Deferred not found" (EXCEPTION) in "/src/spl/BaseClassLoader" at line 144
+2019-07-10 [23:01:40] [Server thread/INFO]: [Sakuraft] Rác sẽ được dọn sau 2 phút nữa!
+2019-07-10 [23:01:40] [Server thread/ERROR]: [SkinChanger] Could not check for Update: "Empty Response" !
+2019-07-10 [23:01:40] [Server thread/INFO]: [Tool[PTK]-System]→ Không có phiên bản cập nhật nào mới cho Tool[PTK].Bạn đang dùng bản mới nhất!
+2019-07-10 [23:02:48] [Server thread/INFO]: [Sakuraft]Phát hiện lỗi hãy báo với chủ server!
+2019-07-10 [23:03:34] [Server thread/INFO]: [Sakuraft]Vinh hạnh chào mừng bạn đến với server
+2019-07-10 [23:05:01] [Server thread/INFO]: [Sakuraft] Các minigames mới: BuildBattle, EggWars,...
+2019-07-10 [23:06:50] [Server thread/INFO]: [Sakuraft]Hãy vote tại :bit.do/sakuraft để ủng hộ server
+2019-07-10 [23:08:14] [Server thread/INFO]: [Sakuraft]Phát hiện lỗi hãy báo với chủ server!
+2019-07-10 [23:09:42] [Server thread/INFO]: [Sakuraft]Vinh hạnh chào mừng bạn đến với server
+2019-07-10 [23:10:28] [Server thread/INFO]: [Sakuraft] Các minigames mới: BuildBattle, EggWars,...
+2019-07-10 [23:13:25] [Server thread/INFO]: [Sakuraft]Hãy vote tại :bit.do/sakuraft để ủng hộ server
+2019-07-10 [23:15:46] [Server thread/INFO]: [Sakuraft]Phát hiện lỗi hãy báo với chủ server!
+2019-07-10 [23:18:12] [Server thread/INFO]: [Sakuraft]Vinh hạnh chào mừng bạn đến với server
+2019-07-10 [23:20:24] [Server thread/INFO]: [Sakuraft] Các minigames mới: BuildBattle, EggWars,...
+2019-07-10 [23:22:48] [Server thread/INFO]: [Sakuraft]Hãy vote tại :bit.do/sakuraft để ủng hộ server
+2019-07-10 [23:22:48] [Server thread/INFO]: [Sakuraft] Rác sẽ được dọn sau 2 phút nữa!
+2019-07-10 [23:26:39] [Server thread/INFO]: [Sakuraft]Phát hiện lỗi hãy báo với chủ server!
+2019-07-10 [23:28:57] [Server thread/INFO]: [Sakuraft]Vinh hạnh chào mừng bạn đến với server
+2019-07-10 [23:31:51] [Server thread/INFO]: [Sakuraft] Các minigames mới: BuildBattle, EggWars,...
+2019-07-10 [23:32:52] [Server thread/INFO]: [Sakuraft] Watchdog đã dọn 0 vật phẩm rơi trên mặt đất!
+2019-07-10 [23:32:52] [Server thread/INFO]: [Sakuraft]Hãy vote tại :bit.do/sakuraft để ủng hộ server
+2019-07-10 [23:33:00] [Server thread/INFO]: Vohuynhnamviet[/14.227.96.51:47056] [ClientID: -3.6840627253135E+18] logged in with entity id 1 at (world, 130.5895, 7.5, 126.3042)
+2019-07-10 [23:33:00] [Server thread/INFO]: [CommandTracker] <CONSOLE> /list
+2019-07-10 [23:33:00] [Server thread/INFO]: Có tất cả 1/50 đang online:
+2019-07-10 [23:33:00] [Server thread/INFO]: Vohuynhnamviet
+2019-07-10 [23:33:11] [Server thread/INFO]: [Tool[PTK]] Running
+2019-07-10 [23:33:11] [Server thread/INFO]: Chào Mừng "• Vohuynhnamviet đã vào SaKuRAFT."
+2019-07-10 [23:33:22] [Server thread/INFO]: [Sakuraft]Phát hiện lỗi hãy báo với chủ server!
+2019-07-10 [23:33:37] [Server thread/INFO]: [Sakuraft]Vinh hạnh chào mừng bạn đến với server
+2019-07-10 [23:33:46] [Server thread/INFO]: [CommandTracker] <Vohuynhnamviet> /gmc 
+2019-07-10 [23:33:51] [Server thread/INFO]: [CommandTracker] <Vohuynhnamviet> /muakey 2
+2019-07-10 [23:33:54] [Server thread/INFO]: [Sakuraft] Các minigames mới: BuildBattle, EggWars,...
+2019-07-10 [23:34:09] [Server thread/INFO]: [Sakuraft]Hãy vote tại :bit.do/sakuraft để ủng hộ server
+2019-07-10 [23:34:24] [Server thread/INFO]: [Sakuraft]Phát hiện lỗi hãy báo với chủ server!
+2019-07-10 [23:34:39] [Server thread/INFO]: [Sakuraft]Vinh hạnh chào mừng bạn đến với server
+2019-07-10 [23:34:54] [Server thread/INFO]: [Sakuraft] Các minigames mới: BuildBattle, EggWars,...
+2019-07-10 [23:35:09] [Server thread/INFO]: [Sakuraft] Rác sẽ được dọn sau 2 phút nữa!
+2019-07-10 [23:35:09] [Server thread/INFO]: [Sakuraft]Hãy vote tại :bit.do/sakuraft để ủng hộ server
+2019-07-10 [23:35:24] [Server thread/INFO]: [Sakuraft]Phát hiện lỗi hãy báo với chủ server!
+2019-07-10 [23:35:38] [Server thread/INFO]: [Sakuraft]Vinh hạnh chào mừng bạn đến với server
+2019-07-10 [23:35:54] [Server thread/INFO]: [Sakuraft] Các minigames mới: BuildBattle, EggWars,...
+2019-07-10 [23:36:09] [Server thread/INFO]: [Sakuraft]Hãy vote tại :bit.do/sakuraft để ủng hộ server
+2019-07-10 [23:36:24] [Server thread/INFO]: [Sakuraft]Phát hiện lỗi hãy báo với chủ server!
+2019-07-10 [23:36:39] [Server thread/INFO]: [Sakuraft]Vinh hạnh chào mừng bạn đến với server
+2019-07-10 [23:36:54] [Server thread/INFO]: [Sakuraft] Các minigames mới: BuildBattle, EggWars,...
+2019-07-10 [23:37:09] [Server thread/INFO]: [Sakuraft] Watchdog đã dọn 0 vật phẩm rơi trên mặt đất!
+2019-07-10 [23:37:09] [Server thread/INFO]: [Sakuraft]Hãy vote tại :bit.do/sakuraft để ủng hộ server
+2019-07-10 [23:37:24] [Server thread/INFO]: [Sakuraft]Phát hiện lỗi hãy báo với chủ server!
+2019-07-10 [23:37:39] [Server thread/INFO]: [Sakuraft]Vinh hạnh chào mừng bạn đến với server
+2019-07-10 [23:37:54] [Server thread/INFO]: [Sakuraft] Các minigames mới: BuildBattle, EggWars,...
+2019-07-10 [23:38:09] [Server thread/INFO]: [Sakuraft] Rác sẽ được dọn sau 2 phút nữa!
+2019-07-10 [23:38:09] [Server thread/INFO]: [Sakuraft]Hãy vote tại :bit.do/sakuraft để ủng hộ server
+2019-07-10 [23:38:24] [Server thread/INFO]: [Sakuraft]Phát hiện lỗi hãy báo với chủ server!
+2019-07-10 [23:38:39] [Server thread/INFO]: [Sakuraft]Vinh hạnh chào mừng bạn đến với server
+2019-07-10 [23:38:54] [Server thread/INFO]: [Sakuraft] Các minigames mới: BuildBattle, EggWars,...
+2019-07-10 [23:39:09] [Server thread/INFO]: [Sakuraft]Hãy vote tại :bit.do/sakuraft để ủng hộ server
+2019-07-10 [23:39:24] [Server thread/INFO]: [Sakuraft]Phát hiện lỗi hãy báo với chủ server!
+2019-07-10 [23:39:38] [Server thread/INFO]: [Sakuraft]Vinh hạnh chào mừng bạn đến với server
+2019-07-10 [23:39:54] [Server thread/INFO]: [Sakuraft] Các minigames mới: BuildBattle, EggWars,...
+2019-07-10 [23:40:09] [Server thread/INFO]: [Sakuraft]Hãy vote tại :bit.do/sakuraft để ủng hộ server
+2019-07-10 [23:40:24] [Server thread/INFO]: [Sakuraft]Phát hiện lỗi hãy báo với chủ server!
+2019-07-10 [23:40:39] [Server thread/INFO]: [Sakuraft]Vinh hạnh chào mừng bạn đến với server
+2019-07-10 [23:40:54] [Server thread/INFO]: [Sakuraft] Các minigames mới: BuildBattle, EggWars,...
+2019-07-10 [23:41:09] [Server thread/INFO]: [Sakuraft] Watchdog đã dọn 0 vật phẩm rơi trên mặt đất!
+2019-07-10 [23:41:09] [Server thread/INFO]: [Sakuraft]Hãy vote tại :bit.do/sakuraft để ủng hộ server
+2019-07-10 [23:41:09] [Server thread/INFO]: [Sakuraft] Rác sẽ được dọn sau 2 phút nữa!
+2019-07-10 [23:41:24] [Server thread/INFO]: [Sakuraft]Phát hiện lỗi hãy báo với chủ server!
+2019-07-10 [23:41:39] [Server thread/INFO]: [Sakuraft]Vinh hạnh chào mừng bạn đến với server
+2019-07-10 [23:41:54] [Server thread/INFO]: [Sakuraft] Các minigames mới: BuildBattle, EggWars,...
+2019-07-10 [23:42:09] [Server thread/INFO]: [Sakuraft]Hãy vote tại :bit.do/sakuraft để ủng hộ server
+2019-07-10 [23:42:24] [Server thread/INFO]: [Sakuraft]Phát hiện lỗi hãy báo với chủ server!
+2019-07-10 [23:42:40] [Server thread/INFO]: [Sakuraft]Vinh hạnh chào mừng bạn đến với server
+2019-07-10 [23:42:56] [Server thread/INFO]: [Sakuraft] Các minigames mới: BuildBattle, EggWars,...
+2019-07-10 [23:43:11] [Server thread/INFO]: [Sakuraft]Hãy vote tại :bit.do/sakuraft để ủng hộ server
+2019-07-10 [23:43:26] [Server thread/INFO]: [Sakuraft]Phát hiện lỗi hãy báo với chủ server!
+2019-07-10 [23:43:48] [Server thread/INFO]: • Vohuynhnamviet đã thoát khỏi server.
+2019-07-10 [23:43:48] [Server thread/INFO]: Vohuynhnamviet[/14.227.96.51:47056] logged out due to timeout
+2019-07-10 [23:43:48] [Server thread/INFO]: [CommandTracker] <CONSOLE> /list
+2019-07-10 [23:43:48] [Server thread/INFO]: Có tất cả 0/50 đang online:
+2019-07-10 [23:43:48] [Server thread/INFO]: 
+2019-07-10 [23:44:12] [Server thread/INFO]: [Sakuraft]Vinh hạnh chào mừng bạn đến với server
+2019-07-10 [23:46:50] [Server thread/INFO]: [Sakuraft] Các minigames mới: BuildBattle, EggWars,...
+2019-07-10 [23:48:56] [Server thread/INFO]: [Sakuraft]Hãy vote tại :bit.do/sakuraft để ủng hộ server
+2019-07-10 [23:48:56] [Server thread/INFO]: [Sakuraft] Rác sẽ được dọn sau 2 phút nữa!
+2019-07-10 [23:50:05] [Server thread/INFO]: [Sakuraft]Phát hiện lỗi hãy báo với chủ server!
+2019-07-10 [23:51:58] [Server thread/INFO]: [Sakuraft]Vinh hạnh chào mừng bạn đến với server
+2019-07-10 [23:53:48] [Server thread/INFO]: [Sakuraft] Các minigames mới: BuildBattle, EggWars,...
+2019-07-10 [23:55:51] [Server thread/INFO]: [Sakuraft]Hãy vote tại :bit.do/sakuraft để ủng hộ server
+2019-07-10 [23:55:51] [Server thread/INFO]: [Sakuraft] Watchdog đã dọn 0 vật phẩm rơi trên mặt đất!
+2019-07-10 [23:57:22] [Server thread/INFO]: [Sakuraft]Phát hiện lỗi hãy báo với chủ server!
+2019-07-10 [23:58:13] [Server thread/INFO]: [Sakuraft]Vinh hạnh chào mừng bạn đến với server
+2019-07-10 [23:59:10] [Server thread/INFO]: [Sakuraft] Các minigames mới: BuildBattle, EggWars,...
+2019-07-11 [00:00:36] [Server thread/INFO]: [Sakuraft]Hãy vote tại :bit.do/sakuraft để ủng hộ server
+2019-07-11 [00:01:26] [Server thread/INFO]: [Sakuraft]Phát hiện lỗi hãy báo với chủ server!
+2019-07-11 [00:03:39] [Server thread/INFO]: [Sakuraft]Vinh hạnh chào mừng bạn đến với server
+2019-07-11 [00:06:00] [Server thread/INFO]: [Sakuraft] Các minigames mới: BuildBattle, EggWars,...
+2019-07-11 [00:08:20] [Server thread/INFO]: [Sakuraft]Hãy vote tại :bit.do/sakuraft để ủng hộ server
+2019-07-11 [00:08:20] [Server thread/INFO]: [Sakuraft] Rác sẽ được dọn sau 2 phút nữa!
+2019-07-11 [00:10:24] [Server thread/INFO]: [Sakuraft]Phát hiện lỗi hãy báo với chủ server!
+2019-07-11 [00:13:13] [Server thread/INFO]: [Sakuraft]Vinh hạnh chào mừng bạn đến với server
+2019-07-11 [00:15:27] [Server thread/INFO]: [Sakuraft] Các minigames mới: BuildBattle, EggWars,...
+2019-07-11 [00:17:35] [Server thread/INFO]: [Sakuraft]Hãy vote tại :bit.do/sakuraft để ủng hộ server
+2019-07-11 [00:19:59] [Server thread/INFO]: [Sakuraft]Phát hiện lỗi hãy báo với chủ server!
+2019-07-11 [00:22:09] [Server thread/INFO]: [Sakuraft]Vinh hạnh chào mừng bạn đến với server
+2019-07-11 [00:23:05] [Server thread/INFO]: [Sakuraft] Các minigames mới: BuildBattle, EggWars,...
+2019-07-11 [00:23:20] [Server thread/INFO]: [Sakuraft]Hãy vote tại :bit.do/sakuraft để ủng hộ server
+2019-07-11 [00:23:20] [Server thread/INFO]: [Sakuraft] Watchdog đã dọn 0 vật phẩm rơi trên mặt đất!
+2019-07-11 [00:23:35] [Server thread/INFO]: [Sakuraft]Phát hiện lỗi hãy báo với chủ server!
+2019-07-11 [00:23:50] [Server thread/INFO]: [Sakuraft]Vinh hạnh chào mừng bạn đến với server
+2019-07-11 [00:24:05] [Server thread/INFO]: [Sakuraft] Các minigames mới: BuildBattle, EggWars,...
+2019-07-11 [00:24:20] [Server thread/INFO]: [Sakuraft]Hãy vote tại :bit.do/sakuraft để ủng hộ server
+2019-07-11 [00:24:20] [Server thread/INFO]: [Sakuraft] Rác sẽ được dọn sau 2 phút nữa!
+2019-07-11 [00:24:35] [Server thread/INFO]: [Sakuraft]Phát hiện lỗi hãy báo với chủ server!
+2019-07-11 [00:24:50] [Server thread/INFO]: [Sakuraft]Vinh hạnh chào mừng bạn đến với server
+2019-07-11 [00:25:05] [Server thread/INFO]: [Sakuraft] Các minigames mới: BuildBattle, EggWars,...
+2019-07-11 [00:25:20] [Server thread/INFO]: [Sakuraft]Hãy vote tại :bit.do/sakuraft để ủng hộ server
+2019-07-11 [00:25:35] [Server thread/INFO]: [Sakuraft]Phát hiện lỗi hãy báo với chủ server!
+2019-07-11 [00:25:50] [Server thread/INFO]: [Sakuraft]Vinh hạnh chào mừng bạn đến với server
+2019-07-11 [00:26:05] [Server thread/INFO]: [Sakuraft] Các minigames mới: BuildBattle, EggWars,...
+2019-07-11 [00:26:20] [Server thread/INFO]: [Sakuraft]Hãy vote tại :bit.do/sakuraft để ủng hộ server
+2019-07-11 [00:26:35] [Server thread/INFO]: [Sakuraft]Phát hiện lỗi hãy báo với chủ server!
+2019-07-11 [00:26:50] [Server thread/INFO]: [Sakuraft]Vinh hạnh chào mừng bạn đến với server
+2019-07-11 [00:27:05] [Server thread/INFO]: [Sakuraft] Các minigames mới: BuildBattle, EggWars,...
+2019-07-11 [00:27:20] [Server thread/INFO]: [Sakuraft]Hãy vote tại :bit.do/sakuraft để ủng hộ server
+2019-07-11 [00:27:20] [Server thread/INFO]: [Sakuraft] Watchdog đã dọn 0 vật phẩm rơi trên mặt đất!
+2019-07-11 [00:27:20] [Server thread/INFO]: [Sakuraft] Rác sẽ được dọn sau 2 phút nữa!
+2019-07-11 [00:27:35] [Server thread/INFO]: [Sakuraft]Phát hiện lỗi hãy báo với chủ server!
+2019-07-11 [00:27:50] [Server thread/INFO]: [Sakuraft]Vinh hạnh chào mừng bạn đến với server
+2019-07-11 [00:28:05] [Server thread/INFO]: [Sakuraft] Các minigames mới: BuildBattle, EggWars,...
+2019-07-11 [00:28:20] [Server thread/INFO]: [Sakuraft]Hãy vote tại :bit.do/sakuraft để ủng hộ server
+2019-07-11 [00:28:35] [Server thread/INFO]: [Sakuraft]Phát hiện lỗi hãy báo với chủ server!
+2019-07-11 [00:28:50] [Server thread/INFO]: [Sakuraft]Vinh hạnh chào mừng bạn đến với server
+2019-07-11 [00:29:05] [Server thread/INFO]: [Sakuraft] Các minigames mới: BuildBattle, EggWars,...
+2019-07-11 [00:29:20] [Server thread/INFO]: [Sakuraft]Hãy vote tại :bit.do/sakuraft để ủng hộ server
+2019-07-11 [00:29:35] [Server thread/INFO]: [Sakuraft]Phát hiện lỗi hãy báo với chủ server!
+2019-07-11 [00:29:50] [Server thread/INFO]: [Sakuraft]Vinh hạnh chào mừng bạn đến với server
+2019-07-11 [00:30:05] [Server thread/INFO]: [Sakuraft] Các minigames mới: BuildBattle, EggWars,...
+2019-07-11 [00:30:20] [Server thread/INFO]: [Sakuraft]Hãy vote tại :bit.do/sakuraft để ủng hộ server
+2019-07-11 [00:30:20] [Server thread/INFO]: [Sakuraft] Rác sẽ được dọn sau 2 phút nữa!
+2019-07-11 [00:30:35] [Server thread/INFO]: [Sakuraft]Phát hiện lỗi hãy báo với chủ server!
+2019-07-11 [00:30:50] [Server thread/INFO]: [Sakuraft]Vinh hạnh chào mừng bạn đến với server
+2019-07-11 [00:31:05] [Server thread/INFO]: [Sakuraft] Các minigames mới: BuildBattle, EggWars,...
+2019-07-11 [00:31:20] [Server thread/INFO]: [Sakuraft]Hãy vote tại :bit.do/sakuraft để ủng hộ server
+2019-07-11 [00:31:20] [Server thread/INFO]: [Sakuraft] Watchdog đã dọn 0 vật phẩm rơi trên mặt đất!
+2019-07-11 [00:31:35] [Server thread/INFO]: [Sakuraft]Phát hiện lỗi hãy báo với chủ server!
+2019-07-11 [00:32:45] [Server thread/INFO]: [Sakuraft]Vinh hạnh chào mừng bạn đến với server
+2019-07-11 [00:33:47] [Server thread/INFO]: [Sakuraft] Các minigames mới: BuildBattle, EggWars,...
+2019-07-11 [00:34:05] [Server thread/INFO]: [Sakuraft]Hãy vote tại :bit.do/sakuraft để ủng hộ server
+2019-07-11 [00:34:20] [Server thread/INFO]: [Sakuraft]Phát hiện lỗi hãy báo với chủ server!
+2019-07-11 [00:34:35] [Server thread/INFO]: [Sakuraft]Vinh hạnh chào mừng bạn đến với server
+2019-07-11 [00:34:50] [Server thread/INFO]: [Sakuraft] Các minigames mới: BuildBattle, EggWars,...
+2019-07-11 [00:35:05] [Server thread/INFO]: [Sakuraft]Hãy vote tại :bit.do/sakuraft để ủng hộ server
+2019-07-11 [00:35:05] [Server thread/INFO]: [Sakuraft] Rác sẽ được dọn sau 2 phút nữa!
+2019-07-11 [00:35:20] [Server thread/INFO]: [Sakuraft]Phát hiện lỗi hãy báo với chủ server!
+2019-07-11 [00:35:35] [Server thread/INFO]: [Sakuraft]Vinh hạnh chào mừng bạn đến với server
+2019-07-11 [00:35:50] [Server thread/INFO]: [Sakuraft] Các minigames mới: BuildBattle, EggWars,...
+2019-07-11 [00:36:05] [Server thread/INFO]: [Sakuraft]Hãy vote tại :bit.do/sakuraft để ủng hộ server
+2019-07-11 [00:36:20] [Server thread/INFO]: [Sakuraft]Phát hiện lỗi hãy báo với chủ server!
+2019-07-11 [00:36:35] [Server thread/INFO]: [Sakuraft]Vinh hạnh chào mừng bạn đến với server
+2019-07-11 [00:36:50] [Server thread/INFO]: [Sakuraft] Các minigames mới: BuildBattle, EggWars,...
+2019-07-11 [00:37:05] [Server thread/INFO]: [Sakuraft] Watchdog đã dọn 0 vật phẩm rơi trên mặt đất!
+2019-07-11 [00:37:05] [Server thread/INFO]: [Sakuraft]Hãy vote tại :bit.do/sakuraft để ủng hộ server
+2019-07-11 [00:37:20] [Server thread/INFO]: [Sakuraft]Phát hiện lỗi hãy báo với chủ server!
+2019-07-11 [00:37:35] [Server thread/INFO]: [Sakuraft]Vinh hạnh chào mừng bạn đến với server
+2019-07-11 [00:37:50] [Server thread/INFO]: [Sakuraft] Các minigames mới: BuildBattle, EggWars,...
+2019-07-11 [00:38:05] [Server thread/INFO]: [Sakuraft] Rác sẽ được dọn sau 2 phút nữa!
+2019-07-11 [00:38:05] [Server thread/INFO]: [Sakuraft]Hãy vote tại :bit.do/sakuraft để ủng hộ server
+2019-07-11 [00:38:20] [Server thread/INFO]: [Sakuraft]Phát hiện lỗi hãy báo với chủ server!
+2019-07-11 [00:38:35] [Server thread/INFO]: [Sakuraft]Vinh hạnh chào mừng bạn đến với server
+2019-07-11 [00:38:50] [Server thread/INFO]: [Sakuraft] Các minigames mới: BuildBattle, EggWars,...
+2019-07-11 [00:39:05] [Server thread/INFO]: [Sakuraft]Hãy vote tại :bit.do/sakuraft để ủng hộ server
+2019-07-11 [00:39:20] [Server thread/INFO]: [Sakuraft]Phát hiện lỗi hãy báo với chủ server!
+2019-07-11 [00:39:35] [Server thread/INFO]: [Sakuraft]Vinh hạnh chào mừng bạn đến với server
+2019-07-11 [00:39:50] [Server thread/INFO]: [Sakuraft] Các minigames mới: BuildBattle, EggWars,...
+2019-07-11 [00:40:05] [Server thread/INFO]: [Sakuraft]Hãy vote tại :bit.do/sakuraft để ủng hộ server
+2019-07-11 [00:40:20] [Server thread/INFO]: [Sakuraft]Phát hiện lỗi hãy báo với chủ server!
+2019-07-11 [00:40:35] [Server thread/INFO]: [Sakuraft]Vinh hạnh chào mừng bạn đến với server
+2019-07-11 [00:40:50] [Server thread/INFO]: [Sakuraft] Các minigames mới: BuildBattle, EggWars,...
+2019-07-11 [00:41:05] [Server thread/INFO]: [Sakuraft] Rác sẽ được dọn sau 2 phút nữa!
+2019-07-11 [00:41:05] [Server thread/INFO]: [Sakuraft]Hãy vote tại :bit.do/sakuraft để ủng hộ server
+2019-07-11 [00:41:05] [Server thread/INFO]: [Sakuraft] Watchdog đã dọn 0 vật phẩm rơi trên mặt đất!
+2019-07-11 [00:41:20] [Server thread/INFO]: [Sakuraft]Phát hiện lỗi hãy báo với chủ server!
+2019-07-11 [00:41:35] [Server thread/INFO]: [Sakuraft]Vinh hạnh chào mừng bạn đến với server
+2019-07-11 [00:41:50] [Server thread/INFO]: [Sakuraft] Các minigames mới: BuildBattle, EggWars,...
+2019-07-11 [00:42:05] [Server thread/INFO]: [Sakuraft]Hãy vote tại :bit.do/sakuraft để ủng hộ server
+2019-07-11 [00:42:20] [Server thread/INFO]: [Sakuraft]Phát hiện lỗi hãy báo với chủ server!
+2019-07-11 [00:42:35] [Server thread/INFO]: [Sakuraft]Vinh hạnh chào mừng bạn đến với server
+2019-07-11 [00:42:50] [Server thread/INFO]: [Sakuraft] Các minigames mới: BuildBattle, EggWars,...
+2019-07-11 [00:43:05] [Server thread/INFO]: [Sakuraft]Hãy vote tại :bit.do/sakuraft để ủng hộ server
+2019-07-11 [00:43:20] [Server thread/INFO]: [Sakuraft]Phát hiện lỗi hãy báo với chủ server!
+2019-07-11 [00:44:09] [Server thread/INFO]: [Sakuraft]Vinh hạnh chào mừng bạn đến với server
+2019-07-11 [00:44:46] [Server thread/INFO]: [Sakuraft] Các minigames mới: BuildBattle, EggWars,...
+2019-07-11 [00:45:01] [Server thread/INFO]: [Sakuraft] Rác sẽ được dọn sau 2 phút nữa!
+2019-07-11 [00:45:01] [Server thread/INFO]: [Sakuraft]Hãy vote tại :bit.do/sakuraft để ủng hộ server
+2019-07-11 [00:45:16] [Server thread/INFO]: [Sakuraft]Phát hiện lỗi hãy báo với chủ server!
+2019-07-11 [00:45:31] [Server thread/INFO]: [Sakuraft]Vinh hạnh chào mừng bạn đến với server
+2019-07-11 [00:45:46] [Server thread/INFO]: [Sakuraft] Các minigames mới: BuildBattle, EggWars,...
+2019-07-11 [00:46:01] [Server thread/INFO]: [Sakuraft] Watchdog đã dọn 0 vật phẩm rơi trên mặt đất!
+2019-07-11 [00:46:01] [Server thread/INFO]: [Sakuraft]Hãy vote tại :bit.do/sakuraft để ủng hộ server
+2019-07-11 [00:46:58] [Server thread/INFO]: [Sakuraft]Phát hiện lỗi hãy báo với chủ server!
+2019-07-11 [00:47:17] [Server thread/INFO]: [Sakuraft]Vinh hạnh chào mừng bạn đến với server
+2019-07-11 [00:48:07] [Server thread/INFO]: [Sakuraft] Các minigames mới: BuildBattle, EggWars,...
+2019-07-11 [00:48:23] [Server thread/INFO]: [Sakuraft]Hãy vote tại :bit.do/sakuraft để ủng hộ server
+2019-07-11 [00:48:37] [Server thread/INFO]: [Sakuraft]Phát hiện lỗi hãy báo với chủ server!
+2019-07-11 [00:48:52] [Server thread/INFO]: [Sakuraft]Vinh hạnh chào mừng bạn đến với server
+2019-07-11 [00:50:25] [Server thread/INFO]: [Sakuraft] Các minigames mới: BuildBattle, EggWars,...
+2019-07-11 [00:53:36] [Server thread/INFO]: [Sakuraft] Rác sẽ được dọn sau 2 phút nữa!
+2019-07-11 [00:53:36] [Server thread/INFO]: [Sakuraft]Hãy vote tại :bit.do/sakuraft để ủng hộ server
+2019-07-11 [00:59:48] [Server thread/INFO]: [Sakuraft]Phát hiện lỗi hãy báo với chủ server!
+2019-07-11 [01:03:08] [Server thread/INFO]: [Sakuraft]Vinh hạnh chào mừng bạn đến với server
+2019-07-11 [01:06:14] [Server thread/INFO]: [Sakuraft] Các minigames mới: BuildBattle, EggWars,...
+2019-07-11 [01:17:13] [Server thread/INFO]: [Sakuraft]Hãy vote tại :bit.do/sakuraft để ủng hộ server
+2019-07-11 [01:18:19] [Server thread/INFO]: [Sakuraft]Phát hiện lỗi hãy báo với chủ server!
+2019-07-11 [01:26:26] [Server thread/INFO]: [Sakuraft]Vinh hạnh chào mừng bạn đến với server
+2019-07-11 [01:33:16] [Server thread/INFO]: [Sakuraft] Các minigames mới: BuildBattle, EggWars,...
+2019-07-11 [01:41:44] [Server thread/INFO]: [Sakuraft] Watchdog đã dọn 0 vật phẩm rơi trên mặt đất!
+2019-07-11 [01:41:44] [Server thread/INFO]: [Sakuraft]Hãy vote tại :bit.do/sakuraft để ủng hộ server
+2019-07-11 [01:46:50] [Server thread/INFO]: [Sakuraft]Phát hiện lỗi hãy báo với chủ server!
+2019-07-11 [01:51:46] [Server thread/INFO]: [Sakuraft]Vinh hạnh chào mừng bạn đến với server
+2019-07-11 [01:56:53] [Server thread/INFO]: [Sakuraft] Các minigames mới: BuildBattle, EggWars,...
+2019-07-11 [02:01:54] [Server thread/INFO]: [Sakuraft] Rác sẽ được dọn sau 2 phút nữa!
+2019-07-11 [02:01:54] [Server thread/INFO]: [Sakuraft]Hãy vote tại :bit.do/sakuraft để ủng hộ server
+2019-07-11 [02:02:22] [Server thread/INFO]: [Sakuraft]Phát hiện lỗi hãy báo với chủ server!
+2019-07-11 [02:02:37] [Server thread/INFO]: [Sakuraft]Vinh hạnh chào mừng bạn đến với server
+2019-07-11 [02:02:52] [Server thread/INFO]: [Sakuraft] Các minigames mới: BuildBattle, EggWars,...
+2019-07-11 [02:03:07] [Server thread/INFO]: [Sakuraft]Hãy vote tại :bit.do/sakuraft để ủng hộ server
+2019-07-11 [02:03:22] [Server thread/INFO]: [Sakuraft]Phát hiện lỗi hãy báo với chủ server!
+2019-07-11 [02:03:37] [Server thread/INFO]: [Sakuraft]Vinh hạnh chào mừng bạn đến với server
+2019-07-11 [02:03:52] [Server thread/INFO]: [Sakuraft] Các minigames mới: BuildBattle, EggWars,...
+2019-07-11 [02:04:07] [Server thread/INFO]: [Sakuraft]Hãy vote tại :bit.do/sakuraft để ủng hộ server
+2019-07-11 [02:04:22] [Server thread/INFO]: [Sakuraft]Phát hiện lỗi hãy báo với chủ server!
+2019-07-11 [02:04:47] [Server thread/INFO]: [Sakuraft]Vinh hạnh chào mừng bạn đến với server
+2019-07-11 [02:05:02] [Server thread/INFO]: [Sakuraft] Các minigames mới: BuildBattle, EggWars,...
+2019-07-11 [02:05:17] [Server thread/INFO]: [Sakuraft] Watchdog đã dọn 0 vật phẩm rơi trên mặt đất!
+2019-07-11 [02:05:17] [Server thread/INFO]: [Sakuraft]Hãy vote tại :bit.do/sakuraft để ủng hộ server
+2019-07-11 [02:05:17] [Server thread/INFO]: [Sakuraft] Rác sẽ được dọn sau 2 phút nữa!
+2019-07-11 [02:05:32] [Server thread/INFO]: [Sakuraft]Phát hiện lỗi hãy báo với chủ server!
+2019-07-11 [02:05:47] [Server thread/INFO]: [Sakuraft]Vinh hạnh chào mừng bạn đến với server
+2019-07-11 [02:07:00] [Server thread/INFO]: [Sakuraft] Các minigames mới: BuildBattle, EggWars,...
+2019-07-11 [02:07:49] [Server thread/INFO]: [Sakuraft]Hãy vote tại :bit.do/sakuraft để ủng hộ server
+2019-07-11 [02:08:04] [Server thread/INFO]: [Sakuraft]Phát hiện lỗi hãy báo với chủ server!
+2019-07-11 [02:08:19] [Server thread/INFO]: [Sakuraft]Vinh hạnh chào mừng bạn đến với server
+2019-07-11 [02:08:34] [Server thread/INFO]: [Sakuraft] Các minigames mới: BuildBattle, EggWars,...
+2019-07-11 [02:08:49] [Server thread/INFO]: [Sakuraft]Hãy vote tại :bit.do/sakuraft để ủng hộ server
+2019-07-11 [02:09:04] [Server thread/INFO]: [Sakuraft]Phát hiện lỗi hãy báo với chủ server!
+2019-07-11 [02:10:13] [Server thread/INFO]: [Sakuraft]Vinh hạnh chào mừng bạn đến với server
+2019-07-11 [02:11:48] [Server thread/INFO]: [Sakuraft] Các minigames mới: BuildBattle, EggWars,...
+2019-07-11 [02:15:12] [Server thread/INFO]: [Sakuraft] Rác sẽ được dọn sau 2 phút nữa!
+2019-07-11 [02:15:12] [Server thread/INFO]: [Sakuraft]Hãy vote tại :bit.do/sakuraft để ủng hộ server
+2019-07-11 [02:17:19] [Server thread/INFO]: [Sakuraft]Phát hiện lỗi hãy báo với chủ server!
+2019-07-11 [02:17:34] [Server thread/INFO]: [Sakuraft]Vinh hạnh chào mừng bạn đến với server
+2019-07-11 [02:19:24] [Server thread/INFO]: [Sakuraft] Các minigames mới: BuildBattle, EggWars,...
+2019-07-11 [02:22:56] [Server thread/INFO]: [Sakuraft] Watchdog đã dọn 0 vật phẩm rơi trên mặt đất!
+2019-07-11 [02:22:56] [Server thread/INFO]: [Sakuraft]Hãy vote tại :bit.do/sakuraft để ủng hộ server
+2019-07-11 [02:23:11] [Server thread/INFO]: [Sakuraft]Phát hiện lỗi hãy báo với chủ server!
+2019-07-11 [02:23:26] [Server thread/INFO]: [Sakuraft]Vinh hạnh chào mừng bạn đến với server
+2019-07-11 [02:23:41] [Server thread/INFO]: [Sakuraft] Các minigames mới: BuildBattle, EggWars,...
+2019-07-11 [02:23:56] [Server thread/INFO]: [Sakuraft]Hãy vote tại :bit.do/sakuraft để ủng hộ server
+2019-07-11 [02:25:42] [Server thread/INFO]: [Sakuraft]Phát hiện lỗi hãy báo với chủ server!
+2019-07-11 [02:32:30] [Server thread/INFO]: [Sakuraft]Vinh hạnh chào mừng bạn đến với server
+2019-07-11 [02:32:45] [Server thread/INFO]: [Sakuraft] Các minigames mới: BuildBattle, EggWars,...
+2019-07-11 [02:33:00] [Server thread/INFO]: [Sakuraft] Rác sẽ được dọn sau 2 phút nữa!
+2019-07-11 [02:33:00] [Server thread/INFO]: [Sakuraft]Hãy vote tại :bit.do/sakuraft để ủng hộ server
+2019-07-11 [02:33:15] [Server thread/INFO]: [Sakuraft]Phát hiện lỗi hãy báo với chủ server!
+2019-07-11 [02:36:32] [Server thread/INFO]: [Sakuraft]Vinh hạnh chào mừng bạn đến với server
+2019-07-11 [02:41:44] [Server thread/INFO]: [Sakuraft] Các minigames mới: BuildBattle, EggWars,...
+2019-07-11 [02:46:44] [Server thread/INFO]: [Sakuraft]Hãy vote tại :bit.do/sakuraft để ủng hộ server
+2019-07-11 [02:51:01] [Server thread/INFO]: [Sakuraft]Phát hiện lỗi hãy báo với chủ server!
+2019-07-11 [02:51:16] [Server thread/INFO]: [Sakuraft]Vinh hạnh chào mừng bạn đến với server
+2019-07-11 [02:51:31] [Server thread/INFO]: [Sakuraft] Các minigames mới: BuildBattle, EggWars,...
+2019-07-11 [02:51:46] [Server thread/INFO]: [Sakuraft] Watchdog đã dọn 0 vật phẩm rơi trên mặt đất!
+2019-07-11 [02:51:46] [Server thread/INFO]: [Sakuraft]Hãy vote tại :bit.do/sakuraft để ủng hộ server
+2019-07-11 [02:52:01] [Server thread/INFO]: [Sakuraft]Phát hiện lỗi hãy báo với chủ server!
+2019-07-11 [02:52:46] [Server thread/INFO]: [Sakuraft]Vinh hạnh chào mừng bạn đến với server
+2019-07-11 [02:53:42] [Server thread/INFO]: [Sakuraft] Các minigames mới: BuildBattle, EggWars,...
+2019-07-11 [02:54:25] [Server thread/INFO]: [Sakuraft]Hãy vote tại :bit.do/sakuraft để ủng hộ server
+2019-07-11 [02:54:25] [Server thread/INFO]: [Sakuraft] Rác sẽ được dọn sau 2 phút nữa!
+2019-07-11 [02:56:05] [Server thread/INFO]: [Sakuraft]Phát hiện lỗi hãy báo với chủ server!
+2019-07-11 [02:57:35] [Server thread/INFO]: [Sakuraft]Vinh hạnh chào mừng bạn đến với server
+2019-07-11 [02:58:50] [Server thread/INFO]: [Sakuraft] Các minigames mới: BuildBattle, EggWars,...
+2019-07-11 [02:58:58] [Server thread/INFO]: [CommandTracker] <CONSOLE> /list
+2019-07-11 [02:58:58] [Server thread/INFO]: Có tất cả 0/50 đang online:
+2019-07-11 [02:58:58] [Server thread/INFO]: 
+2019-07-11 [02:59:05] [Server thread/INFO]: [Sakuraft]Hãy vote tại :bit.do/sakuraft để ủng hộ server
+2019-07-11 [03:00:20] [Server thread/INFO]: [Sakuraft]Phát hiện lỗi hãy báo với chủ server!
+2019-07-11 [03:00:38] [Server thread/INFO]: [Sakuraft]Vinh hạnh chào mừng bạn đến với server
+2019-07-11 [03:00:53] [Server thread/INFO]: [Sakuraft] Các minigames mới: BuildBattle, EggWars,...
+2019-07-11 [03:01:09] [Server thread/INFO]: Vohuynhnamviet[/14.227.96.51:46071] [ClientID: -3.6840627253135E+18] logged in with entity id 170 at (world, 154.3916, 6, 126.7059)
+2019-07-11 [03:01:09] [Server thread/INFO]: [CommandTracker] <CONSOLE> /list
+2019-07-11 [03:01:09] [Server thread/INFO]: Có tất cả 1/50 đang online:
+2019-07-11 [03:01:09] [Server thread/INFO]: Vohuynhnamviet
+2019-07-11 [03:01:20] [Server thread/INFO]: [Tool[PTK]] Running
+2019-07-11 [03:01:20] [Server thread/INFO]: Chào Mừng "• Vohuynhnamviet đã vào SaKuRAFT."
+2019-07-11 [03:01:24] [Server thread/INFO]: [Sakuraft]Hãy vote tại :bit.do/sakuraft để ủng hộ server
+2019-07-11 [03:02:02] [Server thread/INFO]: • Vohuynhnamviet đã thoát khỏi server.
+2019-07-11 [03:02:02] [Server thread/INFO]: Vohuynhnamviet[/14.227.96.51:46071] logged out due to timeout
+2019-07-11 [03:02:02] [Server thread/INFO]: [CommandTracker] <CONSOLE> /list
+2019-07-11 [03:02:02] [Server thread/INFO]: Có tất cả 0/50 đang online:
+2019-07-11 [03:02:02] [Server thread/INFO]: 
+2019-07-11 [03:02:06] [Server thread/INFO]: [Sakuraft]Phát hiện lỗi hãy báo với chủ server!
+2019-07-11 [03:02:21] [Server thread/INFO]: [Sakuraft]Vinh hạnh chào mừng bạn đến với server
+2019-07-11 [03:02:36] [Server thread/INFO]: [Sakuraft] Các minigames mới: BuildBattle, EggWars,...
+2019-07-11 [03:02:51] [Server thread/INFO]: [Sakuraft] Watchdog đã dọn 0 vật phẩm rơi trên mặt đất!
+2019-07-11 [03:02:51] [Server thread/INFO]: [Sakuraft] Rác sẽ được dọn sau 2 phút nữa!
+2019-07-11 [03:02:51] [Server thread/INFO]: [Sakuraft]Hãy vote tại :bit.do/sakuraft để ủng hộ server
+2019-07-11 [03:03:06] [Server thread/INFO]: [Sakuraft]Phát hiện lỗi hãy báo với chủ server!
+2019-07-11 [03:03:21] [Server thread/INFO]: [Sakuraft]Vinh hạnh chào mừng bạn đến với server
+2019-07-11 [03:03:36] [Server thread/INFO]: [Sakuraft] Các minigames mới: BuildBattle, EggWars,...
+2019-07-11 [03:03:51] [Server thread/INFO]: [Sakuraft]Hãy vote tại :bit.do/sakuraft để ủng hộ server
+2019-07-11 [03:04:06] [Server thread/INFO]: [Sakuraft]Phát hiện lỗi hãy báo với chủ server!
+2019-07-11 [03:04:21] [Server thread/INFO]: [Sakuraft]Vinh hạnh chào mừng bạn đến với server
+2019-07-11 [03:04:36] [Server thread/INFO]: [Sakuraft] Các minigames mới: BuildBattle, EggWars,...
+2019-07-11 [03:04:51] [Server thread/INFO]: [Sakuraft]Hãy vote tại :bit.do/sakuraft để ủng hộ server
+2019-07-11 [03:05:06] [Server thread/INFO]: [Sakuraft]Phát hiện lỗi hãy báo với chủ server!
+2019-07-11 [03:05:21] [Server thread/INFO]: [Sakuraft]Vinh hạnh chào mừng bạn đến với server
+2019-07-11 [03:05:36] [Server thread/INFO]: [Sakuraft] Các minigames mới: BuildBattle, EggWars,...
+2019-07-11 [03:05:53] [Server thread/INFO]: [Sakuraft]Hãy vote tại :bit.do/sakuraft để ủng hộ server
+2019-07-11 [03:05:53] [Server thread/INFO]: [Sakuraft] Rác sẽ được dọn sau 2 phút nữa!
+2019-07-11 [03:08:28] [Server thread/INFO]: [Sakuraft]Phát hiện lỗi hãy báo với chủ server!
+2019-07-11 [03:11:15] [Server thread/INFO]: [Sakuraft]Vinh hạnh chào mừng bạn đến với server
+2019-07-11 [03:13:06] [Server thread/INFO]: [Sakuraft] Các minigames mới: BuildBattle, EggWars,...
+2019-07-11 [03:15:44] [Server thread/INFO]: [Sakuraft] Watchdog đã dọn 0 vật phẩm rơi trên mặt đất!
+2019-07-11 [03:15:44] [Server thread/INFO]: [Sakuraft]Hãy vote tại :bit.do/sakuraft để ủng hộ server
+2019-07-11 [03:16:49] [Server thread/INFO]: [Sakuraft]Phát hiện lỗi hãy báo với chủ server!
+2019-07-11 [03:17:04] [Server thread/INFO]: [Sakuraft]Vinh hạnh chào mừng bạn đến với server
+2019-07-11 [03:17:19] [Server thread/INFO]: [Sakuraft] Các minigames mới: BuildBattle, EggWars,...
+2019-07-11 [03:17:34] [Server thread/INFO]: [Sakuraft]Hãy vote tại :bit.do/sakuraft để ủng hộ server
+2019-07-11 [03:17:49] [Server thread/INFO]: [Sakuraft]Phát hiện lỗi hãy báo với chủ server!
+2019-07-11 [03:18:04] [Server thread/INFO]: [Sakuraft]Vinh hạnh chào mừng bạn đến với server
+2019-07-11 [03:22:05] [Server thread/INFO]: [Sakuraft] Các minigames mới: BuildBattle, EggWars,...
+2019-07-11 [03:26:43] [Server thread/INFO]: [Sakuraft] Rác sẽ được dọn sau 2 phút nữa!
+2019-07-11 [03:26:43] [Server thread/INFO]: [Sakuraft]Hãy vote tại :bit.do/sakuraft để ủng hộ server
+2019-07-11 [03:31:42] [Server thread/INFO]: [Sakuraft]Phát hiện lỗi hãy báo với chủ server!
+2019-07-11 [03:32:47] [Server thread/INFO]: [Sakuraft]Vinh hạnh chào mừng bạn đến với server
+2019-07-11 [03:33:31] [Server thread/INFO]: [Sakuraft] Các minigames mới: BuildBattle, EggWars,...
+2019-07-11 [03:37:57] [Server thread/INFO]: [Sakuraft]Hãy vote tại :bit.do/sakuraft để ủng hộ server
+2019-07-11 [03:39:29] [Server thread/INFO]: [Sakuraft]Phát hiện lỗi hãy báo với chủ server!
+2019-07-11 [03:39:44] [Server thread/INFO]: [Sakuraft]Vinh hạnh chào mừng bạn đến với server
+2019-07-11 [03:39:59] [Server thread/INFO]: [Sakuraft] Các minigames mới: BuildBattle, EggWars,...
+2019-07-11 [03:43:11] [Server thread/INFO]: [Sakuraft]Hãy vote tại :bit.do/sakuraft để ủng hộ server
+2019-07-11 [03:43:11] [Server thread/INFO]: [Sakuraft] Watchdog đã dọn 0 vật phẩm rơi trên mặt đất!
+2019-07-11 [03:43:26] [Server thread/INFO]: [Sakuraft]Phát hiện lỗi hãy báo với chủ server!
+2019-07-11 [03:43:41] [Server thread/INFO]: [Sakuraft]Vinh hạnh chào mừng bạn đến với server
+2019-07-11 [03:43:56] [Server thread/INFO]: [Sakuraft] Các minigames mới: BuildBattle, EggWars,...
+2019-07-11 [03:44:11] [Server thread/INFO]: [Sakuraft] Rác sẽ được dọn sau 2 phút nữa!
+2019-07-11 [03:44:11] [Server thread/INFO]: [Sakuraft]Hãy vote tại :bit.do/sakuraft để ủng hộ server
+2019-07-11 [03:44:12] [Server thread/INFO]: Vohuynhnamviet[/14.227.96.51:42210] [ClientID: -3.6840627253135E+18] logged in with entity id 210 at (world, 128.9532, 7, 127.7995)
+2019-07-11 [03:44:12] [Server thread/INFO]: [CommandTracker] <CONSOLE> /list
+2019-07-11 [03:44:12] [Server thread/INFO]: Có tất cả 1/50 đang online:
+2019-07-11 [03:44:12] [Server thread/INFO]: Vohuynhnamviet
+2019-07-11 [03:44:17] [Server thread/INFO]: [Tool[PTK]] Running
+2019-07-11 [03:44:17] [Server thread/INFO]: Chào Mừng "• Vohuynhnamviet đã vào SaKuRAFT."
+2019-07-11 [03:44:26] [Server thread/INFO]: [Sakuraft]Phát hiện lỗi hãy báo với chủ server!
+2019-07-11 [03:44:41] [Server thread/INFO]: [Sakuraft]Vinh hạnh chào mừng bạn đến với server
+2019-07-11 [03:44:56] [Server thread/INFO]: [Sakuraft] Các minigames mới: BuildBattle, EggWars,...
+2019-07-11 [03:45:11] [Server thread/INFO]: [Sakuraft]Hãy vote tại :bit.do/sakuraft để ủng hộ server
+2019-07-11 [03:45:26] [Server thread/INFO]: [Sakuraft]Phát hiện lỗi hãy báo với chủ server!
+2019-07-11 [03:45:36] [Server thread/INFO]: [CommandTracker] <Vohuynhnamviet> /gmc 
+2019-07-11 [03:45:41] [Server thread/INFO]: [Sakuraft]Vinh hạnh chào mừng bạn đến với server
+2019-07-11 [03:45:58] [Server thread/INFO]: [Sakuraft] Các minigames mới: BuildBattle, EggWars,...
+2019-07-11 [03:46:10] [Server thread/INFO]: Ghast_Noob[/58.186.163.66:33542] [ClientID: -8.48082300625E+18] logged in with entity id 237 at (world, 128, 7, 128)
+2019-07-11 [03:46:10] [Server thread/INFO]: [CommandTracker] <CONSOLE> /list
+2019-07-11 [03:46:10] [Server thread/INFO]: Có tất cả 2/50 đang online:
+2019-07-11 [03:46:10] [Server thread/INFO]: Vohuynhnamviet, Ghast_Noob
+2019-07-11 [03:46:11] [Server thread/INFO]: [Tool[PTK]] Running
+2019-07-11 [03:46:12] [Server thread/INFO]: Chào Mừng "• Ghast_Noob đã vào SaKuRAFT."
+2019-07-11 [03:46:13] [Server thread/INFO]: [Sakuraft]Hãy vote tại :bit.do/sakuraft để ủng hộ server
+2019-07-11 [03:46:30] [Server thread/INFO]: [Sakuraft]Phát hiện lỗi hãy báo với chủ server!
+2019-07-11 [03:46:35] [Server thread/INFO]: [CommandTracker] <Vohuynhnamviet> /slapper spawn player NeTher !!!!!!
+2019-07-11 [03:46:46] [Server thread/INFO]: [Sakuraft]Vinh hạnh chào mừng bạn đến với server
+2019-07-11 [03:47:00] [Server thread/INFO]: [CommandTracker] <Vohuynhnamviet> /slapper edit 238 addcommand rca {player} warp nether
+2019-07-11 [03:47:03] [Server thread/INFO]: [Sakuraft] Các minigames mới: BuildBattle, EggWars,...
+2019-07-11 [03:47:03] [Server thread/INFO]: [CommandTracker] <Ghast_Noob> /pl 
+2019-07-11 [03:47:12] [Server thread/INFO]: [CommandTracker] <Vohuynhnamviet> /hub 
+2019-07-11 [03:47:18] [Server thread/INFO]: [Sakuraft]Hãy vote tại :bit.do/sakuraft để ủng hộ server
+2019-07-11 [03:47:18] [Server thread/INFO]: [Sakuraft] Rác sẽ được dọn sau 2 phút nữa!
+2019-07-11 [03:47:18] [Server thread/INFO]: [Sakuraft] Watchdog đã dọn 0 vật phẩm rơi trên mặt đất!
+2019-07-11 [03:47:35] [Server thread/INFO]: [Sakuraft]Phát hiện lỗi hãy báo với chủ server!
+2019-07-11 [03:47:39] [Server thread/INFO]: [CommandTracker] <Vohuynhnamviet> /muakey 2
+2019-07-11 [03:47:52] [Server thread/INFO]: [Sakuraft]Vinh hạnh chào mừng bạn đến với server
+2019-07-11 [03:48:07] [Server thread/INFO]: [Sakuraft] Các minigames mới: BuildBattle, EggWars,...
+2019-07-11 [03:48:15] [Server thread/INFO]: [CommandTracker] <Ghast_Noob> /say tháo bớt mấy pl ko quan trọng đi
+2019-07-11 [03:48:15] [Server thread/INFO]: [King] ༺OP༻ Ghast_Noob ⊹⊱tháo bớt mấy pl ko quan trọng đi⊰⊹
+2019-07-11 [03:48:18] [Server thread/INFO]: [CommandTracker] <Ghast_Noob> /say cho đỡ lag
+2019-07-11 [03:48:18] [Server thread/INFO]: [King] ༺OP༻ Ghast_Noob ⊹⊱cho đỡ lag⊰⊹
+2019-07-11 [03:48:22] [Server thread/INFO]: [Sakuraft]Hãy vote tại :bit.do/sakuraft để ủng hộ server
+2019-07-11 [03:48:30] [Server thread/INFO]: [CommandTracker] <Vohuynhnamviet> /slapper spawn player Mystery Box{line}CLICK TO OPEN
+2019-07-11 [03:48:39] [Server thread/INFO]: [Sakuraft]Phát hiện lỗi hãy báo với chủ server!
+2019-07-11 [03:48:43] [Server thread/INFO]: [CommandTracker] <Vohuynhnamviet> /say  pluin nào
+2019-07-11 [03:48:43] [Server thread/INFO]: [LetItGo ● ๖ۣۜĄ∂๓เйッ ●~ Vohuynhnamviet <>  pluin nào
+2019-07-11 [03:48:48] [Server thread/INFO]: [CommandTracker] <Ghast_Noob> /pl 
+2019-07-11 [03:48:54] [Server thread/INFO]: [Sakuraft]Vinh hạnh chào mừng bạn đến với server
+2019-07-11 [03:48:54] [Server thread/INFO]: [CommandTracker] <Ghast_Noob> /say Wing của Ghast ý
+2019-07-11 [03:48:54] [Server thread/INFO]: [King] ༺OP༻ Ghast_Noob ⊹⊱Wing của Ghast ý⊰⊹
+2019-07-11 [03:48:55] [Server thread/INFO]: [CommandTracker] <Vohuynhnamviet> /say  mới code plugin hộp bí ẩn nè
+2019-07-11 [03:48:55] [Server thread/INFO]: [LetItGo ● ๖ۣۜĄ∂๓เйッ ●~ Vohuynhnamviet <>  mới code plugin hộp bí ẩn nè
+2019-07-11 [03:48:58] [Server thread/INFO]: [CommandTracker] <Vohuynhnamviet> /say ừ
+2019-07-11 [03:48:58] [Server thread/INFO]: [LetItGo ● ๖ۣۜĄ∂๓เйッ ●~ Vohuynhnamviet <> ừ
+2019-07-11 [03:49:03] [Server thread/INFO]: [CommandTracker] <Ghast_Noob> /say cài chi cả đống
+2019-07-11 [03:49:03] [Server thread/INFO]: [King] ༺OP༻ Ghast_Noob ⊹⊱cài chi cả đống⊰⊹
+2019-07-11 [03:49:10] [Server thread/INFO]: [Sakuraft] Các minigames mới: BuildBattle, EggWars,...
+2019-07-11 [03:49:17] [Server thread/INFO]: [CommandTracker] <Vohuynhnamviet> /slapper edit 240 size 0
+2019-07-11 [03:49:23] [Server thread/INFO]: [CommandTracker] <Ghast_Noob> /say xóa ItemID
+2019-07-11 [03:49:23] [Server thread/INFO]: [King] ༺OP༻ Ghast_Noob ⊹⊱xóa ItemID⊰⊹
+2019-07-11 [03:49:25] [Server thread/INFO]: [Sakuraft]Hãy vote tại :bit.do/sakuraft để ủng hộ server
+2019-07-11 [03:49:28] [Server thread/INFO]: [CommandTracker] <Vohuynhnamviet> /say có plugin hộp bí ẩn tự code nè
+2019-07-11 [03:49:28] [Server thread/INFO]: [LetItGo ● ๖ۣۜĄ∂๓เйッ ●~ Vohuynhnamviet <> có plugin hộp bí ẩn tự code nè
+2019-07-11 [03:49:31] [Server thread/INFO]: [CommandTracker] <Ghast_Noob> /say cho superbar rùi cài pl đó chi
+2019-07-11 [03:49:31] [Server thread/INFO]: [King] ༺OP༻ Ghast_Noob ⊹⊱cho superbar rùi cài pl đó chi⊰⊹
+2019-07-11 [03:49:34] [Server thread/INFO]: [CommandTracker] <Ghast_Noob> /say xóa
+2019-07-11 [03:49:34] [Server thread/INFO]: [King] ༺OP༻ Ghast_Noob ⊹⊱xóa⊰⊹
+2019-07-11 [03:49:38] [Server thread/INFO]: [CommandTracker] <Ghast_Noob> /say ItemId
+2019-07-11 [03:49:38] [Server thread/INFO]: [King] ༺OP༻ Ghast_Noob ⊹⊱ItemId⊰⊹
+2019-07-11 [03:49:39] [Server thread/INFO]: [CommandTracker] <Vohuynhnamviet> /say ừ
+2019-07-11 [03:49:39] [Server thread/INFO]: [LetItGo ● ๖ۣۜĄ∂๓เйッ ●~ Vohuynhnamviet <> ừ
+2019-07-11 [03:49:39] [Server thread/INFO]: [CommandTracker] <Ghast_Noob> /say :3
+2019-07-11 [03:49:39] [Server thread/INFO]: [King] ༺OP༻ Ghast_Noob ⊹⊱:3⊰⊹
+2019-07-11 [03:49:40] [Server thread/INFO]: [Sakuraft]Phát hiện lỗi hãy báo với chủ server!
+2019-07-11 [03:49:44] [Server thread/INFO]: [CommandTracker] <Vohuynhnamviet> /tp Gh
+2019-07-11 [03:49:44] [Server thread/INFO]: [Vohuynhnamviet: Di chuyển người chơi Vohuynhnamviet đến Ghast_Noob]
+2019-07-11 [03:49:55] [Server thread/INFO]: [Sakuraft]Vinh hạnh chào mừng bạn đến với server
+2019-07-11 [03:50:03] [Server thread/INFO]: [CommandTracker] <Vohuynhnamviet> /say coi nè
+2019-07-11 [03:50:03] [Server thread/INFO]: [LetItGo ● ๖ۣۜĄ∂๓เйッ ●~ Vohuynhnamviet <> coi nè
+2019-07-11 [03:50:11] [Server thread/INFO]: [Sakuraft] Các minigames mới: BuildBattle, EggWars,...
+2019-07-11 [03:50:16] [Server thread/INFO]: [CommandTracker] <Vohuynhnamviet> /say mới code đó :))
+2019-07-11 [03:50:16] [Server thread/INFO]: [LetItGo ● ๖ۣۜĄ∂๓เйッ ●~ Vohuynhnamviet <> mới code đó :))
+2019-07-11 [03:50:20] [Server thread/INFO]: [CommandTracker] <Ghast_Noob> /say cho cái cục đó đi
+2019-07-11 [03:50:20] [Server thread/INFO]: [King] ༺OP༻ Ghast_Noob ⊹⊱cho cái cục đó đi⊰⊹
+2019-07-11 [03:50:26] [Server thread/INFO]: [Sakuraft]Hãy vote tại :bit.do/sakuraft để ủng hộ server
+2019-07-11 [03:50:26] [Server thread/INFO]: [Sakuraft] Rác sẽ được dọn sau 2 phút nữa!
+2019-07-11 [03:50:29] [Server thread/INFO]: [CommandTracker] <Vohuynhnamviet> /say ghi /muakey 2
+2019-07-11 [03:50:29] [Server thread/INFO]: [LetItGo ● ๖ۣۜĄ∂๓เйッ ●~ Vohuynhnamviet <> ghi /muakey 2
+2019-07-11 [03:50:35] [Server thread/INFO]: [CommandTracker] <Ghast_Noob> /muakey 
+2019-07-11 [03:50:41] [Server thread/INFO]: [Sakuraft]Phát hiện lỗi hãy báo với chủ server!
+2019-07-11 [03:50:43] [Server thread/INFO]: [CommandTracker] <Ghast_Noob> /muakey help
+2019-07-11 [03:50:56] [Server thread/INFO]: [CommandTracker] <Ghast_Noob> /givemoney gh 99999999999
+2019-07-11 [03:50:57] [Server thread/INFO]: [Sakuraft]Vinh hạnh chào mừng bạn đến với server
+2019-07-11 [03:50:58] [Server thread/INFO]: [CommandTracker] <Ghast_Noob> /muakey 1
+2019-07-11 [03:51:00] [Server thread/INFO]: [CommandTracker] <Vohuynhnamviet> /say cái này tự code nha
+2019-07-11 [03:51:00] [Server thread/INFO]: [LetItGo ● ๖ۣۜĄ∂๓เйッ ●~ Vohuynhnamviet <> cái này tự code nha
+2019-07-11 [03:51:12] [Server thread/INFO]: [Sakuraft] Các minigames mới: BuildBattle, EggWars,...
+2019-07-11 [03:51:16] [Server thread/INFO]: [CommandTracker] <Ghast_Noob> /muakey 2
+2019-07-11 [03:51:27] [Server thread/INFO]: [Sakuraft] Watchdog đã dọn 0 vật phẩm rơi trên mặt đất!
+2019-07-11 [03:51:27] [Server thread/INFO]: [Sakuraft]Hãy vote tại :bit.do/sakuraft để ủng hộ server
+2019-07-11 [03:51:29] [Server thread/INFO]: [CommandTracker] <Ghast_Noob> /say hàm rand là =)
+2019-07-11 [03:51:29] [Server thread/INFO]: [King] ༺OP༻ Ghast_Noob ⊹⊱hàm rand là =)⊰⊹
+2019-07-11 [03:51:37] [Server thread/INFO]: [CommandTracker] <Vohuynhnamviet> /say  rand gì
+2019-07-11 [03:51:37] [Server thread/INFO]: [LetItGo ● ๖ۣۜĄ∂๓เйッ ●~ Vohuynhnamviet <>  rand gì
+2019-07-11 [03:51:45] [Server thread/INFO]: [CommandTracker] <Vohuynhnamviet> /say  ko xài cái đó
+2019-07-11 [03:51:45] [Server thread/INFO]: [LetItGo ● ๖ۣۜĄ∂๓เйッ ●~ Vohuynhnamviet <>  ko xài cái đó
+2019-07-11 [03:51:45] [Server thread/INFO]: [Sakuraft]Phát hiện lỗi hãy báo với chủ server!
+2019-07-11 [03:51:53] [Server thread/INFO]: [CommandTracker] <Ghast_Noob> /say chớ xài cái gì
+2019-07-11 [03:51:53] [Server thread/INFO]: [King] ༺OP༻ Ghast_Noob ⊹⊱chớ xài cái gì⊰⊹
+2019-07-11 [03:51:56] [Server thread/INFO]: [CommandTracker] <Ghast_Noob> /muakey 2
+2019-07-11 [03:51:56] [Server thread/INFO]: [CommandTracker] <Vohuynhnamviet> /say  xài $prize gì đó
+2019-07-11 [03:51:56] [Server thread/INFO]: [LetItGo ● ๖ۣۜĄ∂๓เйッ ●~ Vohuynhnamviet <>  xài $prize gì đó
+2019-07-11 [03:52:01] [Server thread/INFO]: [Sakuraft]Vinh hạnh chào mừng bạn đến với server
+2019-07-11 [03:52:02] [Server thread/INFO]: [CommandTracker] <Vohuynhnamviet> /say  rồi case 1
+2019-07-11 [03:52:02] [Server thread/INFO]: [LetItGo ● ๖ۣۜĄ∂๓เйッ ●~ Vohuynhnamviet <>  rồi case 1
+2019-07-11 [03:52:17] [Server thread/INFO]: [Sakuraft] Các minigames mới: BuildBattle, EggWars,...
+2019-07-11 [03:52:23] [Server thread/INFO]: [CommandTracker] <Ghast_Noob> /muakey 2
+2019-07-11 [03:52:30] [Server thread/INFO]: [CommandTracker] <Vohuynhnamviet> /say $inv->addItem-> gì đó id item
+2019-07-11 [03:52:30] [Server thread/INFO]: [LetItGo ● ๖ۣۜĄ∂๓เйッ ●~ Vohuynhnamviet <> $inv->addItem-> gì đó id item
+2019-07-11 [03:52:33] [Server thread/INFO]: [Sakuraft]Hãy vote tại :bit.do/sakuraft để ủng hộ server
+2019-07-11 [03:52:39] [Server thread/INFO]: [CommandTracker] <Ghast_Noob> /gm c
+2019-07-11 [03:52:40] [Server thread/INFO]: [Ghast_Noob: Đặt chế độ chơi là Chế độ sáng tạo]
+2019-07-11 [03:52:42] [Server thread/INFO]: [CommandTracker] <Vohuynhnamviet> /say ê chỉnh cái này nè
+2019-07-11 [03:52:42] [Server thread/INFO]: [LetItGo ● ๖ۣۜĄ∂๓เйッ ●~ Vohuynhnamviet <> ê chỉnh cái này nè
+2019-07-11 [03:52:52] [Server thread/INFO]: [CommandTracker] <Vohuynhnamviet> /say mem vip5
+2019-07-11 [03:52:52] [Server thread/INFO]: [LetItGo ● ๖ۣۜĄ∂๓เйッ ●~ Vohuynhnamviet <> mem vip5
+2019-07-11 [03:53:01] [Server thread/INFO]: [Sakuraft]Phát hiện lỗi hãy báo với chủ server!
+2019-07-11 [03:53:07] [Server thread/INFO]: [CommandTracker] <Vohuynhnamviet> /say  sao chỉnh gma cho người khác được
+2019-07-11 [03:53:07] [Server thread/INFO]: [LetItGo ● ๖ۣۜĄ∂๓เйッ ●~ Vohuynhnamviet <>  sao chỉnh gma cho người khác được
+2019-07-11 [03:53:12] [Server thread/INFO]: [CommandTracker] <Ghast_Noob> /say việt hóa lại hử?
+2019-07-11 [03:53:12] [Server thread/INFO]: [King] ༺OP༻ Ghast_Noob ⊹⊱việt hóa lại hử?⊰⊹
+2019-07-11 [03:53:16] [Server thread/INFO]: [Sakuraft]Vinh hạnh chào mừng bạn đến với server
+2019-07-11 [03:53:19] [Server thread/INFO]: [CommandTracker] <Ghast_Noob> /say ghi /gamemode v
+2019-07-11 [03:53:19] [Server thread/INFO]: [King] ༺OP༻ Ghast_Noob ⊹⊱ghi /gamemode v⊰⊹
+2019-07-11 [03:53:26] [Server thread/INFO]: [CommandTracker] <Vohuynhnamviet> /say  ko phải
+2019-07-11 [03:53:26] [Server thread/INFO]: [LetItGo ● ๖ۣۜĄ∂๓เйッ ●~ Vohuynhnamviet <>  ko phải
+2019-07-11 [03:53:28] [Server thread/INFO]: [CommandTracker] <Ghast_Noob> /say thì /gamemode a
+2019-07-11 [03:53:28] [Server thread/INFO]: [King] ༺OP༻ Ghast_Noob ⊹⊱thì /gamemode a⊰⊹
+2019-07-11 [03:53:33] [Server thread/INFO]: [Sakuraft] Các minigames mới: BuildBattle, EggWars,...
+2019-07-11 [03:53:40] [Server thread/INFO]: [CommandTracker] <Vohuynhnamviet> /say tui ggi /setgperm VipV tool.gamemode
+2019-07-11 [03:53:40] [Server thread/INFO]: [LetItGo ● ๖ۣۜĄ∂๓เйッ ●~ Vohuynhnamviet <> tui ggi /setgperm VipV tool.gamemode
+2019-07-11 [03:53:48] [Server thread/INFO]: [Sakuraft] Rác sẽ được dọn sau 2 phút nữa!
+2019-07-11 [03:53:48] [Server thread/INFO]: [Sakuraft]Hãy vote tại :bit.do/sakuraft để ủng hộ server
+2019-07-11 [03:53:52] [Server thread/INFO]: [CommandTracker] <Ghast_Noob> /say Ghast nhớ add lệnh r mà :3
+2019-07-11 [03:53:52] [Server thread/INFO]: [King] ༺OP༻ Ghast_Noob ⊹⊱Ghast nhớ add lệnh r mà :3⊰⊹
+2019-07-11 [03:53:52] [Server thread/INFO]: [CommandTracker] <Vohuynhnamviet> /say là tụi nó chỉnh gmc cho người khác được luôn
+2019-07-11 [03:53:52] [Server thread/INFO]: [LetItGo ● ๖ۣۜĄ∂๓เйッ ●~ Vohuynhnamviet <> là tụi nó chỉnh gmc cho người khác được luôn
+2019-07-11 [03:54:03] [Server thread/INFO]: [Sakuraft]Phát hiện lỗi hãy báo với chủ server!
+2019-07-11 [03:54:04] [Server thread/INFO]: [CommandTracker] <Vohuynhnamviet> /say  gmc cho bản thân thôi á
+2019-07-11 [03:54:04] [Server thread/INFO]: [LetItGo ● ๖ۣۜĄ∂๓เйッ ●~ Vohuynhnamviet <>  gmc cho bản thân thôi á
+2019-07-11 [03:54:10] [Server thread/INFO]: [CommandTracker] <Ghast_Noob> /say lên mess Ghast đưa pl mới code cho
+2019-07-11 [03:54:10] [Server thread/INFO]: [King] ༺OP༻ Ghast_Noob ⊹⊱lên mess Ghast đưa pl mới code cho⊰⊹
+2019-07-11 [03:54:18] [Server thread/INFO]: [CommandTracker] <Vohuynhnamviet> /say ừ
+2019-07-11 [03:54:18] [Server thread/INFO]: [LetItGo ● ๖ۣۜĄ∂๓เйッ ●~ Vohuynhnamviet <> ừ
+2019-07-11 [03:54:18] [Server thread/INFO]: [Sakuraft]Vinh hạnh chào mừng bạn đến với server
+2019-07-11 [03:54:24] [Server thread/INFO]: [CommandTracker] <Ghast_Noob> /pl 
+2019-07-11 [03:54:35] [Server thread/INFO]: [Sakuraft] Các minigames mới: BuildBattle, EggWars,...
+2019-07-11 [03:54:50] [Server thread/INFO]: [Sakuraft]Hãy vote tại :bit.do/sakuraft để ủng hộ server
+2019-07-11 [03:55:03] [Server thread/INFO]: • Ghast_Noob đã thoát khỏi server.
+2019-07-11 [03:55:03] [Server thread/INFO]: Ghast_Noob[/58.186.163.66:33542] logged out due to timeout
+2019-07-11 [03:55:03] [Server thread/INFO]: [CommandTracker] <CONSOLE> /list
+2019-07-11 [03:55:03] [Server thread/INFO]: Có tất cả 1/50 đang online:
+2019-07-11 [03:55:03] [Server thread/INFO]: Vohuynhnamviet
+2019-07-11 [03:55:05] [Server thread/INFO]: [Sakuraft]Phát hiện lỗi hãy báo với chủ server!
+2019-07-11 [03:56:36] [Server thread/INFO]: • Vohuynhnamviet đã thoát khỏi server.
+2019-07-11 [03:56:36] [Server thread/INFO]: Vohuynhnamviet[/14.227.96.51:42210] logged out due to timeout
+2019-07-11 [03:56:36] [Server thread/INFO]: [CommandTracker] <CONSOLE> /list
+2019-07-11 [03:56:36] [Server thread/INFO]: Có tất cả 0/50 đang online:
+2019-07-11 [03:56:36] [Server thread/INFO]: 
+2019-07-11 [03:57:32] [Server thread/INFO]: [Sakuraft]Vinh hạnh chào mừng bạn đến với server
+2019-07-11 [03:57:35] [Server thread/INFO]: [CommandTracker] <CONSOLE> /stop
+2019-07-11 [03:57:35] [Server thread/INFO]: [CONSOLE: Đang dừng server...]
+2019-07-11 [03:57:35] [Server thread/INFO]: Disabling EconomyAPI v2.0.9
+2019-07-11 [03:57:35] [Server thread/INFO]: Disabling PurePerms v1.3.7
+2019-07-11 [03:57:35] [Server thread/INFO]: Disabling SimpleAuth v1.8.1
+2019-07-11 [03:57:35] [Server thread/INFO]: Disabling Titler v0.1.0
+2019-07-11 [03:57:35] [Server thread/INFO]: [Titler] Đã vô hiệu hóa
+2019-07-11 [03:57:35] [Server thread/INFO]: Disabling Broadcaster v1.16
+2019-07-11 [03:57:35] [Server thread/INFO]: Disabling Fireworks_JJBH v1.0 by Jaciel
+2019-07-11 [03:57:35] [Server thread/INFO]: Disabling FrameKeeper v1.1
+2019-07-11 [03:57:35] [Server thread/INFO]: Disabling CustomAlerts v1.6
+2019-07-11 [03:57:35] [Server thread/INFO]: Disabling Slapper_Việt_Hóa_By_Sói_Con v1.1
+2019-07-11 [03:57:35] [Server thread/INFO]: Disabling ManyWorlds v2.0.3
+2019-07-11 [03:57:35] [Server thread/INFO]: Disabling DevTools v1.10.0
+2019-07-11 [03:57:35] [Server thread/INFO]: Disabling Bar v1
+2019-07-11 [03:57:35] [Server thread/INFO]: [Bar] Bar closed
+2019-07-11 [03:57:35] [Server thread/INFO]: Disabling ItemID v1.1.0
+2019-07-11 [03:57:35] [Server thread/INFO]: Disabling AdvertisingKick v1.0.0
+2019-07-11 [03:57:35] [Server thread/INFO]: [AdvertisingKick] AdvertisingKick Stopped
+2019-07-11 [03:57:35] [Server thread/INFO]: Disabling AntiSpam v1.3
+2019-07-11 [03:57:35] [Server thread/INFO]: Disabling iProtector v3.1b
+2019-07-11 [03:57:35] [Server thread/INFO]: Disabling CommandTracker v1.1
+2019-07-11 [03:57:35] [Server thread/INFO]: Disabling Sheep v5.0.0
+2019-07-11 [03:57:35] [Server thread/INFO]: Disabling MagicWE v0.2.6
+2019-07-11 [03:57:35] [Server thread/INFO]: Disabling Lobby-by-DPMC v1
+2019-07-11 [03:57:35] [Server thread/INFO]: [Lobby-by-DPMC] >Deactivated!
+2019-07-11 [03:57:35] [Server thread/INFO]: Disabling BlockParticle v1
+2019-07-11 [03:57:35] [Server thread/INFO]: Disabling TheMask v1.0.0
+2019-07-11 [03:57:35] [Server thread/INFO]: Disabling SkinChanger v1.2.6
+2019-07-11 [03:57:35] [Server thread/INFO]: Disabling Trampoline v1.2
+2019-07-11 [03:57:35] [Server thread/INFO]: [Trampoline] Disabled!
+2019-07-11 [03:57:35] [Server thread/INFO]: Disabling MagicTelePortal v1.3.2
+2019-07-11 [03:57:35] [Server thread/INFO]: Disabling Tool[PTK] v2.0.0
+2019-07-11 [03:57:35] [Server thread/INFO]: Disabling SizePLayer v1.5
+2019-07-11 [03:57:35] [Server thread/INFO]: Disabling essentialsTP v1.1.0
+2019-07-11 [03:57:35] [Server thread/INFO]: [essentialsTP] ༺EssentialsTP༻ EssentialsTP Đã Ngừng Hoạt Động
+2019-07-11 [03:57:35] [Server thread/INFO]: Disabling Disable_TNT v0.1
+2019-07-11 [03:57:35] [Server thread/INFO]: [Disable_TNT] Plugin Đã Bị Vô Hiệu Hóa Do Bạn Dừng Máy Chủ Hoặc Có Lỗi Phát Sinh
+2019-07-11 [03:57:35] [Server thread/INFO]: Disabling Alias v1.2.0
+2019-07-11 [03:57:35] [Server thread/INFO]: Disabling ALW v1
+2019-07-11 [03:57:35] [Server thread/INFO]: Disabling Sell v2
+2019-07-11 [03:57:35] [Server thread/INFO]: Disabling Report v1
+2019-07-11 [03:57:35] [Server thread/INFO]: Disabling HopBiAn v1.0.0
+2019-07-11 [03:57:35] [Server thread/INFO]: Disabling FactionsPro v0.1#Beta
+2019-07-11 [03:57:35] [Server thread/INFO]: Disabling WorldProtect v2.2.0
+2019-07-11 [03:57:35] [Server thread/INFO]: Disabling Buyfix v1.0.0
+2019-07-11 [03:57:35] [Server thread/INFO]: Disabling Coin v2.0
+2019-07-11 [03:57:35] [Server thread/INFO]: Disabling ArcoLife v1
+2019-07-11 [03:57:35] [Server thread/INFO]: Disabling WingFire v1.3
+2019-07-11 [03:57:35] [Server thread/INFO]: Disabling Muakey v2
+2019-07-11 [03:57:35] [Server thread/INFO]: Disabling TopIS v2
+2019-07-11 [03:57:35] [Server thread/INFO]: Disabling Trade v1
+2019-07-11 [03:57:35] [Server thread/INFO]: Disabling NoTP v1.0.5
+2019-07-11 [03:57:35] [Server thread/INFO]: Disabling WingWater v1.3
+2019-07-11 [03:57:35] [Server thread/INFO]: Disabling WingSpore v1.3
+2019-07-11 [03:57:35] [Server thread/INFO]: Disabling QuyenHang v1
+2019-07-11 [03:57:35] [Server thread/INFO]: [QuyenHang] 
+======================================
+
+- Quyền Hạng Code Bởi Ghast Noob
+- Dành Cho Phiên Bản MCPE 1.1.x
+- Trạng Thái: Đã Vô Hiệu Hóa
+
+======================================
+2019-07-11 [03:57:35] [Server thread/INFO]: Disabling AntiDamage v1.3
+2019-07-11 [03:57:35] [Server thread/INFO]: Disabling MuaRank v1
+2019-07-11 [03:57:35] [Server thread/INFO]: Disabling WingWaterDrip v1.3
+2019-07-11 [03:57:35] [Server thread/INFO]: Disabling WingSmoke v1.3
+2019-07-11 [03:57:35] [Server thread/INFO]: Disabling WingRedstone v1.3
+2019-07-11 [03:57:35] [Server thread/INFO]: Disabling WingRain v1.3
+2019-07-11 [03:57:35] [Server thread/INFO]: Disabling WingPortal v1.3
+2019-07-11 [03:57:35] [Server thread/INFO]: Disabling WingMobSpell v1.3
+2019-07-11 [03:57:35] [Server thread/INFO]: Disabling WingLava v1.3
+2019-07-11 [03:57:35] [Server thread/INFO]: Disabling WingLavaDrip v1.3
+2019-07-11 [03:57:35] [Server thread/INFO]: Disabling WingHeart v1.3
+2019-07-11 [03:57:35] [Server thread/INFO]: Disabling WingHappy v1.3
+2019-07-11 [03:57:35] [Server thread/INFO]: Disabling WingFlame v1.3
+2019-07-11 [03:57:35] [Server thread/INFO]: Disabling WingEnchant v1.3
+2019-07-11 [03:57:35] [Server thread/INFO]: Disabling WingCritical v1.3
+2019-07-11 [03:57:35] [Server thread/INFO]: Disabling WingBubble v1.3
+2019-07-11 [03:57:35] [Server thread/INFO]: Disabling WingAngry v1.3
+2019-07-11 [03:57:35] [Server thread/INFO]: Disabling BuyEnchant v1
+2019-07-11 [03:57:35] [Server thread/INFO]: Disabling Prealms_BuildBattle v1.3.0
+2019-07-11 [03:57:35] [Server thread/INFO]: Unloading level "Hypixel Build Battle map"
+2019-07-11 [03:57:36] [Server thread/INFO]: Disabling DonRac[PTK] v2
+2019-07-11 [03:57:36] [Server thread/INFO]: [DonRac[PTK]]  Plugin Dọn Rác Bởi PTK Đã Tắt Phiên Bản:2!
+2019-07-11 [03:57:36] [Server thread/INFO]: Disabling CopyPasteBuildDP v2.0.0
+2019-07-11 [03:57:36] [Server thread/INFO]: Disabling EconomyShop v2.0.7
+2019-07-11 [03:57:36] [Server thread/INFO]: Disabling EconomySell v2.0.7
+2019-07-11 [03:57:36] [Server thread/INFO]: Disabling EconomyLand v2.0.9
+2019-07-11 [03:57:36] [Server thread/INFO]: Disabling EconomyJob v2.0.4
+2019-07-11 [03:57:36] [Server thread/INFO]: Disabling SimpleAuthHelper v2.0.1
+2019-07-11 [03:57:36] [Server thread/INFO]: Disabling HealthBar v1.0.1
+2019-07-11 [03:57:36] [Server thread/INFO]: Disabling SkyBlock v2
+2019-07-11 [03:57:36] [Server thread/INFO]: Disabling PureChat v1.4.0
+2019-07-11 [03:57:36] [Server thread/INFO]: Unloading level "world"
+2019-07-11 [03:57:36] [Server thread/INFO]: Unloading level "nether"
+2019-07-11 [03:57:36] [Server thread/INFO]: Unloading level "ender"
+2019-07-11 [03:57:36] [Server thread/INFO]: Unloading level "pvp"
+2019-07-11 [03:57:36] [Server thread/INFO]: Unloading level "sb"
+2019-07-11 [03:57:36] [Server thread/INFO]: Unloading level "shop"
+2019-07-11 [03:57:36] [Server thread/INFO]: Unloading level "sur"
+2019-07-11 [03:57:36] [Server thread/INFO]: Unloading level "sur1"
+2019-07-11 [03:57:36] [Server thread/INFO]: Unloading level "bbhub"
+2019-07-11 [03:57:41] [Server thread/INFO]: Stopping other threads

@@ -1,0 +1,43 @@
+name: CoinAPI
+main: onebone\coinapi\CoinAPI
+version: "2.0.9"
+author: onebone
+api:
+- 2.0.0
+
+permissions:
+ coinapi.*:
+  default: op
+  description: Allows to control all of functions in EconomyAPI
+  children:
+   coinapi.command.*:
+    default: op
+    description: Allows to use all of commands in EconomyAPI
+    children:
+     coinapi.command.setcoin:
+      default: op
+      description: Allows to set player's coin
+     coinapi.command.mycoin:
+      description: Allows player to see his/her coin
+      default: true
+     coinapi.command.givecoin:
+      description: Allows player to give coin to others
+      default: op
+     coinapi.command.paycoin:
+      description: Allows player to pay coin to someone
+      default: true
+     coinapi.command.seecoin:
+      description: Allows player to see others' coin
+      default: true
+     coinapi.command.setlangcoin:
+      description: Allows player to set his/her language
+      default: true
+     coinapi.command.topcoin:
+      description: Allows player to see top coin list
+      default: true
+     coinapi.command.mystatuscoin:
+      description: Allows player to see his/her financial status
+      default: true
+     economyapi.command.takemoney:
+      description: Allows player to take money from others
+      default: op

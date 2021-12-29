@@ -1,0 +1,2549 @@
+name: SkyBlock
+main: MyPlot\MyPlot
+version: 2.0
+load: STARTUP
+api: 3.0.1
+author: CreationsPlus TM
+description: Plot and protection plugin
+softdepend: [EconomyAPI, PocketMoney]
+
+permissions:
+  myplot.command:
+    description: Allows users to use myplot features
+    default: op
+    children:
+      myplot.command.help:
+        description: Displays all the available commands
+        default: true
+      myplot.command.claim:
+        description: Gives the claim command
+        default: true
+      myplot.command.info:
+        description: Gives the info command
+        default: true
+      myplot.command.generate:
+        description: Gives the generate command
+        default: op
+      myplot.command.addhelper:
+        description: Gives the addhelper command
+        default: true
+      myplot.command.removehelper:
+        description: Gives the removehelper command
+        default: true
+      myplot.command.auto:
+        description: Gives the auto command
+        default: true
+      myplot.command.play:
+        description: Play command
+        default: true
+      myplot.command.clear:
+        description: Gives the clear command
+        default: true
+      myplot.command.dispose:
+        description: Gives the dispose command
+        default: true
+      myplot.command.reset:
+        description: Gives the reset command
+        default: true
+      myplot.command.biome:
+        description: Gives the biome command
+        default: true
+      myplot.command.home:
+        description: Gives the home command
+        default: true
+      myplot.command.homes:
+        description: Gives the homes command
+        default: true
+      myplot.command.name:
+        description: Gives the name command
+        default: true
+      myplot.command.give:
+        description: Gives the give command
+        default: true
+      myplot.command.warp:
+        description: Gives the warp command
+        default: true
+  myplot.admin:
+    description: Grant administrator powers
+    default: op
+    children:
+      myplot.admin.clear:
+        description: Allow clear command on every plot
+        default: op
+      myplot.admin.dispose:
+        description: Allow dispose command on every plot
+        default: op
+      myplot.admin.reset:
+        description: Allow reset command on every plot
+        default: op
+      myplot.admin.addhelper:
+        description: Allow addhelper command on every plot
+        default: op
+      myplot.admin.removehelper:
+        description: Allow removehelper command on every plot
+        default: op
+      myplot.admin.build:
+        description: Allow player to build outside his own plots
+        default: op
+        children:
+          myplot.admin.build.plot:
+            description: Allow player to build on all plots
+            default: op
+          myplot.admin.build.road:
+            description: Allow player to build on the road
+            default: op
+      myplot.admin.name:
+        description: Allows player to change the name of every plot
+        default: op
+      myplot.admin.warp:
+        description: Allow player to warp to unclaimed plots
+        default: op
+      myplot.admin.biome:
+        description: Allow player to use the biome command on all plots
+        default: op
+  myplot.claimplots:
+    description: Allows players to claim X plots
+    default: false
+    children:
+      myplot.claimplots.2:
+        description: Allow player to claim 2 plots
+        default: true
+      myplot.claimplots.unlimited:
+        description: Allow player to claim unlimited plots
+        default: op<?php
+namespace MyPlot;
+
+use MyPlot\provider\EconomySProvider;
+use MyPlot\provider\PocketMoneyProvider;
+use MyPlot\task\ClearPlotTask;
+use pocketmine\event\level\LevelLoadEvent;
+use pocketmine\event\Listener;
+use pocketmine\lang\BaseLang;
+use pocketmine\level\generator\biome\Biome;
+use pocketmine\level\Position;
+use pocketmine\permission\Permission;
+use pocketmine\plugin\PluginBase;
+use pocketmine\level\generator\Generator;
+use pocketmine\Player;
+use MyPlot\provider\DataProvider;
+use pocketmine\level\Level;
+use MyPlot\provider\SQLiteDataProvider;
+use MyPlot\provider\EconomyProvider;
+
+class MyPlot extends PluginBase implements Listener
+{
+    /** @var MyPlot */
+    private static $instance;
+
+    /** @var PlotLevelSettings[] */
+    private $levels = [];
+
+    /** @var DataProvider */
+    private $dataProvider = null;
+
+    /** @var EconomyProvider */
+    private $economyProvider = null;
+
+    /** @var BaseLang */
+    private $baseLang = null;
+
+    /**
+     * @api
+     * @return MyPlot
+     */
+    public static function getInstance() {
+        return self::$instance;
+    }
+
+    /**
+     * @api
+     * @return BaseLang
+     */
+    public function getLanguage() {
+        return $this->baseLang;
+    }
+
+    /**
+     * Returns the DataProvider that is being used
+     *
+     * @api
+     * @return DataProvider
+     */
+    public function getProvider() {
+        return $this->dataProvider;
+    }
+
+    /**
+     * Returns the EconomyProvider that is being used
+     *
+     * @api
+     * @return EconomyProvider
+     */
+    public function getEconomyProvider() {
+        return $this->economyProvider;
+    }
+
+    /**
+     * Returns a PlotLevelSettings object which contains all the settings of a level
+     *
+     * @api
+     * @param string $levelName
+     * @return PlotLevelSettings|null
+     */
+    public function getLevelSettings($levelName) {
+        if (isset($this->levels[$levelName])) {
+            return $this->levels[$levelName];
+        }
+        return null;
+    }
+	
+	
+    /**
+     * Checks if a plot level is loaded
+     *
+     * @api
+     * @param string $levelName
+     * @return bool
+     */
+    public function isLevelLoaded($levelName) {
+        return isset($this->levels[$levelName]);
+    }
+
+    /**
+     * Generate a new plot level with optional settings
+     *
+     * @api
+     * @param string $levelName
+     * @param array $settings
+     * @return bool
+     */
+    public function generateLevel($levelName, $settings = []) {
+        if ($this->getServer()->isLevelGenerated($levelName) === true) {
+            return false;
+        }
+        if (empty($settings)) {
+            $settings = $this->getConfig()->get("DefaultWorld");
+        }
+        $settings = [
+            "preset" => json_encode($settings)
+        ];
+        return $this->getServer()->generateLevel($levelName, null, MyPlotGenerator::class, $settings);
+    }
+
+    /**
+     * Saves provided plot if changed
+     *
+     * @api
+     * @param Plot $plot
+     * @return bool
+     */
+    public function savePlot(Plot $plot) {
+        return $this->dataProvider->savePlot($plot);
+    }
+
+    /**
+     * Get all the plots a player owns (in a certain level if $levelName is provided)
+     *
+     * @api
+     * @param string $username
+     * @param string $levelName
+     * @return Plot[]
+     */
+    public function getPlotsOfPlayer($username, $levelName = "") {
+        return $this->dataProvider->getPlotsByOwner($username, $levelName);
+    }
+
+    /**
+     * Get the next free plot in a level
+     *
+     * @api
+     * @param string $levelName
+     * @param int $limitXZ
+     * @return Plot|null
+     */
+    public function getNextFreePlot($levelName, $limitXZ = 0) {
+        return $this->dataProvider->getNextFreePlot($levelName, $limitXZ);
+    }
+
+    /**
+     * Finds the plot at a certain position or null if there is no plot at that position
+     *
+     * @api
+     * @param Position $position
+     * @return Plot|null
+     */
+    public function getPlotByPosition(Position $position) {
+        $x = $position->x;
+        $z = $position->z;
+        $levelName = $position->level->getName();
+
+        $plotLevel = $this->getLevelSettings($levelName);
+        if ($plotLevel === null) {
+            return null;
+        }
+
+        $plotSize = $plotLevel->plotSize;
+        $roadWidth = $plotLevel->roadWidth;
+        $totalSize = $plotSize + $roadWidth;
+
+        if ($x >= 0) {
+            $X = floor($x / $totalSize);
+            $difX = $x % $totalSize;
+        } else {
+            $X = ceil(($x - $plotSize + 1) / $totalSize);
+            $difX = abs(($x - $plotSize + 1) % $totalSize);
+        }
+
+        if ($z >= 0) {
+            $Z = floor($z / $totalSize);
+            $difZ = $z % $totalSize;
+        } else {
+            $Z = ceil(($z - $plotSize + 1) / $totalSize);
+            $difZ = abs(($z - $plotSize + 1) % $totalSize);
+        }
+
+        if (($difX > $plotSize - 1) or ($difZ > $plotSize - 1)) {
+            return null;
+        }
+
+        return $this->dataProvider->getPlot($levelName, $X, $Z);
+    }
+
+    /**
+     *  Get the begin position of a plot
+     *
+     * @api
+     * @param Plot $plot
+     * @return Position|null
+     */
+    public function getPlotPosition(Plot $plot) {
+        $plotLevel = $this->getLevelSettings($plot->levelName);
+        if ($plotLevel === null) {
+            return null;
+        }
+
+        $plotSize = $plotLevel->plotSize;
+        $roadWidth = $plotLevel->roadWidth;
+        $totalSize = $plotSize + $roadWidth;
+        $x = $totalSize * $plot->X;
+        $z = $totalSize * $plot->Z;
+        $level = $this->getServer()->getLevelByName($plot->levelName);
+        return new Position($x, $plotLevel->groundHeight, $z, $level);
+    }
+
+    /**
+     * Teleport a player to a plot
+     *
+     * @api
+     * @param Player $player
+     * @param Plot $plot
+     * @return bool
+     */
+    public function teleportPlayerToPlot(Player $player, Plot $plot) {
+        $plotLevel = $this->getLevelSettings($plot->levelName);
+        if ($plotLevel === null) {
+            return false;
+        }
+        $pos = $this->getPlotPosition($plot);
+        $plotSize = $plotLevel->plotSize;
+        $pos->x += floor($plotSize / 2);
+        $pos->z -= -88;
+        $pos->y += 5;
+        $player->teleport($pos);
+        return true;
+    }
+
+    /**
+     * Reset all the blocks inside a plot
+     *
+     * @api
+     * @param Plot $plot
+     * @param int $maxBlocksPerTick
+     * @return bool
+     */
+    public function clearPlot(Plot $plot, $maxBlocksPerTick = 256) {
+        if (!$this->isLevelLoaded($plot->levelName)) {
+            return false;
+        }
+        $task = new ClearPlotTask($this, $plot, $maxBlocksPerTick);
+        $task->onRun(0);
+        return true;
+    }
+
+    /**
+     * Delete the plot data
+     *
+     * @param Plot $plot
+     * @return bool
+     */
+    public function disposePlot(Plot $plot) {
+        return $this->dataProvider->deletePlot($plot);
+    }
+
+    /**
+     * Clear and dispose a plot
+     *
+     * @param Plot $plot
+     * @param int $maxBlocksPerTick
+     * @return bool
+     */
+    public function resetPlot(Plot $plot, $maxBlocksPerTick = 256) {
+        if ($this->disposePlot($plot)) {
+            return $this->clearPlot($plot, $maxBlocksPerTick);
+        }
+        return false;
+    }
+
+    /**
+     * Changes the biome of a plot
+     *
+     * @api
+     * @param Plot $plot
+     * @param Biome $biome
+     * @return bool
+     */
+    public function setPlotBiome(Plot $plot, Biome $biome) {
+        $plotLevel = $this->getLevelSettings($plot->levelName);
+        if ($plotLevel === null) {
+            return false;
+        }
+
+        $level = $this->getServer()->getLevelByName($plot->levelName);
+        $pos = $this->getPlotPosition($plot);
+        $plotSize = $plotLevel->plotSize;
+        $xMax = $pos->x + $plotSize;
+        $zMax = $pos->z + $plotSize;
+
+        $chunkIndexes = [];
+        for ($x = $pos->x; $x < $xMax; $x++) {
+            for ($z = $pos->z; $z < $zMax; $z++) {
+                $index = Level::chunkHash($x >> 4, $z >> 4);
+                if (!in_array($index, $chunkIndexes)) {
+                    $chunkIndexes[] = $index;
+                }
+                $color = $biome->getColor();
+                $R = $color >> 16;
+                $G = ($color >> 8) & 0xff;
+                $B = $color & 0xff;
+                $level->setBiomeColor($x, $z, $R, $G, $B);
+            }
+        }
+
+        foreach ($chunkIndexes as $index) {
+            Level::getXZ($index, $X, $Z);
+            $chunk = $level->getChunk($X, $Z);
+            foreach ($level->getChunkPlayers($X, $Z) as $player) {
+                $player->onChunkChanged($chunk);
+            }
+        }
+
+        $plot->biome = $biome->getName();
+        $this->dataProvider->savePlot($plot);
+        return true;
+    }
+
+    /**
+     * Returns the PlotLevelSettings of all the loaded levels
+     *
+     * @api
+     * @return string[]
+     */
+    public function getPlotLevels() {
+        return $this->levels;
+    }
+
+    /**
+     * Get the maximum number of plots a player can claim
+     *
+     * @param Player $player
+     * @return int
+     */
+    public function getMaxPlotsOfPlayer(Player $player) {
+        if ($player->hasPermission("myplot.claimplots.unlimited"))
+            return PHP_INT_MAX;
+
+        /** @var Permission[] $perms */
+        $perms = array_merge($this->getServer()->getPluginManager()->getDefaultPermissions($player->isOp()),
+                             $player->getEffectivePermissions());
+        $perms = array_filter($perms, function ($name) {
+            return (substr($name, 0, 18) === "myplot.claimplots.");
+        }, ARRAY_FILTER_USE_KEY);
+
+        if (count($perms) == 0)
+            return 0;
+
+        krsort($perms);
+
+        foreach ($perms as $name => $perm) {
+            $maxPlots = substr($name, 18);
+            if (is_numeric($maxPlots)) {
+                return $maxPlots;
+            }
+        }
+
+        return 0;
+    }
+
+
+    /* -------------------------- Non-API part -------------------------- */
+
+    public function onEnable() {
+		$this->getServer()->getPluginManager()->registerEvents($this, $this);
+        $this->getLogger()->info("Loading MyPlot");
+        self::$instance = $this;
+
+        $this->saveDefaultConfig();
+        $this->reloadConfig();
+
+        @mkdir($this->getDataFolder());
+        @mkdir($this->getDataFolder() . "worlds");
+
+        Generator::addGenerator(MyPlotGenerator::class, "myplot");
+
+        $lang = $this->getConfig()->get("language", BaseLang::FALLBACK_LANGUAGE);
+        $this->baseLang = new BaseLang($lang, $this->getFile() . "resources/");
+
+        // Initialize DataProvider
+        $cacheSize = $this->getConfig()->get("PlotCacheSize");
+        switch (strtolower($this->getConfig()->get("DataProvider"))) {
+            case "sqlite":
+            default:
+                $this->dataProvider = new SQLiteDataProvider($this, $cacheSize);
+                break;
+        }
+
+        // Initialize EconomyProvider
+        if ($this->getConfig()->get("UseEconomy") == true) {
+            if ($this->getServer()->getPluginManager()->getPlugin("EconomyAPI") !== null) {
+                $this->economyProvider = new EconomySProvider();
+            } elseif (($plugin = $this->getServer()->getPluginManager()->getPlugin("PocketMoney")) !== null) {
+                $this->economyProvider = new PocketMoneyProvider($plugin);
+            }
+        }
+
+        $eventListener = new EventListener($this);
+        $this->getServer()->getPluginManager()->registerEvents($eventListener, $this);
+        foreach($this->getServer()->getLevels() as $level) {
+            $eventListener->onLevelLoad(new LevelLoadEvent($level));
+        }
+        $this->getServer()->getCommandMap()->register(Commands::class, new Commands($this));
+    }
+
+    public function addLevelSettings($levelName, PlotLevelSettings $settings) {
+        $this->levels[$levelName] = $settings;
+    }
+
+    public function unloadLevelSettings($levelName) {
+        if (isset($this->levels[$levelName])) {
+            unset($this->levels[$levelName]);
+            return true;
+        }
+        return false;
+    }
+
+    public function onDisable() {
+        if ($this->dataProvider !== null) {
+            $this->dataProvider->close();
+        }
+    }
+}
+<?php
+namespace MyPlot;
+
+class Plot
+{
+    public $levelName, $X, $Z, $name, $owner, $helpers, $biome, $id;
+
+    /**
+     * @param string $levelName
+     * @param int $X
+     * @param int $Z
+     * @param string $name
+     * @param string $owner
+     * @param array $helpers
+     * @param string $biome
+     * @param int $id
+     */
+    public function __construct($levelName, $X, $Z, $name = "", $owner = "", $helpers = [], $biome = "PLAINS", $id = -1) {
+        $this->levelName = $levelName;
+        $this->X = $X;
+        $this->Z = $Z;
+        $this->name = $name;
+        $this->owner = $owner;
+        $this->helpers = $helpers;
+        $this->biome = $biome;
+        $this->id = $id;
+    }
+
+    /**
+     * @param string $username
+     * @return bool
+     */
+    public function isHelper($username) {
+        return in_array($username, $this->helpers);
+    }
+
+    /**
+     * @param string $username
+     * @return bool
+     */
+    public function addHelper($username) {
+        if (!$this->isHelper($username)) {
+            $this->helpers[] = $username;
+            return true;
+        }
+        return false;
+    }
+
+    /**
+     * @param string $username
+     * @return bool
+     */
+    public function removeHelper($username) {
+        $key = array_search($username, $this->helpers);
+        if ($key === false) {
+            return false;
+        }
+        unset($this->helpers[$key]);
+        return true;
+    }
+
+    public function __toString() {
+        return "(" . $this->X . ";" . $this->Z . ")";
+    }
+}
+# The language that should be used in MyPlot
+# Available languages: eng, nl, vi
+#
+# English language pack by @Exxarion
+# Dutch language pack by @Wies
+# Vietnamese language pack by @Harry
+#
+language: vi
+
+# The data provider where plot data is stored.
+# There is currently only one data provider: sqlite.
+DataProvider: sqlite
+
+# Use an economy with MyPlot. This will allow for plot pricing such as claiming, clearing, etc.
+# Currently supported economy plugins: Economy$, PocketMoney
+# MyPlot will use any economy plugin found on the server.
+# Be sure not to use more than 1 economy plugin!
+UseEconomy: false
+
+# Amount of plots to be cached.
+# Increasing this number might improve performance, but also increase memory usage.
+PlotCacheSize: 256
+
+# When a player enters a plot, a popup with basic info will be shown
+ShowPlotPopup: true
+
+# Amount of blocks to reset per tick.
+# Increasing this number will speed up '/p clear' and '/p reset' but also increases lag
+ClearBlocksPerTick: 256
+
+
+# These settings will be used when creating a new world.
+DefaultWorld:
+
+  # Restrict entities (e.g. tnt) from moving except falling
+  # This will prevent things like tnt cannons ruining other plots
+  RestrictEntityMovement: true
+
+  # How much it costs to claim a plot (Economy must be set to 'true')
+  ClaimPrice: 0
+  # How much it costs to clear a plot (Economy must be set to 'true')
+  ClearPrice: 0
+  # How much it costs to dispose a plot (Economy must be set to 'true')
+  DisposePrice: 0
+  # How much it costs to reset a plot (Economy must be set to 'true')
+  ResetPrice: 0
+  MaxPlotsPerPlayer: 2
+
+  # The size of a plot
+  PlotSize: 180
+  # The height of a plot
+  GroundHeight: 64
+  # The width of the road
+  RoadWidth: 7
+
+  # The block that the road is made of (Default is Oak Planks)
+  RoadBlock: '5:0'
+  # The block that plot walls are made of (Default is Stone Slabs)
+  WallBlock: '44:0'
+  # The block used as the plot floor (Default is Grass)
+  PlotFloorBlock: '2:0'
+  # The block that fills the rest of the plot (Default is Dirt)
+  PlotFillBlock: '3:0'
+  # The block at the bottom (Default is Bedrock)
+  BottomBlock: '7:0'
+<?php
+
+namespace MyPlot;
+
+use pocketmine\block\Block;
+use pocketmine\level\generator\Generator;
+use pocketmine\level\ChunkManager;
+use pocketmine\math\Vector3;
+use pocketmine\utils\Random;
+use pocketmine\level\generator\biome\Biome;
+use pocketmine\level\Level;
+use pocketmine\level\format\FullChunk;
+
+class MyPlotGenerator extends Generator{
+	/** @var Level */
+	public $level;
+	
+	/** @var string[] */
+	private $settings;
+	
+	/** @var Block */
+	public $roadBlock, $wallBlock, $plotFloorBlock, $plotFillBlock, $bottomBlock;
+	
+	/** @var int */
+	public $roadWidth, $plotSize, $groundHeight;
+	private $chunk1, $chunk2;
+	const PLOT = 0;
+	const ROAD = 1;
+	const WALL = 2;
+	const ISLAND = 3;
+
+	public function __construct(array $settings = []){
+		if(isset($settings["preset"])){
+			$settings = json_decode($settings["preset"], true);
+			if($settings === false){
+				$settings = [];
+			}
+		}
+		else{
+			$settings = [];
+		}
+		$this->roadBlock = $this->parseBlock($settings, "RoadBlock", new Block(5));
+		$this->wallBlock = $this->parseBlock($settings, "WallBlock", new Block(44));
+		$this->plotFloorBlock = $this->parseBlock($settings, "PlotFloorBlock", new Block(2));
+		$this->plotFillBlock = $this->parseBlock($settings, "PlotFillBlock", new Block(3));
+		$this->bottomBlock = $this->parseBlock($settings, "BottomBlock", new Block(7));
+		$this->roadWidth = $this->parseNumber($settings, "RoadWidth", 7);
+		$this->plotSize = $this->parseNumber($settings, "PlotSize", 32);
+		$this->groundHeight = $this->parseNumber($settings, "GroundHeight", 32);
+		
+		$this->settings = [];
+		$this->settings["preset"] = json_encode(["RoadBlock" => $this->roadBlock->getId() . (($meta = $this->roadBlock->getDamage())?'':':' . $meta), "WallBlock" => $this->wallBlock->getId() . (($meta = $this->wallBlock->getDamage())?'':':' . $meta), 
+				"PlotFloorBlock" => $this->plotFloorBlock->getId() . (($meta = $this->plotFloorBlock->getDamage())?'':':' . $meta), "PlotFillBlock" => $this->plotFillBlock->getId() . (($meta = $this->plotFillBlock->getDamage())?'':':' . $meta), 
+				"BottomBlock" => $this->bottomBlock->getId() . (($meta = $this->bottomBlock->getDamage())?'':':' . $meta), "RoadWidth" => $this->roadWidth, "PlotSize" => $this->plotSize, "GroundHeight" => $this->groundHeight]);
+	}
+
+	private function parseBlock(&$array, $key, $default){
+		if(isset($array[$key])){
+			$id = $array[$key];
+			if(is_numeric($id)){
+				$block = new Block($id);
+			}
+			else{
+				$split = explode(":", $id);
+				if(count($split) === 2 and is_numeric($split[0]) and is_numeric($split[1])){
+					$block = new Block($split[0], $split[1]);
+				}
+				else{
+					$block = $default;
+				}
+			}
+		}
+		else{
+			$block = $default;
+		}
+		return $block;
+	}
+
+	private function parseNumber(&$array, $key, $default){
+		if(isset($array[$key]) and is_numeric($array[$key])){
+			return $array[$key];
+		}
+		else{
+			return $default;
+		}
+	}
+
+	public function getName(){
+		return "skyblock";
+	}
+
+	public function getSettings(){
+		return $this->settings;
+	}
+
+	public function init(ChunkManager $level, Random $random){
+		$this->level = $level;
+		$this->random = $random;
+	}
+
+	public function generateChunk($chunkX, $chunkZ){
+		$shape = $this->getShape($chunkX << 4, $chunkZ << 4);
+		$chunk = $this->level->getChunk($chunkX, $chunkZ);
+		$chunk->setGenerated();
+		
+		$bottomBlockId = $this->bottomBlock->getId();
+		$bottomBlockMeta = $this->bottomBlock->getDamage();
+		$plotFillBlockId = $this->plotFillBlock->getId();
+		$plotFillBlockMeta = $this->plotFillBlock->getDamage();
+		$plotFloorBlockId = $this->plotFloorBlock->getId();
+		$plotFloorBlockMeta = $this->plotFloorBlock->getDamage();
+		$roadBlockId = $this->roadBlock->getId();
+		$roadBlockMeta = $this->roadBlock->getDamage();
+		$wallBlockId = $this->wallBlock->getId();
+		$wallBlockMeta = $this->wallBlock->getDamage();
+		$groundHeight = $this->groundHeight;
+		
+		for($Z = 0; $Z < 16; ++$Z){
+			for($X = 0; $X < 16; ++$X){
+				$chunk instanceof FullChunk;
+			}
+		}
+		$chunk->setX($chunkX);
+		$chunk->setZ($chunkZ);
+		$this->level->setChunk($chunkX, $chunkZ, $chunk);
+		$this->populateChunk($chunkX, $chunkZ);
+	}
+
+	public function getShape($x, $z){
+		$totalSize = $this->plotSize + $this->roadWidth;
+		
+		if($x >= 0){
+			$X = $x % $totalSize;
+		}
+		else{
+			$X = $totalSize - abs($x % $totalSize);
+		}
+		if($z >= 0){
+			$Z = $z % $totalSize;
+		}
+		else{
+			$Z = $totalSize - abs($z % $totalSize);
+		}
+		
+		$startX = $X;
+		$shape = new \SplFixedArray(256);
+		
+		for($z = 0; $z < 16; $z++, $Z++){
+			if($Z === $totalSize){
+				$Z = 0;
+			}
+			if($Z < $this->plotSize){
+				$typeZ = self::PLOT;
+			}
+			else{
+				$typeZ = self::ROAD;
+			}
+			
+			for($x = 0, $X = $startX; $x < 16; $x++, $X++){
+				if($X === $totalSize) $X = 0;
+				if($X < $this->plotSize){
+					$typeX = self::PLOT;
+				}
+				else{
+					$typeX = self::ROAD;
+				}
+				if($typeX === $typeZ){
+					$type = $typeX;
+				}
+				elseif($typeX === self::PLOT){
+					$type = $typeZ;
+				}
+				elseif($typeZ === self::PLOT){
+					$type = $typeX;
+				}
+				else{
+					$type = self::ROAD;
+				}
+				if($X == floor($this->plotSize / 2) && $Z == floor($this->plotSize / 2)){
+					$type = self::ISLAND;
+				}
+				$shape[($z << 4) | $x] = $type;
+			}
+		}
+		return $shape;
+	}
+
+	public function populateChunk($chunkX, $chunkZ){
+		$island = new SkyBlockStructure($this);
+		$island->populate($this->level, $chunkX, $chunkZ, $this->random);
+	}
+
+	public function getSpawn(){
+		return new Vector3(0, $this->groundHeight, 0);
+	}
+}﻿# Vietnamese language pack for MyPlot
+# Created by Parroted - an old guy and QuangDo - play.fcavn.net
+
+# Popup when entering a plot
+popup=Bạn đã vào đảo {%0}
+popup.owner=Sở hữu bởi {%0}
+popup.available=Đảo này chưa có chủ! Dùng /sb claim
+
+# /sb info
+command.name=skyblock
+command.alias=sb
+command.desc=Nhận và quản lý đảo
+command.usage=Cách dùng: /sb help
+command.unknown=Có gì đó sai sai. Hãy nhập /sb help để xem các lệnh
+
+subcommand.usage=Cách dùng: {%0}
+
+#Errors that are displayed when the player does something wrong, or the plugin screws up.
+error=Ồ! Có gì đó không ổn
+notinplot=Bạn đang không đứng trong một đảo
+notowner=Bạn không phải là chủ của đảo
+
+confirm=confirm
+
+#The /sb help Subcommand
+help.name=help
+help.desc=Xem danh sách trợ giúp
+help.usage=/sb help
+help.header=--- Đang mở trang hướng dẫn {%0} of {%1} ---
+
+#The /sb addhelper Subcommand
+addhelper.name=addhelper
+addhelper.alias=addh
+addhelper.desc=Thêm người vào đảo của bạn
+addhelper.usage=/sb addhelper <player>
+addhelper.alreadyone={%0} hiện đã là helper của đảo này rồi
+addhelper.success=Chúc mừng {%0} đã trở thành helper của đảo
+
+#The /sb removehelper Subcommand
+removehelper.name=removehelper
+removehelper.alias=rmh
+removehelper.desc=Đuổi helper khỏi đảo
+removehelper.usage=/sb removehelper <player>
+removehelper.notone={%0} không phải là helper của đảo
+removehelper.success=Hiện {%0} không còn là helper của đảo
+
+#The /sb claim Subcommand
+claim.name=claim
+claim.desc=Mua đảo bạn đang đứng
+claim.usage=/sb claim
+claim.yourplot=Bạn không thể mua vì đây đã là đảo của bạn .
+claim.alreadyclaimed=Đảo này đã có chủ {%0}
+claim.maxplots=Bạn đã sở hữu tối đa {%0} đảo
+claim.nomoney=Bạn không đủ tiền để mua đảo này
+claim.success=Đã mua đảo , chúc bạn chơi vui vẻ ở
+
+#The /sb auto Subcommand
+auto.name=auto
+#auto.alias=a
+#auto.desc=Đi đến đảo trống
+#auto.usage=/sb auto
+auto.notplotworld=Bạn đang ở ngoài world skyblock
+auto.success=Đã đi đến ({%0}, {%1})
+auto.noplots=Không có đảo trống nào ở quanh đây
+
+#The /sb play Subcommand
+play.name=play
+play.alias=p
+play.desc=Đi đến đảo
+play.usage=/sb play
+
+#The /sb dispose Subcommand
+dispose.name=dispose
+dispose.desc=Bỏ hẳn đảo của bạn
+dispose.usage=/sb dispose
+dispose.confirm=Bạn có chắc chắn muốn bỏ đảo {%0} ? Nếu chắc , hãy dùng lệnh /sb dispose confirm
+dispose.nomoney=Bạn không đủ tiền để bỏ đảo
+dispose.success=Đảo đã bị bỏ
+
+#The /sb name Subcommand
+name.name=name
+name.desc=Đặt hoặc đổi tên cho đảo của bạn
+name.usage=/sb name <name>
+name.success=Tên của đảo này được đổi thành: {%0}
+
+#The /sb home Subcommand
+home.name=home
+home.alias=h
+home.desc=Đi về đảo của bạn
+home.usage=/sb home [số theo dạng x;y]
+home.noplots=Bạn hiện đang không có đảo nào
+home.notexist=Bạn không sở hữu đảo số {%0} 
+home.success=Đang đi đến đảo của {%0}
+home.error=Không thể đi đến đảo
+
+#The /sb homes Subcommand
+homes.name=homes
+homes.desc=Danh sách đảo của bạn
+homes.usage=/sb homes
+homes.noplots=Bạn không sở hữu đảo nào
+homes.header=Đảo đang hoạt động:
+
+#The /sb info Subcommand
+info.name=info
+info.alias=i
+info.desc=Xem thông tin về đảo
+info.usage=/sb info
+info.about=Thông tin về {%0}
+info.plotname=Tên: {%0}
+info.owner=Chủ: {%0}
+info.helpers=Người giúp: {%0}
+info.biome=Hệ sinh thái: {%0}
+
+#The /sb generate Subcommand - Can only be used by OPs or players with the myplot.command.generate permission
+generate.name=generate
+generate.alias=gen
+generate.desc=Tạo ra một world skyblock mới
+generate.usage=/sb generate <tên>
+generate.exists=World có tên {%0} đã có sẵn
+generate.success=Đã tạo ra world {%0}
+generate.error=World không thể tạo ra được
+
+#The /sb give Subcommand
+give.name=give
+give.desc=Cho đảo của mình cho người khác
+give.usage=/sb give [tên người chơi]
+give.notonline=Người chơi đó hiện không online
+give.maxedout=Người chơi đó đã có đủ số đảo cho phép
+give.toself=Bạn không thể tự cho chính mình
+give.confirm=Bạn chắc bạn muốn gửi đảo {%0} cho {%1}? Nếu chắc chắn hãy dùng lệnh /sb give {%1} confirm
+give.success=Bạn đã gửi đảo cho {%0} thành công
+give.received={%0} đã cho bạn đảo của họ, {%1}
+
+# The /sb warp Subcommand
+warp.name=warp
+warp.desc=Di chuyển tới đảo
+warp.usage=/sb warp <id>
+warp.wrongid=Mã đảo phải theo dạng X;Z
+warp.notinplotworld=Bạn đang không ở trong world skyblock
+warp.unclaimed=Bạn không thể di chuyển tới đảo chưa được mua
+warp.success=Bạn đang di chuyển đến đảo {%0}
+# English language pack for MyPlot
+# Created by Wiez and Exxarion
+
+# Popup when entering a plot
+popup=You entered plot {%0}
+popup.owner=Owned by {%0}
+popup.available=This plot is open! Use /p claim
+
+# /p info
+command.name=plot
+command.alias=p
+command.desc=Claim and manage your plots
+command.usage=Usage: /plot <help|sub-cmd> [options]
+command.unknown=Unknown command. Try /p help for a list of commands
+
+subcommand.usage=Usage: {%0}
+
+#Errors that are displayed when the player does something wrong, or the plugin screws up.
+error=Whoops! Something went wrong
+notinplot=You are not standing inside a plot
+notowner=You do not own this plot
+
+confirm=confirm
+
+#The /p help Subcommand
+help.name=help
+help.desc=Shows the help menu
+help.usage=/p help [page]
+help.header=--- Showing MyPlot help page {%0} of {%1} ---
+
+#The /p addhelper Subcommand
+addhelper.name=addhelper
+addhelper.alias=addh
+addhelper.desc=Add a helper to your plot
+addhelper.usage=/p addhelper <player>
+addhelper.alreadyone={%0} is already a helper of this plot
+addhelper.success={%0} is now a helper of this plot
+
+#The /p removehelper Subcommand
+removehelper.name=removehelper
+removehelper.alias=delh
+removehelper.desc=Remove a helper from your plot
+removehelper.usage=/p removehelper <player>
+removehelper.notone={%0} is not a helper
+removehelper.success={%0} has been removed from plot helpers
+
+#The /p claim Subcommand
+claim.name=claim
+claim.desc=Claim the plot that you are standing on
+claim.usage=/p claim [name]
+claim.yourplot=You have already claimed this plot
+claim.alreadyclaimed=This plot is already claimed by {%0}
+claim.maxplots=You reached the limit of {%0} plots per player
+claim.nomoney=You do not have enough money to claim this plot
+claim.success=You have successfully claimed this plot
+
+#The /p dispose Subcommand
+dispose.name=dispose
+dispose.desc=Disposes your plot
+dispose.usage=/p dispose
+dispose.confirm=Are you sure you want to dispose plot {%0} ? If so, use /p dispose confirm
+dispose.nomoney=You do not have enough money to dispose this plot
+dispose.success=Plot disposed
+
+#The /p reset Subcommand
+reset.name=reset
+reset.desc=Disposes and clears your plot
+reset.usage=/p reset
+reset.confirm=Are you sure you want to reset plot {%0} ? If so, use /p reset confirm
+reset.nomoney=You do not have enough money to reset this plot
+reset.success=Plot reset
+
+#The /p clear Subcommand
+clear.name=clear
+clear.desc=Clears your plot
+clear.usage=/p clear
+clear.confirm=Are you sure you want to clear plot {%0} ? If so, use /p clear confirm
+clear.nomoney=You do not have enough money to clear this plot
+clear.success=Plot cleared
+
+#The /p biome Subcommand
+biome.name=biome
+biome.desc=Changes your plot biome
+biome.usage=/p biome [biome]
+biome.success=Plot biome changed to {%0}
+biome.invalid=That biome does not exist
+biome.possible=Possible biomes are: {%0}
+
+#The /p name Subcommand
+name.name=name
+name.desc=Sets or changes your plot name
+name.usage=/p name <name>
+name.success=Plot name changed to {%0}
+
+#The /p home Subcommand
+home.name=home
+home.alias=h
+home.desc=Travel to your plot
+home.usage=/p home [number]
+home.noplots=You do not own any plots
+home.notexist=You do not own a plot with id {%0} 
+home.success=Teleported to plot {%0}
+home.error=Could not travel to plot
+
+#The /p homes Subcommand
+homes.name=homes
+homes.desc=Shows your claimed plots
+homes.usage=/p homes
+homes.noplots=You do not own any plots
+homes.header=Plots you own:
+
+#The /p info Subcommand
+info.name=info
+info.alias=i
+info.desc=Shows information about a plot
+info.usage=/p info
+info.about=Info about plot {%0}
+info.plotname=Name: {%0}
+info.owner=Owner: {%0}
+info.helpers=Helpers: {%0}
+info.biome=Biome: {%0}
+
+#The /p generate Subcommand - Can only be used by OPs or players with the myplot.command.generate permission
+generate.name=generate
+generate.alias=gen
+generate.desc=Generate a new plot world
+generate.usage=/p generate <name>
+generate.exists=World with name {%0} already exists
+generate.success=Successfully generated plot world {%0}
+generate.error=World could not be generated
+
+#The /p give Subcommand
+give.name=give
+give.desc=Give your plot to someone else
+give.usage=/p give [name]
+give.notonline=That player is not online
+give.maxedout=That player has reached the maximum number of plots
+give.toself=You cannot give a plot to yourself
+give.confirm=Are you sure you want to give plot {%0} to player {%1}? If so, use /p give {%1} confirm
+give.success=You have given the plot to {%0}
+give.received={%0} gave you their plot, {%1}
+
+# The /p warp Subcommand
+warp.name=warp
+warp.desc=Teleport to a plot
+warp.usage=/p warp <id>
+warp.wrongid=The plot id should be in the format X;Z
+warp.notinplotworld=You are not in a plot world
+warp.unclaimed=You cannot warp to an unclaimed plot
+warp.success=You are teleported to plot {%0}
+<?php
+namespace MyPlot\provider;
+
+use MyPlot\MyPlot;
+use MyPlot\Plot;
+use SQLite3;
+use SQLite3Stmt;
+
+class SQLiteDataProvider extends DataProvider
+{
+    /** @var SQLite3 */
+    private $db;
+
+    /** @var SQLite3Stmt */
+    private $sqlGetPlot, $sqlSavePlot, $sqlSavePlotById, $sqlRemovePlot,
+            $sqlRemovePlotById, $sqlGetPlotsByOwner, $sqlGetPlotsByOwnerAndLevel,
+            $sqlGetExistingXZ;
+
+    public function __construct(MyPlot $plugin, $cacheSize = 0) {
+        parent::__construct($plugin, $cacheSize);
+
+        $this->db = new SQLite3($this->plugin->getDataFolder() . "plots.db");
+        $this->db->exec(
+            "CREATE TABLE IF NOT EXISTS plots
+            (id INTEGER PRIMARY KEY AUTOINCREMENT, level TEXT, X INTEGER, Z INTEGER, name TEXT,
+             owner TEXT, helpers TEXT, biome TEXT)"
+        );
+
+        $this->sqlGetPlot = $this->db->prepare(
+            "SELECT id, name, owner, helpers, biome FROM plots WHERE level = :level AND X = :X AND Z = :Z"
+        );
+        $this->sqlSavePlot = $this->db->prepare(
+            "INSERT OR REPLACE INTO plots (id, level, X, Z, name, owner, helpers, biome) VALUES
+            ((select id from plots where level = :level AND X = :X AND Z = :Z),
+             :level, :X, :Z, :name, :owner, :helpers, :biome);"
+        );
+        $this->sqlSavePlotById = $this->db->prepare(
+            "UPDATE plots SET name = :name, owner = :owner, helpers = :helpers, biome = :biome WHERE id = :id"
+        );
+        $this->sqlRemovePlot = $this->db->prepare(
+            "DELETE FROM plots WHERE level = :level AND X = :X AND Z = :Z"
+        );
+        $this->sqlRemovePlotById = $this->db->prepare("DELETE FROM plots WHERE id = :id");
+        $this->sqlGetPlotsByOwner = $this->db->prepare("SELECT * FROM plots WHERE owner = :owner");
+        $this->sqlGetPlotsByOwnerAndLevel = $this->db->prepare(
+            "SELECT * FROM plots WHERE owner = :owner AND level = :level"
+        );
+        $this->sqlGetExistingXZ = $this->db->prepare(
+            "SELECT X, Z FROM plots WHERE (
+                level = :level
+                AND (
+                    (abs(X) == :number AND abs(Z) <= :number) OR
+                    (abs(Z) == :number AND abs(X) <= :number)
+                )
+            )"
+        );
+    }
+
+    public function close() {
+        $this->db->close();
+    }
+
+    public function savePlot(Plot $plot) {
+        $helpers = implode(",", $plot->helpers);
+        if ($plot->id >= 0) {
+            $stmt = $this->sqlSavePlotById;
+            $stmt->bindValue(":id", $plot->id, SQLITE3_INTEGER);
+        } else {
+            $stmt = $this->sqlSavePlot;
+            $stmt->bindValue(":level", $plot->levelName, SQLITE3_TEXT);
+            $stmt->bindValue(":X", $plot->X, SQLITE3_INTEGER);
+            $stmt->bindValue(":Z", $plot->Z, SQLITE3_INTEGER);
+        }
+        $stmt->bindValue(":name", $plot->name, SQLITE3_TEXT);
+        $stmt->bindValue(":owner", $plot->owner, SQLITE3_TEXT);
+        $stmt->bindValue(":helpers", $helpers, SQLITE3_TEXT);
+        $stmt->bindValue(":biome", $plot->biome, SQLITE3_TEXT);
+        $stmt->reset();
+        $result = $stmt->execute();
+        if ($result === false) {
+            return false;
+        }
+        $this->cachePlot($plot);
+        return true;
+    }
+
+    public function deletePlot(Plot $plot) {
+        if ($plot->id >= 0) {
+            $stmt = $this->sqlRemovePlotById;
+            $stmt->bindValue(":id", $plot->id, SQLITE3_INTEGER);
+        } else {
+            $stmt = $this->sqlRemovePlot;
+            $stmt->bindValue(":level", $plot->levelName, SQLITE3_TEXT);
+            $stmt->bindValue(":X", $plot->X, SQLITE3_INTEGER);
+            $stmt->bindValue(":Z", $plot->Z, SQLITE3_INTEGER);
+        }
+        $stmt->reset();
+        $result = $stmt->execute();
+        if ($result === false) {
+            return false;
+        }
+        $plot = new Plot($plot->levelName, $plot->X, $plot->Z);
+        $this->cachePlot($plot);
+        return true;
+    }
+
+    public function getPlot($levelName, $X, $Z) {
+        if ($plot = $this->getPlotFromCache($levelName, $X, $Z)) {
+            return $plot;
+        }
+        $this->sqlGetPlot->bindValue(":level", $levelName, SQLITE3_TEXT);
+        $this->sqlGetPlot->bindValue(":X", $X, SQLITE3_INTEGER);
+        $this->sqlGetPlot->bindValue(":Z", $Z, SQLITE3_INTEGER);
+        $this->sqlGetPlot->reset();
+        $result = $this->sqlGetPlot->execute();
+        if ($val = $result->fetchArray(SQLITE3_ASSOC)) {
+            if ($val["helpers"] === null or $val["helpers"] === "") {
+                $helpers = [];
+            } else {
+                $helpers = explode(",", (string)$val["helpers"]);
+            }
+            $plot = new Plot($levelName, $X, $Z, (string)$val["name"], (string)$val["owner"],
+                $helpers, (string)$val["biome"], (int)$val["id"]);
+        } else {
+            $plot = new Plot($levelName, $X, $Z);
+        }
+        $this->cachePlot($plot);
+        return $plot;
+    }
+
+    public function getPlotsByOwner($owner, $levelName = "") {
+        if ($levelName === "") {
+            $stmt = $this->sqlGetPlotsByOwner;
+        } else {
+            $stmt = $this->sqlGetPlotsByOwnerAndLevel;
+            $stmt->bindValue(":level", $levelName, SQLITE3_TEXT);
+        }
+        $stmt->bindValue(":owner", $owner, SQLITE3_TEXT);
+        $plots = [];
+        $stmt->reset();
+        $result = $stmt->execute();
+        while ($val = $result->fetchArray(SQLITE3_ASSOC)) {
+            $helpers = explode(",", (string)$val["helpers"]);
+            $plots[] = new Plot((string)$val["level"], (int)$val["X"], (int)$val["Z"], (string)$val["name"],
+                (string)$val["owner"], $helpers, (string)$val["biome"], (int)$val["id"]);
+        }
+        usort($plots, function ($plot1, $plot2) {
+            /** @var Plot $plot1 */
+            /** @var Plot $plot2 */
+            return strcmp($plot1->levelName, $plot2->levelName);
+        });
+        return $plots;
+    }
+
+    public function getNextFreePlot($levelName, $limitXZ = 0) {
+        $this->sqlGetExistingXZ->bindValue(":level", $levelName, SQLITE3_TEXT);
+        $i = 0;
+        $this->sqlGetExistingXZ->bindParam(":number", $i, SQLITE3_INTEGER);
+        for (; $limitXZ <= 0 or $i < $limitXZ; $i++) {
+            $this->sqlGetExistingXZ->reset();
+            $result = $this->sqlGetExistingXZ->execute();
+            $plots = [];
+            while ($val = $result->fetchArray(SQLITE3_NUM)) {
+                $plots[$val[0]][$val[1]] = true;
+            }
+            if (count($plots) === max(1, 8 * $i)) {
+                continue;
+            }
+
+            if ($ret = self::findEmptyPlotSquared(0, $i, $plots)) {
+                list($X, $Z) = $ret;
+                $plot = new Plot($levelName, $X, $Z);
+                $this->cachePlot($plot);
+                return $plot;
+            }
+            for ($a = 1; $a < $i; $a++) {
+                if ($ret = self::findEmptyPlotSquared($a, $i, $plots)) {
+                    list($X, $Z) = $ret;
+                    $plot = new Plot($levelName, $X, $Z);
+                    $this->cachePlot($plot);
+                    return $plot;
+                }
+            }
+            if ($ret = self::findEmptyPlotSquared($i, $i, $plots)) {
+                list($X, $Z) = $ret;
+                $plot = new Plot($levelName, $X, $Z);
+                $this->cachePlot($plot);
+                return $plot;
+            }
+        }
+        return null;
+    }
+
+    private static function findEmptyPlotSquared($a, $b, &$plots) {
+        if (!isset($plots[$a][$b])) return array($a, $b);
+        if (!isset($plots[$b][$a])) return array($b, $a);
+        if ($a !== 0) {
+            if (!isset($plots[-$a][$b])) return array(-$a, $b);
+            if (!isset($plots[$b][-$a])) return array($b, -$a);
+        }
+        if ($b !== 0) {
+            if (!isset($plots[-$b][$a])) return array(-$b, $a);
+            if (!isset($plots[$a][-$b])) return array($a, -$b);
+        }
+        if ($a | $b === 0) {
+            if (!isset($plots[-$a][-$b])) return array(-$a, -$b);
+            if (!isset($plots[-$b][-$a])) return array(-$b, -$a);
+        }
+        return null;
+    }
+}<?php
+namespace MyPlot\provider;
+
+use MyPlot\MyPlot;
+use MyPlot\Plot;
+
+abstract class DataProvider
+{
+    /** @var Plot[] */
+    private $cache = [];
+    /** @var int */
+    private $cacheSize;
+    /** @var MyPlot */
+    protected $plugin;
+
+    public function __construct(MyPlot $plugin, $cacheSize = 0) {
+        $this->plugin = $plugin;
+        $this->cacheSize = $cacheSize;
+    }
+
+    protected final function cachePlot(Plot $plot) {
+        if ($this->cacheSize > 0) {
+            $key = $plot->levelName . ';' . $plot->X . ';' . $plot->Z;
+            if (isset($this->cache[$key])) {
+                unset($this->cache[$key]);
+            } elseif($this->cacheSize <= count($this->cache)) {
+                array_pop($this->cache);
+            }
+            $this->cache = array_merge(array($key => clone $plot), $this->cache);
+        }
+    }
+
+    protected final function getPlotFromCache($levelName, $X, $Z) {
+        if ($this->cacheSize > 0) {
+            $key = $levelName . ';' . $X . ';' . $Z;
+            if (isset($this->cache[$key])) {
+                return $this->cache[$key];
+            }
+        }
+        return null;
+    }
+
+    /**
+     * @param Plot $plot
+     * @return bool
+     */
+    public abstract function savePlot(Plot $plot);
+
+    /**
+     * @param Plot $plot
+     * @return bool
+     */
+    public abstract function deletePlot(Plot $plot);
+
+    /**
+     * @param string $levelName
+     * @param int $X
+     * @param int $Z
+     * @return Plot
+     */
+    public abstract function getPlot($levelName, $X, $Z);
+
+    /**
+     * @param string $owner
+     * @param string $levelName
+     * @return Plot[]
+     */
+    public abstract function getPlotsByOwner($owner, $levelName = "");
+
+    /**
+     * @param string $levelName
+     * @param int $limitXZ
+     * @return Plot|null
+     */
+    public abstract function getNextFreePlot($levelName, $limitXZ = 0);
+
+    public abstract function close();
+}<?php
+namespace MyPlot;
+
+use pocketmine\block\Sapling;
+use pocketmine\event\player\PlayerMoveEvent;
+use pocketmine\Player;
+use pocketmine\event\block\BlockUpdateEvent;
+use pocketmine\event\entity\EntityExplodeEvent;
+use pocketmine\event\entity\EntityMotionEvent;
+use pocketmine\event\Listener;
+use pocketmine\event\level\LevelLoadEvent;
+use pocketmine\event\level\LevelUnloadEvent;
+use pocketmine\utils\Config;
+use pocketmine\event\block\BlockPlaceEvent;
+use pocketmine\event\block\BlockBreakEvent;
+use pocketmine\event\player\PlayerInteractEvent;
+use pocketmine\utils\TextFormat;
+use pocketmine\block\Lava;
+use pocketmine\block\Water;
+
+class EventListener implements Listener
+{
+    /** @var MyPlot */
+    private $plugin;
+
+    public function __construct(MyPlot $plugin){
+        $this->plugin = $plugin;
+		$plugin->getServer()->getPluginManager()->registerEvents($this, $plugin);
+    }
+
+    public function onLevelLoad(LevelLoadEvent $event) {
+        if ($event->getLevel()->getProvider()->getGenerator() === "myplot") {
+            $settings = $event->getLevel()->getProvider()->getGeneratorOptions();
+            if (isset($settings["preset"]) === false or $settings["preset"] === "") {
+                return;
+            }
+            $settings = json_decode($settings["preset"], true);
+            if ($settings === false) {
+                return;
+            }
+            $levelName = $event->getLevel()->getName();
+            $filePath = $this->plugin->getDataFolder() . "worlds/" . $levelName . ".yml";
+            $config = $this->plugin->getConfig();
+            $default = [
+			"MaxPlotsPerPlayer" => $config->getNested("DefaultWorld.MaxPlotsPerPlayer"),
+                "RestrictEntityMovement" => $config->getNested("DefaultWorld.RestrictEntityMovement"),
+                "ClaimPrice" => $config->getNested("DefaultWorld.ClaimPrice"),
+                "ClearPrice" => $config->getNested("DefaultWorld.ClearPrice"),
+                "DisposePrice" => $config->getNested("DefaultWorld.DisposePrice"),
+                "ResetPrice" => $config->getNested("DefaultWorld.ResetPrice"),
+            ];
+            $config = new Config($filePath, Config::YAML, $default);
+            foreach (array_keys($default) as $key) {
+                $settings[$key] = $config->get($key);
+            }
+            $this->plugin->addLevelSettings($levelName, new PlotLevelSettings($levelName, $settings));
+        }
+    }
+
+    public function onLevelUnload(LevelUnloadEvent $event) {
+        $levelName = $event->getLevel()->getName();
+        $this->plugin->unloadLevelSettings($levelName);
+    }
+
+    public function onBlockPlace(BlockPlaceEvent $event) {
+        $this->onEventOnBlock($event);
+    }
+
+    public function onBlockBreak(BlockBreakEvent $event) {
+        $this->onEventOnBlock($event);
+    }
+
+    public function onPlayerInteract(PlayerInteractEvent $event) {
+        $this->onEventOnBlock($event);
+    }
+
+    public function onExplosion(EntityExplodeEvent $event) {
+        $levelName = $event->getEntity()->getLevel()->getName();
+        if (!$this->plugin->isLevelLoaded($levelName))
+            return;
+
+        $plot = $this->plugin->getPlotByPosition($event->getPosition());
+        if ($plot === null) {
+            $event->setCancelled(true);
+            return;
+        }
+        $beginPos = $this->plugin->getPlotPosition($plot);
+        $endPos = clone $beginPos;
+        $plotSize = $this->plugin->getLevelSettings($levelName)->plotSize;
+        $endPos->x += $plotSize;
+        $endPos->z += $plotSize;
+        $blocks = array_filter($event->getBlockList(), function($block) use($beginPos, $endPos) {
+            if ($block->x >= $beginPos->x and $block->z >= $beginPos->z and $block->x < $endPos->x and $block->z < $endPos->z) {
+                return true;
+            }
+            return false;
+        });
+        $event->setBlockList($blocks);
+    }
+
+    /**
+     * @param BlockPlaceEvent|BlockBreakEvent|PlayerInteractEvent $event
+     */
+    private function onEventOnBlock($event) {
+        $levelName = $event->getBlock()->getLevel()->getName();
+        if (!$this->plugin->isLevelLoaded($levelName)) {
+            return;
+        }
+        $plot = $this->plugin->getPlotByPosition($event->getBlock());
+        if ($plot !== null) {
+            $username = $event->getPlayer()->getName();
+            if ($plot->owner == $username or $plot->isHelper($username) or $event->getPlayer()->hasPermission("myplot.admin.build.plot")) {
+                if (!($event instanceof PlayerInteractEvent and $event->getBlock() instanceof Sapling))
+                    return;
+
+                /*
+                 * Prevent growing a tree near the edge of a plot
+                 * so the leaves won't go outside the plot
+                 */
+                $block = $event->getBlock();
+                $maxLengthLeaves = (($block->getDamage() & 0x07) == Sapling::SPRUCE) ? 3 : 2;
+                $beginPos = $this->plugin->getPlotPosition($plot);
+                $endPos = clone $beginPos;
+                $beginPos->x += $maxLengthLeaves;
+                $beginPos->z += $maxLengthLeaves;
+                $plotSize = $this->plugin->getLevelSettings($levelName)->plotSize;
+                $endPos->x += $plotSize - $maxLengthLeaves;
+                $endPos->z += $plotSize - $maxLengthLeaves;
+
+                if ($block->x >= $beginPos->x and $block->z >= $beginPos->z and $block->x < $endPos->x and $block->z < $endPos->z) {
+                    return;
+                }
+            }
+        } elseif ($event->getPlayer()->hasPermission("myplot.admin.build.road")) {
+            return;
+        }
+        $event->setCancelled(true);
+    }
+
+    public function onEntityMotion(EntityMotionEvent $event) {
+        $levelName = $event->getEntity()->getLevel()->getName();
+        if (!$this->plugin->isLevelLoaded($levelName))
+            return;
+
+        $settings = $this->plugin->getLevelSettings($levelName);
+        if ($settings->restrictEntityMovement and !($event->getEntity() instanceof Player)) {
+            $event->setCancelled(true);
+        }
+    }
+
+    public function onPlayerMove(PlayerMoveEvent $event) {
+        if (!$this->plugin->getConfig()->get("ShowPlotPopup", true))
+            return;
+
+        $levelName = $event->getPlayer()->getLevel()->getName();
+        if (!$this->plugin->isLevelLoaded($levelName))
+            return;
+
+        $plot = $this->plugin->getPlotByPosition($event->getTo());
+        if ($plot !== null and $plot !== $this->plugin->getPlotByPosition($event->getFrom())) {
+            $plotName = TextFormat::GREEN . $plot;
+            $popup = $this->plugin->getLanguage()->translateString("popup", [$plotName]);
+            if ($plot->owner != "") {
+                $owner = TextFormat::GREEN . $plot->owner;
+                $ownerPopup = $this->plugin->getLanguage()->translateString("popup.owner", [$owner]);
+                $paddingSize = floor((strlen($popup) - strlen($ownerPopup)) / 2);
+                $paddingPopup = str_repeat(" ", max(0, -$paddingSize));
+                $paddingOwnerPopup = str_repeat(" ", max(0, $paddingSize));
+                $popup = TextFormat::WHITE . $paddingPopup . $popup . "\n" .
+                         TextFormat::WHITE . $paddingOwnerPopup . $ownerPopup;
+            } else {
+                $ownerPopup = $this->plugin->getLanguage()->translateString("popup.available");
+                $paddingSize = floor((strlen($popup) - strlen($ownerPopup)) / 2);
+                $paddingPopup = str_repeat(" ", max(0, -$paddingSize));
+                $paddingOwnerPopup = str_repeat(" ", max(0, $paddingSize));
+                $popup = TextFormat::WHITE . $paddingPopup . $popup . "\n" .
+                         TextFormat::WHITE . $paddingOwnerPopup . $ownerPopup;
+            }
+            $event->getPlayer()->sendMessage($popup);
+        }
+    }
+}
+<?php
+namespace MyPlot;
+
+use pocketmine\utils\TextFormat;
+use MyPlot\subcommand\SubCommand;
+use MyPlot\subcommand\AddHelperSubCommand;
+use MyPlot\subcommand\ClaimSubCommand;
+use MyPlot\subcommand\DisposeSubCommand;
+use MyPlot\subcommand\GenerateSubCommand;
+use MyPlot\subcommand\HelpSubCommand;
+use MyPlot\subcommand\HomeSubCommand;
+use MyPlot\subcommand\InfoSubCommand;
+use MyPlot\subcommand\HomesSubCommand;
+use pocketmine\command\PluginCommand;
+use pocketmine\command\CommandSender;
+use MyPlot\subcommand\RemoveHelperSubCommand;
+use MyPlot\subcommand\AutoSubCommand;
+use MyPlot\subcommand\PlaySubCommand;
+use MyPlot\subcommand\NameSubCommand;
+use MyPlot\subcommand\GiveSubCommand;
+use MyPlot\subcommand\WarpSubCommand;
+use pocketmine\event\Listener;
+
+class Commands extends PluginCommand
+{
+    /** @var SubCommand[] */
+    private $subCommands = [];
+
+    /** @var SubCommand[]  */
+    private $aliasSubCommands = [];
+
+    public function __construct(MyPlot $plugin) {
+        parent::__construct($plugin->getLanguage()->get("command.name"), $plugin);
+        $this->setPermission("myplot.command");
+        $this->setAliases([$plugin->getLanguage()->get("command.alias")]);
+        $this->setDescription($plugin->getLanguage()->get("command.desc"));
+
+        $this->loadSubCommand(new HelpSubCommand($plugin, "help"));
+        $this->loadSubCommand(new ClaimSubCommand($plugin, "claim"));
+        $this->loadSubCommand(new GenerateSubCommand($plugin, "generate"));
+        $this->loadSubCommand(new InfoSubCommand($plugin, "info"));
+        $this->loadSubCommand(new AddHelperSubCommand($plugin, "addhelper"));
+        $this->loadSubCommand(new RemoveHelperSubCommand($plugin, "removehelper"));
+        $this->loadSubCommand(new AutoSubCommand($plugin, "auto"));
+		$this->loadSubCommand(new PlaySubCommand($plugin, "play"));
+        $this->loadSubCommand(new DisposeSubCommand($plugin, "dispose"));
+        $this->loadSubCommand(new HomeSubCommand($plugin, "home"));
+        $this->loadSubCommand(new HomesSubCommand($plugin, "homes"));
+        $this->loadSubCommand(new NameSubCommand($plugin, "name"));
+        $this->loadSubCommand(new GiveSubCommand($plugin, "give"));
+        $this->loadSubCommand(new WarpSubCommand($plugin, "warp"));
+    }
+
+    /**
+     * @return SubCommand[]
+     */
+    public function getCommands() {
+        return $this->subCommands;
+    }
+
+    private function loadSubCommand(Subcommand $command) {
+        $this->subCommands[$command->getName()] = $command;
+        if ($command->getAlias() != "") {
+            $this->aliasSubCommands[$command->getAlias()] = $command;
+        }
+    }
+
+    public function execute(CommandSender $sender, $alias, array $args) {
+        if (!isset($args[0])) {
+            $sender->sendMessage(MyPlot::getInstance()->getLanguage()->get("command.usage"));
+            return true;
+        }
+
+        $subCommand = strtolower(array_shift($args));
+        if (isset($this->subCommands[$subCommand])) {
+            $command = $this->subCommands[$subCommand];
+        } elseif (isset($this->aliasSubCommands[$subCommand])) {
+            $command = $this->aliasSubCommands[$subCommand];
+        } else {
+            $sender->sendMessage(TextFormat::RED . MyPlot::getInstance()->getLanguage()->get("command.unknown"));
+            return true;
+        }
+
+        if ($command->canUse($sender)) {
+            if (!$command->execute($sender, $args)) {
+                $usage = MyPlot::getInstance()->getLanguage()->translateString("subcommand.usage", [$command->getUsage()]);
+                $sender->sendMessage($usage);
+            }
+        } else {
+            $sender->sendMessage(TextFormat::RED . MyPlot::getInstance()->getLanguage()->get("command.unknown"));
+        }
+        return true;
+    }
+}
+<?php
+namespace MyPlot\subcommand;
+
+use pocketmine\command\CommandSender;
+use pocketmine\command\ConsoleCommandSender;
+use pocketmine\utils\TextFormat;
+
+class HelpSubCommand extends SubCommand
+{
+    public function canUse(CommandSender $sender) {
+        return $sender->hasPermission("myplot.command.help");
+    }
+
+    /**
+     * @return \MyPlot\Commands
+     */
+    private function getCommandHandler()
+    {
+        return $this->getPlugin()->getCommand($this->translateString("command.name"));
+    }
+
+    public function execute(CommandSender $sender, array $args) {
+        if (count($args) === 0) {
+            $pageNumber = 1;
+        } elseif (is_numeric($args[0])) {
+            $pageNumber = (int) array_shift($args);
+            if ($pageNumber <= 0) {
+                $pageNumber = 1;
+            }
+        } else {
+            return false;
+        }
+
+        if ($sender instanceof ConsoleCommandSender) {
+            $pageHeight = PHP_INT_MAX;
+        } else {
+            $pageHeight = 5;
+        }
+
+        $commands = [];
+        foreach ($this->getCommandHandler()->getCommands() as $command) {
+            if ($command->canUse($sender)) {
+                $commands[$command->getName()] = $command;
+            }
+        }
+        ksort($commands, SORT_NATURAL | SORT_FLAG_CASE);
+        $commands = array_chunk($commands, $pageHeight);
+        /** @var SubCommand[][] $commands */
+
+							//////
+            $sender->sendMessage("§c-=- §a§lSkyBlock - Server §c-=-");
+			$sender->sendMessage("§l§b/sb auto§7 - §fĐi đến một hòn đảo");
+			$sender->sendMessage("§l§a/sb claim§7 - §fNhận ngay hòn đảo bạn đang đứng");
+			$sender->sendMessage("§l§f/sb addhelper §e<player>§7 - §fThêm người vào đảo của bạn");
+			$sender->sendMessage("§l§d/sb removehelper §e<player>§7 - §fXóa người chơi trong đảo của bạn");
+			$sender->sendMessage("§l§6/sb homes§7 - §fDanh sách đảo của bạn");
+			$sender->sendMessage("§l§e/sb home §6<Số> §7 - §fDịch chuyển về đảo của bạn");
+			$sender->sendMessage("§l§3/sb info§7 - §fXem thông tin hòn đảo");
+			$sender->sendMessage("§l§9/sb give §b<Tên người chơi> §7 - §fCho người khác hòn đảo của bạn");
+			$sender->sendMessage("§l§c/sb warp §e<X;Y> §7 - §fDi chuyển đến hòn đảo nào đó");
+			$sender->sendMessage("§e------------------------------------------");
+        return true;
+    }
+}
+<?php
+namespace MyPlot\subcommand;
+
+use MyPlot\MyPlot;
+use pocketmine\command\CommandSender;
+use pocketmine\Server;
+use pocketmine\event\Listener;
+
+abstract class SubCommand
+{
+    /** @var MyPlot */
+    private $plugin;
+    private $name;
+
+    /**
+     * @param MyPlot $plugin
+     * @param string $name
+     */
+    public function __construct(MyPlot $plugin, $name) {
+        $this->plugin = $plugin;
+        $this->name = $name;
+    }
+
+    /**
+     * @return MyPlot
+     */
+    public final function getPlugin(){
+        return $this->plugin;
+    }
+
+    /**
+     * @param string   $str
+     * @param string[] $params
+     *
+     * @return string
+     */
+    protected function translateString($str, array $params = [], $onlyPrefix = null) {
+        return $this->plugin->getLanguage()->translateString($str, $params, $onlyPrefix);
+    }
+
+    /**
+     * @param CommandSender $sender
+     * @return bool
+     */
+    public abstract function canUse(CommandSender $sender);
+
+    /**
+     * @return string
+     */
+    public final function getUsage() {
+        $usage = $this->getPlugin()->getLanguage()->get($this->name . ".usage");
+        return ($usage == $this->name . ".usage") ? "" : $usage;
+    }
+
+    /**
+     * @return string
+     */
+    public final function getName() {
+        $name = $this->getPlugin()->getLanguage()->get($this->name . ".name");
+        return ($name == $this->name . ".name") ? "" : $name;
+    }
+
+    /**
+     * @return string
+     */
+    public final function getDescription() {
+        $desc = $this->getPlugin()->getLanguage()->get($this->name . ".desc");
+        return ($desc == $this->name . ".desc") ? "" : $desc;
+    }
+
+    /**
+     * @return string
+     */
+    public final function getAlias() {
+        $alias = $this->getPlugin()->getLanguage()->get($this->name . ".alias");
+        return ($alias == $this->name . ".alias") ? "" : $alias;
+    }
+
+    /**
+     * @param CommandSender $sender
+     * @param string[] $args
+     * @return bool
+     */
+    public abstract function execute(CommandSender $sender, array $args);
+}
+<?php
+namespace MyPlot\subcommand;
+
+use pocketmine\command\CommandSender;
+use pocketmine\Player;
+use pocketmine\utils\TextFormat;
+use pocketmine\math\Vector3;
+use pocketmine\nbt\tag\CompoundTag;
+use pocketmine\nbt\tag\ListTag;
+use pocketmine\nbt\tag\StringTag;
+use pocketmine\tile\Tile;
+use pocketmine\nbt\tag\IntTag;
+use pocketmine\nbt\NBT;
+use pocketmine\block\Block;
+use pocketmine\item\Item;
+use pocketmine\level\Position;
+
+class ClaimSubCommand extends SubCommand
+{
+    public function canUse(CommandSender $sender) {
+        return ($sender instanceof Player) and $sender->hasPermission("myplot.command.claim");
+    }
+
+    public function execute(CommandSender $sender, array $args) {
+        if (count($args) > 1) {
+            return false;
+        }
+        $name = "";
+        if (isset($args[0])) {
+            $name = $args[0];
+        }
+        $player = $sender->getServer()->getPlayer($sender->getName());
+        $plot = $this->getPlugin()->getPlotByPosition($player->getPosition());
+        if ($plot === null) {
+            $sender->sendMessage(TextFormat::RED . $this->translateString("notinplot"));
+            return true;
+        }
+        if ($plot->owner != "") {
+            if ($plot->owner === $sender->getName()) {
+                $sender->sendMessage(TextFormat::RED . $this->translateString("claim.yourplot"));
+            } else {
+                $sender->sendMessage(TextFormat::RED . $this->translateString("claim.alreadyclaimed", [$plot->owner]));
+            }
+            return true;
+        }
+
+        $maxPlots = $this->getPlugin()->getMaxPlotsOfPlayer($player);
+        $plotsOfPlayer = count($this->getPlugin()->getProvider()->getPlotsByOwner($player->getName()));
+        if ($plotsOfPlayer >= $maxPlots) {
+            $sender->sendMessage(TextFormat::RED . $this->translateString("claim.maxplots", [$maxPlots]));
+            return true;
+        }
+
+        $plotLevel = $this->getPlugin()->getLevelSettings($plot->levelName);
+        $economy = $this->getPlugin()->getEconomyProvider();
+        if ($economy !== null and !$economy->reduceMoney($player, $plotLevel->claimPrice)) {
+            $sender->sendMessage(TextFormat::RED . $this->translateString("claim.nomoney"));
+            return true;
+        }
+		
+
+        $plot->owner = $sender->getName();
+        $plot->name = $name;
+        if ($this->getPlugin()->getProvider()->savePlot($plot)) {
+            $sender->sendMessage($this->translateString("claim.success"));
+			
+			$player->getInventory()->addItem(Item::get(8, 0, 2));
+			$player->getInventory()->addItem(Item::get(85, 0, 2));
+			$player->getInventory()->addItem(Item::get(278, 0, 1));
+            $sender->sendMessage("§l§f[§b☘§aSkyBlock§b☘§f] §6• §bĐã Thêm đồ vào rương của bạn!");
+        } else {
+            $sender->sendMessage(TextFormat::RED . $this->translateString("error"));
+        }
+        return true;
+    }
+}<?php
+namespace MyPlot\subcommand;
+
+use pocketmine\command\CommandSender;
+use pocketmine\utils\TextFormat;
+
+class GenerateSubCommand extends SubCommand
+{
+    public function canUse(CommandSender $sender) {
+        return $sender->hasPermission("myplot.command.generate");
+    }
+
+    public function execute(CommandSender $sender, array $args) {
+        if (count($args) !== 1) {
+            return false;
+        }
+        $levelName = $args[0];
+        if ($sender->getServer()->isLevelGenerated($levelName)) {
+            $sender->sendMessage(TextFormat::RED . $this->translateString("generate.exists", [$levelName]));
+            return true;
+        }
+        if ($this->getPlugin()->generateLevel($levelName)) {
+            $sender->sendMessage($this->translateString("generate.success", [$levelName]));
+        } else {
+            $sender->sendMessage(TextFormat::RED . $this->translateString("generate.error"));
+        }
+        return true;
+    }
+}<?php
+namespace MyPlot\subcommand;
+
+use pocketmine\command\CommandSender;
+use pocketmine\Player;
+use pocketmine\utils\TextFormat;
+
+class InfoSubCommand extends SubCommand
+{
+    public function canUse(CommandSender $sender) {
+        return ($sender instanceof Player) and $sender->hasPermission("myplot.command.info");
+    }
+
+    public function getAliases() {
+        return [];
+    }
+
+    public function execute(CommandSender $sender, array $args) {
+        if (!empty($args)) {
+            return false;
+        }
+        $player = $sender->getServer()->getPlayer($sender->getName());
+        $plot = $this->getPlugin()->getPlotByPosition($player->getPosition());
+        if ($plot === null) {
+            $sender->sendMessage(TextFormat::RED . $this->translateString("notinplot"));
+            return true;
+        }
+        $sender->sendMessage($this->translateString("info.about", [TextFormat::GREEN . $plot]));
+        $sender->sendMessage($this->translateString("info.owner", [TextFormat::GREEN . $plot->owner]));
+        $sender->sendMessage($this->translateString("info.plotname", [TextFormat::GREEN . $plot->name]));
+        $helpers = implode(", ", $plot->helpers);
+        $sender->sendMessage($this->translateString("info.helpers", [TextFormat::GREEN . $helpers]));
+        $sender->sendMessage($this->translateString("info.biome", [TextFormat::GREEN . $plot->biome]));
+        return true;
+    }
+}<?php
+namespace MyPlot\subcommand;
+
+use pocketmine\command\CommandSender;
+use pocketmine\Player;
+use pocketmine\utils\TextFormat;
+
+class AddHelperSubCommand extends SubCommand
+{
+    public function canUse(CommandSender $sender) {
+        return ($sender instanceof Player) and $sender->hasPermission("myplot.command.addhelper");
+    }
+
+    public function execute(CommandSender $sender, array $args) {
+        if (count($args) !== 1)
+            return false;
+
+        $helper = $args[0];
+        $player = $sender->getServer()->getPlayer($sender->getName());
+        $plot = $this->getPlugin()->getPlotByPosition($player->getPosition());
+        if ($plot === null) {
+            $sender->sendMessage(TextFormat::RED . $this->translateString("notinplot"));
+            return true;
+        }
+        if ($plot->owner !== $sender->getName() and !$sender->hasPermission("myplot.admin.addhelper")) {
+            $sender->sendMessage(TextFormat::RED . $this->translateString("notowner"));
+            return true;
+        }
+        if (!$plot->addHelper($helper)) {
+            $sender->sendMessage($this->translateString("addhelper.alreadyone", [$helper]));
+            return true;
+        }
+        if ($this->getPlugin()->getProvider()->savePlot($plot)) {
+            $sender->sendMessage($this->translateString("addhelper.success", [$helper]));
+        } else {
+            $sender->sendMessage(TextFormat::RED . $this->translateString("error"));
+        }
+        return true;
+    }
+}
+<?php
+namespace MyPlot\subcommand;
+
+use pocketmine\command\CommandSender;
+use pocketmine\Player;
+use pocketmine\utils\TextFormat;
+
+class RemoveHelperSubCommand extends SubCommand
+{
+    public function canUse(CommandSender $sender) {
+        return ($sender instanceof Player) and $sender->hasPermission("myplot.command.removehelper");
+    }
+
+    public function execute(CommandSender $sender, array $args) {
+        if (count($args) !== 1) {
+            return false;
+        }
+        $helper = $args[0];
+        $player = $sender->getServer()->getPlayer($sender->getName());
+        $plot = $this->getPlugin()->getPlotByPosition($player->getPosition());
+        if ($plot === null) {
+            $sender->sendMessage(TextFormat::RED . $this->translateString("notinplot"));
+            return true;
+        }
+        if ($plot->owner !== $sender->getName() and !$sender->hasPermission("myplot.admin.removehelper")) {
+            $sender->sendMessage(TextFormat::RED . $this->translateString("notowner"));
+            return true;
+        }
+        if (!$plot->removeHelper($helper)) {
+            $sender->sendMessage(TextFormat::RED . $this->translateString("removehelper.notone", [$helper]));
+            return true;
+        }
+        if ($this->getPlugin()->getProvider()->savePlot($plot)) {
+            $sender->sendMessage($this->translateString("removehelper.success", [$helper]));
+        } else {
+            $sender->sendMessage(TextFormat::RED . $this->translateString("error"));
+        }
+        return true;
+    }
+}
+<?php
+namespace MyPlot\subcommand;
+
+use pocketmine\command\Command;
+use pocketmine\command\CommandSender;
+use pocketmine\command\ConsoleCommandSender;
+use pocketmine\Player;
+use pocketmine\utils\TextFormat;
+use pocketmine\level\Position;
+use pocketmine\level\Level;
+use pocketmine\Server;
+
+class AutoSubCommand extends SubCommand
+{
+
+
+    public function canUse(CommandSender $sender) {
+        return ($sender instanceof Player) and $sender->hasPermission("myplot.command.auto");
+    }
+    
+    public function pl(Player $player)
+    {
+        return $player;
+    }
+
+    public function execute(CommandSender $sender, array $args) {
+        if (!empty($args)) {
+            return false;
+        }
+        $player = $sender->getServer()->getPlayer($sender->getName());
+        $levelName = $player->getLevel()->getName();
+        if (!$this->getPlugin()->isLevelLoaded($levelName)) {
+            $sender->sendMessage(TextFormat::RED . $this->translateString("auto.notplotworld"));
+            return true;
+        }
+        if (($plot = $this->getPlugin()->getProvider()->getNextFreePlot($levelName)) !== null) {
+            $this->getPlugin()->teleportPlayerToPlot($player, $plot);
+            $sender->sendMessage($this->translateString("auto.success", [$plot->X, $plot->Z]));
+        } else {
+            $sender->sendMessage(TextFormat::RED . $this->translateString("auto.noplots"));
+        }
+        return true;
+    }
+}<?php
+namespace MyPlot\subcommand;
+
+use pocketmine\command\Command;
+use pocketmine\command\CommandSender;
+use pocketmine\command\ConsoleCommandSender;
+use pocketmine\Player;
+use pocketmine\utils\TextFormat;
+use pocketmine\level\Position;
+use pocketmine\level\Level;
+use pocketmine\Server;
+
+class PlaySubCommand extends SubCommand
+{
+
+
+    public function canUse(CommandSender $sender) {
+        return ($sender instanceof Player) and $sender->hasPermission("myplot.command.play");
+    }
+    
+    public function pl(Player $player)
+    {
+        return $player;
+    }
+
+    public function execute(CommandSender $sender, array $args) {
+        if (!empty($args)) {
+            return false;
+        }
+        $player = $sender->getServer()->getPlayer($sender->getName());
+        $levelName = $player->getLevel()->getName();
+        $name = $player->getName();
+        $worldAsObject = $this->getPlugin()->getServer()->getLevelByName("sb");
+        $this->pl($sender)->teleport(new Position(110, 110, 110, $worldAsObject));
+		$this->getPlugin()->getServer()->dispatchCommand($player, "sb auto");
+    return true;
+    }
+}<?php
+namespace MyPlot\subcommand;
+
+use pocketmine\command\CommandSender;
+use pocketmine\Player;
+use pocketmine\utils\TextFormat;
+
+class DisposeSubCommand extends SubCommand
+{
+    public function canUse(CommandSender $sender) {
+        return ($sender instanceof Player) and $sender->hasPermission("myplot.command.dispose");
+    }
+
+    public function execute(CommandSender $sender, array $args) {
+        $confirm = (count($args) == 1 and $args[0] == $this->translateString("confirm"));
+        if (count($args) != 0 and !$confirm) {
+            return false;
+        }
+
+        $player = $sender->getServer()->getPlayer($sender->getName());
+        $plot = $this->getPlugin()->getPlotByPosition($player->getPosition());
+        if ($plot === null) {
+            $sender->sendMessage(TextFormat::RED . $this->translateString("notinplot"));
+            return true;
+        }
+        if ($plot->owner !== $sender->getName() and !$sender->hasPermission("myplot.admin.dispose")) {
+            $sender->sendMessage(TextFormat::RED . $this->translateString("notowner"));
+            return true;
+        }
+
+        if ($confirm) {
+            $economy = $this->getPlugin()->getEconomyProvider();
+            $price = $this->getPlugin()->getLevelSettings($plot->levelName)->disposePrice;
+            if ($economy !== null and !$economy->reduceMoney($player, $price)) {
+                $sender->sendMessage(TextFormat::RED . $this->translateString("dispose.nomoney"));
+                return true;
+            }
+
+            if ($this->getPlugin()->disposePlot($plot)) {
+                $sender->sendMessage($this->translateString("dispose.success"));
+            } else {
+                $sender->sendMessage(TextFormat::RED . $this->translateString("error"));
+            }
+        } else {
+            $plotId = TextFormat::GREEN . $plot . TextFormat::WHITE;
+            $sender->sendMessage($this->translateString("dispose.confirm", [$plotId]));
+        }
+        return true;
+    }
+}
+<?php
+namespace MyPlot\subcommand;
+
+use pocketmine\command\CommandSender;
+use pocketmine\Player;
+use pocketmine\utils\TextFormat;
+
+class HomeSubCommand extends SubCommand
+{
+    public function canUse(CommandSender $sender) {
+        return ($sender instanceof Player) and $sender->hasPermission("myplot.command.home");
+    }
+
+    public function execute(CommandSender $sender, array $args) {
+        if (empty($args)) {
+            $plotNumber = 1;
+        } elseif (count($args) === 1 and is_numeric($args[0])) {
+            $plotNumber = (int) $args[0];
+        } else {
+            return false;
+        }
+        $plots = $this->getPlugin()->getProvider()->getPlotsByOwner($sender->getName());
+        if (empty($plots)) {
+            $sender->sendMessage(TextFormat::RED . $this->translateString("home.noplots"));
+            return true;
+        }
+        if (!isset($plots[$plotNumber - 1])) {
+            $sender->sendMessage(TextFormat::RED . $this->translateString("home.notexist", [$plotNumber]));
+            return true;
+        }
+        
+        usort($plots, function ($plot1, $plot2) {
+            /** @var $plot1 Plot */
+            /** @var $plot2 Plot */
+            if ($plot1->levelName == $plot2->levelName) {
+                return 0;
+            }
+            return ($plot1->levelName < $plot2->levelName) ? -1 : 1;
+        });
+        
+        $player = $this->getPlugin()->getServer()->getPlayer($sender->getName());
+        $plot = $plots[$plotNumber - 1];
+        if ($this->getPlugin()->teleportPlayerToPlot($player, $plot)) {
+            $sender->sendMessage($this->translateString("home.success", [$plot]));
+        } else {
+            $sender->sendMessage(TextFormat::RED . $this->translateString("home.error"));
+        }
+        return true;
+    }
+}
+<?php
+namespace MyPlot\subcommand;
+
+use pocketmine\command\CommandSender;
+use pocketmine\Player;
+use pocketmine\utils\TextFormat;
+use MyPlot\Plot;
+
+class HomesSubCommand extends SubCommand
+{
+    public function canUse(CommandSender $sender) {
+        return ($sender instanceof Player) and $sender->hasPermission("myplot.command.homes");
+    }
+
+    public function execute(CommandSender $sender, array $args) {
+        if (!empty($args)) {
+            return false;
+        }
+        $player = $sender->getServer()->getPlayer($sender->getName());
+        $levelName = $player->getLevel()->getName();
+        $plots = $this->getPlugin()->getProvider()->getPlotsByOwner($sender->getName());
+        if (empty($plots)) {
+            $sender->sendMessage(TextFormat::RED . $this->translateString("homes.noplots"));
+            return true;
+        }
+        $sender->sendMessage(TextFormat::DARK_GREEN . $this->translateString("homes.header"));
+
+        usort($plots, function ($plot1, $plot2) {
+            /** @var $plot1 Plot */
+            /** @var $plot2 Plot */
+            if ($plot1->levelName == $plot2->levelName) {
+                return 0;
+            }
+            return ($plot1->levelName < $plot2->levelName) ? -1 : 1;
+        });
+
+        for ($i = 0; $i < count($plots); $i++) {
+            $plot = $plots[$i];
+            $message = TextFormat::DARK_GREEN . "§7• §eID đảo: §b" . ($i + 1) . " ";
+            $message .= TextFormat::WHITE . "§eĐịa chỉ §b" . " " . $plot;
+            if ($plot->name !== "") {
+                $message .= " = " . $plot->name;
+            }
+            $sender->sendMessage($message);
+        }
+        return true;
+    }
+}<?php
+namespace MyPlot\subcommand;
+
+use pocketmine\command\CommandSender;
+use pocketmine\Player;
+use pocketmine\utils\TextFormat;
+
+class NameSubCommand extends SubCommand
+{
+    public function canUse(CommandSender $sender) {
+        return ($sender instanceof Player) and $sender->hasPermission("myplot.command.name");
+    }
+
+    public function execute(CommandSender $sender, array $args) {
+        if (count($args) !== 1) {
+            return false;
+        }
+        
+        $player = $sender->getServer()->getPlayer($sender->getName());
+        $plot = $this->getPlugin()->getPlotByPosition($player->getPosition());
+        if ($plot === null) {
+            $sender->sendMessage(TextFormat::RED . $this->translateString("notinplot"));
+            return true;
+        }
+        if ($plot->owner !== $sender->getName() and !$sender->hasPermission("myplot.admin.name")) {
+            $sender->sendMessage(TextFormat::RED . $this->translateString("notowner"));
+            return true;
+        }
+        
+        $name = $args[0];
+        $plot->name = $name;
+        if ($this->getPlugin()->getProvider()->savePlot($plot)) {
+            $sender->sendMessage($this->translateString("name.success", [$name]));
+        } else {
+            $sender->sendMessage(TextFormat::RED . $this->translateString("error"));
+        }
+        return true;
+    }
+}
+<?php
+namespace MyPlot\subcommand;
+
+use pocketmine\command\CommandSender;
+use pocketmine\Player;
+use pocketmine\utils\TextFormat;
+
+class GiveSubCommand extends SubCommand
+{
+    public function canUse(CommandSender $sender) {
+        return ($sender instanceof Player) and $sender->hasPermission("myplot.command.give");
+    }
+
+    public function execute(CommandSender $sender, array $args) {
+        $confirm = (count($args) == 2 and $args[1] == $this->translateString("confirm"));
+        if (count($args) != 1 and !$confirm) {
+            return false;
+        }
+        
+        $player = $sender->getServer()->getPlayer($sender->getName());
+        $plot = $this->getPlugin()->getPlotByPosition($player->getPosition());
+        if ($plot === null) {
+            $sender->sendMessage(TextFormat::RED . $this->translateString("notinplot"));
+            return true;
+        }
+        if ($plot->owner !== $sender->getName()) {
+            $sender->sendMessage(TextFormat::RED . $this->translateString("notowner"));
+            return true;
+        }
+
+        $newOwner = $this->getPlugin()->getServer()->getPlayer($args[0]);
+        if (!($newOwner instanceof Player)) {
+            $sender->sendMessage(TextFormat::RED . $this->translateString("give.notonline"));
+            return true;
+        } elseif ($newOwner === $player) {
+            $sender->sendMessage(TextFormat::RED . $this->translateString("give.toself"));
+            return true;
+        }
+
+        $maxPlots = $this->getPlugin()->getMaxPlotsOfPlayer($newOwner);
+        $plotsOfPlayer = count($this->getPlugin()->getProvider()->getPlotsByOwner($newOwner->getName()));
+        if ($plotsOfPlayer >= $maxPlots) {
+            $sender->sendMessage(TextFormat::RED . $this->translateString("give.maxedout", [$maxPlots]));
+            return true;
+        }
+
+        if ($confirm) {
+            $plot->owner = $newOwner->getName();
+            if ($this->getPlugin()->getProvider()->savePlot($plot)) {
+                $plotId = TextFormat::GREEN . $plot . TextFormat::WHITE;
+                $oldOwnerName = TextFormat::GREEN . $sender->getName() . TextFormat::WHITE;
+                $newOwnerName = TextFormat::GREEN . $newOwner->getName() . TextFormat::WHITE;
+                $sender->sendMessage($this->translateString("give.success", [$newOwnerName]));
+                $newOwner->sendMessage($this->translateString("give.received", [$oldOwnerName, $plotId]));
+            } else {
+                $sender->sendMessage(TextFormat::RED . $this->translateString("error"));
+            }
+        } else {
+            $plotId = TextFormat::GREEN . $plot . TextFormat::WHITE;
+            $newOwnerName = TextFormat::GREEN . $newOwner->getName() . TextFormat::WHITE;
+            $sender->sendMessage($this->translateString("give.confirm", [$plotId, $newOwnerName]));
+        }
+        return true;
+    }
+}
+<?php
+namespace MyPlot\subcommand;
+
+use pocketmine\command\CommandSender;
+use pocketmine\Player;
+use pocketmine\utils\TextFormat;
+use pocketmine\level\Position;
+use pocketmine\level\Level;
+use pocketmine\Server;
+
+class WarpSubCommand extends SubCommand
+{
+    public function canUse(CommandSender $sender) {
+        return ($sender instanceof Player) and $sender->hasPermission("myplot.command.warp");
+    }
+
+    public function execute(CommandSender $sender, array $args) {
+        if (count($args) != 1)
+            return false;
+		
+	
+	$player = $sender->getServer()->getPlayer($sender->getName());
+        $levelName = $player->getLevel()->getName();
+        $name = $player->getName();
+        $worldAsObject = $this->getPlugin()->getServer()->getLevelByName("sb");
+        $player->teleport(new Position(110, 110, 110, $worldAsObject));
+
+        $player = $sender->getServer()->getPlayer($sender->getName());
+        $levelName = $player->getLevel()->getName();
+        if (!$this->getPlugin()->isLevelLoaded($levelName)) {
+            $sender->sendMessage(TextFormat::RED . $this->translateString("warp.notinplotworld"));
+            return true;
+        }
+
+        $plotIdArray = explode(";", $args[0]);
+        if (count($plotIdArray) != 2 or !is_numeric($plotIdArray[0]) or !is_numeric($plotIdArray[1])) {
+            $sender->sendMessage(TextFormat::RED . $this->translateString("warp.wrongid"));
+            return true;
+        }
+
+        $plot = $this->getPlugin()->getProvider()->getPlot($levelName, $plotIdArray[0], $plotIdArray[1]);
+        if ($plot->owner == "" and !$sender->hasPermission("myplot.admin.warp")) {
+            $sender->sendMessage(TextFormat::RED . $this->translateString("warp.unclaimed"));
+            return true;
+        }
+
+        $this->getPlugin()->teleportPlayerToPlot($player, $plot);
+
+        $plot = TextFormat::GREEN . $plot . TextFormat::WHITE;
+        $sender->sendMessage($this->translateString("warp.success", [$plot]));
+        return true;
+    }
+}
+<?php
+namespace MyPlot;
+
+use pocketmine\block\Block;
+class PlotLevelSettings
+{
+    /** @var string */
+    public $name;
+    /** @var Block */
+    public $roadBlock, $wallBlock, $plotFloorBlock, $plotFillBlock, $bottomBlock;
+    /** @var int */
+    public $roadWidth, $plotSize, $groundHeight, $maxPlotsPerPlayer, $claimPrice, $clearPrice,
+            $disposePrice, $resetPrice;
+    public $restrictEntityMovement;
+
+    public function __construct($name, $settings = []) {
+        $this->name = $name;
+        if (!empty($settings)) {
+            $this->roadBlock = self::parseBlock($settings, "RoadBlock", new Block(5));
+            $this->wallBlock = self::parseBlock($settings, "WallBlock", new Block(44));
+            $this->plotFloorBlock = self::parseBlock($settings, "PlotFloorBlock", new Block(2));
+            $this->plotFillBlock = self::parseBlock($settings, "PlotFillBlock", new Block(3));
+            $this->bottomBlock = self::parseBlock($settings, "BottomBlock", new Block(7));
+            $this->roadWidth = self::parseNumber($settings, "RoadWidth", 7);
+            $this->plotSize = self::parseNumber($settings, "PlotSize", 22);
+            $this->groundHeight = self::parseNumber($settings, "GroundHeight", 64);
+			$this->maxPlotsPerPlayer = self::parseNumber($settings, "MaxPlotsPerPlayer", 2);
+            $this->claimPrice = self::parseNumber($settings, "ClaimPrice", 0);
+            $this->clearPrice = self::parseNumber($settings, "ClearPrice", 0);
+            $this->disposePrice = self::parseNumber($settings, "DisposePrice", 0);
+            $this->resetPrice = self::parseNumber($settings, "ResetPrice", 0);
+            $this->restrictEntityMovement = self::parseBool($settings, "RestrictEntityMovement", true);
+        }
+    }
+
+    private static function parseBlock(&$array, $key, $default) {
+        if (isset($array[$key])) {
+            $id = $array[$key];
+            if (is_numeric($id)) {
+                $block = new Block($id);
+            } else {
+                $split = explode(":", $id);
+                if (count($split) === 2 and is_numeric($split[0]) and is_numeric($split[1])) {
+                    $block = new Block($split[0], $split[1]);
+                } else {
+                    $block = $default;
+                }
+            }
+        } else {
+            $block = $default;
+        }
+        return $block;
+    }
+
+    private static function parseNumber(&$array, $key, $default) {
+        if (isset($array[$key]) and is_numeric($array[$key])) {
+            return $array[$key];
+        } else {
+            return $default;
+        }
+    }
+
+    private static function parseBool(&$array, $key, $default) {
+        if (isset($array[$key]) and is_bool($array[$key])) {
+            return $array[$key];
+        } else {
+            return $default;
+        }
+    }
+}

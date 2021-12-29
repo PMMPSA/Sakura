@@ -1,0 +1,20 @@
+---
+prefix: "§bSakuraft"
+suffix: "[A]"
+time: 15
+sendmessage-format: "&e[{TIME}] &b[{PREFIX}] {SUFFIX} &a{SENDER}&e>&f {MESSAGE}"
+datetime-format: "H:i:s"
+broadcast-enabled: true
+messages:
+ - "§l&b[{PREFIX}]&f§dHãy vote tại :bit.do/sakuraft để ủng hộ server"
+ - "§l&b[{PREFIX}]&f§cPhát hiện lỗi hãy báo với chủ server!"
+ - "§l&b[{PREFIX}]&f§aVinh hạnh chào mừng bạn đến với server"
+ - "§l&b[{PREFIX}]&f§b Các minigames mới: BuildBattle, EggWars,..."
+popup-time: 15
+popup-duration: 5
+sendpopup-format: "&a{SENDER}&e>>&f {MESSAGE}"
+popup-broadcast-enabled: true
+popups:
+ - "&aWatchdog đã ban hơn 10 người vì tội hacking và quấy rối!"
+ - "&d{TOTALPLAYERS} &etrên &d{MAXPLAYERS} &eđang trực tuyến"
+...

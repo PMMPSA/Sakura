@@ -1,0 +1,11 @@
+name: Report
+version: 1.0
+main: Bluplayz\Report
+api: 1.14.0
+author: Bluplayz
+commands:
+    report:
+        description: ReportCommand
+permission:
+    report.manage:
+        default: false

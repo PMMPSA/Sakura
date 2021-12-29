@@ -1,0 +1,11 @@
+name: Trade
+version: 1.0
+main: Trade\Trade\Main
+author: Ghast Noob
+api:
+- 1.0.0
+- 2.0.0
+- 3.0.0
+commands:
+ trade:
+  default: true

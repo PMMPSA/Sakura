@@ -1,0 +1,14 @@
+---
+# RainbowBlock Plugin
+Blocks: []
+
+# Thời Gian Khối Cầu Vồng Thay Đổi Màu Sắc(Mặc Định: 0.1 Giây)
+Speed: 0.1
+
+# Chọn 'same' Để Mọi Ngối Cầu Vồng Thay Đổi Đồng Loạt 1 Màu Sắc
+# Chọn 'not' Để Mọi Khối Cầu Vồng Thay Đổi Màu Sắc Ngẫu Nhiên
+ColorChange: same
+
+# Vui Lòng Không Chỉnh Sửa Nếu Bạn Biết Bạn Đang Làm Gì
+BreakMode: nodrop
+...

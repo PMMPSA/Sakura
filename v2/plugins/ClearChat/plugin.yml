@@ -1,0 +1,12 @@
+name: ClearChat
+description: Xóa Các Tin Nhắn Hiện Trên Màn Hình
+author: Ghast Noob
+version: 1.0
+main: CC\CC\Main
+api: [1.0.0, 2.0.0]
+commands:
+ cc:
+    description: Xóa Các Tin Nhắn Hiện Trên Màn Hình
+    usage: "Sử Dụng: /cc"
+    permission: cc.command
+    default: op

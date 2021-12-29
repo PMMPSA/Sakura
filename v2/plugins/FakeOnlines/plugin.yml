@@ -1,0 +1,14 @@
+name: FakeOnlines
+main: FakeOnlines\FakeOnlines
+author: Ghast Noob
+version: 1.0.0
+api: [2.0.0,3.0.0]
+commands:
+ max:
+  description: "Chỉnh Số Người Lớn Nhất Có Thể Hiện Thị"
+  usage: "/max"
+  permission: op
+ min:
+  description: "Chỉnh Số Người Nhỏ Nhất Có Thể Hiển Thị"
+  usage: "/min"
+  permission: op

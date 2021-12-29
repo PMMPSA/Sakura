@@ -1,0 +1,62 @@
+name: TPALL
+main: zMeliodasxD\TPALL
+version: "1.0.0"
+api: 2.0.0
+
+commands:
+  tpall:
+    description: Ja sabe ne?
+    permission: tp.all
+
+permissions:
+  tp.all:
+    default: op<?php
+
+namespace zMeliodasxD;
+
+use pocketmine\plugin\PluginBase;
+use pocketmine\command\CommandSender;
+use pocketmine\command\Command;
+use pocketmine\level\Position;
+use pocketmine\level\Level;
+use pocketmine\math\Vector3;
+use pocketmine\utils\Config;
+use pocketmine\Player;
+use pocketmine\Server;
+
+class TPALL extends PluginBase{
+	
+	private $cfg;
+	
+	public function onEnable(){
+		@mkdir($this->getDataFolder());
+		$this->saveResource("config.yml");
+		$this->cfg = new Config($this->getDataFolder()."config.yml");
+		$this->reloadConfig();
+	}
+	
+	public function onCommand(CommandSender $sender, Command $command, $label, array $args){
+		switch(strtolower($command->getName())){
+			case "tpall":
+				if($sender->hasPermission("tp.all")){
+					$x = $sender->getX();
+					$y = $sender->getY();
+					$z = $sender->getZ();
+					$world = $this->getServer()->getLevelByName($sender->getLevel()->getName());
+					$sender->sendMessage($this->cfg->get("Mensagem"));
+					foreach($this->getServer()->getOnlinePlayers() as $players){
+						$players->teleport(new Position($x,$y,$z,$world));
+					}
+				}
+		}
+	}
+}# Feito por: @zMeliodasxD
+# Permissão: tp.all
+# Versão: 1.0.0
+# © Não foi usado nenhum plugin de TP como base.
+# Frase pra quem kiba: Vai tomar no seu cu kibador <3.
+# Não modifique esse plugin sem a permissão do dono.
+
+---
+Mensagem: "§9[TPALL] §7Todos os players foram teleportado até você."
+...

@@ -1,0 +1,10 @@
+---
+pvp: false
+bancmds:
+  /nick: /nick
+  /setwarp: /setwarp
+  /topcoin: /topcoin
+banitem:
+  165: Slime Block
+  381: Eye Of Ender
+...

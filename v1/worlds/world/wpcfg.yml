@@ -1,0 +1,10 @@
+---
+pvp: false
+banitem:
+  369: BLAZE ROD
+protect: protect
+bancmds:
+  /pos1: /pos1
+  /fill: /fill
+  /topcoin: /topcoin
+...

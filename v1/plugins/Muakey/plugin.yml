@@ -1,0 +1,11 @@
+name: Muakey
+description: mua Key
+author: BOSS _CraftPE
+version: 2.0
+main: MuaKey\Main
+api: 2.0.0
+commands:
+ muakey:
+    description: mua Key
+    usage: "Sử dụng: /muakey"
+    permission: muakey.command

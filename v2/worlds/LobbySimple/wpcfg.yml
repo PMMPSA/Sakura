@@ -1,0 +1,11 @@
+---
+banitem:
+  293: Diamond Hoe
+  259: Flint and Steel
+  325: Bucket
+  10: Lava
+  8: Water
+  277: Diamond Shovel
+pvp: false
+protect: lock
+...

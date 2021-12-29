@@ -1,0 +1,5 @@
+---
+bancmds:
+  /tp: /tp
+protect: lock
+...

@@ -1,0 +1,24 @@
+---
+#Thông Báo Khi Người Chơi Tạo Bảng Enchant Mà Không Có Quyền
+Create: §e༺§c Bạn Không Có Thẩm Quyền Tạo Bảng Cường Hóa §e༻
+
+
+#Thông Báo Khi Đang Trong Quá Trình Tạo Bảng
+Create2: §e༺§a Đang Khởi Tạo Bảng Cường Hóa §e༻
+
+
+#Thông Báo Khi Tạo Thành Công Bảng Enchant
+Create3: §e༺§a Khởi Tạo Thành Công Bảng Cường Hóa §e༻
+
+
+#Thông Báo Khi Không Đủ Tiền Mua Enchant
+Money: §e༺§c Bạn Không Đủ Tiền Để Mua Cường Hóa §e༻
+
+
+#Thông Báo Khi Phá Vỡ Bảng Enchant
+Off: §e༺§a Đã Tháo Bỏ Bảng Cường Hóa §e༻
+
+
+#Thông Báo Khi Người Chơi Phá Bảng Enchant Mà Không Có Quyền
+Off2: §e༺§c Bạn Không Có Quyền Tháo Bỏ Bảng Cường Hóa §e༻
+...

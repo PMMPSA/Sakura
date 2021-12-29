@@ -1,0 +1,17 @@
+---
+name: RainbowBlock
+author: Ghast Noob
+version: 1.0
+api: [2.0.0, 3.0.0]
+main: RainbowBlock\RainbowBlock\Main
+commands: 
+    rainbowblock:
+       description: Tạo Khối Nhiều Màu Sắc Chớp Nháy
+       permission: rb.create
+       aliases: [rb]
+permissions: 
+   rb.create:
+      default: op
+   rb.delete:
+      default: op
+...

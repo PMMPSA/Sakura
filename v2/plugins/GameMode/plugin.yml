@@ -1,0 +1,20 @@
+name: GameMode
+description: Chỉnh Chế Độ Sinh Tồn Và Sáng Tạo Cho Người Chơi
+author: Ghast Noob
+version: 1.0
+main: GM\GM\Main
+api: 2.0.0
+commands:
+ gmc:
+    description: Chỉnh Chế Độ Sáng Tạo
+    usage: "Sử Dụng: /gmc"
+    permission: gmc.cmd
+ gms:
+    description: Chỉnh Chế Độ Sinh Tồn
+    usage: "Sử Dụng: /gms"
+    permission: gms.cmd
+    permissions:
+    gmc:
+    default: op
+    gms:
+    default: op

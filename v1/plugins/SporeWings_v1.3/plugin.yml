@@ -1,0 +1,15 @@
+name: WingSpore
+main: SporeWings\Main
+version: 1.3
+api: [1.0.0]
+author: "vk.com/eddir"
+commands:
+  wingspore:
+    description: Lấy Cánh Spore
+    permission: wingspore.command
+    usage: /wingspore
+permissions:
+  wingspore.command:
+    default: op
+    description: Cho Phép Người Chơi Lấy Cánh Spore
+#Ghast Noob

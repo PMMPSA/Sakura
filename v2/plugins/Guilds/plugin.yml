@@ -1,0 +1,19 @@
+name: FactionsPro
+author: SoraLifeVN
+description: A Plugin For Easily Managing Guilds
+version: 0.1
+main: FactionsPro\FactionMain
+api:
+- 1.14.0
+- 2.0.0- 3.0.0-ALPHA9
+commands:
+  guilds:
+    description: use /guilds help for all parameters
+    permission: f.command
+  g:
+    description: use /guilds help for all parameters
+    permission: f.command
+permissions:
+  f.command:
+    default: true
+    description: "Allow use of all guilds commands"

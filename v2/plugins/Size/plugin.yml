@@ -1,0 +1,9 @@
+name: Size
+version: 2.0
+author: Ghast Noob
+api: ["2.0.0", "2.1.0", "3.0.0APLHA1", "3.0.0"]
+main: Size\Main
+
+permissions:
+ size.cmd:
+      default: op

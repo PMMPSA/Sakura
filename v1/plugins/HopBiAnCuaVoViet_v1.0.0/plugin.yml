@@ -1,0 +1,7 @@
+name: HopBiAn
+author: VoViet edit bye BOSS_CraftPE
+main: HopBiAn\HopBiAn\Main
+version: 1.0.0
+api: 
+- 2.0.0
+load: STARTUP

@@ -1,0 +1,83 @@
+name: AdvertisingKick
+main: DarkN3ss\AdvertisingKick\AdvertisingKick
+version: 1.0.0
+api: 1.0.0<?php
+
+namespace DarkN3ss\AdvertisingKick;
+
+use DevTools\commands\ExtractPluginCommand;
+use FolderPluginLoader\FolderPluginLoader;
+use pocketmine\command\Command;
+use pocketmine\command\CommandExecutor;
+use pocketmine\command\CommandSender;
+use pocketmine\network\protocol\Info;
+use pocketmine\permission\Permission;
+use pocketmine\Player;
+use pocketmine\plugin\Plugin;
+use pocketmine\plugin\PluginBase;
+use pocketmine\plugin\PluginLoadOrder;
+use pocketmine\Server;
+use pocketmine\utils\TextFormat;
+
+class AdvertisingKick extends PluginBase{
+
+    public function onEnable(){
+        $this->getLogger()->info("AdvertisingKick Starterd");
+        $this->listener = new EventListener($this);
+        $this->getServer()->getPluginManager()->registerEvents($this->listener, $this);
+    }
+
+    public function onDisable(){
+        $this->getLogger()->info("AdvertisingKick Stopped");
+    }
+}<?php
+namespace DarkN3ss\AdvertisingKick;
+
+use pocketmine\event\Listener;
+use pocketmine\event\player\PlayerChatEvent;
+use pocketmine\event\player\PlayerJoinEvent;
+
+class EventListener implements Listener{
+    
+    private $plugin;
+
+    public function __construct(AdvertisingKick $plugin){
+            $this->plugin = $plugin;
+    }
+    
+    private $webEndings = array(".net",".com",".co",".org",".info",".tk"); 
+        
+    /**
+    * @param PlayerChatEvent $event
+    *
+    * @priority       NORMAL
+    * @ignoreCanceled false
+    */
+    public function onChat(PlayerChatEvent $event){
+        $player = $event->getPlayer();
+        $message = $event->getMessage();
+        $playername = $event->getPlayer()->getDisplayName();
+        //----------------------------
+        $parts = explode('.', $message);
+        if(sizeof($parts) >= 4)
+        {
+            if (preg_match('/[0-9]+/', $parts[1]))
+            {
+                $event->setCancelled(true);
+                $player->kick("Advertising");
+                echo "========================[Advertising]: Kicked " . $playername . " For saying: ". $message . " ========================\n";
+            }
+        }
+        //----------------------------
+        foreach ($this->webEndings as $url) {
+            if (strpos($message, $url) !== FALSE) 
+            {
+                $event->setCancelled(true);
+                $player->kick("Advertising");
+                echo "========================[Advertising]: Kicked " . $playername . " For saying: ". $message . " ========================\n";
+            }
+        }
+        //----------------------------
+        
+    }
+}

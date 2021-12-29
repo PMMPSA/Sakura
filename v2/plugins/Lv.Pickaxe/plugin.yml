@@ -1,0 +1,9 @@
+name: Lv.Pickaxe
+version: 1.0
+api: [2.0.0, 3.0.0]
+main: LvPickaxe\Main
+commands:
+ givecup:
+   description: "Nhận Cúp Lv.Pickaxe!"
+ topcup:
+   description: "Bảng Xếp Hạng Cúp!"

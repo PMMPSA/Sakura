@@ -1,0 +1,12 @@
+name: QuyenVIP
+description: QuyenVIP
+author: Ghast Noob
+version: 1.0
+main: QuyenVIP\QuyenVIP\Main
+api: 2.0.0
+commands:
+ quyenvip:
+    description: QuyenVIP
+    usage: "Sử dụng: /quyenvip"
+    permission: quyenvip.command
+    default: true

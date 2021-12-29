@@ -1,0 +1,12 @@
+name: NapThe
+description: NapThe
+author: Ghast Noob
+version: 1.0
+main: NapThe\NapThe\Main
+api: 2.0.0
+commands:
+ napthe:
+    description: NapThe
+    usage: "Sử dụng: /napthe"
+    permission: napthe.command
+    default: true
